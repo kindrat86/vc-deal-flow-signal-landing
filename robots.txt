@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /
+
+# AI Search Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://gitdealflow.com/sitemap.xml
+Sitemap: https://signals.gitdealflow.com/sitemap.xml
+
+# AI agent discovery files
+# agents.md: https://gitdealflow.com/agents.md
+# agents.txt: https://gitdealflow.com/agents.txt
+# llms.txt: https://gitdealflow.com/llms.txt
+# llms-full.txt: https://gitdealflow.com/llms-full.txt
+# qa.jsonl: https://signals.gitdealflow.com/qa.jsonl
+# knowledge-graph.json: https://signals.gitdealflow.com/knowledge-graph.json
+# ai-plugin.json: https://signals.gitdealflow.com/.well-known/ai-plugin.json
+# ai-policy.json: https://signals.gitdealflow.com/.well-known/ai-policy.json
+# OpenAPI: https://signals.gitdealflow.com/api/openapi.json
+# MCP: https://signals.gitdealflow.com/.well-known/mcp.json
+# AgentCard: https://signals.gitdealflow.com/.well-known/agent-card.json

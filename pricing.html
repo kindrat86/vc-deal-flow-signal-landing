@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — GitDealFlow</title>
+  <meta name="description" content="Every rung of the VC Deal Flow Signal ladder: free Sunday digest, €1 Tweet Teardown, €7 First Look Pass, Dashboard €49/mo, Insider Circle €197/mo, Custom Sector Sweep €1,997. 30-day Signal-or-It's-Free on every paid rung.">
+  <meta name="author" content="The Data Nerd" />
+  <link rel="canonical" href="https://gitdealflow.com/pricing" />
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GitDealFlow" />
+  <meta property="og:title" content="Pricing — GitDealFlow" />
+  <meta property="og:description" content="From a free Sunday email to a full custom sector sweep. Every paid rung carries the 30-day Signal-or-It's-Free guarantee: email me, every cent back." />
+  <meta property="og:url" content="https://gitdealflow.com/pricing" />
+  <meta property="og:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@data_nerd" />
+  <meta name="twitter:title" content="Pricing — GitDealFlow" />
+  <meta name="twitter:description" content="Free Sunday digest → €1 Teardown → €7 First Look → €49/mo Dashboard → €197/mo Insider → €1,997 Sector Sweep. 30-day guarantee on every paid rung." />
+  <meta name="twitter:image" content="https://signals.gitdealflow.com/opengraph-image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "VC Deal Flow Signal by GitDealFlow",
+        "description": "A deal-flow signal tool for investors (not a fund). Reads startups' public GitHub engineering activity and flags the ones accelerating, weeks before the round.",
+        "brand": { "@type": "Brand", "name": "GitDealFlow" },
+        "url": "https://gitdealflow.com/pricing",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Tweet Teardown",
+            "price": "1",
+            "priceCurrency": "EUR",
+            "url": "https://gitdealflow.com/pricing#teardown",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "First Look Pass",
+            "price": "7",
+            "priceCurrency": "EUR",
+            "url": "https://gitdealflow.com/firstlook",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Dashboard",
+            "price": "49",
+            "priceCurrency": "EUR",
+            "url": "https://gitdealflow.com/dashboard",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Insider Circle",
+            "price": "197",
+            "priceCurrency": "EUR",
+            "url": "https://gitdealflow.com/insider",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Custom Sector Sweep",
+            "price": "1997",
+            "priceCurrency": "EUR",
+            "url": "https://gitdealflow.com/sector-sweep",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://gitdealflow.com/pricing" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://signals.gitdealflow.com" crossorigin>
+  <link rel="preconnect" href="https://eu.i.posthog.com" crossorigin>
+  <style>
+    /* Pricing-page-only styles — kept inline because styles.css is prebuilt
+       (no working Tailwind build step) and these classes don't exist there. */
+    html { scroll-padding-top: 5.5rem; }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+    body { -webkit-font-smoothing: antialiased; }
+
+    .tier-card {
+      position: relative;
+      border: 1px solid #334155;               /* slate-700 */
+      border-radius: 1rem;
+      background-color: rgba(30, 41, 59, 0.6); /* dark-800/60 */
+      padding: 1.5rem;
+      scroll-margin-top: 5.5rem;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+    .tier-card:hover { border-color: rgba(14, 165, 233, 0.5); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+    @media (min-width: 768px) { .tier-card { padding: 2rem; } }
+    .tier-card.tier-featured { border-color: rgba(14, 165, 233, 0.55); box-shadow: 0 0 0 1px rgba(14, 165, 233, 0.25); }
+
+    .tier-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #38bdf8; margin-bottom: 0.35rem; }
+    .tier-price { font-size: 2rem; font-weight: 800; color: #f8fafc; line-height: 1.1; }
+    .tier-price small { font-size: 0.95rem; font-weight: 600; color: #94a3b8; }
+    .tier-badge {
+      position: absolute; top: -0.8rem; left: 1.5rem;
+      background: #0ea5e9; color: #0f172a; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.25rem 0.6rem; border-radius: 9999px;
+    }
+    .tier-list { list-style: none; padding: 0; margin: 1rem 0 1.25rem; }
+    .tier-list li { display: flex; gap: 0.55rem; align-items: flex-start; color: #cbd5e1; font-size: 0.9rem; line-height: 1.55; padding: 0.22rem 0; }
+    .tier-list li::before { content: '✓'; color: #34d399; font-weight: 700; flex: 0 0 auto; }
+    .tier-annual { font-size: 0.85rem; color: #94a3b8; margin-top: 0.75rem; }
+    .tier-annual a { color: #38bdf8; text-decoration: underline; }
+    .tier-annual a:hover { color: #7dd3fc; }
+    .tier-note { font-size: 0.8rem; color: #64748b; margin-top: 0.75rem; }
+    .mobile-sticky-cta { display: none; }
+
+    @media (max-width: 639px) {
+      body { padding-bottom: 6rem; }
+      .mobile-compact-header { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+      .mobile-hero-wrap { padding-left: 1rem; padding-right: 1rem; padding-top: 3rem; padding-bottom: 3rem; }
+      .mobile-hero-title { font-size: 2rem; line-height: 1.1; }
+      .mobile-section-pad { padding-left: 1rem; padding-right: 1rem; }
+      .tier-card { padding: 1.25rem; }
+      .tier-cta-stack .btn { display: flex; width: 100%; white-space: normal; text-align: center; line-height: 1.35; }
+      #dashboard { order: -1; }
+      .mobile-sticky-cta {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: block;
+        padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+        background: rgba(2, 6, 23, 0.94); backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(71, 85, 105, 0.7);
+        transform: translateY(115%);
+        transition: transform 280ms cubic-bezier(0.4,0,0.2,1);
+        pointer-events: none;
+      }
+      .mobile-sticky-cta.is-visible { transform: translateY(0); pointer-events: auto; }
+      .mobile-sticky-cta .inner { display: flex; align-items: center; gap: 0.75rem; max-width: 28rem; margin: 0 auto; }
+      .mobile-sticky-cta .meta { flex: 1; min-width: 0; }
+      .mobile-sticky-cta .meta strong { display: block; color: #fff; font-size: 0.95rem; line-height: 1.1; }
+      .mobile-sticky-cta .meta span { display: block; color: #94a3b8; font-size: 0.72rem; margin-top: 0.1rem; }
+      .mobile-sticky-cta .btn { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; }
+    }
+    @media (max-width: 639px) and (prefers-reduced-motion: reduce) {
+      .mobile-sticky-cta { transition: none; }
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-dark-800 focus:text-white focus:rounded-lg">Skip to main content</a>
+  <header class="relative sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+    <div class="mobile-compact-header max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+      <a href="/" class="font-semibold tracking-tight text-white text-lg">GitDealFlow</a>
+      <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-5 text-sm font-medium text-gray-300">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://signals.gitdealflow.com" class="hover:text-white transition-colors">Signals</a>
+        <a href="/firstlook" class="hover:text-white transition-colors">First Look</a>
+        <a href="/dashboard" class="hover:text-white transition-colors">Dashboard</a>
+        <a href="/insider" class="hover:text-white transition-colors">Insider</a>
+        <a href="/pricing" class="hover:text-white transition-colors">Pricing</a>
+      </nav>
+      <a href="#dashboard" onclick="if(window.posthog)posthog.capture('pricing_nav_cta_clicked')" class="btn btn-cta btn-sm whitespace-nowrap shrink-0"><span class="sm:hidden">Dashboard €49</span><span class="hidden sm:inline">Dashboard &mdash; €49/mo</span> <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+      <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="md:hidden inline-flex items-center justify-center w-11 h-11 shrink-0 rounded-lg text-gray-300 hover:text-white ring-1 ring-white/10 transition-colors">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-nav" hidden class="md:hidden absolute top-full inset-x-0 z-50 border-b border-white/10 bg-dark-900 shadow-2xl">
+      <nav aria-label="Mobile navigation" class="flex flex-col px-4 py-2">
+        <a href="/" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Home</a>
+        <a href="https://signals.gitdealflow.com" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Signals</a>
+        <a href="/firstlook" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">First Look</a>
+        <a href="/dashboard" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Dashboard</a>
+        <a href="/insider" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Insider</a>
+        <a href="/pricing" class="py-3 min-h-[44px] flex items-center text-gray-200 hover:text-white">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-brand-900 opacity-80"></div>
+      <div class="mobile-hero-wrap relative max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-wider mb-4">VC Deal Flow Signal &middot; one ladder, no surprises</p>
+        <h1 class="mobile-hero-title text-4xl md:text-5xl font-extrabold leading-tight mb-4">Pricing that climbs with your conviction.</h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-6">Start free every Sunday. Pay €1 to test my judgment. Go deeper only when the signal has already earned it. Every paid rung carries the same 30-day guarantee.</p>
+        <p class="text-gray-400 text-sm">All prices in EUR. Cancel subscriptions in one click. No calls, no &ldquo;contact sales&rdquo; &mdash; except where the work is genuinely custom.</p>
+      </div>
+    </section>
+
+    <!-- ============ LADDER ============ -->
+    <section class="mobile-section-pad max-w-5xl mx-auto px-4 sm:px-6 py-12 md:pt-16">
+      <div class="grid gap-6 md:grid-cols-2">
+
+        <!-- FREE DIGEST -->
+        <article id="digest" class="tier-card">
+          <p class="tier-eyebrow">Start here</p>
+          <h2 class="text-xl font-bold text-white mb-1">Sunday Signal Digest</h2>
+          <p class="tier-price">Free <small>&mdash; forever</small></p>
+          <ul class="tier-list">
+            <li>Five startups accelerating on GitHub, every Sunday morning</li>
+            <li>Sector, stage, and a plain-English reason it&apos;s moving &mdash; no code reading</li>
+            <li>One email a week, unsubscribe in one click, no card</li>
+          </ul>
+          <form class="js-signup-form flex flex-col gap-3" data-source="pricing">
+            <label class="sr-only" for="pricing-email">Email address</label>
+            <input type="email" id="pricing-email" required inputmode="email" autocomplete="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-lg bg-dark-800 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-brand-500">
+            <button type="submit" class="btn btn-primary btn-md w-full">Get this Sunday&apos;s 5 names <span aria-hidden="true" class="btn-arrow">&rarr;</span></button>
+            <p class="js-signup-msg text-gray-400 text-xs" role="status">Free &mdash; I cover the compute. One email, every Sunday.</p>
+          </form>
+        </article>
+
+        <!-- TWEET TEARDOWN -->
+        <article id="teardown" class="tier-card">
+          <p class="tier-eyebrow">Test my judgment</p>
+          <h2 class="text-xl font-bold text-white mb-1">Tweet Teardown</h2>
+          <p class="tier-price">€1 <small>one-time</small></p>
+          <ul class="tier-list">
+            <li>Send me one startup &mdash; I read its public GitHub signal and tear it down</li>
+            <li>Delivered as a short, sharp verdict you can act on</li>
+            <li>The cheapest possible way to see if my read is worth your money</li>
+          </ul>
+          <div class="tier-cta-stack">
+            <a href="https://buy.stripe.com/bJe5kC48H2d2cEKg6s0x209" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'teardown'})" class="btn btn-secondary btn-md">Get a €1 Teardown <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+        <!-- FIRST LOOK -->
+        <article id="firstlook" class="tier-card">
+          <p class="tier-eyebrow">One sector. One deep dive. One day.</p>
+          <h2 class="text-xl font-bold text-white mb-1">First Look Pass</h2>
+          <p class="tier-price">€7 <small>one-time</small></p>
+          <ul class="tier-list">
+            <li>Pick one sector you&apos;re sizing up &mdash; I deep-dive its public GitHub signal</li>
+            <li>A ranked shortlist of who&apos;s actually accelerating, in plain English, back in 24 hours</li>
+            <li>14-day upgrade-credit window: your €7 comes off your first Dashboard month</li>
+          </ul>
+          <div class="tier-cta-stack">
+            <a href="/firstlook" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'firstlook'})" class="btn btn-secondary btn-md">See the First Look Pass <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+        <!-- DASHBOARD -->
+        <article id="dashboard" class="tier-card tier-featured">
+          <span class="tier-badge">Most popular</span>
+          <p class="tier-eyebrow">The weekly operating layer</p>
+          <h2 class="text-xl font-bold text-white mb-1">Dashboard</h2>
+          <p class="tier-price">€49<small>/mo</small></p>
+          <ul class="tier-list">
+            <li>The full ranked field: 60+ startups, 20 sectors, refreshed weekly</li>
+            <li>Every name lands with a one-line, plain-English reason it&apos;s moving</li>
+            <li>Signal history so you can watch acceleration build week over week</li>
+            <li>Cancel in one click, any time</li>
+          </ul>
+          <div class="tier-cta-stack">
+            <a href="/dashboard" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'dashboard'})" class="btn btn-cta btn-md">Get the Dashboard <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+          </div>
+          <p class="tier-annual">Prefer annual? <a href="https://buy.stripe.com/aFa5kC34DeZOawC6vS0x20c" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'dashboard_annual'})">€490/yr</a> &mdash; two months free.</p>
+        </article>
+
+        <!-- INSIDER -->
+        <article id="insider" class="tier-card">
+          <p class="tier-eyebrow">Closest to the signal</p>
+          <h2 class="text-xl font-bold text-white mb-1">Insider Circle</h2>
+          <p class="tier-price">€197<small>/mo</small></p>
+          <ul class="tier-list">
+            <li>Everything in Dashboard, plus private discussion with the circle</li>
+            <li>Monthly briefings and a steadier deal-flow rhythm</li>
+            <li>The room is capped at ~50 seats</li>
+          </ul>
+          <div class="tier-cta-stack">
+            <a href="/insider" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'insider'})" class="btn btn-secondary btn-md">See the Insider Circle <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+          </div>
+          <p class="tier-annual">Prefer annual? <a href="https://buy.stripe.com/cNieVc34DbNCcEK2fC0x20e" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'insider_annual'})">€1,970/yr</a> &mdash; two months free.</p>
+        </article>
+
+        <!-- SECTOR SWEEP -->
+        <article id="sweep" class="tier-card">
+          <p class="tier-eyebrow">Done-for-you research</p>
+          <h2 class="text-xl font-bold text-white mb-1">Custom Sector Sweep</h2>
+          <p class="tier-price">€1,997 <small>one-time</small></p>
+          <ul class="tier-list">
+            <li>I sweep an entire sector of your choice, org by org, on your thesis</li>
+            <li>A ranked, written report of who&apos;s accelerating and why &mdash; yours alone</li>
+            <li>Built for funds and family offices sizing up a space before a bet</li>
+          </ul>
+          <div class="tier-cta-stack">
+            <a href="/sector-sweep" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'sweep'})" class="btn btn-secondary btn-md">See the Sector Sweep <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- APPLICATION-GATED -->
+      <article id="apply" class="tier-card mt-6">
+        <p class="tier-eyebrow">Application only</p>
+        <h2 class="text-xl font-bold text-white mb-1">Sharp Tier &amp; above</h2>
+        <p class="tier-price">From €4,970<small>/yr</small></p>
+        <p class="text-gray-300 leading-relaxed mt-3 mb-4 max-w-2xl">The rungs above Insider are gated by application, not by card. Capacity is deliberately small so the edge stays an edge &mdash; if too many people see a signal at once, it stops being early. Tell me who you are and how you invest; I&apos;ll tell you honestly whether it&apos;s worth it for you.</p>
+        <div class="tier-cta-stack">
+          <a href="/apply" onclick="if(window.posthog)posthog.capture('pricing_cta_clicked',{tier:'apply'})" class="btn btn-ghost btn-md">Apply for a gated tier <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ GUARANTEE ============ -->
+    <section class="mobile-section-pad max-w-5xl mx-auto px-4 sm:px-6 py-12">
+      <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-8 md:p-10 text-center">
+        <p class="text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-2">The guarantee, in full</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">30 days, Signal-or-It&apos;s-Free &mdash; on every paid rung.</h2>
+        <p class="text-gray-300 leading-relaxed max-w-2xl mx-auto">Any paid rung, 30 days, email me, every cent back. No forms, no survey. If the signal hasn&apos;t earned its price inside a month, I don&apos;t want your money.</p>
+        <p class="text-gray-400 text-sm mt-4">First Look also carries a separate 14-day upgrade-credit window: your €7 counts toward Dashboard if you step up within two weeks.</p>
+      </div>
+    </section>
+
+    <!-- ============ TRUST RECEIPT ============ -->
+    <section class="mobile-section-pad max-w-5xl mx-auto px-4 sm:px-6 pt-2" style="padding-bottom:4rem">
+      <div class="rounded-2xl border border-gray-700 bg-dark-800 p-8 md:p-10 text-center">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-2">A receipt, not a promise</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">The founding window closed June 30 &mdash; exactly as promised.</h2>
+        <p class="text-gray-300 leading-relaxed max-w-2xl mx-auto">Founding members locked €9.97 and €97 for life, and they keep it. Everyone after pays €49 and €197 &mdash; no re-opened &ldquo;last chance,&rdquo; no reset countdown. When I set the next deadline, you&apos;ll know I mean it.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-sticky-cta" aria-hidden="true" inert>
+    <div class="inner">
+      <div class="meta">
+        <strong>Dashboard &mdash; €49/mo</strong>
+        <span>Most popular &middot; cancel anytime</span>
+      </div>
+      <a href="#dashboard" onclick="if(window.posthog)posthog.capture('pricing_sticky_cta_clicked',{tier:'dashboard'})" class="btn btn-cta btn-sm">See tier &rarr;</a>
+    </div>
+  </div>
+
+  <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+    <div class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-gray-300 mb-4 font-semibold">GitDealFlow is a deal-flow signal tool for investors &mdash; not a fund.</p>
+      <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm mb-4">
+        <a href="/" class="hover:text-gray-300">Home</a>
+        <a href="/firstlook" class="hover:text-gray-300">First Look</a>
+        <a href="/dashboard" class="hover:text-gray-300">Dashboard</a>
+        <a href="/insider" class="hover:text-gray-300">Insider</a>
+        <a href="/sector-sweep" class="hover:text-gray-300">Sector Sweep</a>
+        <a href="/privacy" class="hover:text-gray-300">Privacy</a>
+        <a href="/terms" class="hover:text-gray-300">Terms</a>
+      </div>
+      <p class="text-gray-400 text-xs">&copy; 2026 GitDealFlow. Questions? signals@gitdealflow.com &mdash; a human (the same one) answers.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Attribution helper — same pattern as index.html so source + UTM land
+    // on the subscribe record identically.
+    window.GDFattribution = function(source) {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const stored = JSON.parse(sessionStorage.getItem('gdf_attr') || '{}');
+        const get = function(key) { return params.get(key) || stored[key] || ''; };
+        const utm_source = get('utm_source');
+        const utm_medium = get('utm_medium');
+        const utm_campaign = get('utm_campaign');
+        if (!stored.utm_source && (utm_source || utm_medium || utm_campaign)) {
+          try {
+            sessionStorage.setItem('gdf_attr', JSON.stringify({
+              utm_source: utm_source,
+              utm_medium: utm_medium,
+              utm_campaign: utm_campaign,
+              referrer: document.referrer || '',
+              landing_path: window.location.pathname + window.location.search
+            }));
+          } catch (e) {}
+        }
+        return {
+          source: source || stored.source || 'pricing',
+          utm_source: utm_source,
+          utm_medium: utm_medium,
+          utm_campaign: utm_campaign,
+          referrer: stored.referrer || document.referrer || '',
+          landing_path: stored.landing_path || (window.location.pathname + window.location.search)
+        };
+      } catch (e) {
+        return { source: source || 'pricing' };
+      }
+    };
+
+    // Free-digest opt-in — identical fetch pattern to index.html forms.
+    document.querySelectorAll('form.js-signup-form').forEach(function (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const msg = form.querySelector('.js-signup-msg');
+        const emailEl = form.querySelector('input[type="email"]');
+        const email = (emailEl && emailEl.value || '').trim();
+        if (!email) return;
+        const orig = btn ? btn.innerHTML : '';
+        if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); btn.innerHTML = 'Sending&hellip;'; }
+        try {
+          const attr = window.GDFattribution(form.getAttribute('data-source') || 'pricing');
+          const res = await fetch('https://signals.gitdealflow.com/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.assign({ email: email }, attr))
+          });
+          const data = await res.json();
+          if (data.ok) {
+            if (window.posthog) posthog.capture('signup_verify_sent', { placement: 'pricing' });
+            try { sessionStorage.setItem('gdf_email', email); } catch (e) {}
+            window.location.href = '/thanks';
+            return;
+          }
+          throw new Error(data.error || 'Failed');
+        } catch (err) {
+          if (msg) {
+            msg.textContent = 'Something went wrong. Try again or email signals@gitdealflow.com';
+            msg.className = 'js-signup-msg text-red-400 text-xs';
+          }
+          if (btn) { btn.disabled = false; btn.removeAttribute('aria-busy'); btn.innerHTML = orig; }
+        }
+      });
+    });
+  </script>
+
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement('script')).type='text/javascript',p.async=!0,p.src=s.api_host+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],u.toString=function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e},u.people.toString=function(){return u.toString(1)+'.people (stub)'},o='init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group setPersonProperties resetPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    (function(){
+      function _init(){ if(/^https?:$/.test(location.protocol)) posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'}); }
+      if('requestIdleCallback' in window){requestIdleCallback(_init,{timeout:2500});} else {setTimeout(_init,2000);}
+    })();
+  </script>
+
+  <script>
+    (function(){
+      function _load(){var s=document.createElement('script');s.src='/pixels.js';s.async=true;document.head.appendChild(s);}
+      if('requestIdleCallback' in window){requestIdleCallback(_load,{timeout:3000});} else {setTimeout(_load,2500);}
+    })();
+  </script>
+
+  <script>
+(function(){var t=document.querySelector('[data-nav-toggle]'),p=document.getElementById('mobile-nav');if(!t||!p)return;function set(o){t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'Close menu':'Open menu');p.hidden=!o;}
+t.addEventListener('click',function(){set(t.getAttribute('aria-expanded')!=='true');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&t.getAttribute('aria-expanded')==='true'){set(false);t.focus();}});})();
+  </script>
+
+  <script>
+    // Sticky mobile CTA reveals only after the hero scrolls out of view,
+    // so it never competes with the hero copy. Scroll-driven for reliability.
+    (function () {
+      var bar = document.querySelector('.mobile-sticky-cta');
+      if (!bar) return;
+      var hero = document.querySelector('.mobile-hero-wrap');
+      function set(on) {
+        bar.classList.toggle('is-visible', on);
+        bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+        if (on) { bar.removeAttribute('inert'); } else { bar.setAttribute('inert', ''); }
+      }
+      if (!hero) { set(true); return; }
+      var ticking = false;
+      function update() {
+        ticking = false;
+        set(hero.getBoundingClientRect().bottom < 8);
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funnel Math — GitDealFlow</title>
+  <meta name="description" content="The formula behind the business: Subscribers × Value × Frequency. Interactive funnel math calculator with real benchmarks.">
+  <link rel="canonical" href="https://gitdealflow.com/funnel-math" />
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .fm-input {
+      width: 100%; padding: 0.75rem 1rem; border-radius: 0.5rem;
+      background: #0f172a; border: 1px solid #334155; color: #e2e8f0;
+      font-size: 1.125rem; font-variant-numeric: tabular-nums;
+      transition: border-color 120ms ease;
+    }
+    .fm-input:focus { outline: none; border-color: #0ea5e9; box-shadow: 0 0 0 2px rgba(14,165,233,0.2); }
+    .fm-label { display: block; font-size: 0.875rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.375rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .fm-result-big { font-size: 2.5rem; font-weight: 900; color: #38bdf8; font-variant-numeric: tabular-nums; line-height: 1.1; }
+    .fm-result-label { font-size: 0.875rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+    .fm-bar-bg { height: 8px; border-radius: 4px; background: #1e293b; overflow: hidden; }
+    .fm-bar-fill { height: 100%; border-radius: 4px; transition: width 400ms cubic-bezier(0.4,0,0.2,1); }
+    .fm-tier { padding: 1rem 1.25rem; border-radius: 0.75rem; border: 1px solid #334155; background: #0f172a; }
+    .fm-tier:hover { border-color: rgba(14,165,233,0.4); }
+    .fm-highlight { background: rgba(14,165,233,0.08); border-color: rgba(14,165,233,0.3); }
+    @media (max-width: 639px) { .fm-result-big { font-size: 1.875rem; } }
+  </style>
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+  <header class="sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+      <a href="/" class="font-semibold tracking-tight text-white text-lg">GitDealFlow</a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="/" class="text-gray-400 text-sm hover:text-gray-100 transition">Home</a>
+        <a href="/dashboard" class="text-gray-400 text-sm hover:text-gray-100 transition">Dashboard</a>
+        <a href="/firstlook" class="text-gray-400 text-sm hover:text-gray-100 transition">First Look</a>
+        <a href="/insider" class="text-gray-400 text-sm hover:text-gray-100 transition">Insider</a>
+      </nav>
+      <a href="/dashboard#checkout" class="btn btn-cta btn-sm whitespace-nowrap shrink-0">Start Dashboard — €49/mo <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-brand-900 opacity-80"></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24 text-center">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-wider mb-4">DotCom Secrets · Chapter 2</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">The Formula</h1>
+        <p class="text-2xl md:text-3xl font-bold text-signal-400 mb-4 font-mono">Subscribers &times; Value &times; Frequency</p>
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">Every dollar this business earns is a function of three variables. Move any one, and revenue moves with it. Here's the math, the benchmarks, and the calculator — so you can see exactly how the pieces fit.</p>
+      </div>
+    </section>
+
+    <!-- THE THREE VARIABLES -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <h2 class="text-center text-2xl md:text-3xl font-bold mb-10">The three variables you can move</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-sky-500/30 bg-sky-500/10 p-7">
+          <p class="text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">Variable 1</p>
+          <h3 class="text-xl font-bold mb-3">Subscribers</h3>
+          <p class="text-gray-300 leading-relaxed text-sm">How many people are on the list. Every visitor who joins the Sunday email enters the funnel. This is the top of the ladder — the raw fuel.</p>
+          <p class="text-sky-400 font-bold mt-4 text-lg">Goal: grow 10%&nbsp;month-over-month</p>
+        </div>
+        <div class="rounded-2xl border border-sky-500/30 bg-sky-500/10 p-7">
+          <p class="text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">Variable 2</p>
+          <h3 class="text-xl font-bold mb-3">Average Value</h3>
+          <p class="text-gray-300 leading-relaxed text-sm">What each buyer pays on average — including bumps, upsells, and cross-sells. This is where the <a href="/dashboard#checkout" class="text-brand-500 underline">order bump</a> and <a href="/firstlook" class="text-brand-500 underline">First Look</a> ladder do their work.</p>
+          <p class="text-sky-400 font-bold mt-4 text-lg">Goal: lift AOV via bumps + OTOs</p>
+        </div>
+        <div class="rounded-2xl border border-sky-500/30 bg-sky-500/10 p-7">
+          <p class="text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">Variable 3</p>
+          <h3 class="text-xl font-bold mb-3">Frequency</h3>
+          <p class="text-gray-300 leading-relaxed text-sm">How often each buyer pays. A €49/mo subscription has frequency 12 (yearly revenue per buyer). A €7 one-time has frequency 1. Retention = frequency.</p>
+          <p class="text-sky-400 font-bold mt-4 text-lg">Goal: &gt;12-month average retention</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CALCULATOR -->
+    <section class="bg-dark-800 py-16 md:py-20 border-y border-gray-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <p class="text-center text-brand-500 text-xs font-semibold uppercase tracking-wider mb-3">Interactive</p>
+        <h2 class="text-center text-2xl md:text-3xl font-bold mb-2">Funnel Math Calculator</h2>
+        <p class="text-center text-gray-400 mb-10 max-w-xl mx-auto">Drag the sliders. Watch the formula work. The numbers update live — this is the actual math behind the business.</p>
+
+        <div class="rounded-2xl border border-gray-700 bg-dark-900/60 p-6 md:p-8">
+          <!-- INPUTS -->
+          <div class="grid sm:grid-cols-2 gap-6 mb-8">
+            <div>
+              <label class="fm-label" for="fm-subs">Monthly new subscribers</label>
+              <input type="number" id="fm-subs" class="fm-input" value="200" min="0" max="10000" step="10">
+              <input type="range" id="fm-subs-range" min="0" max="2000" value="200" step="10" class="w-full mt-2 accent-sky-500" aria-hidden="true">
+            </div>
+            <div>
+              <label class="fm-label" for="fm-cvr">Visitor → Subscriber rate</label>
+              <div class="relative">
+                <input type="number" id="fm-cvr" class="fm-input pr-10" value="15" min="1" max="60" step="1">
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 font-semibold">%</span>
+              </div>
+              <input type="range" id="fm-cvr-range" min="1" max="60" value="15" step="1" class="w-full mt-2 accent-sky-500" aria-hidden="true">
+            </div>
+            <div>
+              <label class="fm-label" for="fm-sub2paid">Subscriber → Buyer rate</label>
+              <div class="relative">
+                <input type="number" id="fm-sub2paid" class="fm-input pr-10" value="5" min="0.5" max="30" step="0.5">
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 font-semibold">%</span>
+              </div>
+              <input type="range" id="fm-sub2paid-range" min="1" max="30" value="5" step="0.5" class="w-full mt-2 accent-sky-500" aria-hidden="true">
+            </div>
+            <div>
+              <label class="fm-label" for="fm-bump-rate">Order bump attach rate</label>
+              <div class="relative">
+                <input type="number" id="fm-bump-rate" class="fm-input pr-10" value="30" min="0" max="60" step="5">
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 font-semibold">%</span>
+              </div>
+              <input type="range" id="fm-bump-rate-range" min="0" max="60" value="30" step="5" class="w-full mt-2 accent-sky-500" aria-hidden="true">
+            </div>
+            <div>
+              <label class="fm-label" for="fm-retention">Avg. months retained</label>
+              <input type="number" id="fm-retention" class="fm-input" value="14" min="1" max="36" step="1">
+              <input type="range" id="fm-retention-range" min="1" max="36" value="14" step="1" class="w-full mt-2 accent-sky-500" aria-hidden="true">
+            </div>
+            <div>
+              <label class="fm-label" for="fm-base">Base price (€/mo)</label>
+              <input type="number" id="fm-base" class="fm-input" value="49" min="1" max="197" step="0.01">
+            </div>
+          </div>
+
+          <!-- RESULTS -->
+          <div class="border-t border-gray-700 pt-6">
+            <div class="grid sm:grid-cols-2 gap-6 mb-6">
+              <div class="rounded-xl border border-gray-700 bg-dark-800 p-5 text-center">
+                <p class="fm-result-label mb-1">Monthly new buyers</p>
+                <p id="fm-r-buyers" class="fm-result-big">10</p>
+              </div>
+              <div class="rounded-xl border border-gray-700 bg-dark-800 p-5 text-center">
+                <p class="fm-result-label mb-1">Monthly revenue (steady state)</p>
+                <p id="fm-r-monthly" class="fm-result-big">€1,396</p>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4 mb-6">
+              <div class="rounded-xl border border-gray-700 bg-dark-800 p-5 text-center">
+                <p class="fm-result-label mb-1">AOV (first invoice)</p>
+                <p id="fm-r-aov" class="text-2xl font-extrabold text-white">€12.07</p>
+                <p class="text-xs text-gray-500 mt-1">Base + bump lift</p>
+              </div>
+              <div class="rounded-xl border border-gray-700 bg-dark-800 p-5 text-center">
+                <p class="fm-result-label mb-1">Bump revenue / mo</p>
+                <p id="fm-r-bump" class="text-2xl font-extrabold text-emerald-400">€21</p>
+                <p class="text-xs text-gray-500 mt-1">Pure margin</p>
+              </div>
+              <div class="rounded-xl border border-gray-700 bg-dark-800 p-5 text-center">
+                <p class="fm-result-label mb-1">LTV per buyer</p>
+                <p id="fm-r-ltv" class="text-2xl font-extrabold text-white">€139.58</p>
+                <p class="text-xs text-gray-500 mt-1">Base × retention</p>
+              </div>
+            </div>
+            <div class="rounded-xl border-2 border-signal-500/30 bg-signal-500/10 p-6 text-center">
+              <p class="fm-result-label mb-2">Annual revenue potential (12-month cohort)</p>
+              <p id="fm-r-annual" class="text-4xl md:text-5xl font-black text-signal-400 font-mono">€23,326</p>
+              <p id="fm-r-annual-note" class="text-xs text-gray-500 mt-3 max-w-md mx-auto leading-relaxed">Based on 200 subs/mo, 15% opt-in, 5% conversion, 30% bump attach, 14-month retention.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE LADDER × FREQUENCY TABLE -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-20">
+      <p class="text-center text-brand-500 text-xs font-semibold uppercase tracking-wider mb-3">The ladder</p>
+      <h2 class="text-center text-2xl md:text-3xl font-bold mb-10">Each rung moves a different variable.</h2>
+      <div class="rounded-2xl border border-gray-700 bg-dark-900/60 overflow-hidden">
+        <div class="grid grid-cols-4 gap-0 text-xs font-bold uppercase tracking-wider text-gray-400 border-b border-gray-700 bg-dark-800 px-2 py-3">
+          <div class="px-3">Rung</div>
+          <div class="px-3 text-right">Price</div>
+          <div class="px-3 text-right">Frequency</div>
+          <div class="px-3 text-right">Variable moved</div>
+        </div>
+        <div class="fm-tier grid grid-cols-4 gap-0 items-center py-4 px-2 rounded-none border-0 border-b border-gray-800">
+          <div class="px-3"><strong class="text-white">Sunday Email</strong><br><span class="text-gray-500 text-xs">Free</span></div>
+          <div class="px-3 text-right text-gray-300 font-mono">€0</div>
+          <div class="px-3 text-right text-gray-300 font-mono">52/yr</div>
+          <div class="px-3 text-right text-sky-400 text-sm">Subscribers &uarr;</div>
+        </div>
+        <div class="fm-tier grid grid-cols-4 gap-0 items-center py-4 px-2 rounded-none border-0 border-b border-gray-800">
+          <div class="px-3"><strong class="text-white">First Look</strong><br><span class="text-gray-500 text-xs">One-time tripwire</span></div>
+          <div class="px-3 text-right text-gray-300 font-mono">€7</div>
+          <div class="px-3 text-right text-gray-300 font-mono">1</div>
+          <div class="px-3 text-right text-sky-400 text-sm">Value &uarr; (identity shift)</div>
+        </div>
+        <div class="fm-tier fm-highlight grid grid-cols-4 gap-0 items-center py-4 px-2 rounded-none border-0 border-b border-gray-800">
+          <div class="px-3"><strong class="text-white">Dashboard</strong> <span class="text-signal-400 text-xs">← you are here</span><br><span class="text-gray-500 text-xs">Subscription</span></div>
+          <div class="px-3 text-right text-gray-300 font-mono">€49/mo</div>
+          <div class="px-3 text-right text-gray-300 font-mono">12/yr</div>
+          <div class="px-3 text-right text-sky-400 text-sm">Frequency &uarr;</div>
+        </div>
+        <div class="fm-tier grid grid-cols-4 gap-0 items-center py-4 px-2 rounded-none border-0 border-b border-gray-800">
+          <div class="px-3"><strong class="text-white">Insider</strong><br><span class="text-gray-500 text-xs">Premium subscription</span></div>
+          <div class="px-3 text-right text-gray-300 font-mono">€97/mo</div>
+          <div class="px-3 text-right text-gray-300 font-mono">12/yr</div>
+          <div class="px-3 text-right text-sky-400 text-sm">Value &times;10</div>
+        </div>
+        <div class="fm-tier grid grid-cols-4 gap-0 items-center py-4 px-2 rounded-none border-0">
+          <div class="px-3"><strong class="text-white">Sector Sweep</strong><br><span class="text-gray-500 text-xs">Custom one-time</span></div>
+          <div class="px-3 text-right text-gray-300 font-mono">€1,997</div>
+          <div class="px-3 text-right text-gray-300 font-mono">1</div>
+          <div class="px-3 text-right text-sky-400 text-sm">Value &times;200</div>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-6 max-w-xl mx-auto">The bump sits <em>between</em> the rungs — it doesn't replace a tier, it lifts the average value of whichever tier the buyer is on. That's why it works on every checkout, not just one.</p>
+    </section>
+
+    <!-- BENCHMARKS -->
+    <section class="bg-dark-800 py-16 md:py-20 border-y border-gray-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <p class="text-center text-brand-500 text-xs font-semibold uppercase tracking-wider mb-3">Where we stand</p>
+        <h2 class="text-center text-2xl md:text-3xl font-bold mb-10">Benchmarks vs. target</h2>
+        <div class="space-y-5 max-w-2xl mx-auto">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <span class="text-gray-200 font-semibold">Landing page opt-in rate</span>
+              <span class="text-gray-400 text-sm">Target: <strong class="text-sky-400">20%+</strong></span>
+            </div>
+            <div class="fm-bar-bg"><div class="fm-bar-fill" style="width:75%;background:linear-gradient(90deg,#0ea5e9,#38bdf8)"></div></div>
+            <p class="text-xs text-gray-500 mt-1">15% → growing. The multi-step hero qualification lifts this above industry average.</p>
+          </div>
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <span class="text-gray-200 font-semibold">Subscriber → Buyer rate</span>
+              <span class="target text-gray-400 text-sm">Target: <strong class="text-sky-400">8-10%</strong></span>
+            </div>
+            <div class="fm-bar-bg"><div class="fm-bar-fill" style="width:50%;background:linear-gradient(90deg,#0ea5e9,#38bdf8)"></div></div>
+            <p class="text-xs text-gray-500 mt-1">5% → the tripwire (First Look) and Soap Opera sequence are the levers.</p>
+          </div>
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <span class="text-gray-200 font-semibold">Order bump attach rate</span>
+              <span class="text-gray-400 text-sm">Target: <strong class="text-sky-400">20-40%</strong></span>
+            </div>
+            <div class="fm-bar-bg"><div class="fm-bar-fill" style="width:10%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
+            <p class="text-xs text-gray-500 mt-1">Just shipped — tracking starts now. Pre-checked default targets 30%.</p>
+          </div>
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <span class="text-gray-200 font-semibold">Monthly churn (Dashboard)</span>
+              <span class="text-gray-400 text-sm">Target: <strong class="text-sky-400">&lt;5%</strong></span>
+            </div>
+            <div class="fm-bar-bg"><div class="fm-bar-fill" style="width:60%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
+            <p class="text-xs text-gray-500 mt-1">~3% → founding-rate lock-in + weekly habit = stickier than typical SaaS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">The math only works if the signal is real.</h2>
+      <p class="text-gray-300 max-w-xl mx-auto mb-8">The formula is simple. The execution is the moat. Every week the field updates, every week the methodology holds or breaks in public — and every week the numbers above move.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/dashboard#checkout" class="btn btn-cta btn-lg">Start Dashboard &mdash; €49/mo &rarr;</a>
+        <a href="/#signup" class="btn btn-secondary btn-lg">Get the free Sunday email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="flex flex-wrap justify-center gap-6 text-gray-500 text-sm mb-4">
+        <a href="/" class="hover:text-gray-300">Home</a>
+        <a href="/dashboard" class="hover:text-gray-300">Dashboard</a>
+        <a href="/firstlook" class="hover:text-gray-300">First Look</a>
+        <a href="/insider" class="hover:text-gray-300">Insider</a>
+        <a href="/privacy" class="hover:text-gray-300">Privacy</a>
+      </div>
+      <p class="text-gray-600 text-xs">GitDealFlow &middot; Funnel Math</p>
+    </div>
+  </footer>
+
+  <script>
+    // Funnel Math Calculator — DotCom Secrets Ch 2: Subs × Value × Frequency
+    (function() {
+      var inputs = {
+        subs: document.getElementById('fm-subs'),
+        subsRange: document.getElementById('fm-subs-range'),
+        cvr: document.getElementById('fm-cvr'),
+        cvrRange: document.getElementById('fm-cvr-range'),
+        sub2paid: document.getElementById('fm-sub2paid'),
+        sub2paidRange: document.getElementById('fm-sub2paid-range'),
+        bumpRate: document.getElementById('fm-bump-rate'),
+        bumpRateRange: document.getElementById('fm-bump-rate-range'),
+        retention: document.getElementById('fm-retention'),
+        retentionRange: document.getElementById('fm-retention-range'),
+        base: document.getElementById('fm-base'),
+      };
+
+      // Sync number inputs with their range sliders
+      function syncPair(numEl, rangeEl) {
+        numEl.addEventListener('input', function() { rangeEl.value = numEl.value; recalc(); });
+        rangeEl.addEventListener('input', function() { numEl.value = rangeEl.value; recalc(); });
+      }
+      syncPair(inputs.subs, inputs.subsRange);
+      syncPair(inputs.cvr, inputs.cvrRange);
+      syncPair(inputs.sub2paid, inputs.sub2paidRange);
+      syncPair(inputs.bumpRate, inputs.bumpRateRange);
+      syncPair(inputs.retention, inputs.retentionRange);
+      inputs.base.addEventListener('input', recalc);
+
+      function num(el) { return parseFloat(el.value) || 0; }
+      function fmt(eur) { return '€' + Math.round(eur).toLocaleString('en-US'); }
+      function fmt2(eur) { return '€' + eur.toFixed(2); }
+
+      function recalc() {
+        var monthlySubs     = num(inputs.subs);
+        var sub2paidPct     = num(inputs.sub2paid) / 100;
+        var bumpRatePct     = num(inputs.bumpRate) / 100;
+        var retentionMonths = num(inputs.retention);
+        var basePrice       = num(inputs.base);
+        var bumpPrice       = 7.00; // one-time bump
+
+        // Funnel: subscribers → buyers
+        var monthlyBuyers = monthlySubs * sub2paidPct;
+
+        // AOV: base subscription + bump (weighted by attach rate)
+        var avgBumpPerBuyer = bumpPrice * bumpRatePct;
+        var aovFirstInvoice = basePrice + avgBumpPerBuyer;
+
+        // Monthly bump revenue (only first invoice for new buyers)
+        var monthlyBumpRevenue = monthlyBuyers * avgBumpPerBuyer;
+
+        // Steady-state monthly revenue:
+        // Active subscribers accumulate: each cohort stays for `retentionMonths`
+        // So steady-state active = monthlyBuyers × retentionMonths (capped)
+        var steadyStateActive = monthlyBuyers * retentionMonths;
+        var monthlyRecurringRevenue = steadyStateActive * basePrice;
+        var monthlyRevenue = monthlyRecurringRevenue + monthlyBumpRevenue;
+
+        // LTV per buyer
+        var ltv = (basePrice * retentionMonths) + avgBumpPerBuyer;
+
+        // Annual: 12 months of accumulating cohorts
+        var annualBuyers = monthlyBuyers * 12;
+        var annualRecurring = 0;
+        // Each monthly cohort contributes: basePrice × min(retention, remaining months)
+        for (var m = 1; m <= 12; m++) {
+          var activeMonths = Math.min(retentionMonths, 13 - m);
+          annualRecurring += monthlyBuyers * basePrice * activeMonths;
+        }
+        var annualBump = annualBuyers * avgBumpPerBuyer;
+        var annualTotal = annualRecurring + annualBump;
+
+        // Render
+        document.getElementById('fm-r-buyers').textContent = Math.round(monthlyBuyers).toString();
+        document.getElementById('fm-r-monthly').textContent = fmt(monthlyRevenue);
+        document.getElementById('fm-r-aov').textContent = fmt2(aovFirstInvoice);
+        document.getElementById('fm-r-bump').textContent = fmt(monthlyBumpRevenue);
+        document.getElementById('fm-r-ltv').textContent = fmt2(ltv);
+        document.getElementById('fm-r-annual').textContent = fmt(annualTotal);
+
+        var noteSubs = Math.round(monthlySubs);
+        var noteCvr = num(inputs.cvr);
+        var noteConv = num(inputs.sub2paid);
+        var noteBump = num(inputs.bumpRate);
+        var noteRet = Math.round(retentionMonths);
+        document.getElementById('fm-r-annual-note').textContent =
+          'Based on ' + noteSubs + ' subs/mo, ' + noteCvr + '% opt-in, ' + noteConv +
+          '% conversion, ' + noteBump + '% bump attach, ' + noteRet + '-month retention.';
+
+        // PostHog: track calculator interaction
+        if (window.posthog) { try {
+          posthog.capture('funnel_math_calculated', {
+            monthly_subs: monthlySubs,
+            monthly_buyers: monthlyBuyers,
+            monthly_revenue: Math.round(monthlyRevenue),
+            aov_first_invoice: aovFirstInvoice,
+            annual_projection: Math.round(annualTotal)
+          });
+        } catch(e) {} }
+      }
+
+      recalc(); // initial render
+    })();
+  </script>
+</body>
+</html>

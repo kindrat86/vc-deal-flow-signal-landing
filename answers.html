@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Answers — GitDealFlow FAQ</title>
+  <meta name="description" content="Straight answers about the Velocity Verdict: how GitDealFlow reads public GitHub activity to flag startups heating up 3-6 weeks before funding rounds. Covers methodology, pricing, API access, MCP server, and how it differs from Crunchbase and PitchBook.">
+  <meta name="author" content="The Data Nerd" />
+  <link rel="canonical" href="https://gitdealflow.com/answers" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GitDealFlow" />
+  <meta property="og:title" content="Answers — GitDealFlow FAQ" />
+  <meta property="og:description" content="Straight answers about the Velocity Verdict: how GitDealFlow flags startups 3-6 weeks before funding rounds using public GitHub activity." />
+  <meta property="og:url" content="https://gitdealflow.com/answers" />
+  <meta property="og:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@data_nerd" />
+  <meta name="twitter:title" content="Answers — GitDealFlow FAQ" />
+  <meta name="twitter:description" content="How GitDealFlow reads public GitHub activity to flag startups 3-6 weeks before funding rounds. FAQ with 18 questions." />
+  <meta name="twitter:image" content="https://signals.gitdealflow.com/opengraph-image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://gitdealflow.com/answers#faq",
+    "name": "GitDealFlow Frequently Asked Questions",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GitDealFlow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitDealFlow (also known as VC Deal Flow Signal) is a deal-flow signal tool for investors — not a fund and not a VC. It reads public GitHub engineering activity (commit velocity, contributor growth, repository expansion) across ~400 startup GitHub orgs in 20 sectors and surfaces the ones quietly heating up, historically 3-6 weeks before fundraise announcements. Investors use it to spot startups early, before the round or the press."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does GitDealFlow differ from Crunchbase or PitchBook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crunchbase and PitchBook are databases of announced funding events — they tell you what already happened. GitDealFlow is a leading indicator: it surfaces engineering acceleration that precedes announcements by 3-6 weeks. If Crunchbase is the rear-view mirror, GitDealFlow is the headlights. The signal comes from public GitHub activity, not self-reported fundraising data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Velocity Verdict?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Velocity Verdict is GitDealFlow's core output: a weekly ranking of startups sorted by a composite acceleration score derived from commit velocity, contributor growth, and repository expansion over a rolling 6-week window. A rising Verdict means the engineering team is shipping faster than their own historical baseline — historically a leading indicator of a forthcoming raise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the signal calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The methodology is openly published on SSRN (https://ssrn.com/abstract=6606558). In short: GitDealFlow tracks three metrics per organization — commit frequency, unique contributor count, and repository growth — over a rolling 6-week window. A composite Z-score compares the current window against the org's own 12-month baseline. An acceleration alert fires when the composite crosses a statistically significant threshold. The methodology is authored by The Data Nerd (ORCID 0009-0002-2222-4112)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is GitDealFlow a fund or a VC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GitDealFlow is a signal tool for investors. It does not invest, does not take carry, does not make introductions for fees, and is not affiliated with any venture capital firm. It is an independent product operated by The Data Nerd."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many startups does GitDealFlow track?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitDealFlow tracks approximately 400 startup GitHub organizations across 20 sectors including AI/ML, fintech, climate/energy, biotech, developer tools, cybersecurity, enterprise SaaS, and more. The tracked set is not hand-curated — it is derived from public GitHub activity patterns. The methodology section covers the inclusion criteria in detail."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to read code to use GitDealFlow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GitDealFlow does the code-reading for you. It surfaces startups by name, sector, and acceleration score — no code-reading required on your part. The metrics (commit velocity, contributor growth, repo expansion) are abstracted into a simple composite score. If you want to drill into the raw GitHub activity, the API provides that too."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I access GitDealFlow programmatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitDealFlow offers five free programmatic surfaces: an MCP server (npx -y @gitdealflow/mcp-signal), an A2A JSON-RPC endpoint (POST signals.gitdealflow.com/api/a2a), an NLWeb endpoint (POST signals.gitdealflow.com/api/nlweb), a function-calling API (GET/POST signals.gitdealflow.com/api/agent/), and JSON/CSV exports (signals.gitdealflow.com/api/signals.json). All are free, public, and require no authentication."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does GitDealFlow cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitDealFlow offers a free tier (Sunday Digest email) and several paid tiers: €1 Tweet Teardown, €7 First Look Pass, Dashboard at €49/month, Insider Circle at €197/month, and Custom Sector Sweep at €1,997. Every paid rung carries a 30-day Signal-or-It's-Free guarantee. The programmatic APIs (MCP, A2A, NLWeb, JSON) are all free."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does GitDealFlow have a Chrome extension?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The GitDealFlow Chrome extension injects momentum badges on Crunchbase and Wellfound company profiles, showing you the engineering acceleration signal directly on the pages you already use for deal-flow research. It is a Manifest V3 extension available for Chrome and Chromium-based browsers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Scout Score?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Scout Score (0-100) measures a GitHub user's ability to spot breakout startups early by analyzing their repository-starring history against ~75 validated unicorns and high-growth startups. A high Scout Score means the user consistently starred breakout startups before they were widely known. It is available via the MCP server's get_scout_receipts tool."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often is the data updated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The dataset is updated weekly. Each refresh recalculates commit velocity, contributor growth, and repository expansion across all ~400 tracked organizations. The weekly Sunday Digest email delivers the latest Velocity Verdict to free subscribers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What sectors does GitDealFlow cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitDealFlow tracks 20 sectors: AI/ML, fintech, climate/energy, biotech/healthtech, developer tools, cybersecurity, enterprise SaaS, Web3/crypto, space/deep-tech, robotics, edtech, agritech, logistics/supply-chain, proptech, HR tech, legal tech, insurtech, gaming, creator economy, and quantum computing. Sector classification is derived from the startup's public GitHub activity patterns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is the signal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The methodology reports that historically, startups with a statistically significant Velocity Verdict acceleration announced funding rounds within 3-6 weeks. However, the signal is probabilistic, not deterministic — not every acceleration leads to a round, and some rounds occur without a detectable acceleration. The SSRN preprint (https://ssrn.com/abstract=6606558) reports the full methodology, statistical framework, and historical correlation data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use GitDealFlow for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Sunday Digest email is free. The programmatic APIs (MCP server, A2A, NLWeb, JSON/CSV exports) are free and require no authentication. The paid tiers (€1-€1,997) offer additional depth: dashboard access, custom sector sweeps, insider briefings, and the Chrome extension."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is GitDealFlow affiliated with Y Combinator or other accelerators?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GitDealFlow uses the term 'engineering acceleration' to mean quantitative GitHub activity acceleration — commit velocity, contributor growth, and repository expansion. It is not affiliated with startup accelerator programs such as Y Combinator, Techstars, or 500 Global. The site explicitly disambiguates this."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contact GitDealFlow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email: signals@gitdealflow.com. Telegram: https://t.me/gitdealflow. Twitter/X: https://x.com/data_nerd. The methodology is published on SSRN at https://ssrn.com/abstract=6606558. Programmatic access documentation is at https://signals.gitdealflow.com/."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who built GitDealFlow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitDealFlow was built and is maintained by The Data Nerd (ORCID 0009-0002-2222-4112), an independent researcher. The project is operated pseudonymously; public touchpoints use signals@gitdealflow.com or the brand GitDealFlow. The methodology was openly published on SSRN for peer review and replication."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "GitDealFlow", "item": "https://gitdealflow.com" },
+      { "@type": "ListItem", "position": 2, "name": "Answers", "item": "https://gitdealflow.com/answers" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.65; color: #1a1a1a; background: #fff; max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem; }
+    @media (prefers-color-scheme: dark) { body { background: #0a0a0a; color: #e5e5e5; } }
+    nav { margin-bottom: 2rem; font-size: .9rem; }
+    nav a { color: #0066cc; text-decoration: none; font-weight: 500; }
+    @media (prefers-color-scheme: dark) { nav a { color: #7dd3fc; } }
+    h1 { font-size: 2.2rem; line-height: 1.2; margin: .3em 0 .2em; letter-spacing: -0.02em; }
+    .lede { font-size: 1.1rem; color: #555; margin-bottom: 2rem; }
+    @media (prefers-color-scheme: dark) { .lede { color: #9ca3af; } }
+    .toc { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px 20px; margin: 0 0 2rem; }
+    @media (prefers-color-scheme: dark) { .toc { background: #111827; border-color: #1f2937; } }
+    .toc strong { font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; color: #6b7280; display: block; margin-bottom: 8px; }
+    .toc ul { list-style: none; columns: 2; font-size: .92rem; }
+    @media (max-width: 640px) { .toc ul { columns: 1; } }
+    .toc a { color: #0066cc; text-decoration: none; }
+    @media (prefers-color-scheme: dark) { .toc a { color: #7dd3fc; } }
+    h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; scroll-margin-top: 20px; }
+    details { border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+    @media (prefers-color-scheme: dark) { details { border-color: #1f2937; } }
+    details summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before { content: "+"; display: inline-block; width: 1.2em; color: #0066cc; font-weight: 700; }
+    @media (prefers-color-scheme: dark) { details summary::before { color: #7dd3fc; } }
+    details[open] summary::before { content: "−"; }
+    details p { margin: 10px 0 4px; color: #374151; }
+    @media (prefers-color-scheme: dark) { details p { color: #d1d5db; } }
+    .cta { margin: 3rem 0 0; padding: 1.5rem; background: linear-gradient(135deg, #0066cc22, #7c3aed22); border: 1px solid #0066cc33; border-radius: 14px; text-align: center; }
+    .cta a { display: inline-block; padding: 10px 24px; background: #0066cc; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 8px; }
+    footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: .9rem; }
+    @media (prefers-color-scheme: dark) { footer { border-color: #1f2937; color: #9ca3af; } }
+  </style>
+</head>
+<body>
+
+<nav><a href="/">GitDealFlow</a> › <span>Answers</span></nav>
+
+<h1>Answers — GitDealFlow FAQ</h1>
+<p class="lede">Straight answers about the Velocity Verdict: how GitDealFlow reads public GitHub activity to flag startups heating up 3–6 weeks before funding rounds, how it differs from Crunchbase and PitchBook, and how to use the free APIs.</p>
+
+<div class="toc">
+  <strong>Jump to a question</strong>
+  <ul>
+    <li><a href="#what">What is GitDealFlow?</a></li>
+    <li><a href="#diff">vs Crunchbase/PitchBook</a></li>
+    <li><a href="#verdict">Velocity Verdict</a></li>
+    <li><a href="#calc">How calculated</a></li>
+    <li><a href="#fund">Fund or VC?</a></li>
+    <li><a href="#count">Startups tracked</a></li>
+    <li><a href="#code">Do I read code?</a></li>
+    <li><a href="#api">API access</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#extension">Chrome extension</a></li>
+    <li><a href="#scout">Scout Score</a></li>
+    <li><a href="#frequency">Update frequency</a></li>
+    <li><a href="#sectors">Sectors covered</a></li>
+    <li><a href="#accuracy">Signal accuracy</a></li>
+    <li><a href="#free">Free tier</a></li>
+    <li><a href="#yc">Affiliation</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#who">Who built it</a></li>
+  </ul>
+</div>
+
+<h2 id="what">What is GitDealFlow?</h2>
+<details open><summary>What is GitDealFlow?</summary>
+<p>GitDealFlow (also known as VC Deal Flow Signal) is a deal-flow signal tool for investors — <strong>not a fund and not a VC</strong>. It reads public GitHub engineering activity (commit velocity, contributor growth, repository expansion) across ~400 startup GitHub orgs in 20 sectors and surfaces the ones quietly heating up, historically 3–6 weeks before fundraise announcements. Investors use it to spot startups early, before the round or the press; it surfaces the signal, they make the calls.</p>
+</details>
+
+<h2 id="diff">vs Crunchbase and PitchBook</h2>
+<details><summary>How does GitDealFlow differ from Crunchbase or PitchBook?</summary>
+<p>Crunchbase and PitchBook are databases of <em>announced</em> funding events — they tell you what already happened. GitDealFlow is a <strong>leading indicator</strong>: it surfaces engineering acceleration that precedes announcements by 3–6 weeks. If Crunchbase is the rear-view mirror, GitDealFlow is the headlights. The signal comes from public GitHub activity, not self-reported fundraising data.</p>
+</details>
+
+<h2 id="verdict">The Velocity Verdict</h2>
+<details><summary>What is the Velocity Verdict?</summary>
+<p>The Velocity Verdict is GitDealFlow's core output: a weekly ranking of startups sorted by a composite acceleration score derived from commit velocity, contributor growth, and repository expansion over a rolling 6-week window. A rising Verdict means the engineering team is <strong>shipping faster than their own historical baseline</strong> — historically a leading indicator of a forthcoming raise.</p>
+</details>
+
+<h2 id="calc">Methodology</h2>
+<details><summary>How is the signal calculated?</summary>
+<p>The methodology is openly published on SSRN at <a href="https://ssrn.com/abstract=6606558">ssrn.com/abstract=6606558</a>. In short: GitDealFlow tracks three metrics per organization — commit frequency, unique contributor count, and repository growth — over a rolling 6-week window. A composite Z-score compares the current window against the org's own 12-month baseline. An acceleration alert fires when the composite crosses a statistically significant threshold. The methodology is authored by The Data Nerd (ORCID 0009-0002-2222-4112).</p>
+</details>
+
+<h2 id="fund">Not a fund</h2>
+<details><summary>Is GitDealFlow a fund or a VC?</summary>
+<p>No. GitDealFlow does not invest, does not take carry, does not make introductions for fees, and is not affiliated with any venture capital firm. It is an independent product operated by The Data Nerd.</p>
+</details>
+
+<h2 id="count">Coverage</h2>
+<details><summary>How many startups does GitDealFlow track?</summary>
+<p>GitDealFlow tracks approximately <strong>400 startup GitHub organizations</strong> across 20 sectors including AI/ML, fintech, climate/energy, biotech, developer tools, cybersecurity, and enterprise SaaS. The tracked set is derived from public GitHub activity patterns, not hand-curated.</p>
+</details>
+
+<h2 id="code">Code-reading not required</h2>
+<details><summary>Do I need to read code to use GitDealFlow?</summary>
+<p>No. GitDealFlow does the code-reading for you. The metrics (commit velocity, contributor growth, repo expansion) are abstracted into a simple composite score. If you want to drill into the raw GitHub activity, the API provides that too — but it's optional.</p>
+</details>
+
+<h2 id="api">Programmatic access</h2>
+<details><summary>How can I access GitDealFlow programmatically?</summary>
+<p>GitDealFlow offers <strong>five free programmatic surfaces</strong>:</p>
+<ul>
+  <li><strong>MCP server</strong>: <code>npx -y @gitdealflow/mcp-signal</code> (stdio) or <code>POST signals.gitdealflow.com/api/mcp/rpc</code> (HTTP)</li>
+  <li><strong>A2A endpoint</strong>: <code>POST signals.gitdealflow.com/api/a2a</code> (JSON-RPC 2.0)</li>
+  <li><strong>NLWeb endpoint</strong>: <code>POST signals.gitdealflow.com/api/nlweb</code></li>
+  <li><strong>Function-calling API</strong>: <code>GET signals.gitdealflow.com/api/agent/tools</code></li>
+  <li><strong>JSON/CSV exports</strong>: <code>signals.gitdealflow.com/api/signals.json</code></li>
+</ul>
+<p>All are free, public, and require no authentication. The npm package is at <a href="https://www.npmjs.com/package/@gitdealflow/mcp-signal">npmjs.com/package/@gitdealflow/mcp-signal</a>.</p>
+</details>
+
+<h2 id="pricing">Pricing</h2>
+<details><summary>What does GitDealFlow cost?</summary>
+<p>GitDealFlow offers a free tier (Sunday Digest email) and several paid tiers: <strong>€1 Tweet Teardown, €7 First Look Pass, Dashboard at €49/month, Insider Circle at €197/month, and Custom Sector Sweep at €1,997.</strong> Every paid rung carries a 30-day Signal-or-It's-Free guarantee. The programmatic APIs (MCP, A2A, NLWeb, JSON) are all free. See <a href="/pricing">pricing page</a> for full details.</p>
+</details>
+
+<h2 id="extension">Chrome extension</h2>
+<details><summary>Does GitDealFlow have a Chrome extension?</summary>
+<p>Yes. The GitDealFlow Chrome extension injects <strong>momentum badges</strong> on Crunchbase and Wellfound company profiles, showing you the engineering acceleration signal directly on the pages you already use for deal-flow research. It is a Manifest V3 extension.</p>
+</details>
+
+<h2 id="scout">Scout Score</h2>
+<details><summary>What is the Scout Score?</summary>
+<p>The Scout Score (0–100) measures a GitHub user's ability to spot breakout startups early by analyzing their repository-starring history against ~75 validated unicorns and high-growth startups. A high Scout Score means the user <strong>consistently starred breakout startups before they were widely known</strong>. Available via the MCP server's <code>get_scout_receipts</code> tool.</p>
+</details>
+
+<h2 id="frequency">Update frequency</h2>
+<details><summary>How often is the data updated?</summary>
+<p>The dataset is <strong>refreshed weekly</strong>. Each refresh recalculates commit velocity, contributor growth, and repository expansion across all ~400 tracked organizations. The weekly Sunday Digest email delivers the latest Velocity Verdict to free subscribers.</p>
+</details>
+
+<h2 id="sectors">Sectors</h2>
+<details><summary>What sectors does GitDealFlow cover?</summary>
+<p>GitDealFlow tracks <strong>20 sectors</strong>: AI/ML, fintech, climate/energy, biotech/healthtech, developer tools, cybersecurity, enterprise SaaS, Web3/crypto, space/deep-tech, robotics, edtech, agritech, logistics/supply-chain, proptech, HR tech, legal tech, insurtech, gaming, creator economy, and quantum computing. Sector classification is derived from public GitHub activity patterns.</p>
+</details>
+
+<h2 id="accuracy">Signal accuracy</h2>
+<details><summary>How accurate is the signal?</summary>
+<p>The methodology reports that historically, startups with a statistically significant Velocity Verdict acceleration announced funding rounds within 3–6 weeks. However, the signal is <strong>probabilistic, not deterministic</strong> — not every acceleration leads to a round, and some rounds occur without a detectable acceleration. The <a href="https://ssrn.com/abstract=6606558">SSRN preprint</a> reports the full methodology, statistical framework, and historical correlation data.</p>
+</details>
+
+<h2 id="free">Free tier</h2>
+<details><summary>Can I use GitDealFlow for free?</summary>
+<p>Yes. The Sunday Digest email is free. <strong>The programmatic APIs (MCP server, A2A, NLWeb, JSON/CSV exports) are all free and require no authentication.</strong> The paid tiers (€1–€1,997) offer additional depth: dashboard access, custom sector sweeps, insider briefings, and the Chrome extension.</p>
+</details>
+
+<h2 id="yc">Affiliation</h2>
+<details><summary>Is GitDealFlow affiliated with Y Combinator or other accelerators?</summary>
+<p>No. GitDealFlow uses the term "engineering acceleration" to mean <strong>quantitative GitHub activity acceleration</strong> — commit velocity, contributor growth, repository expansion. It is not affiliated with startup accelerator programs like Y Combinator, Techstars, or 500 Global. The site explicitly disambiguates this.</p>
+</details>
+
+<h2 id="contact">Contact</h2>
+<details><summary>How do I contact GitDealFlow?</summary>
+<p>Email: <a href="mailto:signals@gitdealflow.com">signals@gitdealflow.com</a>. Telegram: <a href="https://t.me/gitdealflow">t.me/gitdealflow</a>. Twitter/X: <a href="https://x.com/data_nerd">@data_nerd</a>. The methodology is published on SSRN at <a href="https://ssrn.com/abstract=6606558">ssrn.com/abstract=6606558</a>. For API documentation, visit <a href="https://signals.gitdealflow.com">signals.gitdealflow.com</a>.</p>
+</details>
+
+<h2 id="who">Who built it</h2>
+<details><summary>Who built GitDealFlow?</summary>
+<p>GitDealFlow was built and is maintained by The Data Nerd (ORCID 0009-0002-2222-4112), an independent researcher. The project is operated pseudonymously; public touchpoints use signals@gitdealflow.com or the brand GitDealFlow. The methodology was openly published on SSRN for peer review and replication.</p>
+</details>
+
+<div class="cta">
+  <strong>Ready to try the Velocity Verdict?</strong>
+  <p style="margin:8px 0 0;color:#374151;">Free Sunday Digest — spot startups 3–6 weeks before the round.</p>
+  <a href="/">Get the free digest →</a>
+</div>
+
+<footer>
+  <p>© 2026 GitDealFlow. <a href="/">Home</a> · <a href="/pricing">Pricing</a> · <a href="https://signals.gitdealflow.com">API</a> · <a href="https://ssrn.com/abstract=6606558">SSRN Methodology</a></p>
+</footer>
+
+</body>
+</html>

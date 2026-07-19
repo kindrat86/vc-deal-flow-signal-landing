@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GitDealFlow">
+  <title>GitDealFlow</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" ry="14" fill="url(#g)"/>
+  <path
+    fill="#020617"
+    d="M32 14.5c-9.665 0-17.5 7.835-17.5 17.5s7.835 17.5 17.5 17.5c4.46 0 8.531-1.668 11.624-4.41a2.5 2.5 0 0 0 .876-1.9V32a2.5 2.5 0 0 0-2.5-2.5H32a2.5 2.5 0 1 0 0 5h7v6.5a12.5 12.5 0 1 1 .91-13.94 2.5 2.5 0 1 0 4.42-2.34A17.49 17.49 0 0 0 32 14.5z"
+  />
+</svg>

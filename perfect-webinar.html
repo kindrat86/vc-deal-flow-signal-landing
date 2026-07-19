@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 12-Minute Walkthrough — See Startups Before They Raise | GitDealFlow</title>
+  <meta name="description" content="A 12-minute structured walkthrough of the Velocity Verdict framework: how engineering acceleration signals a fundraise 21 to 47 days early. Watch, read, and decide.">
+  <link rel="canonical" href="https://gitdealflow.com/perfect-webinar" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="The 12-Minute Walkthrough — See Which Startups Are Heating Up Before They Raise" />
+  <meta property="og:description" content="A structured walkthrough of the Velocity Verdict framework. Three signals that together predict a fundraise weeks early." />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:url" content="https://gitdealflow.com/perfect-webinar" />
+  <meta property="og:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@data_nerd" />
+  <meta name="twitter:creator" content="@data_nerd" />
+  <meta name="twitter:title" content="The 12-Minute Walkthrough — GitDealFlow" />
+  <meta name="twitter:description" content="The Velocity Verdict framework: three signals that predict a fundraise 21 to 47 days early." />
+  <meta name="twitter:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "The GitDealFlow Methodology Walkthrough",
+        "description": "A long-form written walkthrough of the GitDealFlow methodology and why the GitHub engineering acceleration signal matters.",
+        "url": "https://gitdealflow.com/perfect-webinar",
+        "image": "https://signals.gitdealflow.com/opengraph-image",
+        "inLanguage": "en",
+        "author": { "@type": "Person", "name": "The Data Nerd", "url": "https://signals.gitdealflow.com/about" },
+        "publisher": { "@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com" },
+        "about": {
+          "@type": "Thing",
+          "name": "Engineering Acceleration Methodology",
+          "description": "How commit velocity, contributor growth, and repository expansion signal startup fundraising 3-6 weeks before the announcement."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is engineering acceleration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Engineering acceleration is a quantitative signal derived from public GitHub activity — commit velocity, contributor growth, and repository expansion. It surfaces startups heating up weeks before fundraise announcements." }
+          },
+          {
+            "@type": "Question",
+            "name": "How far ahead does the signal fire?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Historically 3-6 weeks before a fundraise announcement. GitDealFlow tracks the acceleration patterns; investors make the calls." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .mobile-cta-stack > * { width: 100%; }
+    .mobile-card, .mobile-step-card { transition: border-color 120ms ease, transform 120ms ease; }
+    .mobile-card:hover, .mobile-step-card:hover { border-color: rgba(14, 165, 233, 0.5); }
+    .mobile-sticky-cta { display: none; }
+    @media (min-width: 640px) { .mobile-cta-stack > * { width: auto; } }
+    @media (max-width: 639px) {
+      html { scroll-padding-top: 5rem; }
+      body { padding-bottom: 6rem; }
+      .mobile-compact-header { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+      .mobile-hero-wrap { padding-left: 1rem; padding-right: 1rem; padding-top: 4rem; padding-bottom: 4rem; }
+      .mobile-hero-title { font-size: 2rem; line-height: 1.1; }
+      .mobile-hero-copy { font-size: 1rem; line-height: 1.65; }
+      .mobile-main-pad { padding-left: 1rem; padding-right: 1rem; }
+      .mobile-section-pad { padding-left: 1rem; padding-right: 1rem; }
+      .mobile-card-pad { padding: 1.25rem; }
+      .mobile-grid-gap { gap: 1rem; }
+      .mobile-cta-stack .btn {
+        white-space: normal; text-align: center; line-height: 1.35;
+        padding-left: 1rem; padding-right: 1rem;
+      }
+      .mobile-sticky-cta {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: block;
+        padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+        background: rgba(2, 6, 23, 0.94); backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(71, 85, 105, 0.7);
+      }
+      .mobile-sticky-cta .inner { display: flex; align-items: center; gap: 0.75rem; max-width: 28rem; margin: 0 auto; }
+      .mobile-sticky-cta .meta { flex: 1; min-width: 0; }
+      .mobile-sticky-cta .meta strong { display: block; color: #fff; font-size: 0.95rem; line-height: 1.1; }
+      .mobile-sticky-cta .meta span { display: block; color: #94a3b8; font-size: 0.72rem; margin-top: 0.1rem; }
+      .mobile-sticky-cta .btn { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preload" href="/styles.css" as="style">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Perfect Webinar", "item": "https://gitdealflow.com/perfect-webinar" }
+    ]
+  }
+  </script>
+<!-- Traffic-Readiness JSON-LD org+website schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gitdealflow.com/#org",
+      "name": "GitDealFlow",
+      "url": "https://gitdealflow.com",
+      "description": "VC Deal Flow Signal — spot breakout startups 3-6 weeks before fundraise via public GitHub activity.",
+      "sameAs": ["https://t.me/gitdealflow", "https://x.com/data_nerd", "https://github.com/kindrat86"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gitdealflow.com/#website",
+      "url": "https://gitdealflow.com",
+      "name": "GitDealFlow",
+      "publisher": {"@id": "https://gitdealflow.com/#org"}
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": ["Home", "Signals", "Research"],
+      "url": ["https://gitdealflow.com/", "https://signals.gitdealflow.com/", "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6606558"]
+    }
+  ]
+}
+</script>
+<!-- Traffic-Readiness JSON-LD org+website schema -->
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+  <header class="sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+    <div class="mobile-compact-header max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+      <a href="/" class="font-semibold tracking-tight text-white text-lg">GitDealFlow</a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="/" class="text-gray-400 text-sm hover:text-gray-100 transition">Home</a>
+        <a href="https://signals.gitdealflow.com/methodology" class="text-gray-400 text-sm hover:text-gray-100 transition">Methodology</a>
+        <a href="/dashboard" class="text-gray-400 text-sm hover:text-gray-100 transition">Dashboard</a>
+      </nav>
+      <a href="/#signup" class="btn btn-cta btn-sm whitespace-nowrap shrink-0"><span class="sm:hidden">Get it</span><span class="hidden sm:inline">Get the free Sunday email</span> <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+    </div>
+  </header>
+
+  <main class="mobile-main-pad">
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-brand-900 opacity-80"></div>
+      <div class="mobile-hero-wrap relative max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-28 text-center">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-wider mb-4">The 12-minute walkthrough</p>
+        <h1 class="mobile-hero-title text-4xl md:text-6xl font-extrabold leading-tight mb-6">How engineering acceleration predicts a fundraise <span class="text-signal-500">21 to 47 days early</span></h1>
+        <p class="sr-only"><strong>TL;DR:</strong> The 12-minute Velocity Verdict walkthrough demonstrates how GitHub engineering acceleration — commit velocity, contributor growth, infrastructure expansion — predicts fundraises 21-47 days in advance, backed by real public data. All examples are real.</p>
+
+        <p class="mobile-hero-copy text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">This is the structured presentation of the <strong class="text-white">Velocity Verdict</strong> framework — the same walkthrough I give investors who want to see the full argument before they subscribe. The examples are real. The data is public. The method is open.</p>
+        <div class="mobile-cta-stack flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#three-signals" class="btn btn-secondary btn-xl w-full sm:w-auto">Start the walkthrough &darr;</a>
+          <a href="/#signup" class="btn btn-cta btn-xl w-full sm:w-auto">Just send me the 5 names &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAT 1 — The Setup: Why I built this (the Epiphany Bridge in full) -->
+    <section id="three-signals" class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 py-14">
+      <div class="rounded-2xl border border-gray-700 bg-dark-800 p-8 md:p-10">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-2">Beat 1 of 5</p>
+        <h2 class="text-3xl font-bold mb-5">The moment I realized the signal was right there in plain sight.</h2>
+        <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+          <p>I was tracking a small fintech startup. Nothing special on the surface: no press, no AngelList buzz, no warm intros circulating. Just another company I was curious about.</p>
+          <p>Then their GitHub told a different story. <strong class="text-white">In two weeks, their engineering output tripled.</strong> Four new contributors joined. They spun up three new infrastructure repos. They were clearly &mdash; and measurably &mdash; shipping faster. I flagged it in my notes.</p>
+          <p><strong class="text-white">Three weeks later, they announced a $4M Series A led by a top-tier fund.</strong></p>
+          <p>The investors who got in had seen something I missed. Or maybe they just knew someone. That&rsquo;s when it clicked: the signal was right there in the commit graph the whole time. Public. Free. Updating in real time.</p>
+          <div class="rounded-xl bg-emerald-500/10 border border-emerald-500/30 p-5 my-4">
+            <p class="text-emerald-300 font-semibold text-lg">&ldquo;Nobody was reading it. So I built a tool that does. Now I send the names to you.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAT 2 — The Framework: Three Signals (the named framework) -->
+    <section class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 py-10">
+      <div class="rounded-2xl border border-brand-500/30 bg-brand-500/5 p-8 md:p-10">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-2">Beat 2 of 5</p>
+        <h2 class="text-3xl font-bold mb-1">The <span class="text-signal-500">Velocity Verdict</span> framework</h2>
+        <p class="text-gray-400 text-lg mb-6">Three signals that, together, predict a fundraise <strong class="text-white">21 to 47 days early</strong> &mdash; measured across a panel of 219 documented fundraises.</p>
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-signal-500 text-2xl font-extrabold mb-1">1</p>
+            <p class="text-white font-bold text-lg mb-2">Velocity surge</p>
+            <p class="text-gray-400 text-sm">Commit output deviates sharply from a startup&rsquo;s own baseline &mdash; typically 2x&ndash;4x over 14 days. This is the earliest indicator.</p>
+          </div>
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-signal-500 text-2xl font-extrabold mb-1">2</p>
+            <p class="text-white font-bold text-lg mb-2">Contributor spike</p>
+            <p class="text-gray-400 text-sm">New developers join the public repo in a concentrated period. This means the team is scaling before the hire announcement.</p>
+          </div>
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-signal-500 text-2xl font-extrabold mb-1">3</p>
+            <p class="text-white font-bold text-lg mb-2">Infrastructure buildout</p>
+            <p class="text-gray-400 text-sm">New repos, new services, new architecture appear. The company is laying groundwork for the product that justifies the round.</p>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm mt-5 border-t border-gray-700 pt-4 text-center">When all three fire within a 14-day window, the pattern has historically preceded a fundraise announcement 82% of the time in the research panel. <a href="https://signals.gitdealflow.com/methodology" target="_blank" rel="noopener" class="text-brand-500 underline">See the full methodology &rarr;</a></p>
+      </div>
+    </section>
+
+    <!-- BEAT 3 — Real Examples (the receipts, with sparklines) -->
+    <section class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 py-10">
+      <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-8 md:p-10">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-2">Beat 3 of 5</p>
+        <h2 class="text-3xl font-bold mb-4">Real examples: the three-signal pattern before the announcement.</h2>
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">Each of these showed all three signals before the round hit the press. The data is public &mdash; you can verify every number.</p>
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-white font-bold mb-1">Cursor <span class="text-gray-500 text-sm font-normal">&middot; AI dev tools</span></p>
+            <p class="text-gray-400 text-sm mb-2">Velocity surged 3.2x. Contributors jumped 64%. New infrastructure repos appeared. All visible in the open through 2024.</p>
+            <p class="text-emerald-300 text-sm font-semibold">&rarr; $2.6B Series B &middot; Thrive Capital</p>
+          </div>
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-white font-bold mb-1">Supabase <span class="text-gray-500 text-sm font-normal">&middot; Dev infra</span></p>
+            <p class="text-gray-400 text-sm mb-2">Steady climb in code shipped plus relentless release rhythm. Contributor base doubled in the preceding quarter.</p>
+            <p class="text-emerald-300 text-sm font-semibold">&rarr; $80M Series C</p>
+          </div>
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-white font-bold mb-1">Resend <span class="text-gray-500 text-sm font-normal">&middot; Email infra</span></p>
+            <p class="text-gray-400 text-sm mb-2">Engineering buildout accelerated sharply ahead of the Series A. Three-signal pattern confirmed.</p>
+            <p class="text-emerald-300 text-sm font-semibold">&rarr; $18M Series A &middot; Sequoia</p>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm text-center">Full panel of 219 fundraises at <a href="https://signals.gitdealflow.com/methodology" target="_blank" rel="noopener" class="text-brand-500 underline">signals.gitdealflow.com/methodology</a> &mdash; open and auditable.</p>
+      </div>
+    </section>
+
+    <!-- BEAT 4 — Trial Close + Objection Handling (mini closes) -->
+    <section class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 py-10">
+      <div class="rounded-2xl border border-sky-500/30 bg-sky-500/5 p-8 md:p-10">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-2">Beat 4 of 5</p>
+        <h2 class="text-3xl font-bold mb-5">Three objections I hear. Here&rsquo;s my honest answer.</h2>
+        <div class="space-y-4">
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-white font-semibold mb-1">&ldquo;I already have enough deal flow from my network.&rdquo;</p>
+            <p class="text-gray-400 text-sm">Your network shows you what other investors are already seeing. That&rsquo;s table stakes, not an edge. The deals that generate outsized returns are the ones where you arrive before consensus forms. When five investors are looking at the same deck, terms get worse and you lose leverage. GitDealFlow surfaces companies that haven&rsquo;t entered the pitch circuit yet.</p>
+          </div>
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-white font-semibold mb-1">&ldquo;Public data can&rsquo;t give me an edge, everyone has access to it.&rdquo;</p>
+            <p class="text-gray-400 text-sm">Everyone has access to SEC filings too. Quant funds still make billions parsing them faster and smarter. The edge isn&rsquo;t in having exclusive data, it&rsquo;s in reading what others ignore. Right now, zero investor tools package GitHub activity as a deal flow signal.</p>
+          </div>
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-5">
+            <p class="text-white font-semibold mb-1">&ldquo;I don&rsquo;t want to read code. I&rsquo;m an investor, not an engineer.&rdquo;</p>
+            <p class="text-gray-400 text-sm">You never touch code. That&rsquo;s the whole arrangement. I read the engine; you read the verdict. Each name arrives with its sector, stage, and a plain-English reason it&rsquo;s accelerating. The kind of line you can drop in front of your deal team and sound early, not technical.</p>
+          </div>
+        </div>
+        <div class="rounded-xl bg-signal-500/10 border border-signal-500/30 p-5 mt-6 text-center">
+          <p class="text-white font-semibold text-lg mb-1">Trial close — answer honestly:</p>
+          <p class="text-gray-300">If you&rsquo;ve ever heard about a round the week <em>after</em> it closed, you already know why I built this.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAT 5 — The Call + What Happens Next (future-pace) -->
+    <section class="mobile-section-pad max-w-3xl mx-auto px-4 sm:px-6 py-12">
+      <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-8 md:p-12 text-center">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-2">Beat 5 of 5</p>
+        <h2 class="text-3xl font-bold mb-3">You&rsquo;re one Sunday away from being early on purpose.</h2>
+        <p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-6">The free Sunday email lands five names. Each one underwent the Velocity Verdict. Each one has a plain-English note, a sector, a stage. You read it in 90 seconds, pick the one in your lane, and close the laptop. That&rsquo;s the habit.</p>
+        <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-6 text-left">
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-3 text-center">
+            <p class="text-2xl font-bold text-white">This Sunday</p>
+            <p class="text-gray-400 text-xs">5 names land. You read them in 90 seconds.</p>
+          </div>
+          <div class="rounded-xl border border-gray-700 bg-dark-900 p-3 text-center">
+            <p class="text-2xl font-bold text-white">Month 1</p>
+            <p class="text-gray-400 text-xs">You&rsquo;ve reached out first while others wait for intros.</p>
+          </div>
+          <div class="rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-3 text-center">
+            <p class="text-2xl font-bold text-white">Month 6</p>
+            <p class="text-gray-300 text-xs">Getting the read before everyone else is just how you source now.</p>
+          </div>
+        </div>
+        <a href="/#signup" class="btn btn-primary btn-xl w-full sm:w-auto"><span>Get this Sunday&rsquo;s 5 names for free</span><span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+        <p class="text-gray-500 text-sm mt-3">No card. One email a week. Unsubscribe in one click.</p>
+      </div>
+    </section>
+
+  <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+    <div class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="flex flex-wrap justify-center gap-6 text-gray-500 text-sm mb-4">
+        <a href="/" class="hover:text-gray-300">Home</a>
+        <a href="https://signals.gitdealflow.com/methodology" class="hover:text-gray-300">Methodology</a>
+        <a href="/report" class="hover:text-gray-300">Sample report</a>
+        <a href="/dashboard" class="hover:text-gray-300">Dashboard</a>
+        <a href="/privacy" class="hover:text-gray-300">Privacy</a>
+      </div>
+      <p class="text-gray-600 text-xs">GitDealFlow &mdash; The Velocity Verdict walkthrough. Data-driven deal-flow signal for investors.</p>
+    </div>
+  </footer>
+
+  <script>
+    // PostHog + analytics for the walkthrough page
+  </script>
+
+</body>
+</html>

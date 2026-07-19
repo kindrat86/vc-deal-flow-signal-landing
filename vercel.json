@@ -1,0 +1,257 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/.well-known/llms.txt",
+      "destination": "https://signals.gitdealflow.com/.well-known/llms.txt"
+    },
+    {
+      "source": "/.well-known/llms-full.txt",
+      "destination": "https://signals.gitdealflow.com/.well-known/llms-full.txt"
+    },
+    {
+      "source": "/.well-known/ai.txt",
+      "destination": "https://signals.gitdealflow.com/.well-known/ai.txt"
+    },
+    {
+      "source": "/.well-known/agents.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/agents.json"
+    },
+    {
+      "source": "/.well-known/agent-card.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/agent-card.json"
+    },
+    {
+      "source": "/.well-known/mcp.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/mcp.json"
+    },
+    {
+      "source": "/.well-known/openapi.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/openapi.json"
+    },
+    {
+      "source": "/.well-known/ai-plugin.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/ai-plugin.json"
+    },
+    {
+      "source": "/.well-known/ai-policy.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/ai-policy.json"
+    },
+    {
+      "source": "/.well-known/freshness.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/freshness.json"
+    },
+    {
+      "source": "/.well-known/openai-search.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/openai-search.json"
+    },
+    {
+      "source": "/.well-known/tdm-reservation.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/tdm-reservation.json"
+    },
+    {
+      "source": "/.well-known/dataset.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/dataset.json"
+    },
+    {
+      "source": "/.well-known/skills.json",
+      "destination": "https://signals.gitdealflow.com/.well-known/skills.json"
+    },
+    {
+      "source": "/.well-known/security.txt",
+      "destination": "https://signals.gitdealflow.com/.well-known/security.txt"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.gitdealflow.com"
+        }
+      ],
+      "destination": "https://gitdealflow.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/AGENTS.md",
+      "destination": "/agents.md",
+      "permanent": true
+    },
+    {
+      "source": "/predicted",
+      "destination": "https://signals.gitdealflow.com/predicted",
+      "permanent": true
+    },
+    {
+      "source": "/book",
+      "destination": "https://signals.gitdealflow.com/book",
+      "permanent": true
+    },
+    {
+      "source": "/g2",
+      "destination": "https://www.g2.com/products/gitdealflow/reviews",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "https://signals.gitdealflow.com/about",
+      "permanent": true
+    },
+    {
+      "source": "/methodology",
+      "destination": "https://signals.gitdealflow.com/methodology",
+      "permanent": true
+    },
+    {
+      "source": "/scout-score",
+      "destination": "https://signals.gitdealflow.com/scout-score",
+      "permanent": true
+    },
+    {
+      "source": "/code-side-sourcing",
+      "destination": "https://signals.gitdealflow.com/code-side-sourcing",
+      "permanent": true
+    },
+    {
+      "source": "/vs/gitdealflow-vs-crunchbase",
+      "destination": "/vs/crunchbase",
+      "permanent": true
+    },
+    {
+      "source": "/vs/gitdealflow-vs-pitchbook",
+      "destination": "/vs/pitchbook",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/((?!.*\\.).*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(png|webp|svg|ico|gif|mp4|jpg|jpeg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=2592000"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).xml",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(llms|llms-full|ai|agents|humans).txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/security.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://*.posthog.com https://www.linkedin.com https://snap.licdn.com; connect-src 'self' https://*.posthog.com https://signals.gitdealflow.com https://www.linkedin.com https://snap.licdn.com"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/feed.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/rss+xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
+      ]
+    }
+  ]
+}

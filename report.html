@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample report — GitDealFlow built on VC Deal Flow Signal</title>
+  <meta name="description" content="See a sample GitDealFlow report: startups the signal flagged as heating up, with plain-English notes. A tool for investors, not a fund." />
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://gitdealflow.com/report" />
+  <meta property="og:title" content="Sample report — GitDealFlow" />
+  <meta property="og:description" content="See what GitDealFlow surfaces before you sign up — the startups heating up early — and how it connects back to the VC Deal Flow Signal proof stack." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gitdealflow.com/report" />
+  <meta property="og:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@data_nerd" />
+  <meta name="twitter:title" content="Sample Report — GitDealFlow" />
+  <meta name="twitter:description" content="See what GitDealFlow surfaces: startups heating up early, with plain-English notes." />
+  <meta name="twitter:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://gitdealflow.com/report#webpage",
+        "url": "https://gitdealflow.com/report",
+        "name": "Sample report — GitDealFlow built on VC Deal Flow Signal",
+        "description": "A sample report from GitDealFlow (a signal tool for investors, not a fund), backed by the VC Deal Flow Signal methodology and comparison proof pages.",
+        "isPartOf": { "@id": "https://gitdealflow.com/#website" },
+        "about": [
+          { "@id": "https://gitdealflow.com/#organization" },
+          { "@id": "https://signals.gitdealflow.com/methodology#article" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Sample report", "item": "https://gitdealflow.com/report" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .mobile-cta-stack > * { width: 100%; }
+    .mobile-card, .mobile-step-card { transition: border-color 120ms ease, transform 120ms ease; }
+    .mobile-card:hover, .mobile-step-card:hover { border-color: rgba(14, 165, 233, 0.5); }
+    .mobile-sticky-cta { display: none; }
+    @media (min-width: 640px) { .mobile-cta-stack > * { width: auto; } }
+    @media (max-width: 639px) {
+      html { scroll-padding-top: 5rem; }
+      body { padding-bottom: 6rem; }
+      .mobile-compact-header { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+      .mobile-hero-wrap { padding-left: 1rem; padding-right: 1rem; padding-top: 4rem; padding-bottom: 4rem; }
+      .mobile-hero-title { font-size: 2rem; line-height: 1.1; }
+      .mobile-hero-copy { font-size: 1rem; line-height: 1.65; }
+      .mobile-section-pad { padding-left: 1rem; padding-right: 1rem; }
+      .mobile-card-pad { padding: 1.25rem; }
+      .mobile-stat-grid { gap: 1rem; }
+      .mobile-grid-gap { gap: 1rem; }
+      .mobile-cta-stack .btn,
+      .mobile-form-stack .btn {
+        white-space: normal; text-align: center; line-height: 1.35;
+        padding-left: 1rem; padding-right: 1rem;
+      }
+      .mobile-sticky-cta {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: block;
+        padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+        background: rgba(2, 6, 23, 0.94); backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(71, 85, 105, 0.7);
+        transform: translateY(115%);
+        transition: transform 280ms cubic-bezier(0.4,0,0.2,1);
+        pointer-events: none;
+      }
+      .mobile-sticky-cta.is-visible { transform: translateY(0); pointer-events: auto; }
+      .mobile-sticky-cta .inner { display: flex; align-items: center; gap: 0.75rem; max-width: 28rem; margin: 0 auto; }
+      .mobile-sticky-cta .meta { flex: 1; min-width: 0; }
+      .mobile-sticky-cta .meta strong { display: block; color: #fff; font-size: 0.95rem; line-height: 1.1; }
+      .mobile-sticky-cta .meta span { display: block; color: #94a3b8; font-size: 0.72rem; margin-top: 0.1rem; }
+      .mobile-sticky-cta .btn { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; }
+    }
+    @media (max-width: 639px) and (prefers-reduced-motion: reduce) {
+      .mobile-sticky-cta { transition: none; }
+    }
+  </style>
+  <style>
+    .report-card { transition: border-color 0.2s; }
+    .report-card:hover { border-color: rgb(14 165 233 / 0.5); }
+    .rank-badge {
+      width: 2.5rem; height: 2.5rem;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 9999px; font-weight: 800; font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; text-align: center; }
+    @media (min-width: 640px) { .metric-grid { grid-template-columns: repeat(4, 1fr); } }
+  </style>
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preload" href="/styles.css" as="style">
+<!-- Traffic-Readiness JSON-LD org+website schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gitdealflow.com/#org",
+      "name": "GitDealFlow",
+      "url": "https://gitdealflow.com",
+      "description": "VC Deal Flow Signal — spot breakout startups 3-6 weeks before fundraise via public GitHub activity.",
+      "sameAs": ["https://t.me/gitdealflow", "https://x.com/data_nerd", "https://github.com/kindrat86"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gitdealflow.com/#website",
+      "url": "https://gitdealflow.com",
+      "name": "GitDealFlow",
+      "publisher": {"@id": "https://gitdealflow.com/#org"}
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": ["Home", "Signals", "Research"],
+      "url": ["https://gitdealflow.com/", "https://signals.gitdealflow.com/", "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6606558"]
+    }
+  ]
+}
+</script>
+<!-- Traffic-Readiness JSON-LD org+website schema -->
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-dark-800 focus:text-white focus:rounded-lg">Skip to main content</a>
+  <header class="relative sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+    <div class="mobile-compact-header max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+      <a href="/" class="font-semibold tracking-tight text-white text-lg">GitDealFlow</a>
+      <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-5 text-sm font-medium text-gray-300">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://signals.gitdealflow.com" class="hover:text-white transition-colors">Signals</a>
+        <a href="/firstlook" class="hover:text-white transition-colors">First Look</a>
+        <a href="/dashboard" class="hover:text-white transition-colors">Dashboard</a>
+        <a href="/insider" class="hover:text-white transition-colors">Insider</a>
+        <a href="/pricing" class="hover:text-white transition-colors">Pricing</a>
+      </nav>
+      <a href="/#signup" class="btn btn-cta btn-sm whitespace-nowrap shrink-0"><span class="sm:hidden">Get it</span><span class="hidden sm:inline">Get the free Sunday email</span> <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+      <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="md:hidden inline-flex items-center justify-center w-11 h-11 shrink-0 rounded-lg text-gray-300 hover:text-white ring-1 ring-white/10 transition-colors">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-nav" hidden class="md:hidden absolute top-full inset-x-0 z-50 border-b border-white/10 bg-dark-900 shadow-2xl">
+      <nav aria-label="Mobile navigation" class="flex flex-col px-4 py-2">
+        <a href="/" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Home</a>
+        <a href="https://signals.gitdealflow.com" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Signals</a>
+        <a href="/firstlook" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">First Look</a>
+        <a href="/dashboard" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Dashboard</a>
+        <a href="/insider" class="py-3 min-h-[44px] flex items-center border-b border-white/5 text-gray-200 hover:text-white">Insider</a>
+        <a href="/pricing" class="py-3 min-h-[44px] flex items-center text-gray-200 hover:text-white">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-brand-900 opacity-80"></div>
+      <div class="relative max-w-4xl mx-auto px-6 py-16 md:py-20">
+        <div class="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300 mb-6">
+          <span>Sample report</span>
+          <span class="text-brand-500/60">·</span>
+          <span>What the free weekly email looks like</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-5">A simple read of what&apos;s heating up, not a wall of raw data.</h1>
+        <p class="sr-only"><strong>TL;DR:</strong> This report shows a sample of the exact output GitDealFlow delivers: startups flagged as heating up early, each with sector, stage, and a plain-English note on why it matters. The signal is based on public GitHub engineering activity, refreshed weekly.</p>
+
+          <p class="text-lg text-gray-300 max-w-3xl mb-6"><strong class="text-white">GitDealFlow is a signal tool for investors — not a fund.</strong> This page shows the exact output: the startups its signal flagged as heating up early, in plain language, each with a short why-it-matters note.</p>
+        <div class="flex flex-wrap gap-4 text-sm text-gray-400">
+          <span><strong class="text-white">5</strong> names</span>
+          <span><strong class="text-white">1</strong> email</span>
+          <span><strong class="text-white">0</strong> card required</span>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-4xl mx-auto px-6 py-8">
+      <div class="rounded-2xl border border-gray-800 bg-dark-800/70 p-6 md:p-8">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-4">Verify the sample fast</p>
+        <div class="grid md:grid-cols-3 gap-4 text-left">
+          <a href="https://signals.gitdealflow.com/methodology" class="rounded-xl border border-gray-700 bg-dark-900 p-5 hover:border-signal-500/50 transition">
+            <p class="text-white font-semibold mb-2">Methodology</p>
+            <p class="text-sm text-gray-400">See how the signal is built and what the SSRN panel actually measured.</p>
+          </a>
+          <a href="https://signals.gitdealflow.com/compare/best-alternative-data-tools-for-angel-investors" class="rounded-xl border border-gray-700 bg-dark-900 p-5 hover:border-signal-500/50 transition">
+            <p class="text-white font-semibold mb-2">Comparison</p>
+            <p class="text-sm text-gray-400">See where this stack helps earlier than the usual alternative-data surfaces.</p>
+          </a>
+          <a href="/" class="rounded-xl border border-gray-700 bg-dark-900 p-5 hover:border-signal-500/50 transition">
+            <p class="text-white font-semibold mb-2">Get the live Sunday issue</p>
+            <p class="text-sm text-gray-400">If the sample feels right, go straight back to the free weekly watchlist.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-4xl mx-auto px-6 py-10">
+      <div class="rounded-2xl border border-sky-500/30 bg-sky-500/10 p-8 text-left">
+        <p class="text-sky-300 text-xs font-semibold uppercase tracking-wider mb-3">Why this sample matters</p>
+        <p class="text-gray-300 text-lg leading-relaxed">If this feels calmer than the usual deal-flow firehose, that is the point. You should be able to read it quickly, keep the names that matter, and move on with your week.</p>
+      </div>
+    </section>
+
+
+
+    <section class="max-w-4xl mx-auto px-6 py-12 space-y-6">
+      <div class="report-card rounded-xl border border-gray-700 bg-dark-800 p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="rank-badge bg-brand-600 text-white">1</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h2 class="text-xl font-bold">orbiternassp</h2>
+              <span class="text-gray-500 text-sm">Space Tech</span>
+              <span class="inline-flex text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Engineering momentum spike</span>
+            </div>
+          </div>
+        </div>
+        <div class="metric-grid mb-4">
+          <div><p class="text-2xl font-bold text-emerald-400">+329%</p><p class="text-gray-500 text-xs">Momentum change</p></div>
+          <div><p class="text-2xl font-bold text-white">30</p><p class="text-gray-500 text-xs">Commits (14d)</p></div>
+          <div><p class="text-2xl font-bold text-white">37</p><p class="text-gray-500 text-xs">Contributors</p></div>
+          <div><p class="text-2xl font-bold text-white">Growth</p><p class="text-gray-500 text-xs">Stage</p></div>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed">Why it matters: the team’s public engineering footprint accelerated sharply in a short window. That usually means an internal change worth paying attention to before the outside narrative catches up.</p>
+      </div>
+
+      <div class="report-card rounded-xl border border-gray-700 bg-dark-800 p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="rank-badge bg-brand-600 text-white">2</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h2 class="text-xl font-bold">akto-api-security</h2>
+              <span class="text-gray-500 text-sm">Cybersecurity</span>
+              <span class="inline-flex text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Sustained momentum</span>
+            </div>
+          </div>
+        </div>
+        <div class="metric-grid mb-4">
+          <div><p class="text-2xl font-bold text-emerald-400">+75%</p><p class="text-gray-500 text-xs">Momentum change</p></div>
+          <div><p class="text-2xl font-bold text-white">267</p><p class="text-gray-500 text-xs">Commits (14d)</p></div>
+          <div><p class="text-2xl font-bold text-white">53</p><p class="text-gray-500 text-xs">Contributors</p></div>
+          <div><p class="text-2xl font-bold text-white">US</p><p class="text-gray-500 text-xs">Geography</p></div>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed">Why it matters: this is less about a one-week anomaly and more about a sustained high-output team still accelerating. That tends to matter more than one flashy spike.</p>
+      </div>
+
+      <div class="report-card rounded-xl border border-gray-700 bg-dark-800 p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="rank-badge bg-brand-600 text-white">3</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h2 class="text-xl font-bold">NDLANO</h2>
+              <span class="text-gray-500 text-sm">EdTech</span>
+              <span class="inline-flex text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Platform rebuild</span>
+            </div>
+          </div>
+        </div>
+        <div class="metric-grid mb-4">
+          <div><p class="text-2xl font-bold text-emerald-400">+32%</p><p class="text-gray-500 text-xs">Momentum change</p></div>
+          <div><p class="text-2xl font-bold text-white">29</p><p class="text-gray-500 text-xs">Commits (14d)</p></div>
+          <div><p class="text-2xl font-bold text-white">38</p><p class="text-gray-500 text-xs">Contributors</p></div>
+          <div><p class="text-2xl font-bold text-white">EU</p><p class="text-gray-500 text-xs">Geography</p></div>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed">Why it matters: not every useful signal is explosive. Sometimes the point is that a meaningful team is rebuilding core systems in public, which often precedes a bigger strategic move.</p>
+      </div>
+    </section>
+
+    <section class="bg-dark-800 py-16 md:py-20">
+      <div class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-3">Where this page sits</p>
+        <h2 class="text-3xl font-bold mb-4">This page is a sample, not the whole proof library.</h2>
+        <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto mb-8">If you want to verify the claim properly, use the same three proof surfaces every time: methodology, comparison, and this sample output. If that stack feels solid, go back to the apex and take the free Sunday email.</p>
+        <div class="mobile-cta-stack flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://signals.gitdealflow.com/compare/best-alternative-data-tools-for-angel-investors" class="btn btn-secondary btn-md w-full sm:w-auto">See which alternative-data stack helps you move earlier</a>
+          <a href="/#signup" class="btn btn-cta btn-md w-full sm:w-auto">Send me the next Sunday issue</a>
+        </div>
+        <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center text-left sm:text-center">
+          <a href="https://signals.gitdealflow.com/answers/what-is-startup-engineering-momentum" class="text-signal-400 hover:text-signal-400 underline underline-offset-2">What startup engineering momentum means</a>
+          <a href="https://signals.gitdealflow.com/answers/deal-flow-timing-vs-verification" class="text-signal-400 hover:text-signal-400 underline underline-offset-2">Timing and verification are not the same thing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-sticky-cta" role="region" aria-label="Free Sunday email"><div class="inner"><div class="meta"><strong>Free Sunday email</strong><span>5 names, plain English</span></div><a href="/#signup" class="btn btn-cta btn-sm">Get it &rarr;</a></div></div>
+
+  <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+    <div class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="flex flex-wrap justify-center gap-6 text-gray-500 text-sm mb-4">
+        <a href="/" class="hover:text-gray-300">Home</a>
+        <a href="https://signals.gitdealflow.com" class="hover:text-gray-300">Signals</a>
+        <a href="/firstlook" class="hover:text-gray-300">First Look</a>
+        <a href="/dashboard" class="hover:text-gray-300">Dashboard</a>
+        <a href="/privacy" class="hover:text-gray-300">Privacy</a>
+      </div>
+      <p class="text-gray-400 text-xs">GitDealFlow sample report &middot; &copy; 2026 GitDealFlow &middot; signals@gitdealflow.com</p>
+    </div>
+  </footer>
+
+  <script>
+(function(){var t=document.querySelector('[data-nav-toggle]'),p=document.getElementById('mobile-nav');if(!t||!p)return;function set(o){t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'Close menu':'Open menu');p.hidden=!o;}
+t.addEventListener('click',function(){set(t.getAttribute('aria-expanded')!=='true');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&t.getAttribute('aria-expanded')==='true'){set(false);t.focus();}});})();
+  </script>
+  <script>
+    // Sticky mobile CTA reveals only after the hero scrolls out of view. Scroll-driven for reliability.
+    (function () {
+      var bar = document.querySelector('.mobile-sticky-cta');
+      if (!bar) return;
+      var hero = document.querySelector('main > section');
+      bar.inert = true;
+      if (!hero) { bar.classList.add('is-visible'); bar.inert = false; return; }
+      var ticking = false;
+      function update() {
+        ticking = false;
+        var show = hero.getBoundingClientRect().bottom < 8;
+        bar.classList.toggle('is-visible', show);
+        bar.inert = !show;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
+    })();
+  </script>
+</body>
+</html>

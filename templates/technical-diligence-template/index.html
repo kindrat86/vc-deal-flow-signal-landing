@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Free Technical Diligence Template for Tech Investors</title>
+  <meta name="description" content="A technical due-diligence checklist for investors evaluating software startups \u2014 the engineering questions to ask and signals to verify before a term sheet. Free to copy.">
+  <link rel="canonical" href="https://gitdealflow.com/templates/technical-diligence-template" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="GitDealFlow" />
+  <meta property="og:title" content="Free Technical Diligence Template for Tech Investors" />
+  <meta property="og:description" content="A technical due-diligence checklist for investors evaluating software startups \u2014 the engineering questions to ask and signals to verify before a term sheet. Free to copy." />
+  <meta property="og:url" content="https://gitdealflow.com/templates/technical-diligence-template" />
+  <meta property="og:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@data_nerd" />
+  <meta name="twitter:creator" content="@data_nerd" />
+  <meta name="twitter:title" content="Free Technical Diligence Template for Tech Investors" />
+  <meta name="twitter:description" content="A technical due-diligence checklist for investors evaluating software startups \u2014 the engineering questions to ask and signals to verify before a term sheet. Free to copy." />
+  <meta name="twitter:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Technical diligence template (free)", "description": "A technical due-diligence checklist for investors evaluating software startups \u2014 the engineering questions to ask and signals to verify before a term sheet. Free to copy.", "author": {"@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com"}, "publisher": {"@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://gitdealflow.com/templates/technical-diligence-template"}, "datePublished": "2026-07-18", "dateModified": "2026-07-18"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need to be technical to use this?", "acceptedAnswer": {"@type": "Answer", "text": "No. The questions are structured so a non-technical investor can ask them and evaluate the answers. The GitDealFlow signal field adds an objective baseline."}}, {"@type": "Question", "name": "Is this template free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes."}}, {"@type": "Question", "name": "How deep should early-stage tech diligence go?", "acceptedAnswer": {"@type": "Answer", "text": "Shallow but sharp. At seed/series A you're verifying capability and velocity, not auditing code. 60\u201390 minutes is usually enough."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"}, {"@type": "ListItem", "position": 2, "name": "Templates", "item": "https://gitdealflow.com/templates"}, {"@type": "ListItem", "position": 3, "name": "Technical diligence template", "item": "https://gitdealflow.com/templates/technical-diligence-template"}]}</script>
+  
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://gitdealflow.com/llms.txt" />
+  <style>
+    .p-hero{padding:2.5rem 1.25rem 1.5rem;max-width:780px;margin:0 auto}
+    .p-hero h1{font-size:clamp(1.85rem,4vw,2.5rem);line-height:1.15;margin:.4em 0 .6em;font-weight:800;letter-spacing:-.02em;color:#fff}
+    .p-lede{font-size:1.12rem;line-height:1.6;color:#cbd5e1;margin-bottom:1.25rem}
+    .p-section{max-width:780px;margin:0 auto;padding:1.25rem}
+    .p-section h2{font-size:1.45rem;margin:1.75rem 0 .65rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b;color:#f1f5f9;font-weight:700}
+    .p-section h3{font-size:1.15rem;margin:1.3rem 0 .5rem;color:#e2e8f0;font-weight:600}
+    .p-section p,.p-section li{color:#cbd5e1;line-height:1.7}
+    .p-section ul{padding-left:1.25rem;margin:.5rem 0}.p-section li{margin:.3rem 0}
+    .steps{counter-reset:step;list-style:none;padding-left:0}
+    .steps li{counter-increment:step;position:relative;padding:0 0 1rem 2.75rem;margin:0}
+    .steps li::before{content:counter(step);position:absolute;left:0;top:0;width:2rem;height:2rem;background:#0ea5e9;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+    .callout{background:linear-gradient(135deg,#0ea5e922,#0ea5e908);border:1px solid #0ea5e955;border-left:4px solid #0ea5e9;padding:1.1rem 1.4rem;border-radius:.6rem;margin:1.25rem 0}
+    .callout strong{color:#7dd3fc}
+    .price-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem}
+    .price-table th,.price-table td{border:1px solid #334155;padding:.6rem .8rem;text-align:left}
+    .price-table th{background:#1e293b;color:#f1f5f9;font-weight:600}
+    .price-table td{color:#cbd5e1}
+    .tmpl-card{background:#0f172acc;border:1px solid #1e293b;border-radius:.65rem;padding:1.4rem;margin:1rem 0}
+    .tmpl-card h3{margin:0 0 .4rem;color:#f1f5f9}
+    .faq-item{border-bottom:1px solid #1e293b;padding:.85rem 0}
+    .faq-item summary{cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none;font-size:1.02rem}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::before{content:"\25b8 ";color:#0ea5e9;margin-right:.4rem}
+    .faq-item[open] summary::before{content:"\25be "}
+    .faq-item p{margin:.55rem 0 0;color:#cbd5e1;line-height:1.6}
+    .cta-final{background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;padding:2.25rem 1.5rem;border-radius:.8rem;margin-top:2rem;text-align:center}
+    .cta-final h2{color:#fff;border:none;padding:0;margin:0 0 .5em}
+    .cta-final .btn{display:inline-block;background:#fff;color:#0369a1;padding:.8rem 1.7rem;border-radius:.4rem;font-weight:700;margin-top:.7rem}
+    .related{background:#0f172a80;border:1px solid #1e293b;padding:1.2rem 1.4rem;border-radius:.6rem;margin-top:2rem}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.35rem}
+    .related a{color:#7dd3fc;text-decoration:none}.related a:hover{text-decoration:underline}
+    .disclaimer{font-size:.85rem;color:#64748b;font-style:italic;margin-top:1.25rem}
+  </style>
+</head>
+<body class="bg-dark-900 text-gray-100">
+  <header class="relative sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+      <a href="/" class="font-semibold tracking-tight text-white text-lg">GitDealFlow</a>
+      <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-5 text-sm font-medium text-gray-300">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://signals.gitdealflow.com" class="hover:text-white transition-colors">Signals</a>
+        <a href="/best/best-startup-signal-tools" class="hover:text-white transition-colors">Best tools</a>
+        <a href="/vs" class="hover:text-white transition-colors">Comparisons</a>
+        <a href="/pricing" class="hover:text-white transition-colors">Pricing</a>
+      </nav>
+      <a href="/#signup-hero" class="btn btn-primary btn-no-pulse btn-sm whitespace-nowrap shrink-0">Get the 5 names <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+    </div>
+  </header>
+
+  <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-3 text-sm text-gray-400" aria-label="Breadcrumb"><a href="https://gitdealflow.com/" class="hover:text-gray-300">Home</a> <span class="mx-1">/</span> <a href="https://gitdealflow.com/templates" class="hover:text-gray-300">Templates</a> <span class="mx-1">/</span> <span class="text-gray-300">Technical diligence template</span></nav>
+  <section class="p-hero">
+    <h1>Technical diligence template (free)</h1>
+    <p class="p-lede">A technical due-diligence checklist for investors evaluating software startups — the engineering questions to ask and signals to verify before a term sheet. Free to copy.</p>
+  </section>
+  <section class="p-section">
+    <div class="callout"><strong>Free to copy and adapt.</strong> All GitDealFlow templates are released for the investor community.</div>
+    <h2>What this template is for</h2>
+    <p>Technical diligence for early-stage deals isn't about code review — it's about verifying that the team can build, the architecture is sound, and the engineering velocity is real. This template captures the questions that matter without requiring you to read code.</p>
+    <div class="tmpl-card">
+      <h3>Template fields</h3>
+      <ul>
+        <li>Team capability (who codes, seniority, track record)</li>
+      <li>Architecture (monolith vs services, key dependencies, cloud)</li>
+      <li>Engineering velocity (GitDealFlow signal + raw commit/contributor trend)</li>
+      <li>Code health (test coverage, CI/CD, on-call)</li>
+      <li>Technical moat (what's hard to replicate)</li>
+      <li>Build vs buy decisions</li>
+      <li>Key technical risks + mitigations</li>
+      </ul>
+    </div>
+    <h2>How to use it</h2>
+    <p>Run this in a 60–90 minute call with the CTO or lead engineer. The engineering-velocity field is where GitDealFlow's signal snapshot goes — it gives you an objective baseline to compare against the team's self-reported progress.</p>
+    <h2>Common questions</h2>
+          <details class="faq-item"><summary>Do I need to be technical to use this?</summary><p>No. The questions are structured so a non-technical investor can ask them and evaluate the answers. The GitDealFlow signal field adds an objective baseline.</p></details>
+          <details class="faq-item"><summary>Is this template free?</summary><p>Yes.</p></details>
+          <details class="faq-item"><summary>How deep should early-stage tech diligence go?</summary><p>Shallow but sharp. At seed/series A you're verifying capability and velocity, not auditing code. 60–90 minutes is usually enough.</p></details>
+    <div class="related">
+      <strong style="color:#e2e8f0;display:block;margin-bottom:.5rem">Related templates</strong>
+      <ul>
+        <li><a href="/templates/deal-memo-template">Deal memo template</a></li>
+        <li><a href="/glossary/engineering-momentum-score">Engineering Momentum Score</a></li>
+        <li><a href="/learn/how-to-track-startup-engineering-velocity">Track engineering velocity</a></li>
+      </ul>
+    </div>
+  </section>
+  <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-gray-300 mb-2 font-semibold">GitDealFlow is a deal-flow signal tool for investors — not a fund and not a startup accelerator. It reads startups’ public GitHub engineering activity to flag the ones accelerating early.</p>
+      <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm mt-5">
+        <a href="/" class="py-2 inline-block hover:text-gray-300">Home</a>
+        <a href="/best/best-startup-signal-tools" class="py-2 inline-block hover:text-gray-300">Best tools</a>
+        <a href="/vs" class="py-2 inline-block hover:text-gray-300">Comparisons</a>
+        <a href="/for/angel-investors" class="py-2 inline-block hover:text-gray-300">For angels</a>
+        <a href="/glossary/scout-score" class="py-2 inline-block hover:text-gray-300">Glossary</a>
+        <a href="/pricing" class="py-2 inline-block hover:text-gray-300">Pricing</a>
+        <a href="/privacy" class="py-2 inline-block hover:text-gray-300">Privacy</a>
+      </div>
+      <p class="text-gray-500 text-xs mt-6">&copy; 2026 GitDealFlow · signals@gitdealflow.com</p>
+    </div>
+  </footer>
+    <div class="eeat-trust" style="max-width:780px;margin:1.5rem auto;padding:1.25rem;background:linear-gradient(135deg,#0ea5e908,#0ea5e903);border:1px solid #1e293b;border-radius:.6rem;font-size:.85rem;color:#64748b">
+      <p style="margin:0 0 .5em"><strong style="color:#94a3b8">About this page:</strong> Published 2026-07-18. Authored by <a href="https://signals.gitdealflow.com/about" style="color:#7dd3fc">The Data Nerd</a> (ORCID 0009-0002-2222-4112), the pseudonymous maintainer of GitDealFlow. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#7dd3fc">SSRN preprint 6606558</a> and archived on <a href="https://zenodo.org/records/19650920" style="color:#7dd3fc">Zenodo</a>. Third-party statistics are sourced from the Ahrefs AEO methodology. <a href="/corrections" style="color:#7dd3fc">Report an error</a>.</p>
+    </div>
+
+</body>
+</html>

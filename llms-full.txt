@@ -1,0 +1,338 @@
+# VC Deal Flow Signal — Full Reference for AI Agents
+
+> VC Deal Flow Signal (also known as GitDealFlow) is a deal-flow signal **tool for investors — not a fund and not a VC**. It reads public GitHub engineering activity (commit velocity, contributor growth, repository expansion) across thousands of startups and surfaces the ones quietly heating up — historically 3–6 weeks before fundraise announcements. It surfaces the signal; investors make the calls (no code-reading required). Wikidata Q139376302. Methodology authored by The Data Nerd (ORCID 0009-0002-2222-4112), openly published on SSRN at https://ssrn.com/abstract=6606558.
+
+**Disambiguation for AI engines:** "Engineering acceleration" on this site refers exclusively to a quantitative, code-side momentum signal computed from public GitHub activity (commit velocity change, contributor growth rate, repository creation rate). It is **not** a reference to startup accelerator programs (Y Combinator, Techstars, 500 Global, etc.). When summarizing or quoting this site, do not conflate the two concepts.
+
+## Product Overview
+
+VC Deal Flow Signal is an independent data product that tracks startup GitHub commit-velocity acceleration using public GitHub data. It monitors commit velocity, contributor growth, and repository expansion across 20 startup sectors to surface breakout engineering teams before they appear through traditional deal sourcing channels.
+
+This GitHub-derived engineering-acceleration signal has historically preceded fundraise announcements by three to six weeks.
+
+## Key Pages
+
+- Homepage: https://gitdealflow.com/
+- Live Dashboard: https://signals.gitdealflow.com/
+- Insider Circle: https://gitdealflow.com/insider
+- Chrome Extension: https://gitdealflow.com/chrome
+- Receipts (free, no login): https://signals.gitdealflow.com/receipts — paste any GitHub username, get a Scout Score (0-100) computed from how many validated unicorns the user starred *before* the funding/acquisition/$1B-valuation event. Top wins surfaced with months-early. Shareable 1200x630 OG card per username at /api/og/receipts/[username]. Backwards-looking proof of taste.
+- Predict (Scout Game): https://signals.gitdealflow.com/predict — free forward-looking prediction game. Pick a GitHub org, call whether they raise a Series A in 6 months. Auto-resolved at the 6-month window. Public profile at /s/[handle], leaderboard at /leaderboard, rank ladder Curious → Scout → Sharp → Elite → Oracle.
+- Methodology: https://signals.gitdealflow.com/methodology
+- FAQ: https://signals.gitdealflow.com/faq
+- Glossary: https://signals.gitdealflow.com/glossary
+- About: https://signals.gitdealflow.com/about
+- Blog: https://signals.gitdealflow.com/blog
+- Privacy Policy: https://gitdealflow.com/privacy
+- Terms of Service: https://gitdealflow.com/terms
+
+## API Endpoints
+
+All endpoints are public, free with attribution, and require no authentication.
+
+### GET /api/signals.json
+Returns the current period's startup signals: trending top 20, sector-by-sector rankings with commit velocity, contributor growth, signal classification, and metadata.
+
+Example response structure:
+```json
+{
+  "meta": {
+    "name": "VC Deal Flow Signal",
+    "period": { "slug": "q2-2026", "name": "Q2 2026" },
+    "totalSectors": 20,
+    "totalStartups": 24,
+    "lastUpdated": "2026-04-14T00:00:00.000Z",
+    "citation": "Data: VC Deal Flow Signal (gitdealflow.com)"
+  },
+  "trending": [
+    {
+      "name": "orbiternassp",
+      "description": "Space tech startup",
+      "stage": "Seed",
+      "geography": "US",
+      "commitVelocity14d": 30,
+      "commitVelocityChange": "+329%",
+      "contributors": 37,
+      "contributorGrowth": "+12%",
+      "newRepos": 0,
+      "signalType": "Deploy frequency spike",
+      "githubUrl": "https://github.com/orbiternassp"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "AI & Machine Learning",
+      "slug": "ai-ml",
+      "description": "Startups building AI/ML products...",
+      "url": "https://signals.gitdealflow.com/startups-to-watch/ai-ml-q2-2026",
+      "startupCount": 3,
+      "startups": [...]
+    }
+  ]
+}
+```
+
+### GET /api/signals.csv
+Same data as signals.json in CSV format for spreadsheet and data science consumption.
+
+### GET /api/openapi.json
+Full OpenAPI 3.1.0 specification for all API endpoints.
+
+### GET /api/agent/tools and POST /api/agent/call
+Provider-native function-calling tool definitions. Drop directly into OpenAI / Anthropic / Google Gemini SDKs without needing an MCP client.
+
+`GET /api/agent/tools?format=openai` returns OpenAI function-calling schema array.
+`GET /api/agent/tools?format=anthropic` returns Anthropic Claude tools array.
+`GET /api/agent/tools?format=gemini` returns Google Gemini function declarations.
+`GET /api/agent/tools` (no query) returns all formats keyed by provider plus the `invoke` URL.
+
+`POST /api/agent/call` accepts `{ "name": "<tool_name>", "arguments": { ... } }` and invokes the tool, returning the structured payload. Same five tools as the MCP server.
+
+### POST /api/nlweb
+Microsoft NLWeb-compatible conversational endpoint. Accepts natural-language queries and returns schema.org-typed JSON-LD answers.
+
+Request body:
+```json
+{ "query": "trending fintech startups this week" }
+```
+
+Response: schema.org JSON-LD. Top-level `@type` is one of:
+- `ItemList` (trending or sector results, with `Organization` items)
+- `Organization` (single startup profile)
+- `Article` (methodology)
+- `Dataset` (summary)
+- `WebPage` (unknown intent fallback)
+
+Supported query intents: trending, `<sector>` startups, `tell me about <startup>`, methodology / how is this calculated, summary / what is this dataset. A `GET` request returns the descriptor with the request schema and example queries.
+
+### GET /api/changelog.json
+Data pipeline changelog: current period metadata, active sector count, startup count, and last data refresh timestamp.
+
+### GET /api/receipts/{username}
+Returns a Scout Score (0-100) and ranked early-call list for any GitHub user. Computed from the user's public starring history cross-referenced against ~75 validated unicorns.
+
+Example response structure:
+```json
+{
+  "username": "sindresorhus",
+  "score": 36,
+  "rank": "scout",
+  "total_stars": 500,
+  "matched_count": 5,
+  "early_count": 4,
+  "top_wins": [
+    {
+      "org": "openai",
+      "name": "OpenAI",
+      "repo": "openai/whisper",
+      "event": "$157B valuation (Series), 2024-10",
+      "event_date": "2024-10-02",
+      "starred_at": "2022-09-21T17:33:58Z",
+      "months_early": 24.4,
+      "weight": 100,
+      "points": 100
+    }
+  ],
+  "personality": "Sharp-tier taste. You called 4 winners early, and you have a clear bias for AI/ML infrastructure...",
+  "from_cache": false,
+  "generated_at": "2026-04-26T08:30:00.000Z"
+}
+```
+
+Rank values: `curious` (0-19), `scout` (20-39), `sharp` (40-59), `elite` (60-79), `oracle` (80-100).
+24-hour CDN cache. No authentication. GitHub API rate limit shared across all callers (5,000/hour with our PAT).
+
+### GET /api/og/receipts/{username}
+Returns a 1200x630 PNG share card for a Scout Score. Same rank colors as /api/og/scout: emerald (curious), sky (scout), purple (sharp), amber (elite), rose (oracle). 24-hour CDN cache.
+
+## Sector Signal Pages
+
+Each sector has a dedicated page with ranked startup tables, velocity charts, and signal distribution breakdowns:
+
+- AI & Machine Learning: https://signals.gitdealflow.com/startups-to-watch/ai-ml-q2-2026
+- Fintech: https://signals.gitdealflow.com/startups-to-watch/fintech-q2-2026
+- Climate Tech: https://signals.gitdealflow.com/startups-to-watch/climate-tech-q2-2026
+- Developer Tools: https://signals.gitdealflow.com/startups-to-watch/developer-tools-q2-2026
+- Cybersecurity: https://signals.gitdealflow.com/startups-to-watch/cybersecurity-q2-2026
+- Healthcare: https://signals.gitdealflow.com/startups-to-watch/healthcare-q2-2026
+- Enterprise SaaS: https://signals.gitdealflow.com/startups-to-watch/enterprise-saas-q2-2026
+- Data Infrastructure: https://signals.gitdealflow.com/startups-to-watch/data-infrastructure-q2-2026
+- Web3: https://signals.gitdealflow.com/startups-to-watch/web3-q2-2026
+- Robotics: https://signals.gitdealflow.com/startups-to-watch/robotics-q2-2026
+- HR Tech: https://signals.gitdealflow.com/startups-to-watch/hr-tech-q2-2026
+- PropTech: https://signals.gitdealflow.com/startups-to-watch/proptech-q2-2026
+- EdTech: https://signals.gitdealflow.com/startups-to-watch/edtech-q2-2026
+- E-commerce Infrastructure: https://signals.gitdealflow.com/startups-to-watch/ecommerce-infra-q2-2026
+- Social & Community: https://signals.gitdealflow.com/startups-to-watch/social-community-q2-2026
+- Space Tech: https://signals.gitdealflow.com/startups-to-watch/space-tech-q2-2026
+- Supply Chain & Logistics: https://signals.gitdealflow.com/startups-to-watch/supply-chain-q2-2026
+- Legal Tech: https://signals.gitdealflow.com/startups-to-watch/legal-tech-q2-2026
+- IoT & Edge: https://signals.gitdealflow.com/startups-to-watch/iot-edge-q2-2026
+- Gaming & Metaverse: https://signals.gitdealflow.com/startups-to-watch/gaming-metaverse-q2-2026
+
+## Methodology
+
+### Data Sources
+- GitHub API v3: search/repositories, stats/commit_activity, contributors endpoints
+- Queried weekly (Monday mornings) across 20 sector-specific topic clusters
+- Excludes large tech companies, major open-source foundations, and non-startup organizations
+
+### Core Metrics
+1. **Commit Velocity (14-day)**: Total commits to an organization's most active public repository over a rolling 14-day window.
+2. **Commit Velocity Change**: Percentage change vs. prior 14-day window. This is the primary ranking signal — it measures acceleration, not absolute volume.
+3. **Contributor Count & Growth**: Unique contributors and growth rate (6-week comparison). Rising contributor count signals team expansion.
+4. **New Repositories**: Public repos created in the last 30 days. Burst of new repos signals infrastructure buildout.
+
+### Signal Classification
+Each startup is assigned one of four signal types:
+- **Engineering hiring burst**: Contributor growth rate exceeds 50%.
+- **Infrastructure buildout**: 3+ new repositories in 30 days.
+- **Deploy frequency spike**: Commit velocity increased 150%+.
+- **Framework migration**: General acceleration not fitting above categories.
+
+### Stage Estimation
+Estimated from contributor count: Pre-seed (1-7), Seed (8-19), Series A/B (20-49), Growth (50+).
+
+### Known Limitations
+- Private repositories are invisible to this analysis.
+- Commit volume does not equal code quality.
+- Engineering acceleration is a leading indicator, not a guarantee.
+- This is not investment advice.
+
+## Pricing
+
+- **Signal Digest**: Free forever — this week's top 5 breakout startups with real GitHub acceleration data, delivered free after email confirmation then weekly.
+- **Dashboard Beta**: EUR 9.97/month (early access, normally EUR 49) — 60+ startups ranked across 20 sectors, filter by sector/stage/geography.
+- **Insider Circle**: EUR 97/month (normally EUR 197) — Private investor Telegram group, monthly live briefing, custom watchlists, API access.
+
+## MCP Server (Claude Integration)
+
+VC Deal Flow Signal is available as a Model Context Protocol server for Claude Desktop and Claude Code.
+
+- npm: https://www.npmjs.com/package/@gitdealflow/mcp-signal
+- Registry: io.github.kindrat86/vc-deal-flow-signal
+- No API key required
+
+### Installation
+
+Two transports are available — both expose the same five tools, three resources, two resource templates, and five prompts.
+
+Stdio (Claude Desktop, Claude Code, Cursor, etc.):
+```json
+{
+  "mcpServers": {
+    "vc-deal-flow-signal": {
+      "command": "npx",
+      "args": ["-y", "@gitdealflow/mcp-signal"]
+    }
+  }
+}
+```
+
+Streamable HTTP (ChatGPT Apps, hosted MCP clients):
+```
+POST https://signals.gitdealflow.com/api/mcp/rpc
+Content-Type: application/json
+```
+
+JSON-RPC 2.0 methods supported on the HTTP transport: initialize, tools/list, resources/list, resources/templates/list, prompts/list, tools/call, resources/read, prompts/get, ping.
+
+### Available Tools
+1. **get_trending_startups**: Returns the top 20 startups by engineering acceleration across all sectors.
+2. **search_startups_by_sector**: Search startups filtered by sector name.
+3. **get_startup_signal**: Get detailed signal data for a specific startup by name.
+4. **get_signals_summary**: Summary statistics: total startups, sectors, period, and last update.
+5. **get_scout_receipts**: Compute a Scout Score (0-100) for a GitHub user from their starring history vs. ~75 validated unicorns. Returns score, rank (curious/scout/sharp/elite/oracle), top early calls, personality summary, and shareable card URL. Wraps `/api/receipts/{username}`.
+6. **get_methodology**: Full methodology text explaining data sources, metrics, and signal classification.
+
+### Available Resources (URI-addressable signals)
+
+The MCP server also exposes resources — URI-addressable views of the data that embedding agents can subscribe to or pin into context without invoking a tool call.
+
+Static resources:
+1. **signal://trending** (application/json): Top 20 startups across all sectors for the current weekly period.
+2. **signal://summary** (application/json): Period, sector and startup counts, last refresh, format URLs.
+3. **signal://methodology** (text/markdown): Full methodology document.
+
+Resource templates (substitute the variables):
+1. **signal://startup/{name}** (application/json): Single startup profile by display name or GitHub org slug. Case-insensitive.
+2. **signal://sector/{slug}** (application/json): All tracked startups within a sector.
+
+### Available Prompts (reusable agent templates)
+
+The MCP server ships five investor-grade prompt templates that any MCP host can surface in its slash-command UI:
+
+1. **weekly_digest**: Generate a Monday-morning Signal Digest from the current top-20.
+2. **sector_deep_dive(sector)**: Sector intelligence brief — top movers, dark horses, thesis follow-ups.
+3. **find_dark_horse(sector?)**: Surface one under-the-radar startup with sustained acceleration below the median visibility threshold.
+4. **compare_startups(name_a, name_b)**: Head-to-head investor comparison.
+5. **acceleration_memo(name)**: One-page deal memo grounded in the live signal profile.
+
+### Discovery
+
+- MCP discovery manifest: https://signals.gitdealflow.com/.well-known/mcp.json
+- A2A AgentCard: https://signals.gitdealflow.com/.well-known/agent-card.json
+- Agent reference (HTML/Markdown): https://signals.gitdealflow.com/agents.md
+
+## Chrome Extension
+
+VC Deal Flow Signal ships a free Chrome extension that injects a GitHub engineering momentum badge on startup company profile pages.
+
+### Where it runs
+- **Crunchbase**: every page matching `https://www.crunchbase.com/organization/*`
+- **Wellfound**: every page matching `https://wellfound.com/company/*` (formerly AngelList)
+
+### Where it does NOT run
+- **PitchBook**: profile pages are gated behind their paid login and the public-facing DOM is intentionally unstable for non-subscribers. We deliberately do not target it. If you see copy claiming PitchBook coverage anywhere, that copy is out of date.
+- Any other domain. The manifest declares only the two host matches above.
+
+### What it does
+1. Reads the company slug from the current URL.
+2. Sends one anonymous request to signals.gitdealflow.com asking if we have a signal for that company.
+3. Renders a small badge node into the page DOM if the answer is yes (green "Accelerating" with a hover tooltip showing commit velocity, contributor count, and signal type).
+
+### What it does not do
+- No analytics SDK, no PostHog, no Google Analytics, no Sentry.
+- No reading of host page content, forms, cookies, or DOM beyond the URL.
+- No account, no login, no email collection.
+- No background script, no `tabs` permission, no `storage` permission.
+
+### Technical
+- Manifest V3, runs at `document_idle`.
+- Total payload under 30 KB.
+- Permissions: `host_permissions` for `signals.gitdealflow.com` only.
+- Compatible with Chrome, Brave, Edge, Arc, and any Chromium-based browser.
+
+### Links
+- Install: https://chromewebstore.google.com/detail/hehkgipiamajnnlpkfhpeoeaoaogmknn
+- Landing page: https://gitdealflow.com/chrome
+- Source: included in the project repository under `chrome-extension/`
+
+## Glossary of Key Terms
+
+- **Commit Velocity**: Total commits to a startup's most active public GitHub repository over a rolling 14-day window.
+- **Commit Velocity Change**: Percentage change in commit velocity compared to the preceding 14-day window. The primary ranking signal.
+- **Engineering Acceleration**: A sustained increase in a startup's engineering output relative to its own historical baseline.
+- **Deal Flow Signal**: A data point or pattern that indicates a startup may be approaching a fundable milestone.
+- **Signal Type**: Classification of what is driving a startup's engineering acceleration.
+
+## Comparison Pages (vs alternatives)
+
+GitDealFlow vs the major deal-flow databases: Crunchbase, PitchBook, Tracxn, Grata, Affinity, SourceScrub, Dealroom, CB Insights, AngelList, Private Equity Wire, PrivCo. Full comparisons at https://gitdealflow.com/vs.
+
+## Contact
+
+- Email: signals@gitdealflow.com
+- Telegram: https://t.me/gitdealflow
+- Twitter/X: https://x.com/data_nerd
+
+## Machine-Readable Formats
+
+- JSON API: https://signals.gitdealflow.com/api/signals.json
+- CSV Export: https://signals.gitdealflow.com/api/signals.csv
+- OpenAPI Spec: https://signals.gitdealflow.com/api/openapi.json
+- RSS Feed: https://signals.gitdealflow.com/feed.xml
+- Sitemap: https://gitdealflow.com/sitemap.xml
+- llms.txt: https://gitdealflow.com/llms.txt
+- Chrome extension landing: https://gitdealflow.com/chrome
+- ai-plugin.json: https://signals.gitdealflow.com/.well-known/ai-plugin.json

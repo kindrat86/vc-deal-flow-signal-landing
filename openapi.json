@@ -1,0 +1,195 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "GitDealFlow API",
+    "version": "1.0.0",
+    "description": "Public API for GitDealFlow — a deal-flow signal tool that tracks startup engineering acceleration from public GitHub activity across 4,200+ startup orgs in 20 sectors. Free, no auth required.",
+    "contact": {
+      "email": "signals@gitdealflow.com",
+      "url": "https://gitdealflow.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://signals.gitdealflow.com",
+      "description": "Production API server"
+    }
+  ],
+  "paths": {
+    "/api/signals.json": {
+      "get": {
+        "operationId": "getSignals",
+        "summary": "List trending startups",
+        "description": "Returns the current week's top startup engineering-acceleration signals as JSON. Each entry includes name, sector, stage, signal summary, and GitHub metrics.",
+        "responses": {
+          "200": {
+            "description": "Array of startup signal objects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": { "type": "string" },
+                      "sector": { "type": "string" },
+                      "stage": { "type": "string" },
+                      "summary": { "type": "string" },
+                      "signal_score": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/signals.csv": {
+      "get": {
+        "operationId": "getSignalsCsv",
+        "summary": "List trending startups as CSV",
+        "description": "Same dataset as /api/signals.json exported as CSV for spreadsheets and BI tools.",
+        "responses": {
+          "200": {
+            "description": "CSV file",
+            "content": {
+              "text/csv": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/nlweb": {
+      "get": {
+        "operationId": "getNlwebDescriptor",
+        "summary": "NLWeb endpoint descriptor",
+        "description": "Returns the NLWeb endpoint descriptor with example queries for Microsoft NLWeb-aware crawlers.",
+        "responses": {
+          "200": {
+            "description": "NLWeb descriptor JSON",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "queryNlweb",
+        "summary": "Natural-language query",
+        "description": "Accepts natural-language queries and returns schema.org-typed JSON-LD answers (ItemList, Organization, Article, Dataset, WebPage).",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": { "type": "string", "description": "Natural-language query, e.g. 'trending fintech startups this week'" }
+                },
+                "required": ["query"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON-LD structured answer",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent/tools": {
+      "get": {
+        "operationId": "getAgentTools",
+        "summary": "List function-calling tools",
+        "description": "Returns the agent tools manifest for OpenAI/Anthropic/Gemini function-calling integration.",
+        "responses": {
+          "200": {
+            "description": "Tools manifest JSON",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent/call": {
+      "post": {
+        "operationId": "callAgentTool",
+        "summary": "Invoke a function-calling tool",
+        "description": "Executes a named tool from the agent tools manifest and returns the result.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "tool": { "type": "string" },
+                  "parameters": { "type": "object" }
+                },
+                "required": ["tool"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tool execution result",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/mcp/rpc": {
+      "post": {
+        "operationId": "mcpRpc",
+        "summary": "MCP Streamable HTTP endpoint",
+        "description": "Model Context Protocol server over Streamable HTTP transport. Six read-only tools: get_trending_startups, search_startups_by_sector, get_startup_signal, get_signals_summary, get_scout_receipts, get_methodology.",
+        "responses": {
+          "200": {
+            "description": "MCP JSON-RPC response",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/a2a": {
+      "post": {
+        "operationId": "a2aRpc",
+        "summary": "A2A JSON-RPC 2.0 endpoint",
+        "description": "Google A2A agent endpoint (protocolVersion 0.3.0). Five skills mirroring the MCP tools.",
+        "responses": {
+          "200": {
+            "description": "A2A JSON-RPC response",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

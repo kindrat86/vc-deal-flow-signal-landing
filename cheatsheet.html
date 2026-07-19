@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Velocity Verdict Cheat Sheet — the 14-day pattern that predicts a raise | GitDealFlow</title>
+  <meta name="description" content="A free one-page cheat sheet: the three signals and the 14-day window that, together, have preceded 219 documented fundraises — 21 to 47 days before the press. Download it free.">
+  <link rel="canonical" href="https://gitdealflow.com/cheatsheet" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GitDealFlow" />
+  <meta property="og:title" content="The Velocity Verdict Cheat Sheet — the 14-day pattern that predicts a raise" />
+  <meta property="og:description" content="The three signals, the 14-day window, and the 21-to-47-day lead time — on one page. Free." />
+  <meta property="og:url" content="https://gitdealflow.com/cheatsheet" />
+  <meta property="og:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@data_nerd" />
+  <meta name="twitter:creator" content="@data_nerd" />
+  <meta name="twitter:title" content="The Velocity Verdict Cheat Sheet — GitDealFlow" />
+  <meta name="twitter:description" content="The 14-day engineering pattern that has preceded 219 documented fundraises." />
+  <meta name="twitter:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "The Velocity Verdict Cheat Sheet",
+    "description": "A one-page reference to the three GitHub engineering-acceleration signals and the 14-day window that, together, have preceded 219 documented startup fundraises 21 to 47 days before the press.",
+    "url": "https://gitdealflow.com/cheatsheet",
+    "author": { "@type": "Person", "name": "The Data Nerd", "url": "https://signals.gitdealflow.com/about" },
+    "publisher": { "@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com" },
+    "isAccessibleForFree": true,
+    "educationalLevel": "Beginner",
+    "about": [
+      { "@type": "Thing", "name": "venture capital deal flow" },
+      { "@type": "Thing", "name": "alternative data" },
+      { "@type": "Thing", "name": "GitHub engineering acceleration" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Cheat Sheet", "item": "https://gitdealflow.com/cheatsheet" }
+    ]
+  }
+  </script>
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="stylesheet" href="/styles.css">
+  <script>document.documentElement.className += ' js';</script>
+  <style>
+    html { scroll-padding-top: 6rem; }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+    .mobile-cta-stack > * { width: 100%; }
+    @media (min-width: 640px) { .mobile-cta-stack > * { width: auto; } }
+    @media (max-width: 639px) {
+      html { scroll-padding-top: 5rem; }
+      body { padding-bottom: 6rem; }
+      .mobile-compact-header { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+      .mobile-hero-wrap { padding-left: 1rem; padding-right: 1rem; padding-top: 4rem; padding-bottom: 4rem; }
+      .mobile-hero-title { font-size: 2rem; line-height: 1.1; text-wrap: balance; }
+      .mobile-hero-copy { font-size: 1rem; line-height: 1.65; }
+      .mobile-section-pad { padding-left: 1rem; padding-right: 1rem; }
+      .mobile-card-pad { padding: 1.25rem; }
+      .mobile-cta-stack .btn { white-space: normal; text-align: center; line-height: 1.35; padding-left: 1rem; padding-right: 1rem; }
+    }
+    .cheat-row { display: grid; grid-template-columns: auto 1fr; gap: 1rem 1.25rem; align-items: start; }
+    .cheat-num {
+      display: flex; align-items: center; justify-content: center;
+      flex: 0 0 auto; width: 3rem; height: 3rem; border-radius: 0.75rem;
+      background: rgba(255,107,26,0.12); color: #ff6b1a;
+      font-size: 1.5rem; font-weight: 800;
+    }
+    a:focus-visible { outline: 2px solid #38bdf8; outline-offset: 3px; border-radius: 4px; }
+    .btn-spinner { width: 1rem; height: 1rem; border: 2px solid rgba(15,23,42,0.35); border-top-color: #0f172a; border-radius: 50%; display: inline-block; animation: btn-spin 0.6s linear infinite; }
+    @keyframes btn-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .btn-spinner { animation: none; } }
+    .btn[aria-busy="true"] { cursor: progress; opacity: 0.9; }
+  </style>
+<!-- Traffic-Readiness JSON-LD org+website schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gitdealflow.com/#org",
+      "name": "GitDealFlow",
+      "url": "https://gitdealflow.com",
+      "description": "VC Deal Flow Signal — spot breakout startups 3-6 weeks before fundraise via public GitHub activity.",
+      "sameAs": ["https://t.me/gitdealflow", "https://x.com/data_nerd", "https://github.com/kindrat86"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gitdealflow.com/#website",
+      "url": "https://gitdealflow.com",
+      "name": "GitDealFlow",
+      "publisher": {"@id": "https://gitdealflow.com/#org"}
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": ["Home", "Signals", "Research"],
+      "url": ["https://gitdealflow.com/", "https://signals.gitdealflow.com/", "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6606558"]
+    }
+  ]
+}
+</script>
+<!-- Traffic-Readiness JSON-LD org+website schema -->
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-brand-500 focus:text-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to main content</a>
+
+  <header class="sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+    <div class="mobile-compact-header max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+      <a href="/" class="font-semibold tracking-tight text-white text-lg">GitDealFlow</a>
+      <div class="flex items-center gap-4 shrink-0">
+        <a href="#get-it" class="btn btn-primary btn-no-pulse btn-sm whitespace-nowrap shrink-0"><span>Get the cheat sheet</span> <span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-brand-900 opacity-80"></div>
+      <div class="mobile-hero-wrap relative max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-wider mb-6">Free cheat sheet &mdash; for angels, scouts &amp; seed funds</p>
+        <h1 class="mobile-hero-title text-4xl md:text-6xl font-extrabold leading-tight mb-4">The <span class="text-signal-500">14-day pattern</span> that has preceded <span class="text-emerald-400">219 fundraises</span>.</h1>
+        <p class="sr-only"><strong>TL;DR:</strong> Free one-page cheat sheet: the three-signal pattern (velocity surge, contributor spike, infrastructure buildout) that preceded 219 fundraises, with a scannable table and the 14-day window to watch. Based on the SSRN-published methodology.</p>
+
+        <p class="mobile-hero-copy text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">Three engineering signals fire together in a two-week window. When they do, history says a round follows &mdash; <strong class="text-white">21 to 47 days before the press notices</strong>. This is the one-page version of the method, free.</p>
+        <a href="#get-it" class="btn btn-primary btn-xl w-full sm:w-auto"><span>Get the cheat sheet &mdash; free</span><span aria-hidden="true" class="btn-arrow">&rarr;</span></a>
+        <p class="text-gray-500 text-sm mt-4"><span class="text-emerald-400">&#10003;</span> One page &nbsp; <span class="text-emerald-400">&#10003;</span> No code &nbsp; <span class="text-emerald-400">&#10003;</span> Unsubscribe in one click</p>
+      </div>
+    </section>
+
+    <section class="mobile-section-pad max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider text-center mb-3">What&rsquo;s on the page</p>
+      <h2 class="text-3xl font-bold text-center mb-3">Everything you need to read the signal &mdash; nothing you don&rsquo;t.</h2>
+      <p class="text-gray-300 text-lg text-center max-w-2xl mx-auto mb-10">No 40-page e-book, no video funnel. One printable page you can pin above your desk: the three signals, the window, the lead time, and the one question that tells you whether a startup is about to raise.</p>
+
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-gray-700 bg-dark-800 p-6 md:p-7">
+          <div class="cheat-row">
+            <div class="cheat-num">1</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">The Velocity Surge</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">How to read a commit-output deviation from a startup&rsquo;s own baseline &mdash; the 2x&ndash;4x over 14 days that is the earliest indicator. What it looks like, and what it doesn&rsquo;t.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-gray-700 bg-dark-800 p-6 md:p-7">
+          <div class="cheat-row">
+            <div class="cheat-num">2</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">The Contributor Spike</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">Why new developers joining the public repo in a concentrated window means the team is scaling <em>before</em> the hire announcement &mdash; and how to spot it without reading code.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-gray-700 bg-dark-800 p-6 md:p-7">
+          <div class="cheat-row">
+            <div class="cheat-num">3</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">The Infrastructure Buildout</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">New repos, new services, new architecture: the groundwork a company lays for the product that justifies the round. The signal investors almost never look for.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-6 md:p-7">
+          <div class="cheat-row">
+            <div class="cheat-num" style="background:rgba(16,185,129,0.12);color:#34d399;">&alpha;</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">The 14-day window &amp; the one question</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">When all three fire inside two weeks, the pattern has historically preceded a raise <strong class="text-white">82% of the time</strong> in the 219-fundraise panel. The cheat sheet ends with the one question to ask before you reach out.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-it" class="mobile-section-pad max-w-2xl mx-auto px-4 sm:px-6 py-12 md:py-16 scroll-mt-24">
+      <div class="mobile-card-pad rounded-2xl border border-signal-500/40 bg-dark-800 p-8 md:p-10">
+        <p class="text-signal-400 text-xs font-semibold uppercase tracking-wider mb-3">Get it free</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Drop your email &mdash; the cheat sheet lands in your inbox now.</h2>
+        <p class="text-gray-300 leading-relaxed mb-6">You get the one-page cheat sheet immediately. You also get the free <strong class="text-white">Sunday Signal</strong> &mdash; five startups the pattern flagged that week, each in plain English. No card, ever. One click to unsubscribe.</p>
+        <form class="js-signup-form mobile-cta-stack flex flex-col sm:flex-row gap-3" data-source="cheatsheet">
+          <label for="cheatsheet-email" class="sr-only">Email address</label>
+          <input type="email" id="cheatsheet-email" required inputmode="email" autocomplete="email" placeholder="you@example.com" class="flex-1 px-5 py-4 rounded-lg bg-dark-800 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-lg">
+          <button type="submit" class="btn btn-primary btn-xl w-full sm:w-auto"><span>Send me the cheat sheet</span><span aria-hidden="true" class="btn-arrow">&rarr;</span></button>
+        </form>
+        <p role="status" class="js-signup-msg text-gray-500 text-sm mt-4"><span class="text-emerald-400">&#10003;</span> The cheat sheet + every Sunday issue &nbsp; <span class="text-emerald-400">&#10003;</span> No card &nbsp; <span class="text-emerald-400">&#10003;</span> Unsubscribe in one click</p>
+        <p class="text-gray-500 text-xs mt-4 leading-relaxed">The full method lives at <a href="https://signals.gitdealflow.com/methodology" target="_blank" rel="noopener" class="text-brand-500 underline">signals.gitdealflow.com/methodology</a>. The cheat sheet is the plain-English version for investors who never want to read code.</p>
+      </div>
+    </section>
+
+    <section class="mobile-section-pad max-w-3xl mx-auto px-4 sm:px-6 py-12">
+      <div class="rounded-2xl border border-gray-800 bg-dark-800/70 p-6 md:p-8 text-center">
+        <p class="text-gray-400 text-sm leading-relaxed max-w-xl mx-auto">Not sure yet? <a href="/" class="text-brand-500 underline">See the full landing page</a>, or <a href="/report" class="text-brand-500 underline">read a real sample issue</a> first. The cheat sheet will still be here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+    <div class="mobile-section-pad max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-gray-300 mb-2 font-semibold">GitDealFlow is a deal-flow signal tool for investors &mdash; not a fund.</p>
+      <div class="flex flex-wrap justify-center gap-6 text-gray-500 text-sm mb-5">
+        <a href="/" class="hover:text-gray-300">Home</a>
+        <a href="/perfect-webinar" class="hover:text-gray-300">Walkthrough</a>
+        <a href="/dashboard" class="hover:text-gray-300">Dashboard</a>
+        <a href="/privacy" class="hover:text-gray-300">Privacy</a>
+        <a href="/terms" class="hover:text-gray-300">Terms</a>
+      </div>
+      <p class="text-gray-400 text-xs">&copy; 2026 GitDealFlow. Proof surfaces live on signals.gitdealflow.com.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.GDFattribution = function(source) {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const stored = JSON.parse(sessionStorage.getItem('gdf_attr') || '{}');
+        const get = function(key) { return params.get(key) || stored[key] || ''; };
+        const utm_source = get('utm_source'), utm_medium = get('utm_medium'), utm_campaign = get('utm_campaign');
+        if (!stored.utm_source && (utm_source || utm_medium || utm_campaign)) {
+          try { sessionStorage.setItem('gdf_attr', JSON.stringify({ utm_source, utm_medium, utm_campaign, referrer: document.referrer || '', landing_path: window.location.pathname + window.location.search })); } catch (e) {}
+        }
+        return { source: source || stored.source || 'cheatsheet', utm_source, utm_medium, utm_campaign, referrer: stored.referrer || document.referrer || '', landing_path: stored.landing_path || (window.location.pathname + window.location.search) };
+      } catch (e) { return { source: source || 'cheatsheet' }; }
+    };
+    document.querySelectorAll('form.js-signup-form').forEach(function (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const msg = form.querySelector('.js-signup-msg');
+        const emailEl = form.querySelector('input[type="email"]');
+        const email = (emailEl && emailEl.value || '').trim();
+        if (!email) return;
+        const orig = btn ? btn.innerHTML : '';
+        if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); btn.innerHTML = '<span class="btn-spinner" aria-hidden="true"></span><span>Sending&hellip;</span>'; }
+        try {
+          const attr = window.GDFattribution(form.getAttribute('data-source') || 'cheatsheet');
+          const res = await fetch('https://signals.gitdealflow.com/api/subscribe', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.assign({ email: email, quiz_route: 'cheatsheet', quiz_route_label: 'Velocity Verdict Cheat Sheet' }, attr))
+          });
+          const data = await res.json();
+          if (data.ok) {
+            if (window.posthog) posthog.capture('signup_verify_sent', { placement: 'cheatsheet' });
+            try { sessionStorage.setItem('gdf_email', email); } catch (e) {}
+            window.location.href = '/thanks';
+            return;
+          }
+          throw new Error(data.error || 'Failed');
+        } catch (err) {
+          if (msg) { msg.textContent = 'Something went wrong. Try again or email signals@gitdealflow.com'; msg.className = 'js-signup-msg text-red-400 text-sm mt-4 text-center'; }
+          if (btn) { btn.disabled = false; btn.removeAttribute('aria-busy'); btn.innerHTML = orig; }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "GitDealFlow",
+  "description": "VC deal flow signal — startup engineering acceleration tracker. Surfaces breakout engineering teams 3-6 weeks before fundraise announcements using public GitHub activity data across ~400 startup orgs in 20 sectors. Free APIs, MCP server, and weekly reports.",
+  "home_page_url": "https://gitdealflow.com/",
+  "feed_url": "https://gitdealflow.com/feed.json",
+  "language": "en",
+  "authors": [
+    {
+      "name": "GitDealFlow",
+      "url": "https://gitdealflow.com/about"
+    }
+  ],
+  "_hubs": [
+    "https://pubsubhubbub.appspot.com/",
+    "https://pubsubhubbub.superfeedr.com/",
+    "https://websubhub.com/"
+  ],
+  "_site": {
+    "domain": "gitdealflow.com",
+    "generator": "Hermes WebSub Feed Generator",
+    "generated_at": "2026-07-18T09:05:22Z"
+  },
+  "items": [
+    {
+      "id": "https://gitdealflow.com",
+      "url": "https://gitdealflow.com",
+      "title": "See Which Startups Are Heating Up 21–47 Days Before the Round — the Velocity Verdict | GitDealFlow",
+      "content_text": "The Velocity Verdict: GitDealFlow flags startups accelerating on GitHub 21–47 days before the round. A signal tool for investors — not a fund. No code-reading required.",
+      "date_published": "2026-07-18T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "banner_image": "https://signals.gitdealflow.com/opengraph-image"
+    },
+    {
+      "id": "https://signals.gitdealflow.com/about",
+      "url": "https://signals.gitdealflow.com/about",
+      "title": "About VC Deal Flow Signal — Why It Exists and Why You Might Trust It | VC Deal Flow Signal",
+      "content_text": "Why VC Deal Flow Signal exists, what it tracks, and why its public methodology and data surfaces are built to help you trust the signal faster.",
+      "date_published": "2026-07-16T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/pricing",
+      "url": "https://signals.gitdealflow.com/pricing",
+      "title": "Pricing — Start free, go deeper only when you need it | VC Deal Flow Signal | VC Deal Flow Signal",
+      "content_text": "VC Deal Flow Signal pricing — start free, test one sector, move to the full field, or go deeper only when the question justifies it. Founding-member rates locked. 30-day Signal-or-It's-Free guarantee on every paid plan above €1.",
+      "date_published": "2026-07-14T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/methodology",
+      "url": "https://signals.gitdealflow.com/methodology",
+      "title": "Methodology — How We Measure Startup Engineering Acceleration | VC Deal Flow Signal",
+      "content_text": "How GitDealFlow measures GitHub engineering acceleration: data sources, formulas, signal rules, update cadence, and the proof behind the timing-first thesis.",
+      "date_published": "2026-07-12T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8",
+      "banner_image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8"
+    },
+    {
+      "id": "https://gitdealflow.com/cheatsheet",
+      "url": "https://gitdealflow.com/cheatsheet",
+      "title": "The Velocity Verdict Cheat Sheet — the 14-day pattern that predicts a raise | GitDealFlow",
+      "content_text": "A free one-page cheat sheet: the three signals and the 14-day window that, together, have preceded 219 documented fundraises — 21 to 47 days before the press. Download it free.",
+      "date_published": "2026-07-10T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "banner_image": "https://signals.gitdealflow.com/opengraph-image"
+    },
+    {
+      "id": "https://gitdealflow.com/report",
+      "url": "https://gitdealflow.com/report",
+      "title": "Sample report — GitDealFlow built on VC Deal Flow Signal",
+      "content_text": "See a sample GitDealFlow report: startups the signal flagged as heating up, with plain-English notes. A tool for investors, not a fund.",
+      "date_published": "2026-07-08T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "banner_image": "https://signals.gitdealflow.com/opengraph-image"
+    },
+    {
+      "id": "https://signals.gitdealflow.com",
+      "url": "https://signals.gitdealflow.com",
+      "title": "VC Deal Flow Signal — Find breakout startups via GitHub momentum",
+      "content_text": "A deal-flow signal tool for investors, not a fund. See which startups are accelerating before the round feels obvious — public engineering signals, calmer timing, and direct proof.",
+      "date_published": "2026-07-06T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8",
+      "banner_image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8"
+    },
+    {
+      "id": "https://signals.gitdealflow.com/zh",
+      "url": "https://signals.gitdealflow.com/zh",
+      "title": "VC Deal Flow Signal — 简体中文 (Chinese (Simplified)) | VC Deal Flow Signal",
+      "content_text": "VC Deal Flow Signal（GitDealFlow）通过追踪 GitHub 公开数据中的提交速率、贡献者增长和仓库扩张，识别处于工程加速期的初创公司。我们的研究表明，此类信号通常在融资公告前 3 至 6 周出现。方法论已在 SSRN 公开发表（DOI 10.2139/ssrn.6606558，CC BY 4.0），数据集开放下载。",
+      "date_published": "2026-07-04T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/api/og/locale/zh",
+      "banner_image": "https://signals.gitdealflow.com/api/og/locale/zh"
+    },
+    {
+      "id": "https://signals.gitdealflow.com/year-in-review",
+      "url": "https://signals.gitdealflow.com/year-in-review",
+      "title": "Year in Review — Engineering Signals & Venture Patterns | VC Deal Flow Signal | VC Deal Flow Signal",
+      "content_text": "3 annual editorial roundups covering the engineering-acceleration shifts, M&A patterns, and venture trends defining recent years (2024, 2025, 2026).",
+      "date_published": "2026-07-02T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/works-with",
+      "url": "https://signals.gitdealflow.com/works-with",
+      "title": "Works with — CRM & Workflow Integrations | VC Deal Flow Signal | VC Deal Flow Signal",
+      "content_text": "15 CRM and workflow tool integration pages — Affinity, HubSpot, Salesforce, Notion, Airtable, Slack, Linear, and more. For Corp Dev, PE Operating Partners, and emerging-manager funds who want signals inside their existing stack.",
+      "date_published": "2026-06-30T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/wins",
+      "url": "https://signals.gitdealflow.com/wins",
+      "title": "Underwriting Receipts — Public Ledger of Validated GitHub Signals · €0 | VC Deal Flow Signal",
+      "content_text": "Public ledger of every venture-backed startup whose GitHub engineering acceleration matched our signal pattern before the funding round, acquisition, or valuation announcement. Anonymous-founder, evidence-first track record. No testimonials — just receipts.",
+      "date_published": "2026-06-28T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/wikipedia",
+      "url": "https://signals.gitdealflow.com/wikipedia",
+      "title": "Wikipedia Citation Helper — VC Deal Flow Signal | VC Deal Flow Signal",
+      "content_text": "Copy-paste-ready Wikipedia citation snippets for the SSRN-indexed methodology paper, the public dataset, and every research finding. Uses {{cite journal}} and {{cite web}} templates. Verifiability-policy compliant — every citation resolves to a free, public source.",
+      "date_published": "2026-06-26T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/wikidata",
+      "url": "https://signals.gitdealflow.com/wikidata",
+      "title": "Wikidata Knowledge Panel claim — VC Deal Flow Signal (Q139376302) | VC Deal Flow Signal",
+      "content_text": "Bidirectional Knowledge Panel claim binding the Wikidata entity Q139376302 to signals.gitdealflow.com. Includes copy-paste SPARQL verification queries, the full P-code property table, and the machine-readable manifest at /.well-known/wikidata.json. Reciprocal sameAs across 24+ external profiles.",
+      "date_published": "2026-06-24T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/weekly",
+      "url": "https://signals.gitdealflow.com/weekly",
+      "title": "Weekly Signal Reports — Engineering Acceleration Archive | VC Deal Flow Signal",
+      "content_text": "Archive of weekly startup engineering acceleration reports from VC Deal Flow Signal. Each report ranks the top 10 startups by GitHub commit velocity change across all sectors.",
+      "date_published": "2026-06-22T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8",
+      "banner_image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8"
+    },
+    {
+      "id": "https://signals.gitdealflow.com/watch",
+      "url": "https://signals.gitdealflow.com/watch",
+      "title": "Watch — VC Deal Flow Signal in 90 seconds (silent demo) | VC Deal Flow Signal",
+      "content_text": "Silent visual walkthrough of the VC Deal Flow Signal engine. No audio, no narrator, no face. Just the dashboard breathing — commit velocity, contributor diversity, dependents graph, the composite score animating in real time.",
+      "date_published": "2026-06-20T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/walkthrough",
+      "url": "https://signals.gitdealflow.com/walkthrough",
+      "title": "How to Spot a Series A Weeks Before the Deck Lands — 12-Minute Walkthrough | VC Deal Flow Signal",
+      "content_text": "See why public engineering acceleration can give you earlier startup timing. Three objections, direct proof, and the weekly signal stack behind it.",
+      "date_published": "2026-06-18T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/use-cases",
+      "url": "https://signals.gitdealflow.com/use-cases",
+      "title": "Use Cases — Angels, VC Analysts, Fund of Funds | VC Deal Flow Signal",
+      "content_text": "How angel investors, VC analysts, and fund-of-funds teams use GitDealFlow in real sourcing, diligence, and monitoring workflows — and how those workflows route into proof, compare, and buyer pages.",
+      "date_published": "2026-06-16T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ],
+      "image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8",
+      "banner_image": "https://signals.gitdealflow.com/opengraph-image?2b656e32a9d622b8"
+    },
+    {
+      "id": "https://signals.gitdealflow.com/tweet-teardown",
+      "url": "https://signals.gitdealflow.com/tweet-teardown",
+      "title": "/tweet-teardown",
+      "content_text": "VC deal flow signal — startup engineering acceleration tracker. Surfaces breakout engineering teams 3-6 weeks before fundraise announcements using public GitHub activity data across ~400 startup orgs in 20 sectors. Free APIs, MCP server, and weekly reports.",
+      "date_published": "2026-06-14T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/trending",
+      "url": "https://signals.gitdealflow.com/trending",
+      "title": "Trending Startups — Top Engineering Acceleration Across All Sectors | VC Deal Flow Signal",
+      "content_text": "The top 20 trending startups ranked by GitHub engineering acceleration across all sectors. Commit velocity spikes, contributor growth, and breakout signals — updated weekly.",
+      "date_published": "2026-06-12T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    },
+    {
+      "id": "https://signals.gitdealflow.com/trend",
+      "url": "https://signals.gitdealflow.com/trend",
+      "title": "Trends — Engineering Signal Leaderboards (2026) | VC Deal Flow Signal | VC Deal Flow Signal",
+      "content_text": "Editorial trend leaderboards across 20 technical categories — agentic AI, LLM inference, frontier labs, AI coding, edge compute, AI-native databases, observability, payments. Each leaf is curated, time-bound, and AEO-optimized for citation.",
+      "date_published": "2026-06-10T09:05:22Z",
+      "authors": [
+        {
+          "name": "GitDealFlow"
+        }
+      ]
+    }
+  ]
+}

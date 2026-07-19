@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database</title>
+  <meta name="description" content="PitchBook is the standard for deal-terms data. GitDealFlow is the standard for pre-round signal. Together they form the most complete VC sourcing + analysis stack available.">
+  <link rel="canonical" href="https://gitdealflow.com/integrations/gitdealflow-for-pitchbook" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="GitDealFlow" />
+  <meta property="og:title" content="GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database" />
+  <meta property="og:description" content="PitchBook is the standard for deal-terms data. GitDealFlow is the standard for pre-round signal. Together they form the most complete VC sourcing + analysis stack available." />
+  <meta property="og:url" content="https://gitdealflow.com/integrations/gitdealflow-for-pitchbook" />
+  <meta property="og:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@data_nerd" />
+  <meta name="twitter:creator" content="@data_nerd" />
+  <meta name="twitter:title" content="GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database" />
+  <meta name="twitter:description" content="PitchBook is the standard for deal-terms data. GitDealFlow is the standard for pre-round signal. Together they form the most complete VC sourcing + analysis stack available." />
+  <meta name="twitter:image" content="https://signals.gitdealflow.com/opengraph-image" />
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://gitdealflow.com/llms.txt" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database", "description": "PitchBook is the standard for deal-terms data. GitDealFlow is the standard for pre-round signal. Together they form the most complete VC sourcing + analysis stack available.", "author": {"@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com"}, "publisher": {"@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://gitdealflow.com/integrations/gitdealflow-for-pitchbook"}, "datePublished": "2026-07-18", "dateModified": "2026-07-18", "about": [{"@type": "Thing", "name": "deal flow signal"}, {"@type": "Thing", "name": "alternative data for investors"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com"}, {"@type": "ListItem", "position": 2, "name": "Integrations", "item": "https://gitdealflow.com/integrations"}, {"@type": "ListItem", "position": 3, "name": "GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database", "item": "https://gitdealflow.com"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "Why use both instead of just PitchBook?", "acceptedAnswer": {"@type": "Answer", "text": "PitchBook's deal data is excellent, but it only shows you companies that have already raised. GitDealFlow shows you companies that haven't raised yet — the ones where you can still get allocation."}}]}</script>
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .vs-hero{padding:3rem 1.25rem 2rem;max-width:760px;margin:0 auto}
+    .vs-hero h1{font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.15;margin:.4em 0 .6em;font-weight:800;letter-spacing:-.02em;color:#fff}
+    .vs-lede{font-size:1.15rem;line-height:1.6;color:#cbd5e1;margin-bottom:1.5rem}
+    .vs-section{max-width:760px;margin:0 auto;padding:1.5rem 1.25rem}
+    .vs-section h2{font-size:1.5rem;margin:2rem 0 .75rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b;color:#f1f5f9;font-weight:700}
+    .vs-section p, .vs-section li{color:#cbd5e1;line-height:1.7}
+    .vs-section ul{padding-left:1.25rem;margin:.5rem 0}.vs-section li{margin:.35rem 0}
+    .vs-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem}
+    .vs-table th, .vs-table td{border:1px solid #334155;padding:.7rem .85rem;text-align:left}
+    .vs-table th{background:#1e293b;color:#f1f5f9;font-weight:600}
+    .vs-table td{color:#cbd5e1}.vs-table tr:nth-child(even) td{background:#0f172a66}
+    .verdict{background:linear-gradient(135deg,#0ea5e922,#0ea5e908);border:1px solid #0ea5e955;border-left:4px solid #0ea5e9;padding:1.25rem 1.5rem;border-radius:.6rem;margin:1.5rem 0}
+    .verdict strong{color:#7dd3fc}
+    .callout-warn{background:#fef3c715;border-left:4px solid #d97706;padding:1rem 1.25rem;margin:1.5rem 0;border-radius:0 .375rem .375rem 0;color:#fde68a}
+    .cta-final{background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;padding:2.5rem 1.5rem;border-radius:.8rem;margin-top:2rem;text-align:center}
+    .cta-final h2{color:#fff;border:none;padding:0;margin:0 0 .5em}
+    .cta-final .btn{display:inline-block;background:#fff;color:#0369a1;padding:.85rem 1.75rem;border-radius:.4rem;font-weight:700;margin-top:.75rem}
+    .faq-item{border-bottom:1px solid #1e293b;padding:.9rem 0}
+    .faq-item summary{cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none;font-size:1.05rem}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::before{content:"▸ ";color:#0ea5e9;margin-right:.4rem}
+    .faq-item[open] summary::before{content:"▾ "}
+    .faq-item p{margin:.6rem 0 0;color:#cbd5e1;line-height:1.65}
+    .related{background:#0f172a80;border:1px solid #1e293b;padding:1.25rem 1.5rem;border-radius:.6rem;margin-top:2rem}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.4rem}
+    .related a{color:#7dd3fc;text-decoration:none}.related a:hover{text-decoration:underline}
+    .disclaimer{font-size:.85rem;color:#64748b;font-style:italic;margin-top:1.5rem}
+  </style>
+</head><body class="bg-dark-900 text-gray-100">
+  <header class="relative sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+      <a href="/" class="font-semibold tracking-tight text-white text-lg">GitDealFlow</a>
+      <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-5 text-sm font-medium text-gray-300">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://signals.gitdealflow.com" class="hover:text-white transition-colors">Signals</a>
+        <a href="/best/best-startup-signal-tools" class="hover:text-white transition-colors">Best tools</a>
+        <a href="/vs" class="hover:text-white transition-colors">Comparisons</a>
+        <a href="/pricing" class="hover:text-white transition-colors">Pricing</a>
+      </nav>
+      <a href="/#signup-hero" class="btn btn-primary btn-no-pulse btn-sm whitespace-nowrap shrink-0">Get the 5 names &rarr;</a>
+    </div>
+  </header>
+  <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-3 text-sm text-gray-400" aria-label="Breadcrumb">
+    <a href="/" class="hover:text-gray-300">Home</a> <span class="mx-1">/</span> <a href="/integrations" class="hover:text-gray-300">Integrations</a> <span class="mx-1">/</span> <span class="text-gray-300">GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database</span>
+  </nav>
+  <section class="vs-hero">
+    <h1>GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database</h1>
+    <p class="vs-lede">PitchBook is the standard for deal-terms data. GitDealFlow is the standard for pre-round signal. Together they form the most complete VC sourcing + analysis stack available.</p>
+  </section>
+
+  <section class="vs-section">
+    <h2>How to use them together</h2>
+    <p>Use GitDealFlow to discover which startups are accelerating this week. Once you've identified the hottest prospects, use PitchBook to analyze comparable deals, typical terms for the sector/stage, and which funds co-invest. GitDealFlow answers 'who should I look at.' PitchBook answers 'what should I pay.'</p>
+    <h3>Workflow</h3>
+    <ol style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem">
+      <li>GitDealFlow → identify top 3-5 accelerating startups</li>
+<li>PitchBook → find comparable deals in the same sector + stage</li>
+<li>PitchBook → check typical valuation multiples and deal terms</li>
+<li>PitchBook → identify co-investor patterns (which funds invest together in this space)</li>
+<li>Reach out with context: 'I saw your GitHub momentum + your sector typically raises at X terms'</li>
+    </ol>
+  </section>
+
+  <section class="vs-section">
+    <h2>Frequently asked questions</h2>
+    
+        <details class="faq-item">
+          <summary>Why use both instead of just PitchBook?</summary>
+          <p>PitchBook's deal data is excellent, but it only shows you companies that have already raised. GitDealFlow shows you companies that haven't raised yet — the ones where you can still get allocation.</p>
+        </details>
+  </section>
+
+  <section class="vs-section">
+    <div class="cta-final">
+      <h2>Build your deal-flow stack today</h2>
+      <p style="color:#e0f2fe;margin-bottom:1rem">GitDealFlow integrates with your existing workflow — CRM, database, or spreadsheet.</p>
+      <a href="/#signup-hero" class="btn">Get started free &rarr;</a>
+    </div>
+  </section><section class="vs-section">
+    <div class="related">
+      <h2 style="color:#e2e8f0;margin-top:0;border:none;padding:0;font-size:1.2rem">Related pages</h2>
+      <ul>      <li><a href="/vs/pitchbook">GitDealFlow vs PitchBook</a></li>
+      <li><a href="/cost-of/pitchbook-pricing">PitchBook pricing breakdown</a></li></ul>
+    </div>
+  </section>
+  
+
+<!-- enrichment-block:start -->
+<section class="pg-s" style="max-width:820px;margin:0 auto;padding:1.25rem"><h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">How the GitDealFlow + PitchBook — Pre-Round Signal Meets Deal-Terms Database integration works</h2>
+<p style="color:#cbd5e1;line-height:1.7">The integration pushes GitDealFlow engineering-acceleration signals — commit velocity, contributor growth, star acceleration, and the proprietary Scout Score — directly into PitchBook — Pre-Round Signal Meets Deal-Terms Database. Instead of manually copying startup names from a signal dashboard into your deal-flow workspace, the sync writes a structured record for every accelerating startup the moment it crosses the 21 to 47 day pre-round threshold. The result is a living pipeline in PitchBook — Pre-Round Signal Meets Deal-Terms Database that reflects engineering reality on GitHub, not last quarter funding announcements scraped from a database.</p>
+<h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">What syncs across</h2>
+<p style="color:#cbd5e1;line-height:1.7">Each startup record carries seven fields: organization name, primary sector (one of 20), Scout Score from 0 to 100, four-week commit velocity delta, unique contributor count, repository expansion rate, and the date the acceleration threshold was crossed. PitchBook — Pre-Round Signal Meets Deal-Terms Database receives these as native rows with typed columns, so you can sort, filter, and group using whatever deal-flow taxonomy you already maintain. The sync runs on a weekly cadence aligned to the Sunday Signal Digest, so every Monday your PitchBook — Pre-Round Signal Meets Deal-Terms Database workspace already reflects the prior week momentum shift.</p>
+<h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">Setup steps</h2>
+<ol style="color:#cbd5e1;line-height:1.8;padding-left:1.5rem"><li><strong style="color:#e2e8f0">Connect the workspace.</strong> Authenticate GitDealFlow to your PitchBook — Pre-Round Signal Meets Deal-Terms Database workspace using the native connector or the documented REST endpoint. No API key is required for read-only signal delivery.</li><li><strong style="color:#e2e8f0">Map the destination.</strong> Select the base, database, or pipeline view where accelerating startup records should land. The connector respects your existing schema rather than imposing a new one.</li><li><strong style="color:#e2e8f0">Pick your sectors.</strong> Choose any subset of the 20 tracked sectors. Most teams start with two to four sectors aligned to their investment thesis and expand later.</li><li><strong style="color:#e2e8f0">Confirm the weekly cadence.</strong> The default sync runs every Sunday evening UTC and delivers startups that crossed the acceleration threshold in the prior seven days.</li></ol>
+<h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">Example workflows</h2>
+<p style="color:#cbd5e1;line-height:1.7">A common pattern for seed-stage investors using PitchBook — Pre-Round Signal Meets Deal-Terms Database: the weekly sync writes new accelerating startups into a staging view, an associate triages them Monday morning, and the ones that survive triage get promoted into the active diligence pipeline with a warm-intro path. Because the signal arrives before the funding announcement, there is a genuine window to reach out before competing investors notice the round. Corporate venture teams use a variant of this workflow where the staging view is filtered by strategic-fit keywords mapped to their parent company roadmap.</p>
+<div style="background:linear-gradient(135deg,#0ea5e922,#0ea5e908);border:1px solid #0ea5e955;border-left:4px solid #0ea5e9;padding:1.1rem 1.4rem;border-radius:.6rem;margin:1.25rem 0"><strong style="color:#7dd3fc">Data flow:</strong> <span style="color:#cbd5e1">GitHub public activity &rarr; GitDealFlow acceleration detection &rarr; weekly sync &rarr; PitchBook — Pre-Round Signal Meets Deal-Terms Database structured records &rarr; your existing deal-flow workflow. No manual data entry, no copy-paste, no stale dashboards.</span></div>
+<p style="font-size:.85rem;color:#64748b;margin-top:2rem">All figures on this page reflect GitDealFlow coverage as of Q3 2026 across 4,200+ tracked GitHub organizations in 20 sectors. The methodology is published as <a style="color:#0ea5e9" href="https://ssrn.com/abstract=6606558">SSRN preprint 6606558</a> and validated against 219 documented fundraiser events.</p></section>
+<!-- enrichment-block:end -->
+
+<footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-gray-300 mb-2 font-semibold">GitDealFlow is a deal-flow signal tool for investors — not a fund and not a startup accelerator.</p>
+      <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm mt-5">
+        <a href="/" class="py-2 inline-block hover:text-gray-300">Home</a>
+        <a href="/best/best-startup-signal-tools" class="py-2 inline-block hover:text-gray-300">Best tools</a>
+        <a href="/vs" class="py-2 inline-block hover:text-gray-300">Comparisons</a>
+        <a href="/alternatives-to" class="py-2 inline-block hover:text-gray-300">Alternatives</a>
+        <a href="/pricing" class="py-2 inline-block hover:text-gray-300">Pricing</a>
+      </div>
+      <p class="text-gray-500 text-xs mt-6">&copy; 2026 GitDealFlow. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
