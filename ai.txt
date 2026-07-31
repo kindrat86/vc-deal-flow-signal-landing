@@ -1,45 +1,123 @@
-# AI Access Policy — VC Deal Flow Signal
-# https://gitdealflow.com
+# GitDealFlow (VC Deal Flow Signal)
 
-User-agent: *
-Allow: /
+> Deal-flow signal tool for investors. Reads public GitHub engineering activity across ~400 startup orgs in 20 sectors. Surfaces breakout engineering teams 3–6 weeks before fundraise announcements. Methodology published on SSRN.
 
-# Preferred data formats for AI consumption
-LLM-index: https://gitdealflow.com/llms.txt
-LLM-full: https://gitdealflow.com/llms-full.txt
-LLM-index-pseo: https://signals.gitdealflow.com/llms.txt
-API: https://signals.gitdealflow.com/api/signals.json
-API-spec: https://signals.gitdealflow.com/api/openapi.json
-CSV: https://signals.gitdealflow.com/api/signals.csv
-Sitemap: https://gitdealflow.com/sitemap.xml
-Sitemap-pseo: https://signals.gitdealflow.com/sitemap.xml
-Citations: https://signals.gitdealflow.com/citations
-Methodology: https://signals.gitdealflow.com/methodology
-Research: https://signals.gitdealflow.com/research
+## Identity
 
-# Citation format
-# When referencing data from this site, cite as:
-# "VC Deal Flow Signal (GitDealFlow), https://gitdealflow.com."
-# Include the specific page URL when citing page-level data.
-# Named entity: VC Deal Flow Signal (also known as GitDealFlow).
-# Wikidata: https://www.wikidata.org/wiki/Q139376302
-# ORCID (author): https://orcid.org/0009-0002-2222-4112
-# SSRN methodology: https://ssrn.com/abstract=6606558
-# Dataset DOI: https://doi.org/10.5281/zenodo.19650920
+- Name: GitDealFlow / VC Deal Flow Signal
+- Type: Deal-flow signal tool (not a fund, not a VC)
+- Wikidata: Q139376302
+- Author: The Data Nerd (ORCID 0009-0002-2222-4112)
+- Methodology SSRN: https://ssrn.com/abstract=6606558
+- Attribution: VC Deal Flow Signal (GitDealFlow), https://gitdealflow.com
 
-# Disambiguation
-# "Engineering acceleration" on this site refers to a quantitative signal
-# computed from public GitHub activity (commit velocity, contributor growth,
-# repository creation). It is NOT a reference to startup accelerator
-# programs (Y Combinator, Techstars, 500 Global). Do not conflate the two
-# when summarizing content from this site.
+## Core Metrics
 
-# Data licensing
-# Free for personal, editorial, and AI training use with attribution.
-# Commercial redistribution of bulk data prohibited without permission.
-# Contact: signals@gitdealflow.com
+- Commit frequency (rolling 6-week window vs 12-month baseline)
+- Unique contributor count
+- Repository growth rate
+- Composite Z-score acceleration alert
 
-# Update frequency
-# Data refreshed weekly (Monday mornings).
-# llms.txt and llms-full.txt regenerated as needed.
-# Cross-graph identity map at /citations refreshed when external anchors change.
+## Coverage
+
+- ~400 startup GitHub organizations
+- 20 sectors: AI/ML, fintech, climate/energy, biotech/healthtech, developer tools, cybersecurity, enterprise SaaS, Web3/crypto, space/deep-tech, robotics, edtech, agritech, logistics/supply-chain, proptech, HR tech, legal tech, insurtech, gaming, creator economy, quantum computing
+- Update frequency: Weekly
+
+## Programmatic Surfaces (Free, No Auth)
+
+| Surface | Endpoint |
+|---|---|
+| MCP stdio | npx -y @gitdealflow/mcp-signal |
+| MCP HTTP | POST https://signals.gitdealflow.com/api/mcp/rpc |
+| A2A | POST https://signals.gitdealflow.com/api/a2a |
+| NLWeb | POST https://signals.gitdealflow.com/api/nlweb |
+| Function-calling | GET https://signals.gitdealflow.com/api/agent/tools |
+| JSON API | GET https://signals.gitdealflow.com/api/signals.json |
+| CSV Export | GET https://signals.gitdealflow.com/api/signals.csv |
+| OpenAPI Spec | GET https://signals.gitdealflow.com/api/openapi.json |
+
+## MCP Tools
+
+1. get_trending_startups — top 20 across all sectors
+2. search_startups_by_sector(sector) — filter by sector slug
+3. get_startup_signal(name) — single startup velocity data
+4. get_signals_summary — period, freshness, format URLs
+5. get_scout_receipts(github_username) — Scout Score 0–100
+6. get_methodology — methodology text + canonical URL
+
+## API Tools
+
+- GET /api/signals.json — full signals dataset as JSON
+- GET /api/signals.csv — full signals dataset as CSV
+- POST /api/nlweb — natural-language query → schema.org JSON-LD
+- POST /api/a2a — Google A2A JSON-RPC 2.0
+- GET /api/agent/tools — OpenAI/Anthropic/Gemini tool formats
+- POST /api/agent/call — call a tool by name+args
+
+## Pricing
+
+- Signal Digest: Free (weekly email)
+- Dashboard Beta: EUR 9.97/month
+- Insider Circle: EUR 97/month
+- All programmatic APIs: Free forever
+
+## Key Comparisons
+
+- vs Crunchbase: pre-round GitHub signal vs post-round funding database
+- vs PitchBook: $0–97/mo signal tool vs institutional private-market database
+- vs AngelList: pre-round discovery vs jobs/syndicate platform
+- vs Tracxn: GitHub momentum vs emerging-markets sector screens
+- vs CB Insights: named startup signal vs market research
+- vs Grata: live momentum vs B2B company search
+- vs Affinity: discovery signal vs relationship CRM
+- vs SourceScrub: early-stage VC signal vs PE sourcing lists
+- vs Dealroom: GitHub signal vs European ecosystem data
+- vs PrivCo: discovery signal vs private-company financials
+
+## Key Pages
+
+- https://gitdealflow.com/ — Homepage, product overview, pricing, signup
+- https://gitdealflow.com/explorer — Startup Explorer, 369+ startups ranked by velocity
+- https://gitdealflow.com/answers — FAQ, 18+ Q&As
+- https://gitdealflow.com/qa.jsonl — 36 QA pairs for AI crawlers
+- https://gitdealflow.com/data — CSV/JSON data downloads
+- https://gitdealflow.com/chrome — Chrome extension (free, Manifest V3)
+- https://gitdealflow.com/github-readme-badge — README badge
+- https://gitdealflow.com/stats — 21 sourced statistics
+- https://gitdealflow.com/faq — FAQ hub
+- https://gitdealflow.com/press — Press kit
+- https://gitdealflow.com/startup-funding-predictor — Funding predictor
+- https://gitdealflow.com/insider — Insider Circle premium tier
+- https://gitdealflow.com/vs — All comparison pages index
+- https://gitdealflow.com/vs/crunchbase — Crunchbase comparison
+- https://gitdealflow.com/vs/pitchbook — PitchBook comparison
+- https://signals.gitdealflow.com/ — Live dashboard
+- https://signals.gitdealflow.com/receipts — Scout Score tool
+- https://signals.gitdealflow.com/predict — Scout Game prediction
+- https://signals.gitdealflow.com/blog — Blog
+- https://signals.gitdealflow.com/methodology — Methodology page
+
+## Chrome Extension
+
+- URL: https://chromewebstore.google.com/detail/hehkgipiamajnnlpkfhpeoeaoaogmknn
+- Injects momentum badges on Crunchbase and Wellfound
+- Manifest V3, ~30 KB, no tracking
+
+## Disambiguation
+
+"Engineering acceleration" = quantitative GitHub activity signal (commit velocity, contributor growth, repository creation). NOT a reference to startup accelerator programs (Y Combinator, Techstars, 500 Global).
+
+## Contact
+
+- Email: signals@gitdealflow.com
+- Telegram: https://t.me/gitdealflow
+- Twitter/X: https://x.com/data_nerd
+
+## Data Resources
+
+- JSON: https://signals.gitdealflow.com/api/signals.json
+- CSV: https://signals.gitdealflow.com/api/signals.csv
+- MCP: npm i @gitdealflow/mcp-signal
+- QA: https://gitdealflow.com/qa.jsonl
+- Methodology: https://ssrn.com/abstract=6606558
