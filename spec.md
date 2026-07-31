@@ -26,7 +26,7 @@
 ## Pricing section
 - **Free:** Monthly email digest with top 5 trending startups by GitHub momentum. No login required.
   - CTA: "Start free" -> ConvertKit form
-- **Pro (EUR 9.97/mo):** Full micro-SaaS dashboard. 60+ startups ranked by engineering acceleration. Filter by sector, stage, geography. Enriched with funding data and team size.
+- **Pro (EUR 49/mo):** Full micro-SaaS dashboard. 60+ startups ranked by engineering acceleration. Filter by sector, stage, geography. Enriched with funding data and team size.
   - CTA: Stripe Payment Link placeholder -> {{STRIPE_LINK_TIER_2}}
 - **Premium (EUR 49/mo):** Everything in Pro, plus custom watchlists, API access, Slack alerts, deeper enrichment, portfolio overlap detection, quarterly trend briefings.
   - CTA: Stripe Payment Link placeholder -> {{STRIPE_LINK_TIER_3}}

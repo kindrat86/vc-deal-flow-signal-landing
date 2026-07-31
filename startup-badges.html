@@ -119,9 +119,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -229,9 +227,9 @@
     }
     #searchResults .result-item:hover { background: #1e293b; }
     #searchResults .result-item .name { color: #e2e8f0; font-weight: 600; }
-    #searchResults .result-item .meta { color: #64748b; font-size: 0.8rem; }
+    #searchResults .result-item .meta { color: #94a3b8; font-size: 0.8rem; }
     #searchResults .result-item .sector { color: #60a5fa; font-size: 0.75rem; }
-    .result-count { color: #64748b; font-size: 0.8rem; padding: 0.5rem 1rem; border-bottom: 1px solid #1e293b; }
+    .result-count { color: #94a3b8; font-size: 0.8rem; padding: 0.5rem 1rem; border-bottom: 1px solid #1e293b; }
 
     /* Badge preview */
     #badgePreview {
@@ -300,7 +298,7 @@
     }
 
     /* Loading */
-    .loading { color: #64748b; font-size: 0.9rem; text-align: center; padding: 2rem; }
+    .loading { color: #94a3b8; font-size: 0.9rem; text-align: center; padding: 2rem; }
     .loading .spinner { display: inline-block; animation: spin 1s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -349,7 +347,7 @@
       border-radius: 0.5rem;
       margin-top: 0.75rem;
     }
-    .selected-info .label { color: #64748b; font-size: 0.8rem; }
+    .selected-info .label { color: #94a3b8; font-size: 0.8rem; }
     .selected-info .value { color: #e2e8f0; font-weight: 600; font-family: ui-monospace, monospace; font-size: 0.85rem; }
 
     .footer-links {
@@ -360,7 +358,7 @@
       gap: 2rem;
       flex-wrap: wrap;
     }
-    .footer-links a { color: #64748b; text-decoration: none; font-size: 0.85rem; }
+    .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; }
     .footer-links a:hover { color: #60a5fa; }
 
     @media (max-width: 640px) {
@@ -380,7 +378,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body>
@@ -425,7 +423,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <button class="copy-btn" data-action="copy-badge" data-startup="" data-track="badge_copy" id="copyEmbedBtn" onclick="copyEmbedCode()">📋 Copy to Clipboard</button>
 <div class="selected-info" id="selectedInfo" style="display:none"></div>
 </div>
-<p style="color:#64748b;font-size:0.8rem;margin-top:0.75rem">
+<p style="color:#94a3b8;font-size:0.8rem;margin-top:0.75rem">
       💡 The badge is an <code>&lt;img&gt;</code> tag pointing to our API. It updates automatically when we refresh the dataset.
     </p>
 </div>
@@ -535,7 +533,7 @@ searchInput.addEventListener('input', function() {
   ).slice(0, 30);
 
   if (matches.length === 0) {
-    searchResults.innerHTML = `<div class="result-item" style="color:#64748b;justify-content:center">No matching startups — <a href="#" style="color:#60a5fa" onclick="event.preventDefault();openVelocityCheck()">check velocity instead?</a></div>`;
+    searchResults.innerHTML = `<div class="result-item" style="color:#94a3b8;justify-content:center">No matching startups — <a href="#" style="color:#60a5fa" onclick="event.preventDefault();openVelocityCheck()">check velocity instead?</a></div>`;
   } else {
     searchResults.innerHTML = `<div class="result-count">${matches.length} startup${matches.length !== 1 ? 's' : ''} found</div>` +
       matches.map(m =>

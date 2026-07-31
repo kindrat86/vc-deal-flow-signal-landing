@@ -30,7 +30,7 @@
 
     ## How to track it without reading code
 
-    You don't need to read code or be technical. GitDealFlow tracks all three signals across 4,200+ startup orgs and sends five accelerating startups every Sunday, each with a plain-English note. The Dashboard (€9.97/month) adds ranked filters by sector, stage, and geography.
+    You don't need to read code or be technical. GitDealFlow tracks all three signals across 4,200+ startup orgs and sends five accelerating startups every Sunday, each with a plain-English note. The Dashboard (€49/month) adds ranked filters by sector, stage, and geography.
 
     **Free:** Get five accelerating startups every Sunday — 21–47 days before the round. No card.
     ## Common questions

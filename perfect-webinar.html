@@ -30,7 +30,7 @@
         "url": "https://gitdealflow.com/perfect-webinar",
         "image": "https://signals.gitdealflow.com/opengraph-image",
         "inLanguage": "en",
-        "author": { "@type": "Person", "name": "The Data Nerd", "url": "https://signals.gitdealflow.com/about" },
+        "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd", "url": "https://signals.gitdealflow.com/about" },
         "publisher": { "@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com" },
         "about": {
           "@type": "Thing",
@@ -116,18 +116,18 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://gitdealflow.com/#org",
+      "@id": "https://gitdealflow.com/#organization",
       "name": "GitDealFlow",
       "url": "https://gitdealflow.com",
       "description": "VC Deal Flow Signal — spot breakout startups 3-6 weeks before fundraise via public GitHub activity.",
-      "sameAs": ["https://t.me/gitdealflow", "https://x.com/data_nerd", "https://github.com/kindrat86"]
+      "sameAs": ["https://t.me/gitdealflow", "https://github.com/kindrat86"]
     },
     {
       "@type": "WebSite",
       "@id": "https://gitdealflow.com/#website",
       "url": "https://gitdealflow.com",
       "name": "GitDealFlow",
-      "publisher": {"@id": "https://gitdealflow.com/#org"}
+      "publisher": {"@id": "https://gitdealflow.com/#organization"}
     },
     {
       "@type": "SiteNavigationElement",

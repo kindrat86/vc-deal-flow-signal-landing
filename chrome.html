@@ -59,9 +59,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -129,18 +127,18 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://gitdealflow.com/#org",
+      "@id": "https://gitdealflow.com/#organization",
       "name": "GitDealFlow",
       "url": "https://gitdealflow.com",
       "description": "VC Deal Flow Signal — spot breakout startups 3-6 weeks before fundraise via public GitHub activity.",
-      "sameAs": ["https://t.me/gitdealflow", "https://x.com/data_nerd", "https://github.com/kindrat86"]
+      "sameAs": ["https://t.me/gitdealflow", "https://github.com/kindrat86"]
     },
     {
       "@type": "WebSite",
       "@id": "https://gitdealflow.com/#website",
       "url": "https://gitdealflow.com",
       "name": "GitDealFlow",
-      "publisher": {"@id": "https://gitdealflow.com/#org"}
+      "publisher": {"@id": "https://gitdealflow.com/#organization"}
     },
     {
       "@type": "SiteNavigationElement",
@@ -164,7 +162,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body class="bg-dark-900 text-gray-100 font-sans antialiased">
@@ -263,8 +261,8 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">Privacy and data flow</h2>
 <p style="color:#cbd5e1;line-height:1.7">The extension makes a single read-only request per page load to the public GitDealFlow signal endpoint. No account is required, no cookies are set, no telemetry is collected, and no data is written to the page beyond the badge markup. The page URL is read locally to identify the startup, the lookup is performed against the public signal dataset, and the response is rendered inline. The full methodology behind the signal is published as SSRN preprint 6606558 and the source behavior is documented at the signals.gitdealflow.com methodology page.</p>
 <h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">Install and use</h2>
-<p style="color:#cbd5e1;line-height:1.7">The extension installs from the Chrome Web Store in under a minute and works on Chrome, Brave, and Edge. After install, browse to any Crunchbase or Wellfound startup profile and the badge appears automatically. There is no configuration step and no sign-in. The extension is a free lens, not a paid tier; the deeper signal data, the sector filters, and the CSV export all live on the GitDealFlow dashboard, where the free tier covers 10 tracked startups and the professional tier at EUR 9.97 per month unlocks the rest.</p>
-<p style="font-size:.85rem;color:#64748b;margin-top:2rem">All figures on this page reflect GitDealFlow coverage as of Q3 2026 across 4,200+ tracked GitHub organizations in 20 sectors. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#0ea5e9">SSRN preprint 6606558</a> and validated against 219 documented fundraiser events.</p></section>
+<p style="color:#cbd5e1;line-height:1.7">The extension installs from the Chrome Web Store in under a minute and works on Chrome, Brave, and Edge. After install, browse to any Crunchbase or Wellfound startup profile and the badge appears automatically. There is no configuration step and no sign-in. The extension is a free lens, not a paid tier; the deeper signal data, the sector filters, and the CSV export all live on the GitDealFlow dashboard, where the free tier covers 10 tracked startups and the professional tier at EUR 49 per month unlocks the rest.</p>
+<p style="font-size:.85rem;color:#94a3b8;margin-top:2rem">All figures on this page reflect GitDealFlow coverage as of Q3 2026 across 4,200+ tracked GitHub organizations in 20 sectors. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#0ea5e9">SSRN preprint 6606558</a> and validated against 219 documented fundraiser events.</p></section>
 <!-- enrichment-block:end -->
 <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
 <div class="mobile-section-pad max-w-4xl mx-auto px-4 sm:px-6 text-center">

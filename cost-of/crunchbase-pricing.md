@@ -20,7 +20,7 @@
       **Enterprise / Data**$10k–$30k+/yearAPI access, full data feeds, Salesforce integration, dedicated support. For funds and platforms.
       
     
-    Pricing reflects publicly reported ranges at time of writing. Verify on the vendor&apos;s site. GitDealFlow pricing is live at [/pricing](/pricing) (free to EUR 9.97–97/month).
+    Pricing reflects publicly reported ranges at time of writing. Verify on the vendor&apos;s site. GitDealFlow pricing is live at [/pricing](/pricing) (free to EUR 49–197/month).
 
     ## What you&apos;re paying for
 

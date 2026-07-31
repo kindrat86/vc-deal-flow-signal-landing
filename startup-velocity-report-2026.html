@@ -18,7 +18,6 @@
 <link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link as="style" href="/styles.css" rel="preload"/>
 <link href="/styles.css" rel="stylesheet"/>
-<link href="/ux.css" rel="stylesheet"/>
 <script>document.documentElement.className += ' js';</script>
 <link crossorigin="" href="https://signals.gitdealflow.com" rel="preconnect"/>
 <link href="https://signals.gitdealflow.com" rel="dns-prefetch"/>
@@ -57,9 +56,7 @@
         "@type": "Thing",
         "name": "Startup Engineering Velocity Dataset"
       },
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd"
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd"
       },
       "publisher": {
         "@type": "Organization",
@@ -76,9 +73,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -170,7 +165,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body class="bg-dark-900 text-gray-100 font-sans antialiased">
@@ -194,7 +189,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Startup Velocity Report 2026</h1>
 <p class="text-xl text-gray-300 max-w-3xl mx-auto">Engineering benchmarks, sector trends, and the top 20 fastest-growing teams — analyzed from <strong class="text-white">356 venture-backed startups</strong> across <strong class="text-white">15 sectors</strong></p>
 <div class="max-w-md mx-auto mt-10">
-<form action="/api/subscribe" class="js-signup-form flex flex-col sm:flex-row gap-3" method="POST">
+<form action="https://signals.gitdealflow.com/api/subscribe" class="js-signup-form flex flex-col sm:flex-row gap-3" method="POST">
 <label class="sr-only" for="report-email">Email address</label>
 <input aria-label="Email address" autocomplete="email" class="flex-1 px-5 py-4 rounded-lg bg-dark-800 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-base" id="report-email" inputmode="email" name="email" placeholder="you@example.com" required="" type="email"/>
 <button class="rounded-lg bg-brand-500 px-6 py-4 text-sm font-semibold text-white hover:bg-brand-600 transition whitespace-nowrap" type="submit">Get the full report <span aria-hidden="true">→</span></button>
@@ -404,7 +399,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <section class="max-w-3xl mx-auto px-4 sm:px-6 py-16 text-center">
 <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Get the Full Report in Your Inbox</h2>
 <p class="text-gray-400 mb-6">The complete PDF includes all 20 rankings, sector breakdowns, geography data, and trend analysis — plus a bonus data appendix with raw velocity scores.</p>
-<form action="/api/subscribe" class="js-signup-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" method="POST">
+<form action="https://signals.gitdealflow.com/api/subscribe" class="js-signup-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" method="POST">
 <label class="sr-only" for="cta-email">Email address</label>
 <input aria-label="Email address" autocomplete="email" class="flex-1 px-5 py-4 rounded-lg bg-dark-800 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-base" id="cta-email" inputmode="email" name="email" placeholder="you@example.com" required="" type="email"/>
 <button class="rounded-lg bg-brand-500 px-6 py-4 text-sm font-semibold text-white hover:bg-brand-600 transition whitespace-nowrap" type="submit">Send me the report <span aria-hidden="true">→</span></button>

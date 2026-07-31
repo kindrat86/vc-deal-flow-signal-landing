@@ -5,8 +5,7 @@
 <meta content="nopinit" name="pinterest"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GitDealFlow + Affinity CRM</title>
-<link href="/ux.css" rel="stylesheet"/><meta content="#0f172a" name="theme-color"/><meta content="dark" name="color-scheme"/>
+<title>GitDealFlow + Affinity CRM</title><meta content="#0f172a" name="theme-color"/><meta content="dark" name="color-scheme"/>
 <meta content="Push GitHub acceleration signals into Affinity CRM. Auto-tag startups by engineering velocity in your deal pipeline. See which portfolio companies are ship" name="description"/>
 <link href="https://gitdealflow.com/integrations/gitdealflow-for-affinity-crm" rel="canonical"/>
 <meta content="GitDealFlow + Affinity CRM" property="og:title"/>
@@ -41,9 +40,7 @@
       "image": "https://gitdealflow.com/og.png",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -57,7 +54,7 @@
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement('script')).type='text/javascript',p.async=!0,p.src=s.api_host+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],u.toString=function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e},u.people.toString=function(){return u.toString(1)+'.people (stub)'},o='init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group setPersonProperties resetPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     (function(){
-      function _init(){ if(/^https?:$/.test(location.protocol)) posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'}); }
+      function _init(){ if(/^https?:$/.test(location.protocol)) posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'}); }
       if('requestIdleCallback' in window){requestIdleCallback(_init,{timeout:2500});} else {setTimeout(_init,2000);}
     })();
   </script>
@@ -95,7 +92,7 @@
 <h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">Example workflows</h2>
 <p style="color:#cbd5e1;line-height:1.7">A common pattern for seed-stage investors using Affinity CRM: the weekly sync writes new accelerating startups into a staging view, an associate triages them Monday morning, and the ones that survive triage get promoted into the active diligence pipeline with a warm-intro path. Because the signal arrives before the funding announcement, there is a genuine window to reach out before competing investors notice the round. Corporate venture teams use a variant of this workflow where the staging view is filtered by strategic-fit keywords mapped to their parent company roadmap.</p>
 <div style="background:linear-gradient(135deg,#0ea5e922,#0ea5e908);border:1px solid #0ea5e955;border-left:4px solid #0ea5e9;padding:1.1rem 1.4rem;border-radius:.6rem;margin:1.25rem 0"><strong style="color:#7dd3fc">Data flow:</strong> <span style="color:#cbd5e1">GitHub public activity → GitDealFlow acceleration detection → weekly sync → Affinity CRM structured records → your existing deal-flow workflow. No manual data entry, no copy-paste, no stale dashboards.</span></div>
-<p style="font-size:.85rem;color:#64748b;margin-top:2rem">All figures on this page reflect GitDealFlow coverage as of Q3 2026 across 4,200+ tracked GitHub organizations in 20 sectors. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#0ea5e9">SSRN preprint 6606558</a> and validated against 219 documented fundraiser events.</p></section>
+<p style="font-size:.85rem;color:#94a3b8;margin-top:2rem">All figures on this page reflect GitDealFlow coverage as of Q3 2026 across 4,200+ tracked GitHub organizations in 20 sectors. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#0ea5e9">SSRN preprint 6606558</a> and validated against 219 documented fundraiser events.</p></section>
 <!-- enrichment-block:end -->
 <footer style="margin-top:60px;padding-top:20px;border-top:1px solid #e0e0e0;color:#888;font-size:.85em">
 <p><strong>GitDealFlow</strong> — See which startups are heating up before they raise.</p>

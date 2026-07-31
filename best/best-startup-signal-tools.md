@@ -26,7 +26,7 @@
       
         Signal typeEngineering momentum (pre-round)
                 Data sourcePublic GitHub activity
-                PriceFree to €97/month
+                PriceFree to €197/month
                 Lead time21–47 days pre-round
       
       Pick GitDealFlow if your problem is discovering startups early, not recording them after.

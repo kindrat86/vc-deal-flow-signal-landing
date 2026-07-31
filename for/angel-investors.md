@@ -18,7 +18,7 @@
 
     The methodology is published as an SSRN preprint (abstract 6606558) and validated against 219 documented fundraises. The signal has historically preceded rounds by 21–47 days.
 
-    **Pricing &amp; tiers:** Start free with the Sunday Signal Digest. Upgrade to the €9.97/month Dashboard for 60+ ranked startups with filters, or the €97/month Insider Circle for the private Telegram group and live briefings.
+    **Pricing &amp; tiers:** Start free with the Sunday Signal Digest. Upgrade to the €49/month Dashboard for 60+ ranked startups with filters, or the €197/month Insider Circle for the private Telegram group and live briefings.
     ## How it fits your stack
 
     Most angels pair GitDealFlow with Crunchbase (for confirming rounds and investors after they close). GitDealFlow is the discovery layer; Crunchbase is the record.

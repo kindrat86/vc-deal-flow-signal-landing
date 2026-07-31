@@ -10,7 +10,7 @@ _Prepared 2026-07-18 · AEO plan following the Ahrefs Answer Engine Optimization
   inside step-by-step "how do investors find startups early" answers.
 - **Branded entity map:**
   - *Main brand:* GitDealFlow / VC Deal Flow Signal (Wikidata Q139376302)
-  - *Products:* Signal Digest (free weekly email) · Dashboard Beta (€9.97/mo) · Insider Circle (€97/mo) ·
+  - *Products:* Signal Digest (free weekly email) · Dashboard Beta (€49/mo) · Insider Circle (€197/mo) ·
     Chrome Extension · Predict (Scout Game) · Receipts / Scout Score tool
   - *Proprietary concepts:* "Velocity Verdict" · "engineering acceleration" · "Scout Score" · "Scout Game"
   - *Personal brand:* The Data Nerd (pseudonymous, ORCID 0009-0002-2222-4112, SSRN preprint 6606558)

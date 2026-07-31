@@ -18,7 +18,7 @@
 
     Methodology published as SSRN preprint 6606558, validated against 219 documented fundraises. Available as an MCP server, A2A endpoint, and JSON API for integration into internal tools.
 
-    **Pricing &amp; tiers:** Dashboard €9.97/month for ranked filters. Insider Circle €97/month adds the Telegram group, live briefings, custom watchlists, and API access.
+    **Pricing &amp; tiers:** Dashboard €49/month for ranked filters. Insider Circle €197/month adds the Telegram group, live briefings, custom watchlists, and API access.
     ## How it fits your stack
 
     Pair with Crunchbase or PitchBook for post-round confirmation and investor mapping. GitDealFlow is the discovery layer; those are the record.

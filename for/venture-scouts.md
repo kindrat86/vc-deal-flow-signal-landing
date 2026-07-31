@@ -18,7 +18,7 @@
 
     Scout Score is computed against ~75 validated unicorns. The acceleration methodology is published as an SSRN preprint (abstract 6606558).
 
-    **Pricing &amp; tiers:** The Signal Digest and Scout Score tool are both free. The Dashboard (€9.97/month) adds ranked filters; Insider Circle (€97/month) adds the Telegram group and API access.
+    **Pricing &amp; tiers:** The Signal Digest and Scout Score tool are both free. The Dashboard (€49/month) adds ranked filters; Insider Circle (€197/month) adds the Telegram group and API access.
     ## How it fits your stack
 
     There's no direct competitor for Scout Score — it's a GitDealFlow original. For pre-round discovery, pair with your own network; for post-round confirmation, use Crunchbase.

@@ -30,7 +30,7 @@
     "image": "https://gitdealflow.com/og.png",
     "datePublished": "2026-07-30",
     "dateModified": "2026-07-30",
-    "author": {"@type": "Person", "name": "The Data Nerd"},
+    "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd"},
     "publisher": {"@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com/"}
   }, {
     "@type": "WebPage",
@@ -46,34 +46,34 @@ body{background:#05080f;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFo
 #header{position:fixed;top:20px;left:30px;z-index:20}
 #header h1{font-size:20px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px}
 #header h1 span{color:#60a5fa}
-#header .tagline{font-size:11px;color:#64748b;margin-top:2px;letter-spacing:0.5px;text-transform:uppercase}
+#header .tagline{font-size:11px;color:#94a3b8;margin-top:2px;letter-spacing:0.5px;text-transform:uppercase}
 #stats{position:fixed;top:20px;right:30px;z-index:20;text-align:right;pointer-events:none}
 #stats .num{font-size:28px;font-weight:700;color:#60a5fa}
-#stats .lbl{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:1px}
+#stats .lbl{font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px}
 #tooltip{position:fixed;z-index:30;background:#0f172ae8;border:1px solid #1e293b;border-radius:10px;padding:14px 18px;min-width:200px;pointer-events:none;opacity:0;transition:opacity 0.2s;backdrop-filter:blur(8px)}
 #tooltip.visible{opacity:1}
 #tooltip .name{font-size:15px;font-weight:700;color:#f1f5f9;margin-bottom:4px}
 #tooltip .stat{display:flex;justify-content:space-between;gap:20px;font-size:12px;padding:2px 0}
-#tooltip .stat .k{color:#64748b}
+#tooltip .stat .k{color:#94a3b8}
 #tooltip .stat .v{color:#e2e8f0;font-weight:600}
 #tooltip .sig{display:inline-block;padding:1px 8px;border-radius:9999px;font-size:10px;margin-top:6px}
 #footer{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:20;font-size:10px;color:#334155;letter-spacing:0.5px;text-align:center;pointer-events:none}
 #footer a{color:#475569;text-decoration:none;pointer-events:auto}
 #footer a:hover{color:#60a5fa}
 #legend{position:fixed;bottom:20px;right:30px;z-index:20;text-align:right;pointer-events:none}
-#legend .item{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:2px 0;font-size:10px;color:#64748b}
+#legend .item{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:2px 0;font-size:10px;color:#94a3b8}
 #legend .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
 .loading{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;text-align:center}
 .loading .spin{width:40px;height:40px;border:3px solid #1e293b;border-top-color:#60a5fa;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 15px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.loading p{color:#64748b;font-size:13px}
+.loading p{color:#94a3b8;font-size:13px}
 </style>
 <link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body>

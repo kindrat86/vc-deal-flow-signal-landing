@@ -19,7 +19,7 @@
       **Enterprise / Data feed**$50k–$150k+/yearAPI access, full data feeds, custom integrations. For large funds and platforms.
       
     
-    Pricing reflects publicly reported ranges at time of writing. Verify on the vendor&apos;s site. GitDealFlow pricing is live at [/pricing](/pricing) (free to EUR 9.97–97/month).
+    Pricing reflects publicly reported ranges at time of writing. Verify on the vendor&apos;s site. GitDealFlow pricing is live at [/pricing](/pricing) (free to EUR 49–197/month).
 
     ## What you&apos;re paying for
 
@@ -27,7 +27,7 @@
 
     ## The cheaper alternative for finding startups early
 
-    PitchBook is out of reach for most individual angels and small funds. For pre-round discovery specifically, GitDealFlow (free to €97/month) flags startups accelerating on GitHub 21–47 days before the round — a leading indicator PitchBook doesn't provide. Pair GitDealFlow for discovery with a cheaper database (Crunchbase Pro at $29–$55/month) for confirmation if you can't justify PitchBook.
+    PitchBook is out of reach for most individual angels and small funds. For pre-round discovery specifically, GitDealFlow (free to €197/month) flags startups accelerating on GitHub 21–47 days before the round — a leading indicator PitchBook doesn't provide. Pair GitDealFlow for discovery with a cheaper database (Crunchbase Pro at $29–$55/month) for confirmation if you can't justify PitchBook.
 
     **Bottom line:** If your goal is systematic pre-round discovery, GitDealFlow&apos;s free tier does it at $0. Use a database for confirmation, not discovery.
     ## Common questions

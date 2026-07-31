@@ -55,13 +55,12 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://gitdealflow.com/#org",
+      "@id": "https://gitdealflow.com/#organization",
       "name": "GitDealFlow",
       "url": "https://gitdealflow.com",
       "description": "VC Deal Flow Signal \u2014 spot breakout startups 3-6 weeks before fundraise via public GitHub activity.",
       "sameAs": [
         "https://t.me/gitdealflow",
-        "https://x.com/data_nerd",
         "https://github.com/kindrat86"
       ]
     },
@@ -71,7 +70,7 @@
       "url": "https://gitdealflow.com",
       "name": "GitDealFlow",
       "publisher": {
-        "@id": "https://gitdealflow.com/#org"
+        "@id": "https://gitdealflow.com/#organization"
       }
     },
     {
@@ -94,9 +93,7 @@
       "image": "https://gitdealflow.com/og.png",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -192,11 +189,11 @@
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/sector-ai--machine-learning" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">AI &amp; Machine Learning Startups</a>
+<a href="/sectors" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">AI &amp; Machine Learning Startups</a>
 <a href="/sector-social-community" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Social &amp; Community Startups</a>
 <a href="/sector-legal-tech" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Legal Tech Startups</a>
-<a href="/sector-biotech" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Biotech Startups</a>
-<a href="/sector-cybersecurity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Cybersecurity Startups</a>
+<a href="/sectors" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Biotech Startups</a>
+<a href="/sectors" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Cybersecurity Startups</a>
 <a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
 <a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
 <a href="/startups-in-tel-aviv" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups in Tel Aviv</a>
@@ -206,7 +203,7 @@
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement('script')).type='text/javascript',p.async=!0,p.src=s.api_host+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],u.toString=function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e},u.people.toString=function(){return u.toString(1)+'.people (stub)'},o='init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group setPersonProperties resetPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     (function(){
-      function _init(){ if(/^https?:$/.test(location.protocol)) posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'}); }
+      function _init(){ if(/^https?:$/.test(location.protocol)) posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'}); }
       if('requestIdleCallback' in window){requestIdleCallback(_init,{timeout:2500});} else {setTimeout(_init,2000);}
     })();
   </script>

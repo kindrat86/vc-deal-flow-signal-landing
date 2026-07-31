@@ -36,9 +36,7 @@
       "image": "https://gitdealflow.com/opengraph-image.png",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -69,10 +67,10 @@ header p{color:#94a3b8;font-size:.85rem;margin-top:.5rem}
 .row{display:grid;grid-template-columns:24px 1fr 90px 60px 85px 110px;gap:.25rem;align-items:center;padding:.35rem 0;border-bottom:1px solid #1e293b;font-size:.75rem}
 .r{color:#475569}
 .n{color:#f1f5f9;font-weight:500;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.s{color:#64748b;font-size:.7rem}
+.s{color:#94a3b8;font-size:.7rem}
 .v{font-weight:700;text-align:right;color:#60a5fa}
 .g{text-align:right;font-size:.65rem}
-.sig{color:#64748b;font-size:.65rem;text-align:right}
+.sig{color:#94a3b8;font-size:.65rem;text-align:right}
 .sig::before{content:"[";color:#475569}
 .sig::after{content:"]";color:#475569}
 h2{color:#e2e8f0;font-size:1.1rem;margin-top:2rem;border-left:3px solid #60a5fa;padding-left:.75rem}
@@ -86,7 +84,7 @@ h3{color:#94a3b8;font-size:.95rem;margin-top:1.5rem}
 .footer-links{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
 .footer-links a{color:#475569;font-size:.75rem;text-decoration:none}
 .portfolio{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center}
-.portfolio h4{color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem}
+.portfolio h4{color:#94a3b8;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem}
 .portfolio-links{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
 .portfolio-links a{color:#475569;font-size:.75rem;text-decoration:none}
 .sector-link{display:inline-block;padding:.25rem .5rem;margin:.15rem;background:#0f172a;border:1px solid #1e293b;border-radius:4px;color:#60a5fa;font-size:.75rem;text-decoration:none;transition:border-color .2s}
@@ -98,7 +96,7 @@ h3{color:#94a3b8;font-size:.95rem;margin-top:1.5rem}
 .compared strong{color:#e2e8f0}
 .section-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:#475569;margin-top:1rem;margin-bottom:.5rem}
 .breadcrumb{font-size:.75rem;color:#475569;padding:1rem 0;margin-bottom:0}
-.breadcrumb a{color:#64748b;text-decoration:none}
+.breadcrumb a{color:#94a3b8;text-decoration:none}
 .breadcrumb a:hover{color:#60a5fa}
 @media (max-width:640px){.row{grid-template-columns:20px 1fr 65px 50px 70px 80px;font-size:.7rem;gap:.15rem}.container{padding:1rem}}
 </style>
@@ -114,12 +112,12 @@ h3{color:#94a3b8;font-size:.95rem;margin-top:1.5rem}
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body>
 <div class="container breadcrumb">
-<a href="/">Home</a> › <a href="/startups">Startups</a> › <span style="color:#64748b">Startups Like Adyen</span>
+<a href="/">Home</a> › <a href="/startups">Startups</a> › <span style="color:#94a3b8">Startups Like Adyen</span>
 </div>
 <header>
 <h1>Startups Like Adyen</h1>
@@ -131,34 +129,34 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <p>Adyen is a E-commerce Infrastructure startup. This page shows similar startups in the <strong>E-commerce Infrastructure</strong> sector based on engineering velocity, team growth, and development patterns tracked by GitDealFlow.</p>
 </div>
 <div class="section-label">Top 26 E-commerce Infrastructure Startups Ranked by Commit Velocity</div>
-<div class="row" style="border-bottom:2px solid #1e293b;font-size:.7rem;color:#64748b;text-transform:uppercase;letter-spacing:.05em;padding-bottom:.5rem">
+<div class="row" style="border-bottom:2px solid #1e293b;font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;padding-bottom:.5rem">
 <span class="r">#</span><span>Name</span><span>Stage</span><span style="text-align:right">14d Cmt</span><span style="text-align:right">Chg</span><span style="text-align:right">Signal</span>
 </div>
 <div class="row"><span class="r">1</span><a class="n" href="/startups/builderio">BuilderIO</a><span class="s">Series A/B</span><span class="v">294</span><span class="g" style="color:#f87171">▼ -45%</span><span class="sig">Engineering hiring burst</span></div>
 <div class="row"><span class="r">2</span><a class="n" href="/startups/medusajs">medusajs</a><span class="s">Growth</span><span class="v">105</span><span class="g" style="color:#f87171">▼ -19%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">3</span><a class="n" href="/startups/juspay">juspay</a><span class="s">Growth</span><span class="v">100</span><span class="g" style="color:#4ade80">▲ +113%</span><span class="sig">Framework migration</span></div>
-<div class="row"><span class="r">4</span><a class="n" href="/startups/openlinker-project">openlinker-project</a><span class="s">Seed</span><span class="v">51</span><span class="g" style="color:#f87171">▼ -51%</span><span class="sig">Framework migration</span></div>
+<div class="row"><span class="r">4</span><a class="n" href="/a/startups-like-openlinker-project">openlinker-project</a><span class="s">Seed</span><span class="v">51</span><span class="g" style="color:#f87171">▼ -51%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">5</span><a class="n" href="/startups/tempoxyz">tempoxyz</a><span class="s">Growth</span><span class="v">42</span><span class="g" style="color:#f87171">▼ -45%</span><span class="sig">Infrastructure buildout</span></div>
 <div class="row"><span class="r">6</span><a class="n" href="/startups/biblys">biblys</a><span class="s">Pre-seed</span><span class="v">37</span><span class="g" style="color:#f87171">▼ -31%</span><span class="sig">Engineering hiring burst</span></div>
 <div class="row"><span class="r">7</span><a class="n" href="/startups/vendurehq">vendurehq</a><span class="s">Growth</span><span class="v">32</span><span class="g" style="color:#f87171">▼ -54%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">8</span><a class="n" href="/startups/evershopcommerce">evershopcommerce</a><span class="s">Series A/B</span><span class="v">30</span><span class="g" style="color:#4ade80">▲ +36%</span><span class="sig">Engineering hiring burst</span></div>
 <div class="row"><span class="r">9</span><a class="n" href="/startups/saleor">saleor</a><span class="s">Growth</span><span class="v">22</span><span class="g" style="color:#f87171">▼ -12%</span><span class="sig">Framework migration</span></div>
-<div class="row"><span class="r">10</span><a class="n" href="/startups/lifecycle-innovations-limited">Lifecycle-Innovations-Limited</a><span class="s">Seed</span><span class="v">22</span><span class="g" style="color:#f87171">▼ -21%</span><span class="sig">Framework migration</span></div>
+<div class="row"><span class="r">10</span><a class="n" href="/a/startups-like-lifecycle-innovations-limited">Lifecycle-Innovations-Limited</a><span class="s">Seed</span><span class="v">22</span><span class="g" style="color:#f87171">▼ -21%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">11</span><a class="n" href="/startups/moov-io">moov-io</a><span class="s">Pre-seed</span><span class="v">22</span><span class="g" style="color:#f87171">▼ -21%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">12</span><a class="n" href="/startups/adyen">Adyen</a><span class="s">Seed</span><span class="v">16</span><span class="g" style="color:#f87171">▼ -47%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">13</span><a class="n" href="/startups/mahocommerce">MahoCommerce</a><span class="s">Seed</span><span class="v">14</span><span class="g" style="color:#f87171">▼ -50%</span><span class="sig">Framework migration</span></div>
-<div class="row"><span class="r">14</span><a class="n" href="/startups/intershop">intershop</a><span class="s">Growth</span><span class="v">7</span><span class="g" style="color:#f87171">▼ -46%</span><span class="sig">Framework migration</span></div>
+<div class="row"><span class="r">14</span><a class="n" href="/a/startups-like-intershop">intershop</a><span class="s">Growth</span><span class="v">7</span><span class="g" style="color:#f87171">▼ -46%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">15</span><a class="n" href="/startups/bagisto">bagisto</a><span class="s">Pre-seed</span><span class="v">6</span><span class="g" style="color:#f87171">▼ -77%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">16</span><a class="n" href="/startups/solidusio">solidusio</a><span class="s">Growth</span><span class="v">4</span><span class="g" style="color:#4ade80">▲ +100%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">17</span><a class="n" href="/startups/rapidez">rapidez</a><span class="s">Seed</span><span class="v">4</span><span class="g" style="color:#4ade80">▲ +100%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">18</span><a class="n" href="/startups/bic-org">bic-org</a><span class="s">Pre-seed</span><span class="v">3</span><span class="g" style="color:#4ade80">▲ +999%</span><span class="sig">Engineering hiring burst</span></div>
 <div class="row"><span class="r">19</span><a class="n" href="/startups/beikeshop">beikeshop</a><span class="s">Series A/B</span><span class="v">3</span><span class="g" style="color:#4ade80">▲ +200%</span><span class="sig">Engineering hiring burst</span></div>
-<div class="row"><span class="r">20</span><a class="n" href="/startups/paymenter">Paymenter</a><span class="s">Growth</span><span class="v">3</span><span class="g" style="color:#f87171">▼ -62%</span><span class="sig">Framework migration</span></div>
+<div class="row"><span class="r">20</span><a class="n" href="/a/startups-like-paymenter">Paymenter</a><span class="s">Growth</span><span class="v">3</span><span class="g" style="color:#f87171">▼ -62%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">21</span><a class="n" href="/startups/swellstores">swellstores</a><span class="s">Series A/B</span><span class="v">2</span><span class="g" style="color:#4ade80">▲ +999%</span><span class="sig">Engineering hiring burst</span></div>
 <div class="row"><span class="r">22</span><a class="n" href="/startups/vuestorefront">vuestorefront</a><span class="s">Seed</span><span class="v">2</span><span class="g" style="color:#4ade80">▲ +999%</span><span class="sig">Deploy frequency spike</span></div>
 <div class="row"><span class="r">23</span><a class="n" href="/startups/mercurjs">mercurjs</a><span class="s">Pre-seed</span><span class="v">2</span><span class="g" style="color:#f87171">▼ -98%</span><span class="sig">Engineering hiring burst</span></div>
 <div class="row"><span class="r">24</span><a class="n" href="/startups/vanilophp">vanilophp</a><span class="s">Series A/B</span><span class="v">1</span><span class="g" style="color:#4ade80">▲ +999%</span><span class="sig">Deploy frequency spike</span></div>
-<div class="row"><span class="r">25</span><a class="n" href="/startups/thirtybees">thirtybees</a><span class="s">Growth</span><span class="v">1</span><span class="g" style="color:#64748b">▸ 0%</span><span class="sig">Framework migration</span></div>
+<div class="row"><span class="r">25</span><a class="n" href="/startups/thirtybees">thirtybees</a><span class="s">Growth</span><span class="v">1</span><span class="g" style="color:#94a3b8">▸ 0%</span><span class="sig">Framework migration</span></div>
 <div class="row"><span class="r">26</span><a class="n" href="/startups/ecomplus">ecomplus</a><span class="s">Seed</span><span class="v">1</span><span class="g" style="color:#f87171">▼ -67%</span><span class="sig">Engineering hiring burst</span></div>
 <div class="compared">
 <h3>How Adyen Compares</h3>
@@ -170,17 +168,17 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <a class="sector-link" href="/startups/builderio">BuilderIO</a>
 <a class="sector-link" href="/startups/medusajs">medusajs</a>
 <a class="sector-link" href="/startups/juspay">juspay</a>
-<a class="sector-link" href="/startups/openlinker-project">openlinker-project</a>
+<a class="sector-link" href="/a/startups-like-openlinker-project">openlinker-project</a>
 <a class="sector-link" href="/startups/tempoxyz">tempoxyz</a>
 <a class="sector-link" href="/startups/biblys">biblys</a>
 <a class="sector-link" href="/startups/vendurehq">vendurehq</a>
 <a class="sector-link" href="/startups/evershopcommerce">evershopcommerce</a>
 <a class="sector-link" href="/startups/saleor">saleor</a>
-<a class="sector-link" href="/startups/lifecycle-innovations-limited">Lifecycle-Innovations-Limited</a>
+<a class="sector-link" href="/a/startups-like-lifecycle-innovations-limited">Lifecycle-Innovations-Limited</a>
 <a class="sector-link" href="/startups/moov-io">moov-io</a>
 <a class="sector-link" href="/startups/adyen">Adyen</a>
 <a class="sector-link" href="/startups/mahocommerce">MahoCommerce</a>
-<a class="sector-link" href="/startups/intershop">intershop</a>
+<a class="sector-link" href="/a/startups-like-intershop">intershop</a>
 <a class="sector-link" href="/startups/bagisto">bagisto</a>
 </div>
 <h2>Related Competitive Set Pages</h2>
@@ -216,7 +214,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <a href="/signal">Signals</a>
 </p>
 </main>
-<footer style="border-top:1px solid #1e293b;padding:2rem;text-align:center;color:#64748b;font-size:.8rem">
+<footer style="border-top:1px solid #1e293b;padding:2rem;text-align:center;color:#94a3b8;font-size:.8rem">
 <div class="footer-links">
 <a href="https://gitdealflow.com">GitDealFlow</a> ·
 <a href="https://signals.gitdealflow.com">Signals</a> ·

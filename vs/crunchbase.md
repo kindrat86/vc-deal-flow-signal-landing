@@ -22,7 +22,7 @@
         What the data ispublic GitHub activity (commit velocity, contributor growth, repository expansion) across 4,200+ startup orgs in 20 sectorscrowd-sourced + web-scraped funding announcements, investor profiles, acquisition data
         Signal timing21–47 days before the fundraise announcementreactive — surfaces a startup after the round is announced and the press covers it
         Best forAngels, scouts, and seed/Series A funds sourcing earlyteams that need a comprehensive post-round database of who raised, who invested, and company metadata
-        Price rangeFree to €97/monthPro plans historically start around $29–$55/seat/month for individuals and climb sharply for teams and data access
+        Price rangeFree to €197/monthPro plans historically start around $29–$55/seat/month for individuals and climb sharply for teams and data access
         SetupMinutes — subscribe and readSales-led or self-serve per tier
       
     

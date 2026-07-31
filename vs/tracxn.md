@@ -22,7 +22,7 @@
         What the data ispublic GitHub activity (commit velocity, contributor growth, repository expansion) across 4,200+ startup orgs in 20 sectorscurated company profiles, funding rounds, sector taxonomy, investor tracking
         Signal timing21–47 days before the fundraise announcementpost-round — records rounds and profiles after announcement
         Best forAngels, scouts, and seed/Series A funds sourcing earlyfunds focused on emerging markets and sector-screening workflows
-        Price rangeFree to €97/monthcustom pricing, generally below PitchBook; commonly mid-thousands per seat/year
+        Price rangeFree to €197/monthcustom pricing, generally below PitchBook; commonly mid-thousands per seat/year
         SetupMinutes — subscribe and readSales-led or self-serve per tier
       
     
@@ -88,7 +88,7 @@
   
     ## Pricing context
 
-    GitDealFlow ranges from a permanent free Signal Digest (5 startups every Sunday, no card) to a €9.97/month dashboard and a €97/month Insider Circle. Tracxn is custom pricing, generally below PitchBook; commonly mid-thousands per seat/year. For individual angels and small funds, the gap is large; for institutional desks, it reflects very different products.
+    GitDealFlow ranges from a permanent free Signal Digest (5 startups every Sunday, no card) to a €49/month dashboard and a €197/month Insider Circle. Tracxn is custom pricing, generally below PitchBook; commonly mid-thousands per seat/year. For individual angels and small funds, the gap is large; for institutional desks, it reflects very different products.
 
     Pricing for third-party tools reflects publicly reported ranges at time of writing and changes over time — verify on each vendor’s site. GitDealFlow pricing is live on the [pricing page](/pricing).
 

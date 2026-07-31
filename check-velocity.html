@@ -52,9 +52,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -131,10 +129,10 @@
     .score-ring .fill { fill: none; stroke: #60a5fa; stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
     .score-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; }
     .score-value { font-size: 2rem; font-weight: 700; color: #f1f5f9; }
-    .score-label { font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+    .score-label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
     .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
     .metric-card { background: #1e293b; border-radius: 0.5rem; padding: 1rem; }
-    .metric-label { color: #64748b; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+    .metric-label { color: #94a3b8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
     .metric-value { font-size: 1.5rem; font-weight: 700; color: #f1f5f9; }
     .metric-change { font-size: 0.85rem; font-weight: 600; }
     .up { color: #22c55e; }
@@ -163,7 +161,7 @@
     .widget-wrapper button { width: 100%; padding: 0.5rem; background: #2563eb; color: white; border: none; border-radius: 0.375rem; cursor: pointer; }
 
     .footer-links { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap; }
-    .footer-links a { color: #64748b; text-decoration: none; font-size: 0.85rem; }
+    .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; }
     .footer-links a:hover { color: #60a5fa; }
 
     @media (max-width: 640px) {
@@ -178,7 +176,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body>
@@ -206,7 +204,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 </div>
 <div class="loader" id="loader">
 <div class="spinner"></div>
-<p style="color:#64748b">Checking engineering velocity...</p>
+<p style="color:#94a3b8">Checking engineering velocity...</p>
 </div>
 <div class="result-card" id="result">
 <div class="result-header">
@@ -246,7 +244,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div class="metric-value" id="signalType" style="font-size:1.2rem">—</div>
 </div>
 </div>
-<p style="color:#64748b; font-size:0.8rem; text-align:center; margin-top:1rem">
+<p style="color:#94a3b8; font-size:0.8rem; text-align:center; margin-top:1rem">
       Based on trailing 60-day GitHub activity data. Updated weekly.
       <a href="https://signals.gitdealflow.com" style="color:#60a5fa">Full data at signals.gitdealflow.com →</a>
 </p>
@@ -255,7 +253,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div class="not-found">
 <p style="font-size:2rem; margin-bottom:0.5rem">🔍</p>
 <p style="font-weight:600; margin-bottom:0.5rem">Startup not found in our dataset</p>
-<p style="color:#64748b; font-size:0.9rem">Try a different name, or browse all tracked startups at <a href="https://signals.gitdealflow.com" style="color:#60a5fa">signals.gitdealflow.com</a></p>
+<p style="color:#94a3b8; font-size:0.9rem">Try a different name, or browse all tracked startups at <a href="https://signals.gitdealflow.com" style="color:#60a5fa">signals.gitdealflow.com</a></p>
 </div>
 </div>
 <div class="embed-section">
@@ -269,11 +267,11 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
       width="100%" height="360" frameborder="0" 
       style="border-radius:8px;background:#0b1120"
       title="Startup Velocity Checker by GitDealFlow"&gt;&lt;/iframe&gt;
-      <br/>&lt;p style="font-size:0.8rem;color:#64748b"&gt;Powered by 
+      <br/>&lt;p style="font-size:0.8rem;color:#94a3b8"&gt;Powered by 
       &lt;a href="https://gitdealflow.com"&gt;GitDealFlow&lt;/a&gt;&lt;/p&gt;
     </div>
 <button class="copy-btn" onclick="copyEmbed()">📋 Copy Embed Code</button>
-<p style="color:#64748b; font-size:0.8rem; margin-top:0.5rem">
+<p style="color:#94a3b8; font-size:0.8rem; margin-top:0.5rem">
       The widget is lightweight (~5KB), responsive, and respects your site's CSP headers.
     </p>
 </div>
@@ -283,25 +281,25 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div style="background:#1e293b;border-radius:0.5rem;padding:1rem">
 <div style="color:#60a5fa;font-weight:700;font-size:0.9rem;margin-bottom:0.5rem">0–25</div>
 <div style="font-weight:600;font-size:0.9rem;margin-bottom:0.25rem">Steady State</div>
-<div style="color:#64748b;font-size:0.85rem;line-height:1.4">Normal engineering velocity. No significant acceleration detected in the last 60 days.</div>
+<div style="color:#94a3b8;font-size:0.85rem;line-height:1.4">Normal engineering velocity. No significant acceleration detected in the last 60 days.</div>
 </div>
 <div style="background:#1e293b;border-radius:0.5rem;padding:1rem">
 <div style="color:#22c55e;font-weight:700;font-size:0.9rem;margin-bottom:0.5rem">26–50</div>
 <div style="font-weight:600;font-size:0.9rem;margin-bottom:0.25rem">Building</div>
-<div style="color:#64748b;font-size:0.85rem;line-height:1.4">Moderate engineering activity. Contributor count or commit velocity is growing steadily.</div>
+<div style="color:#94a3b8;font-size:0.85rem;line-height:1.4">Moderate engineering activity. Contributor count or commit velocity is growing steadily.</div>
 </div>
 <div style="background:#1e293b;border-radius:0.5rem;padding:1rem">
 <div style="color:#eab308;font-weight:700;font-size:0.9rem;margin-bottom:0.5rem">51–75</div>
 <div style="font-weight:600;font-size:0.9rem;margin-bottom:0.25rem">Accelerating</div>
-<div style="color:#64748b;font-size:0.85rem;line-height:1.4">Engineering team is expanding. Commit velocity is trending up — often precedes a funding event.</div>
+<div style="color:#94a3b8;font-size:0.85rem;line-height:1.4">Engineering team is expanding. Commit velocity is trending up — often precedes a funding event.</div>
 </div>
 <div style="background:#1e293b;border-radius:0.5rem;padding:1rem">
 <div style="color:#ef4444;font-weight:700;font-size:0.9rem;margin-bottom:0.5rem">76–100</div>
 <div style="font-weight:600;font-size:0.9rem;margin-bottom:0.25rem">Breakout</div>
-<div style="color:#64748b;font-size:0.85rem;line-height:1.4">Strong acceleration across all signals. Engineering team showing 150%+ velocity increase.</div>
+<div style="color:#94a3b8;font-size:0.85rem;line-height:1.4">Strong acceleration across all signals. Engineering team showing 150%+ velocity increase.</div>
 </div>
 </div>
-<p style="color:#64748b; font-size:0.85rem; margin-top:1.5rem; line-height:1.5">
+<p style="color:#94a3b8; font-size:0.85rem; margin-top:1.5rem; line-height:1.5">
 <strong style="color:#e2e8f0">Methodology:</strong> The velocity score is a weighted composite of commit velocity change, 
       contributor growth rate, and repository expansion. Data is derived from public GitHub activity 
       across our tracked startup universe. Scores update weekly. 

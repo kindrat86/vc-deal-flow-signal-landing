@@ -7,8 +7,6 @@
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <link rel="preconnect" href="https://signals.gitdealflow.com" crossorigin>
 <link rel="dns-prefetch" href="https://signals.gitdealflow.com">
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -48,9 +46,7 @@
       "alternateName": "VC Deal Flow Signal",
       "url": "https://gitdealflow.com",
       "email": "signals@gitdealflow.com",
-      "founder": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "founder": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about/founder"
       },
       "disambiguatingDescription": "GitDealFlow is a deal-flow signal tool for investors that reads public GitHub engineering activity to flag accelerating startups 21-47 days before the round \u2014 not a VC fund, not an investment advisor, and not a code-quality or technical-due-diligence tool.",
@@ -63,7 +59,6 @@
       ],
       "sameAs": [
         "https://github.com/gitdealflow",
-        "https://x.com/data_nerd",
         "https://t.me/gitdealflow",
         "https://x.com/sipiteno",
         "https://www.linkedin.com/company/gitdealflow",
@@ -236,7 +231,7 @@
           "name": "What does GitDealFlow cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Signal Digest is free forever (five startups every Sunday, no card). The Dashboard is EUR 9.97/month and the Insider Circle is EUR 97/month. Full pricing is at gitdealflow.com/pricing."
+            "text": "The Signal Digest is free forever (five startups every Sunday, no card). The Dashboard is EUR 49/month and the Insider Circle is EUR 197/month. Full pricing is at gitdealflow.com/pricing."
           }
         },
         {
@@ -244,7 +239,7 @@
           "name": "Where does the data come from?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Public GitHub activity only: commit velocity, contributor growth, and repository expansion across 4,200+ startup GitHub organizations in 20 sectors. No private data, no leaked data, no self-reported company profiles. The full methodology is published at signals.gitdealflow.com/methodology."
+            "text": "Public GitHub activity only: commit velocity, contributor growth, and repository expansion across 4,200+ startup GitHub organizations in 15 sectors. No private data, no leaked data, no self-reported company profiles. The full methodology is published at signals.gitdealflow.com/methodology."
           }
         },
         {
@@ -252,7 +247,7 @@
           "name": "Which sectors does GitDealFlow cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "20 sectors including AI and machine learning, fintech, climate tech, developer tools, cybersecurity, healthcare, enterprise SaaS, data infrastructure, Web3, and robotics. Filter live on the dashboard at signals.gitdealflow.com."
+            "text": "15 sectors including AI and machine learning, fintech, climate tech, developer tools, cybersecurity, healthcare, enterprise SaaS, data infrastructure, Web3, and robotics. Filter live on the dashboard at signals.gitdealflow.com."
           }
         },
         {
@@ -280,9 +275,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -315,7 +308,6 @@
 <link crossorigin="" href="https://eu.i.posthog.com" rel="preconnect"/>
 <link href="https://eu.i.posthog.com" rel="dns-prefetch"/>
 <!-- World-class UX enhancements: reading progress, back-to-top, glass cards -->
-<link href="/ux.css" rel="stylesheet"/>
 <style id="prompt11-fixes">
     /* ── WCAG AA CONTRAST FIXES ───────────────────────── */
     /* #94a3b8 on #0f172a = 3.8:1 (fails AA for small text) → #cbd5e1 = 5.3:1 (passes) */
@@ -330,7 +322,7 @@
     }
     /* #64748b on #0f172a = 4.8:1 → boost to #94a3b8 = 6.1:1 */
     .text-gray-500, [class*="text-gray-500"] {
-      color: #64748b;
+      color: #94a3b8;
     }
     /* ── SMOOTH FAQ ACCORDION ─────────────────────────── */
     details.ux-accordion {
@@ -430,7 +422,7 @@
       user-select: none;
     }
     @media (hover: hover) {
-      .qual-card:hover { border-color: #64748b; background-color: #243144; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+      .qual-card:hover { border-color: #94a3b8; background-color: #243144; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
     }
     .qual-card:active { transform: scale(0.97); }
     .qual-card input[type="radio"] {
@@ -671,18 +663,18 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://gitdealflow.com/#org",
+      "@id": "https://gitdealflow.com/#organization",
       "name": "GitDealFlow",
       "url": "https://gitdealflow.com",
       "description": "VC Deal Flow Signal — spot breakout startups 3-6 weeks before fundraise via public GitHub activity.",
-      "sameAs": ["https://t.me/gitdealflow", "https://x.com/data_nerd", "https://github.com/kindrat86"]
+      "sameAs": ["https://t.me/gitdealflow", "https://github.com/kindrat86"]
     },
     {
       "@type": "WebSite",
       "@id": "https://gitdealflow.com/#website",
       "url": "https://gitdealflow.com",
       "name": "GitDealFlow",
-      "publisher": {"@id": "https://gitdealflow.com/#org"}
+      "publisher": {"@id": "https://gitdealflow.com/#organization"}
     },
     {
       "@type": "SiteNavigationElement",
@@ -1348,9 +1340,9 @@
 <p class="rung-label text-brand-400"><span aria-hidden="true">🔭</span> Operate weekly</p>
 <p class="text-xl font-bold text-white mb-1">Dashboard</p>
 <p class="text-2xl font-extrabold text-white mb-1">€49<span class="text-gray-400 text-sm font-normal">/mo</span></p>
-<p class="text-gray-400 text-xs mb-4">Full ranked field · 60+ startups across 20 sectors · weekly re-rank</p>
+<p class="text-gray-400 text-xs mb-4">Full ranked field · 369 orgs across 15 sectors · weekly re-rank</p>
 <ul class="text-left text-gray-300 text-sm space-y-2 mb-5 flex-1">
-<li class="flex items-start gap-2"><span aria-hidden="true" class="text-emerald-400 mt-0.5">✓</span><span>60+ startups across 20 sectors, ranked by engineering acceleration</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-emerald-400 mt-0.5">✓</span><span>369 orgs across 15 sectors, ranked by engineering acceleration</span></li>
 <li class="flex items-start gap-2"><span aria-hidden="true" class="text-emerald-400 mt-0.5">✓</span><span>Filter by sector, stage, geography</span></li>
 <li class="flex items-start gap-2"><span aria-hidden="true" class="text-emerald-400 mt-0.5">✓</span><span>Funding data &amp; team size enrichment</span></li>
 <li class="flex items-start gap-2"><span aria-hidden="true" class="text-emerald-400 mt-0.5">✓</span><span>CSV export + full history</span></li>
@@ -1569,6 +1561,8 @@
 <a class="py-2 inline-block hover:text-gray-300" href="/data">Data</a>
 <a class="py-2 inline-block hover:text-gray-300" href="/archive">Archive</a>
 <a class="py-2 inline-block hover:text-gray-300" href="/press">Press</a>
+<a class="py-2 inline-block hover:text-gray-300" href="/chrome">Chrome extension</a>
+<a class="py-2 inline-block hover:text-gray-300" href="/answers">Answers</a>
 <!-- CONGREGATION BAR (moved from hero) — where the first movers already gather -->
 <div class="mb-5">
 <p class="text-gray-400 text-xs font-semibold uppercase tracking-wider text-center mb-3">Where the first movers already gather</p>
@@ -1838,7 +1832,7 @@
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement('script')).type='text/javascript',p.async=!0,p.src=s.api_host+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],u.toString=function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e},u.people.toString=function(){return u.toString(1)+'.people (stub)'},o='init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group setPersonProperties resetPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     (function(){
-      function _init(){ if(/^https?:$/.test(location.protocol)) posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'}); }
+      function _init(){ if(/^https?:$/.test(location.protocol)) posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'}); }
       if('requestIdleCallback' in window){requestIdleCallback(_init,{timeout:2500});} else {setTimeout(_init,2000);}
       /* A/B hero layout: read flag landing-hero-layout, toggle order, fire exposure */
       (function(){var F='landing-hero-layout';function apply(){try{var v=(window.posthog&&posthog.getFeatureFlag)?posthog.getFeatureFlag(F):null;var variant=(v==='control')?'control':'form_first';window.__heroVariant=variant;var flow=document.getElementById('hero-flow');if(flow){flow.classList.toggle('hero-control',variant==='control');flow.setAttribute('data-hero-variant',variant);}if(!window.__heroExposed){window.__heroExposed=true;if(window.posthog&&posthog.capture)posthog.capture('hero_experiment_exposed',{variant:variant});}}catch(e){}}function ready(){if(window.posthog&&posthog.onFeatureFlags){posthog.onFeatureFlags(apply);}else{setTimeout(ready,250);}}ready();})();
@@ -1891,7 +1885,7 @@
           '<span style="flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.18);margin-top:5px"></span>' +
           '<span style="flex:1 1 auto"><span style="color:#fff;font-weight:700">An investor from ' + place + '</span> signed up for the Sunday email' +
           '<span style="display:block;color:#94a3b8;font-size:12px;margin-top:2px">' + esc(s.ago) + ' &middot; verified GitHub-signal readers</span></span>' +
-          '<button aria-label="Dismiss" style="flex:0 0 auto;background:none;border:0;color:#64748b;font-size:18px;line-height:1;cursor:pointer;padding:10px 12px;margin:-10px -12px 0 0">&times;</button>';
+          '<button aria-label="Dismiss" style="flex:0 0 auto;background:none;border:0;color:#94a3b8;font-size:18px;line-height:1;cursor:pointer;padding:10px 12px;margin:-10px -12px 0 0">&times;</button>';
         el.querySelector('button').addEventListener('click', function () { hide(el); window.__proofStop = true; });
       }
 

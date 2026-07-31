@@ -27,7 +27,7 @@
 <script type="application/ld+json">[
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gitdealflow.com/"},{"@type":"ListItem","position":2,"name":"Sectors","item":"https://gitdealflow.com/sectors"},{"@type":"ListItem","position":3,"name":"AgTech in Europe","item":"https://gitdealflow.com/g/agtech-startups-in-europe"}]},
   {"@context":"https://schema.org","@type":"CollectionPage","name":"AgTech Startups in Europe — Engineering Velocity","description":"Track 2 agtech startups in Europe. Engineering velocity, contributor growth, and breakout signals from GitHub.","url":"https://gitdealflow.com/g/agtech-startups-in-europe","isPartOf":{"@type":"WebSite","@id":"https://gitdealflow.com/#website"},"about":{"@type":"Thing","name":"AgTech startups in Europe"}},
-  {"@context":"https://schema.org","@type":"ItemList","name":"AgTech Startups Tracked by GitDealFlow in Europe","description":"2 startups","numberOfItems":2,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Organization","name":"Fields2Cover","url":"https://github.com/Fields2Cover"}}{"@type":"ListItem","position":2,"item":{"@type":"Organization","name":"nmi-agro","url":"https://github.com/nmi-agro"}}]},
+  {"@context":"https://schema.org","@type":"ItemList","name":"AgTech Startups Tracked by GitDealFlow in Europe","description":"2 startups","numberOfItems":2,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Organization","name":"Fields2Cover","url":"https://github.com/Fields2Cover"}},{"@type":"ListItem","position":2,"item":{"@type":"Organization","name":"nmi-agro","url":"https://github.com/nmi-agro"}}]},
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many agtech startups are in Europe?","acceptedAnswer":{"@type":"Answer","text":"GitDealFlow tracks 2 agtech startups in Europe as of Q3 2026, monitoring their commit velocity, contributor growth, and signal types to surface engineering acceleration."}},{"@type":"Question","name":"What is the average agtech engineering velocity in Europe?","acceptedAnswer":{"@type":"Answer","text":"The average 14-day commit velocity across agtech startups in Europe is 52.5 commits, with an average of 14.5 contributors per organization."}},{"@type":"Question","name":"How does Europe agtech compare globally?","acceptedAnswer":{"@type":"Answer","text":"Europe has 2 tracked agtech startups. The most common signal type is Engineering hiring burst, and the highest-velocity startup is nmi-agro."}},{"@type":"Question","name":"Which agtech startup has the highest engineering velocity in Europe?","acceptedAnswer":{"@type":"Answer","text":"The top agtech startup by engineering velocity in Europe is nmi-agro, based on 14-day commit activity and contributor growth tracked by GitDealFlow."}}]}
 ]</script>
 <style>*{box-sizing:border-box;margin:0;padding:0}
@@ -48,7 +48,7 @@ tr:hover td{background:#0f172a}
 .stats-bar{display:flex;flex-wrap:wrap;gap:1rem;padding:1.25rem;background:#0f172a;border:1px solid #1e293b;border-radius:12px;margin:1rem 0}
 .stat-item{flex:1;min-width:120px;text-align:center}
 .stat-value{font-size:1.4rem;font-weight:700;color:#f1f5f9}
-.stat-label{font-size:.7rem;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-top:.2rem}
+.stat-label{font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-top:.2rem}
 .signal-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7rem;font-weight:500;white-space:nowrap}
 .overview-card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.5rem;margin:1rem 0}
 .overview-card p{color:#cbd5e1;font-size:.9rem;line-height:1.7}
@@ -56,13 +56,13 @@ tr:hover td{background:#0f172a}
 .related-links a{padding:.35rem .75rem;background:#1e293b;border:1px solid #334155;border-radius:6px;color:#94a3b8;font-size:.8rem;text-decoration:none;transition:all .2s}
 .related-links a:hover{background:#263548;color:#f1f5f9;border-color:#60a5fa}
 .footer-links{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;padding:1.5rem 0;border-top:1px solid #1e293b;margin-top:2rem}
-.footer-links a{color:#64748b;font-size:.78rem;text-decoration:none}
+.footer-links a{color:#94a3b8;font-size:.78rem;text-decoration:none}
 .footer-links a:hover{color:#94a3b8}
 .top5-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;margin:1rem 0}
 .top5-card{background:#0f172a;border:1px solid #1e293b;border-radius:8px;padding:1rem;transition:border-color .2s}
 .top5-card:hover{border-color:#334155}
 .top5-card .name{color:#f1f5f9;font-weight:600;font-size:.9rem}
-.top5-card .stat{color:#64748b;font-size:.75rem;margin-top:.25rem}
+.top5-card .stat{color:#94a3b8;font-size:.75rem;margin-top:.25rem}
 .top5-card .highlight{color:#34d399;font-weight:600}
 .quick-answer{background:linear-gradient(135deg,#0f172a,#1e293b);border:1px solid #60a5fa44;border-radius:12px;padding:1.5rem;margin:1rem 0}
 .quick-answer p{color:#e2e8f0;font-size:1rem;line-height:1.7}
@@ -84,9 +84,7 @@ tr:hover td{background:#0f172a}
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -101,7 +99,7 @@ tr:hover td{background:#0f172a}
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body>
@@ -119,7 +117,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 </header>
 <main class="container">
 <h1>AgTech Startups in Europe</h1>
-<p style="color:#64748b;font-size:.85rem">Q3 2026 · 2 startups tracked · Updated weekly from public GitHub data</p>
+<p style="color:#94a3b8;font-size:.85rem">Q3 2026 · 2 startups tracked · Updated weekly from public GitHub data</p>
 <div class="stats-bar">
 <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">Startups Tracked</div></div>
 <div class="stat-item"><div class="stat-value">52.5</div><div class="stat-label">Avg 14d Velocity</div></div>

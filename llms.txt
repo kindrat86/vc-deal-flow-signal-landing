@@ -70,16 +70,16 @@ Six read-only, idempotent tools: `get_trending_startups`, `search_startups_by_se
 
 ## Sector Signal Pages
 
-- [AI & Machine Learning](https://signals.gitdealflow.com/startups-to-watch/ai-ml-q2-2026)
-- [Fintech](https://signals.gitdealflow.com/startups-to-watch/fintech-q2-2026)
-- [Climate Tech](https://signals.gitdealflow.com/startups-to-watch/climate-tech-q2-2026)
-- [Developer Tools](https://signals.gitdealflow.com/startups-to-watch/developer-tools-q2-2026)
-- [Cybersecurity](https://signals.gitdealflow.com/startups-to-watch/cybersecurity-q2-2026)
-- [Healthcare](https://signals.gitdealflow.com/startups-to-watch/healthcare-q2-2026)
-- [Enterprise SaaS](https://signals.gitdealflow.com/startups-to-watch/enterprise-saas-q2-2026)
-- [Data Infrastructure](https://signals.gitdealflow.com/startups-to-watch/data-infrastructure-q2-2026)
-- [Web3](https://signals.gitdealflow.com/startups-to-watch/web3-q2-2026)
-- [Robotics](https://signals.gitdealflow.com/startups-to-watch/robotics-q2-2026)
+- [AI & Machine Learning](https://signals.gitdealflow.com/startups-to-watch/ai-ml-q3-2026)
+- [Fintech](https://signals.gitdealflow.com/startups-to-watch/fintech-q3-2026)
+- [Climate Tech](https://signals.gitdealflow.com/startups-to-watch/climate-tech-q3-2026)
+- [Developer Tools](https://signals.gitdealflow.com/startups-to-watch/developer-tools-q3-2026)
+- [Cybersecurity](https://signals.gitdealflow.com/startups-to-watch/cybersecurity-q3-2026)
+- [Healthcare](https://signals.gitdealflow.com/startups-to-watch/healthcare-q3-2026)
+- [Enterprise SaaS](https://signals.gitdealflow.com/startups-to-watch/enterprise-saas-q3-2026)
+- [Data Infrastructure](https://signals.gitdealflow.com/startups-to-watch/data-infrastructure-q3-2026)
+- [Web3](https://signals.gitdealflow.com/startups-to-watch/web3-q3-2026)
+- [Robotics](https://signals.gitdealflow.com/startups-to-watch/robotics-q3-2026)
 
 ## Pricing
 

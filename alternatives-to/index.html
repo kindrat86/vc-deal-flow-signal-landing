@@ -28,7 +28,7 @@
     .hub-list a{display:block;background:#0f172acc;border:1px solid #1e293b;border-radius:.55rem;padding:.9rem 1.1rem;color:#7dd3fc;text-decoration:none;transition:border-color .15s}
     .hub-list a:hover{border-color:#334155}
     .hub-list a strong{color:#e2e8f0}
-    .hub-list a span{display:block;color:#64748b;font-size:.85rem;margin-top:.15rem}
+    .hub-list a span{display:block;color:#94a3b8;font-size:.85rem;margin-top:.15rem}
     .cta-f{background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;padding:2rem 1.5rem;border-radius:.8rem;margin-top:2rem;text-align:center}
     .cta-f .btn{display:inline-block;background:#fff;color:#0369a1;padding:.8rem 1.7rem;border-radius:.4rem;font-weight:700;margin-top:.7rem}
   </style>
@@ -49,9 +49,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -63,7 +61,7 @@
   ]
 }</script><script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body class="bg-dark-900 text-gray-100">
@@ -97,7 +95,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 </ul>
 </section>
 <section class="pg-s">
-<div class="eeat-trust" style="max-width:780px;margin:1.5rem auto;padding:1.25rem;background:linear-gradient(135deg,#0ea5e908,#0ea5e903);border:1px solid #1e293b;border-radius:.6rem;font-size:.85rem;color:#64748b">
+<div class="eeat-trust" style="max-width:780px;margin:1.5rem auto;padding:1.25rem;background:linear-gradient(135deg,#0ea5e908,#0ea5e903);border:1px solid #1e293b;border-radius:.6rem;font-size:.85rem;color:#94a3b8">
 <p style="margin:0 0 .5em"><strong style="color:#94a3b8">About this page:</strong> Published 2026-07-18. Authored by <a href="https://signals.gitdealflow.com/about" style="color:#7dd3fc">The Data Nerd</a> (ORCID 0009-0002-2222-4112), the pseudonymous maintainer of GitDealFlow. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#7dd3fc">SSRN preprint 6606558</a> and archived on <a href="https://zenodo.org/records/19650920" style="color:#7dd3fc">Zenodo</a>. Third-party statistics are sourced from the Ahrefs AEO methodology. <a href="/corrections" style="color:#7dd3fc">Report an error</a>.</p>
 </div>
 <div class="cta-f">
@@ -115,7 +113,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <p style="color:#cbd5e1;line-height:1.7">Every page in this section is grounded in the same engineering-acceleration signal: GitDealFlow reads public GitHub activity across 4,200+ startup organizations in 20 sectors and flags the ones whose commit velocity, contributor growth, and repository expansion have crossed an empirically validated threshold. The signal has historically preceded fundraising announcements by 21 to 47 days, validated against 219 documented fundraiser events. Whether the page in front of you is a pricing breakdown, a template, a sector overview, or a glossary term, the underlying claim is the same: engineering momentum on GitHub is a leading indicator of fundraising, and it arrives early enough to act on.</p>
 <h2 style="font-size:1.4rem;color:#f1f5f9;font-weight:700;margin:1.5rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid #1e293b">Citation and corrections</h2>
 <p style="color:#cbd5e1;line-height:1.7">Every factual claim on these pages is sourced. The methodology is published as SSRN preprint 6606558 and archived on Zenodo. Third-party pricing figures cite the vendor public pricing page where available and note the retrieval date. If you find a claim that is stale, ambiguous, or wrong, the corrections page accepts reports and routes them to the pseudonymous maintainer for review. The goal is a reference that an investor can cite in an investment committee memo without re-verifying every number.</p>
-<p style="font-size:.85rem;color:#64748b;margin-top:2rem">All figures on this page reflect GitDealFlow coverage as of Q3 2026 across 4,200+ tracked GitHub organizations in 20 sectors. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#0ea5e9">SSRN preprint 6606558</a> and validated against 219 documented fundraiser events.</p></section>
+<p style="font-size:.85rem;color:#94a3b8;margin-top:2rem">All figures on this page reflect GitDealFlow coverage as of Q3 2026 across 4,200+ tracked GitHub organizations in 20 sectors. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#0ea5e9">SSRN preprint 6606558</a> and validated against 219 documented fundraiser events.</p></section>
 <!-- enrichment-block:end -->
 <footer class="border-t border-gray-800 bg-dark-900/80 py-12">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">

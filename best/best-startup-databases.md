@@ -101,7 +101,7 @@
       
         Coverage4,200+ GitHub orgs, 20 sectors
                 StrengthPre-round engineering acceleration
-                PriceFree to €97/month
+                PriceFree to €197/month
                 Signal21–47 days pre-round
       
       Pair with a database for full-stack deal flow.

@@ -49,8 +49,5 @@ Sitemap: https://signals.gitdealflow.com/sitemap.xml
 # AgentCard: https://signals.gitdealflow.com/.well-known/agent-card.json
 
 # Google Discover gatekeeper — max-image-preview required for Discover eligibility
-max-image-preview:large
-max-video-preview:-1
-max-snippet:-1
 Sitemap: https://gitdealflow.com/sitemap-pages.xml
 Sitemap: https://gitdealflow.com/image-sitemap.xml

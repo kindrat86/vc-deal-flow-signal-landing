@@ -19,10 +19,10 @@ header p{color:#94a3b8;font-size:.85rem}
 .entry{padding:1rem;border-left:2px solid #1e293b;margin-left:.5rem;margin-bottom:.5rem}
 .entry .date{color:#60a5fa;font-size:.75rem;font-weight:600}
 .entry ul{list-style:none;padding:0;margin:.25rem 0 0}
-.entry li{color:#64748b;font-size:.8rem;padding:.15rem 0}
+.entry li{color:#94a3b8;font-size:.8rem;padding:.15rem 0}
 .entry li::before{content:"→ ";color:#334155}
-.entry .tag{display:inline-block;background:#1e293b;padding:.1rem .4rem;border-radius:3px;font-size:.65rem;color:#64748b;margin-left:.5rem}
-footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b;font-size:.8rem}
+.entry .tag{display:inline-block;background:#1e293b;padding:.1rem .4rem;border-radius:3px;font-size:.65rem;color:#94a3b8;margin-left:.5rem}
+footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#94a3b8;font-size:.8rem}
 </style>
 <!-- Google Discover metadata -->
 <meta content="Changelog, deal flow, engineering velocity, venture capital, GitHub, startup" name="news_keywords"/>
@@ -55,9 +55,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b
       "image": "https://gitdealflow.com/opengraph-image.png",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -76,7 +74,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 
 <meta content="summary_large_image" name="twitter:card"/>

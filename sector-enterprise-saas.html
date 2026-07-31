@@ -400,9 +400,7 @@
     "image": "https://signals.gitdealflow.com/opengraph-image",
     "datePublished": "2026-07-30",
     "dateModified": "2026-07-30",
-    "author": {
-      "@type": "Person",
-      "name": "The Data Nerd",
+    "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
       "url": "https://signals.gitdealflow.com/about"
     },
     "publisher": {
@@ -429,7 +427,7 @@ tr:hover td{background:#0f172a}
 .stats-bar{display:flex;flex-wrap:wrap;gap:1rem;padding:1.25rem;background:#0f172a;border:1px solid #1e293b;border-radius:12px;margin:1rem 0}
 .stat-item{flex:1;min-width:120px;text-align:center}
 .stat-value{font-size:1.4rem;font-weight:700;color:#f1f5f9}
-.stat-label{font-size:.7rem;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-top:.2rem}
+.stat-label{font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-top:.2rem}
 .signal-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7rem;font-weight:500;white-space:nowrap}
 .sector-desc{background:linear-gradient(135deg,#0f172a,#1e293b);border:1px solid #1e293b;border-radius:12px;padding:1.5rem;margin:1rem 0;color:#cbd5e1;font-size:.9rem;line-height:1.7}
 .related-links{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
@@ -437,7 +435,7 @@ tr:hover td{background:#0f172a}
 .related-links a:hover{background:#263548;color:#f1f5f9;border-color:#60a5fa}
 .badge-code{background:#020617;border:1px solid #1e293b;border-radius:8px;padding:.75rem;font-family:monospace;font-size:.75rem;color:#94a3b8;overflow-x:auto;margin:.5rem 0}
 .footer-links{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;padding:1.5rem 0;border-top:1px solid #1e293b;margin-top:2rem}
-.footer-links a{color:#64748b;font-size:.78rem;text-decoration:none}
+.footer-links a{color:#94a3b8;font-size:.78rem;text-decoration:none}
 .footer-links a:hover{color:#94a3b8}
 .overview-card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.5rem;margin:1rem 0}
 .overview-card p{color:#cbd5e1;font-size:.9rem;line-height:1.7}
@@ -445,7 +443,7 @@ tr:hover td{background:#0f172a}
 .top5-card{background:#0f172a;border:1px solid #1e293b;border-radius:8px;padding:1rem;transition:border-color .2s}
 .top5-card:hover{border-color:#334155}
 .top5-card .name{color:#f1f5f9;font-weight:600;font-size:.9rem}
-.top5-card .stat{color:#64748b;font-size:.75rem;margin-top:.25rem}
+.top5-card .stat{color:#94a3b8;font-size:.75rem;margin-top:.25rem}
 .top5-card .highlight{color:#34d399;font-weight:600}
 .embed-section{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.5rem;margin:2rem 0}
 .embed-section h3{color:#e2e8f0;margin:0 0 .5rem}
@@ -463,7 +461,7 @@ tr:hover td{background:#0f172a}
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body>
@@ -481,7 +479,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 </header>
 <main class="container">
 <h1>Enterprise SaaS Startups — Engineering Velocity Signals</h1>
-<p style="color:#64748b;font-size:.85rem">Q3 2026 · 31 startups tracked · Updated weekly from public GitHub data</p>
+<p style="color:#94a3b8;font-size:.85rem">Q3 2026 · 31 startups tracked · Updated weekly from public GitHub data</p>
 <div class="stats-bar">
 <div class="stat-item"><div class="stat-value">31</div><div class="stat-label">Startups Tracked</div></div>
 <div class="stat-item"><div class="stat-value">31</div><div class="stat-label">Active This Week</div></div>
@@ -573,10 +571,10 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <h2>Sector Benchmarks</h2>
 <div class="overview-card">
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">
-<div><div style="color:#64748b;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Avg Commits (14d)</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">25.3</div></div>
-<div><div style="color:#64748b;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Avg Contributors</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">30.6</div></div>
-<div><div style="color:#64748b;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Most Common Signal</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">Framework migration</div></div>
-<div><div style="color:#64748b;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Fastest-Growing</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">metorial</div></div>
+<div><div style="color:#94a3b8;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Avg Commits (14d)</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">25.3</div></div>
+<div><div style="color:#94a3b8;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Avg Contributors</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">30.6</div></div>
+<div><div style="color:#94a3b8;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Most Common Signal</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">Framework migration</div></div>
+<div><div style="color:#94a3b8;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em">Fastest-Growing</div><div style="color:#f1f5f9;font-size:1.2rem;font-weight:700;margin-top:.25rem">metorial</div></div>
 </div>
 </div>
 <h2>Related Sectors</h2>
@@ -601,7 +599,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <h3>Enterprise SaaS Sector Badge</h3>
 <p>Embed a live Enterprise SaaS sector badge on your site:</p>
 <div class="badge-code">&lt;a href="https://gitdealflow.com/sector/enterprise-saas"&gt;&lt;img src="https://gitdealflow.com/stats-badge?sector=enterprise-saas&amp;label=Enterprise SaaS" alt="Enterprise SaaS startups engineering velocity" /&gt;&lt;/a&gt;</div>
-<p style="font-size:.78rem;color:#64748b">Copy the HTML above and paste it anywhere on your site. The badge updates automatically with the latest data.</p>
+<p style="font-size:.78rem;color:#94a3b8">Copy the HTML above and paste it anywhere on your site. The badge updates automatically with the latest data.</p>
 </div>
 </main>
 <section class="vs-section">
@@ -646,7 +644,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
 <a href="/sector-data-infrastructure" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Data Infrastructure Startups</a>
-<a href="/sector-ai--machine-learning" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">AI &amp; Machine Learning Startups</a>
+<a href="/sectors" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">AI &amp; Machine Learning Startups</a>
 <a href="/sector-gaming" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Gaming Startups</a>
 <a href="/sector-proptech" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">PropTech Startups</a>
 <a href="/sector-web3" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Web3 Startups</a>

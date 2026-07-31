@@ -62,9 +62,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -100,7 +98,7 @@
     .tool-card.gdf .tag{background:#0ea5e9;color:#fff}
     .tool-card .verdict{color:#94a3b8;font-size:.92rem;margin-top:.5rem;font-style:italic}
     .tool-card dl{margin:.6rem 0 0;display:grid;grid-template-columns:auto 1fr;gap:.3rem .9rem;font-size:.93rem}
-    .tool-card dt{color:#64748b;font-weight:600}.tool-card dd{color:#cbd5e1;margin:0}
+    .tool-card dt{color:#94a3b8;font-weight:600}.tool-card dd{color:#cbd5e1;margin:0}
     .callout{background:linear-gradient(135deg,#0ea5e922,#0ea5e908);border:1px solid #0ea5e955;border-left:4px solid #0ea5e9;padding:1.1rem 1.4rem;border-radius:.6rem;margin:1.25rem 0}
     .callout strong{color:#7dd3fc}
     .audience-card{background:#0f172acc;border:1px solid #1e293b;border-radius:.65rem;padding:1.4rem;margin:1rem 0}
@@ -121,7 +119,7 @@
     .related{background:#0f172a80;border:1px solid #1e293b;padding:1.2rem 1.4rem;border-radius:.6rem;margin-top:2rem}
     .related ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.35rem}
     .related a{color:#7dd3fc;text-decoration:none}.related a:hover{text-decoration:underline}
-    .disclaimer{font-size:.85rem;color:#64748b;font-style:italic;margin-top:1.25rem}
+    .disclaimer{font-size:.85rem;color:#94a3b8;font-style:italic;margin-top:1.25rem}
   </style>
 <meta content="Angel Investors, startup engineering velocity, GitHub signals, deal flow, venture capital, startup funding" name="news_keywords"/>
 <meta content="Angel Investors" property="article:tag"/>
@@ -132,7 +130,7 @@
 <meta name="format-detection" content="telephone=no"/>
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
-posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
 </script>
 </head>
 <body class="bg-dark-900 text-gray-100">
@@ -162,7 +160,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <p>GitDealFlow was built specifically for this. It reads public GitHub engineering activity across 4,200+ startup orgs and flags the ones accelerating — rising commit velocity, contributor growth, repository expansion. You get five names every Sunday, each with sector, stage, and a plain-English note on why it's moving. No code-reading, no quant background required.</p>
 <h2>Where the proof lives</h2>
 <p>The methodology is published as an SSRN preprint (abstract 6606558) and validated against 219 documented fundraises. The signal has historically preceded rounds by 21–47 days.</p>
-<div class="callout"><strong>Pricing &amp; tiers:</strong> Start free with the Sunday Signal Digest. Upgrade to the €9.97/month Dashboard for 60+ ranked startups with filters, or the €97/month Insider Circle for the private Telegram group and live briefings.</div>
+<div class="callout"><strong>Pricing &amp; tiers:</strong> Start free with the Sunday Signal Digest. Upgrade to the €49/month Dashboard for 60+ ranked startups with filters, or the €197/month Insider Circle for the private Telegram group and live briefings.</div>
 <h2>How it fits your stack</h2>
 <p>Most angels pair GitDealFlow with Crunchbase (for confirming rounds and investors after they close). GitDealFlow is the discovery layer; Crunchbase is the record.</p>
 </section>
@@ -173,10 +171,10 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <details class="faq-item"><summary>How is this different from Crunchbase?</summary><p>Crunchbase tells you who already raised. GitDealFlow flags who's about to. Most angels use GitDealFlow for discovery and Crunchbase for confirmation.</p></details>
 </section>
 <section class="page-section">
-<div class="eeat-trust" style="max-width:780px;margin:1.5rem auto;padding:1.25rem;background:linear-gradient(135deg,#0ea5e908,#0ea5e903);border:1px solid #1e293b;border-radius:.6rem;font-size:.85rem;color:#64748b">
+<div class="eeat-trust" style="max-width:780px;margin:1.5rem auto;padding:1.25rem;background:linear-gradient(135deg,#0ea5e908,#0ea5e903);border:1px solid #1e293b;border-radius:.6rem;font-size:.85rem;color:#94a3b8">
 <p style="margin:0 0 .5em"><strong style="color:#94a3b8">About this page:</strong> Published 2026-07-18. Authored by <a href="https://signals.gitdealflow.com/about" style="color:#7dd3fc">The Data Nerd</a> (ORCID 0009-0002-2222-4112), the pseudonymous maintainer of GitDealFlow. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#7dd3fc">SSRN preprint 6606558</a> and archived on <a href="https://zenodo.org/records/19650920" style="color:#7dd3fc">Zenodo</a>. Third-party statistics are sourced from the Ahrefs AEO methodology. <a href="/corrections" style="color:#7dd3fc">Report an error</a>.</p>
 </div>
-<div class="eeat-trust" style="max-width:780px;margin:1.5rem auto;padding:1.25rem;background:linear-gradient(135deg,#0ea5e908,#0ea5e903);border:1px solid #1e293b;border-radius:.6rem;font-size:.85rem;color:#64748b">
+<div class="eeat-trust" style="max-width:780px;margin:1.5rem auto;padding:1.25rem;background:linear-gradient(135deg,#0ea5e908,#0ea5e903);border:1px solid #1e293b;border-radius:.6rem;font-size:.85rem;color:#94a3b8">
 <p style="margin:0 0 .5em"><strong style="color:#94a3b8">About this page:</strong> Published 2026-07-18. Authored by <a href="https://signals.gitdealflow.com/about" style="color:#7dd3fc">The Data Nerd</a> (ORCID 0009-0002-2222-4112), the pseudonymous maintainer of GitDealFlow. The methodology is published as <a href="https://ssrn.com/abstract=6606558" style="color:#7dd3fc">SSRN preprint 6606558</a> and archived on <a href="https://zenodo.org/records/19650920" style="color:#7dd3fc">Zenodo</a>. Third-party statistics are sourced from the Ahrefs AEO methodology. <a href="/corrections" style="color:#7dd3fc">Report an error</a>.</p>
 </div>
 <div class="cta-final">

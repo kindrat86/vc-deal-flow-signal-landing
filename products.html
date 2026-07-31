@@ -56,9 +56,7 @@
       "image": "https://signals.gitdealflow.com/opengraph-image",
       "datePublished": "2026-07-30",
       "dateModified": "2026-07-30",
-      "author": {
-        "@type": "Person",
-        "name": "The Data Nerd",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
         "url": "https://signals.gitdealflow.com/about"
       },
       "publisher": {
@@ -114,7 +112,7 @@
           "priceCurrency": "USD",
           "priceValidUntil": "2027-12-31",
           "availability": "https://schema.org/InStock",
-          "url": "https://buy.stripe.com/test_XXXXXXXX",
+          "url": "/pricing",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
             "billingDuration": "P1M",
@@ -148,7 +146,7 @@
           "priceCurrency": "USD",
           "priceValidUntil": "2027-12-31",
           "availability": "https://schema.org/InStock",
-          "url": "https://buy.stripe.com/test_YYYYYYYY",
+          "url": "/pricing",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
             "billingDuration": "P1Y",
@@ -232,7 +230,7 @@
     .card-header { margin-bottom: 1.5rem; }
     .card-name { font-size: 1.1rem; font-weight: 600; color: #f1f5f9; margin-bottom: 0.25rem; }
     .card-price { font-size: 2.5rem; font-weight: 700; color: #60a5fa; display: flex; align-items: baseline; gap: 0.25rem; }
-    .card-price .interval { font-size: 1rem; font-weight: 400; color: #64748b; }
+    .card-price .interval { font-size: 1rem; font-weight: 400; color: #94a3b8; }
     .card-savings { font-size: 0.8rem; color: #34d399; font-weight: 600; margin-top: 0.25rem; }
     .card-description { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem; }
     .feature-list { list-style: none; padding: 0; margin: 0 0 1.5rem; flex-grow: 1; }
@@ -282,7 +280,7 @@
     .newsletter-form button:hover { background: #3b82f6; }
 
     .footer-links { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
-    .footer-links a { color: #64748b; text-decoration: none; font-size: 0.85rem; }
+    .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; }
     .footer-links a:hover { color: #60a5fa; }
 
     @media (max-width: 640px) {
@@ -336,7 +334,7 @@
 <li>Contributor breakdown by startup</li>
 <li>Signal type analysis (hiring bursts, deploy spikes, infra buildouts, framework migrations)</li>
 </ul>
-<a class="buy-btn outline" href="https://buy.stripe.com/test_XXXXXXXX" onclick="if(window.posthog)posthog.capture('product_buy_clicked',{tier:'monthly',price:3})" rel="noopener" target="_blank">Buy Now — $3/month</a>
+<a class="buy-btn outline" href="/pricing" onclick="if(window.posthog)posthog.capture('product_buy_clicked',{tier:'monthly',price:3})" rel="noopener" target="_blank">Buy Now — $3/month</a>
 </div>
 <!-- Annual Tier -->
 <div class="pricing-card popular">
@@ -353,7 +351,7 @@
 <li>SSRN research methodology reference</li>
 <li>Commercial use license for internal analysis</li>
 </ul>
-<a class="buy-btn" href="https://buy.stripe.com/test_YYYYYYYY" onclick="if(window.posthog)posthog.capture('product_buy_clicked',{tier:'annual',price:29})" rel="noopener" target="_blank">Buy Now — $29/year</a>
+<a class="buy-btn" href="/pricing" onclick="if(window.posthog)posthog.capture('product_buy_clicked',{tier:'annual',price:29})" rel="noopener" target="_blank">Buy Now — $29/year</a>
 </div>
 </div>
 <!-- Features Section -->

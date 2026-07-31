@@ -6,7 +6,7 @@
 2026 Comparison
     # GitDealFlow vs PitchBook
 
-    **Bottom line up front:** GitDealFlow is a $0–$97/month pre-round signal tool; PitchBook is a five-figure institutional database. They sit at opposite ends of the deal-flow stack.
+    **Bottom line up front:** GitDealFlow is a $0–$197/month pre-round signal tool; PitchBook is a five-figure institutional database. They sit at opposite ends of the deal-flow stack.
 
     PitchBook is the institutional-grade private-market intelligence platform — valuations, deal terms, PE/VC data. GitDealFlow is a pre-round signal tool — it reads startups’ public GitHub engineering activity and flags the ones accelerating — 21–47 days before the round. it does not store funding-round histories, valuation tables, investor profiles, or contact data — it is a leading indicator, not a database.
 
@@ -22,7 +22,7 @@
         What the data ispublic GitHub activity (commit velocity, contributor growth, repository expansion) across 4,200+ startup orgs in 20 sectorsanalyst-curated private-market data: deal terms, valuations, fund performance, LP/GP profiles
         Signal timing21–47 days before the fundraise announcementpost-round and historical — comprehensive once a deal is known
         Best forAngels, scouts, and seed/Series A funds sourcing earlyinstitutional PE/VC research desks that need valuations, deal terms, and fund performance
-        Price rangeFree to €97/monthEnterprise contracts, commonly reported in the tens of thousands of dollars per seat per year
+        Price rangeFree to €197/monthEnterprise contracts, commonly reported in the tens of thousands of dollars per seat per year
         SetupMinutes — subscribe and readSales-led or self-serve per tier
       
     
@@ -67,7 +67,7 @@
     ## The verdict
 
     
-      **Choose GitDealFlow if** your problem is finding startups *before* the round. GitDealFlow is a $0–$97/month pre-round signal tool; PitchBook is a five-figure institutional database. They sit at opposite ends of the deal-flow stack.
+      **Choose GitDealFlow if** your problem is finding startups *before* the round. GitDealFlow is a $0–$197/month pre-round signal tool; PitchBook is a five-figure institutional database. They sit at opposite ends of the deal-flow stack.
 
     
     
@@ -81,7 +81,7 @@
   
     ## Common questions
 
-          Is GitDealFlow cheaper than PitchBook?Dramatically — GitDealFlow ranges from free to €97/month, vs PitchBook’s enterprise contracts. They serve different buyers: GitDealFlow is for individual investors and small funds sourcing early; PitchBook is for institutional research desks.
+          Is GitDealFlow cheaper than PitchBook?Dramatically — GitDealFlow ranges from free to €197/month, vs PitchBook’s enterprise contracts. They serve different buyers: GitDealFlow is for individual investors and small funds sourcing early; PitchBook is for institutional research desks.
 
           Does GitDealFlow have PitchBook’s valuation data?No. GitDealFlow carries no valuations, deal terms, or fund performance. It is purely an engineering-acceleration signal.
 
@@ -92,7 +92,7 @@
   
     ## Pricing context
 
-    GitDealFlow ranges from a permanent free Signal Digest (5 startups every Sunday, no card) to a €9.97/month dashboard and a €97/month Insider Circle. PitchBook is Enterprise contracts, commonly reported in the tens of thousands of dollars per seat per year. For individual angels and small funds, the gap is large; for institutional desks, it reflects very different products.
+    GitDealFlow ranges from a permanent free Signal Digest (5 startups every Sunday, no card) to a €49/month dashboard and a €197/month Insider Circle. PitchBook is Enterprise contracts, commonly reported in the tens of thousands of dollars per seat per year. For individual angels and small funds, the gap is large; for institutional desks, it reflects very different products.
 
     Pricing for third-party tools reflects publicly reported ranges at time of writing and changes over time — verify on each vendor’s site. GitDealFlow pricing is live on the [pricing page](/pricing).
 
