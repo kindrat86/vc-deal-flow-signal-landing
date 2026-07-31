@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free Startup Velocity Benchmark — Compare vs 324 Startups (2026) | GitDealFlow</title>
+<meta content="Free tool: compare your startup's GitHub engineering velocity against 324 venture-backed startups across 15 sectors. See your percentile rank instantly — no signup required." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://gitdealflow.com/benchmark" rel="canonical"/>
+<meta content="Free Startup Velocity Benchmark — Compare vs 324 Startups (2026) | GitDealFlow" property="og:title"/>
+<meta content="Free tool: compare your startup's GitHub engineering velocity against 324 venture-backed startups. See your percentile, sector rank, and velocity score." property="og:description"/>
+<meta content="https://signals.gitdealflow.com/opengraph-image" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="https://gitdealflow.com/benchmark" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta 324="" benchmark="" compare="" content="Free Startup Velocity Benchmark — Compare vs 324 Startups (2026) | GitDealFlow" name="twitter:title" startup="" startups"="" team="" velocity="" vs="" your="" —=""/>
+<meta content="Free tool: compare your startup's engineering velocity against 324 venture-backed startups." name="twitter:description"/>
+<meta content="startup velocity benchmark, engineering velocity, commit velocity, GitHub, startup comparison, VC tools" name="news_keywords"/>
+<meta content="startup velocity" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="GitHub" property="article:tag"/>
+<meta content="benchmark" property="article:tag"/>
+<meta name="format-detection" content="telephone=no"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": [
+        "WebApplication",
+        "WebPage"
+      ],
+      "name": "Startup Velocity Benchmark Tool",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Free tool to compare your startup's GitHub engineering velocity against 324 venture-backed startups across 15 sectors.",
+      "featureList": [
+        "Percentile ranking among 324 startups",
+        "Sector-specific comparison",
+        "Radar chart vs sector averages",
+        "Shareable benchmark results",
+        "Embeddable badge"
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Free Startup Velocity Benchmark \u2014 Compare vs 324 Startups (2026) | GitDealFlow",
+      "description": "Free tool: compare your startup's GitHub engineering velocity against 324 venture-backed startups across 15 sectors. See your percentile rank instantly \u2014 no signup required.",
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Benchmark Your Startup Engineering Velocity",
+  "description": "Compare your startup's GitHub engineering velocity against 324 venture-backed startups.",
+  "step": [
+    {"@type": "HowToStep", "position": 1, "name": "Enter your startup name or GitHub org", "text": "Type your startup's name into the search field. The tool searches all 324 tracked startups."},
+    {"@type": "HowToStep", "position": 2, "name": "View your percentile ranking", "text": "See how your engineering velocity ranks globally among all tracked startups and within your sector."},
+    {"@type": "HowToStep", "position": 3, "name": "Compare against sector averages", "text": "Review bar charts comparing your team vs sector average on commit velocity, contributors, and signal strength."},
+    {"@type": "HowToStep", "position": 4, "name": "Share your benchmark", "text": "Copy your shareable benchmark result and embeddable badge to showcase your team's engineering velocity."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://gitdealflow.com/tools"},
+    {"@type": "ListItem", "position": 3, "name": "Startup Velocity Benchmark"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How is the benchmark calculated?","acceptedAnswer":{"@type":"Answer","text":"The benchmark compares your startup's commit velocity (commits per 14 days) against 324 tracked startups. We compute your percentile rank globally and within your sector using commit velocity, contributor count, repository activity, and signal strength."}},
+    {"@type":"Question","name":"What data does the benchmark use?","acceptedAnswer":{"@type":"Answer","text":"All data comes from the VC Deal Flow Signal dataset (SSRN 6606558), which tracks public GitHub activity across 324 venture-backed startups in 15 sectors. Data is updated weekly."}},
+    {"@type":"Question","name":"Is the benchmark tool free?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is completely free. No registration required. Enter any GitHub org or startup name to see how they rank."}},
+    {"@type":"Question","name":"How often is the benchmark data updated?","acceptedAnswer":{"@type":"Answer","text":"The underlying signals data updates weekly. Each update refreshes commit velocity, contributor counts, and signal detections across all 324 tracked startups."}}
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b1120;color:#e2e8f0;min-height:100vh}
+a{color:#60a5fa;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:960px;margin:0 auto;padding:2rem 1rem}
+nav{max-width:960px;margin:0 auto;padding:1rem;display:flex;align-items:center;justify-content:space-between}
+nav a{color:#94a3b8;text-decoration:none;font-size:.875rem}
+nav a:hover{color:#60a5fa}
+.logo{font-weight:700;font-size:1.1rem;color:#f1f5f9}
+.logo span{color:#60a5fa}
+header{border-bottom:1px solid #1e293b;background:#0b1120}
+h1{font-size:1.75rem;font-weight:700;margin-bottom:.5rem;color:#f1f5f9}
+.subtitle{color:#94a3b8;margin-bottom:2rem;font-size:.95rem;line-height:1.5}
+.search-box{display:flex;gap:.5rem;margin-bottom:1.5rem}
+.search-box input{flex:1;padding:.75rem 1rem;border:1px solid #334155;border-radius:.5rem;background:#0f172a;color:#e2e8f0;font-size:1rem;outline:none;transition:border-color .2s}
+.search-box input:focus{border-color:#60a5fa}
+.search-box input::placeholder{color:#475569}
+.search-box button{padding:.75rem 1.5rem;background:#2563eb;color:#fff;border:none;border-radius:.5rem;font-weight:600;cursor:pointer;font-size:.95rem;transition:background .2s}
+.search-box button:hover{background:#1d4ed8}
+.search-box button:disabled{opacity:.5;cursor:not-allowed}
+.result-card{display:none;background:#0f172a;border:1px solid #1e293b;border-radius:.75rem;padding:1.5rem;margin-bottom:2rem}
+.result-card.visible{display:block}
+.result-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;flex-wrap:wrap;gap:.5rem}
+.result-name{font-size:1.5rem;font-weight:700;color:#f1f5f9}
+.result-sector{color:#60a5fa;font-size:.9rem;margin-top:.25rem}
+.rank-big{font-size:3rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.rank-label{color:#64748b;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-card{background:#1e293b;border-radius:.5rem;padding:1rem;text-align:center}
+.stat-card .num{font-size:1.75rem;font-weight:700;color:#f1f5f9}
+.stat-card .lab{color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;margin-top:.25rem}
+.stat-card .sub{color:#94a3b8;font-size:.8rem;margin-top:.15rem}
+.chart-section{margin:1.5rem 0}
+.chart-section h3{color:#f1f5f9;font-size:1rem;margin-bottom:1rem}
+.bar{display:flex;align-items:center;margin-bottom:.6rem;gap:.5rem}
+.bar-label{width:120px;font-size:.8rem;color:#94a3b8;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:24px;background:#1e293b;border-radius:4px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:4px;transition:width 1s ease;position:relative}
+.bar-fill.user{background:linear-gradient(90deg,#60a5fa,#3b82f6)}
+.bar-fill.avg{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+.bar-fill.sector{background:linear-gradient(90deg,#34d399,#10b981)}
+.bar-val{width:60px;font-size:.75rem;color:#64748b;flex-shrink:0}
+.legend{display:flex;gap:1.5rem;margin-bottom:1rem;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#94a3b8}
+.legend-dot{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+.not-found{text-align:center;padding:2rem;color:#94a3b8}
+.not-found h3{font-size:1.2rem;color:#f1f5f9;margin-bottom:.5rem}
+.not-found p{margin-bottom:.5rem}
+.share-section{border-top:1px solid #1e293b;padding-top:1.5rem;margin-top:1.5rem}
+.share-section h3{color:#f1f5f9;font-size:1rem;margin-bottom:1rem}
+.share-btn{padding:.6rem 1.2rem;background:#1e293b;color:#e2e8f0;border:1px solid #334155;border-radius:.375rem;cursor:pointer;font-size:.85rem;transition:all .2s;margin-right:.5rem;margin-bottom:.5rem}
+.share-btn:hover{background:#334155;border-color:#60a5fa}
+.share-text{background:#0b1120;border:1px solid #334155;border-radius:.5rem;padding:1rem;font-family:'SF Mono',Monaco,monospace;font-size:.8rem;color:#94a3b8;margin:.75rem 0;word-break:break-all;user-select:all}
+.embed-code{background:#0b1120;border:1px solid #334155;border-radius:.5rem;padding:1rem;font-family:'SF Mono',Monaco,monospace;font-size:.8rem;color:#94a3b8;margin:.75rem 0;word-break:break-all;user-select:all}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#22c55e;color:#052e16;padding:.75rem 1.5rem;border-radius:.5rem;font-weight:600;font-size:.9rem;opacity:0;transition:opacity .3s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
+.loader{display:none;text-align:center;padding:2rem}
+.loader.visible{display:block}
+.spinner{width:40px;height:40px;border:3px solid #1e293b;border-top:3px solid #60a5fa;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 1rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.table-wrap{overflow-x:auto;margin:2rem 0}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{text-align:left;padding:.5rem .4rem;color:#64748b;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #1e293b;cursor:pointer;white-space:nowrap}
+th:hover{color:#94a3b8}
+td{padding:.45rem .4rem;border-bottom:1px solid #0f172a;color:#cbd5e1;white-space:nowrap}
+tr:hover td{background:rgba(96,165,250,.05)}
+.table-search{margin-bottom:1rem}
+.table-search input{width:100%;padding:.6rem .75rem;border:1px solid #334155;border-radius:.375rem;background:#0f172a;color:#e2e8f0;font-size:.85rem;outline:none}
+.table-search input:focus{border-color:#60a5fa}
+.footer-links{border-top:1px solid #1e293b;padding-top:2rem;margin-top:2rem;display:flex;gap:2rem;flex-wrap:wrap}
+.footer-links a{color:#64748b;text-decoration:none;font-size:.85rem}
+.footer-links a:hover{color:#60a5fa}
+.cta-bar{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0}
+.cta-bar a{padding:.6rem 1.25rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#e8eaed;font-size:.85rem;text-decoration:none;transition:all .2s}
+.cta-bar a:hover{background:#334155;border-color:#60a5fa;color:#60a5fa}
+.radar-wrap{max-width:400px;margin:1rem auto}
+.score-ring{width:140px;height:140px;margin:0 auto 1rem;position:relative}
+.score-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.score-ring .bg{fill:none;stroke:#1e293b;stroke-width:8}
+.score-ring .fill{fill:none;stroke:url(#grad);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1.5s ease}
+.score-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.score-value{font-size:2rem;font-weight:700;color:#f1f5f9}
+.score-label{font-size:.7rem;color:#64748b;text-transform:uppercase;letter-spacing:.05em}
+.tabs{display:flex;gap:.25rem;margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0}
+.tab{padding:.5rem 1rem;font-size:.85rem;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.tab:hover{color:#94a3b8}
+.tab.active{color:#60a5fa;border-bottom-color:#60a5fa}
+.tab-content{display:none}
+.tab-content.active{display:block}
+@media(max-width:640px){h1{font-size:1.4rem}.search-box{flex-direction:column}.search-box button{width:100%}.stats-grid{grid-template-columns:1fr 1fr}.bar-label{width:80px;font-size:.7rem}.cta-bar a{flex:1;text-align:center}}
+</style>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="/">GitDeal<span>Flow</span></a>
+<div>
+<a href="https://signals.gitdealflow.com" style="margin-right:1rem">Signals</a>
+<a href="/pricing" style="margin-right:1rem">Pricing</a>
+<a href="/tools">Tools</a>
+</div>
+</nav>
+</header>
+<div class="container">
+<h1>📊 Startup Velocity Benchmark</h1>
+<p class="subtitle">Enter your GitHub org or startup name to see how you compare against 324 venture-backed startups. Get your percentile rank, sector comparison, and a shareable result.</p>
+<div class="search-box">
+<input id="searchInput" list="suggestions" placeholder="e.g. Vercel, Supabase, Hugging Face, or your GitHub org..." type="text"/>
+<datalist id="suggestions"></datalist>
+<button data-track="benchmark_search" id="searchBtn" onclick="searchBenchmark()">Compare →</button>
+</div>
+<div class="loader" id="loader">
+<div class="spinner"></div>
+<p style="color:#64748b">Computing your benchmark...</p>
+</div>
+<div class="result-card" id="result">
+<div class="tabs" id="resultTabs">
+<div class="tab active" data-tab="overview" onclick="switchTab('overview')">Overview</div>
+<div class="tab" data-tab="charts" onclick="switchTab('charts')">Comparison</div>
+<div class="tab" data-tab="share" onclick="switchTab('share')">Share</div>
+</div>
+<div class="tab-content active" id="tab-overview">
+<div class="result-header">
+<div>
+<div class="result-name" id="startupName">—</div>
+<div class="result-sector" id="startupSector">—</div>
+</div>
+<div style="text-align:right">
+<div class="rank-big" id="percentileRank">—</div>
+<div class="rank-label">Percentile Rank</div>
+</div>
+</div>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="num" id="sRank">—</div>
+<div class="lab">Sector Rank</div>
+<div class="sub" id="sectorOutOf">—</div>
+</div>
+<div class="stat-card">
+<div class="num" id="globalRank">—</div>
+<div class="lab">Global Rank</div>
+<div class="sub">of 324 startups</div>
+</div>
+<div class="stat-card">
+<div class="num" id="compVelocity">—</div>
+<div class="lab">Commit Velocity</div>
+<div class="sub">commits/14d</div>
+</div>
+<div class="stat-card">
+<div class="num" id="compContributors">—</div>
+<div class="lab">Contributors</div>
+<div class="sub">active devs</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="tab-charts">
+<div class="chart-section">
+<h3>You vs Sector Average</h3>
+<div class="legend">
+<div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div> Your Startup</div>
+<div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div> Sector Average</div>
+</div>
+<div id="comparisonBars"></div>
+</div>
+<div class="chart-section">
+<h3>Your Sector Standing</h3>
+<p style="color:#94a3b8;font-size:.85rem;margin-bottom:.75rem">Where you rank among <span id="sectorSize">—</span> startups in <span id="sectorName2">—</span></p>
+<div id="sectorBars"></div>
+</div>
+</div>
+<div class="tab-content" id="tab-share">
+<div class="share-section" style="border-top:none;padding-top:0;margin-top:0">
+<h3>📋 Share Your Benchmark Result</h3>
+<p style="color:#94a3b8;font-size:.85rem;margin-bottom:.75rem">Share this on LinkedIn, Twitter, or your blog:</p>
+<div class="share-text" id="shareText">Loading...</div>
+<div>
+<button class="share-btn" data-share="copy-text" data-track="benchmark_share" onclick="copyShareText()">📋 Copy Share Text</button>
+<button class="share-btn" data-share="permalink" data-track="benchmark_share" onclick="copyPermalink()">🔗 Copy Permalink</button>
+</div>
+<h3 style="margin-top:1.5rem">🏷️ Embed Your Benchmark Badge</h3>
+<p style="color:#94a3b8;font-size:.85rem;margin-bottom:.5rem">Add this badge to your website or README:</p>
+<div class="embed-code" id="badgeCode">Loading...</div>
+<button class="share-btn" data-share="badge" data-track="benchmark_share" onclick="copyBadgeCode()">📋 Copy Badge HTML</button>
+</div>
+</div>
+</div>
+<div class="result-card" id="notFound">
+<div class="not-found">
+<p style="font-size:3rem;margin-bottom:.5rem">🔍</p>
+<h3>Startup Not Found</h3>
+<p>We don't have data for that startup yet. Want to check their velocity anyway?</p>
+<div class="cta-bar" style="justify-content:center;margin-top:1rem">
+<a href="/check-velocity">⚡ Check Velocity</a>
+<a href="/scout">🎯 Scout Score</a>
+<a href="https://signals.gitdealflow.com">📊 Browse All Startups</a>
+</div>
+</div>
+</div>
+<div class="cta-bar">
+<a href="/scout">🎯 Compute Your Scout Score</a>
+<a href="/check-velocity">⚡ Quick Velocity Check</a>
+<a href="/tools">🔧 All Tools</a>
+<a href="https://signals.gitdealflow.com">📡 Signals Database</a>
+</div>
+<div class="table-wrap">
+<h2 style="color:#f1f5f9;font-size:1.1rem;margin-bottom:.75rem">📋 All 324 Tracked Startups</h2>
+<div class="table-search">
+<input id="tableSearch" oninput="filterTable()" placeholder="Search by name, sector, or GitHub org..." type="text"/>
+</div>
+<table>
+<thead>
+<tr>
+<th onclick="sortTable(0)">Startup ↕</th>
+<th onclick="sortTable(1)">Sector ↕</th>
+<th onclick="sortTable(2)">Velocity ↕</th>
+<th onclick="sortTable(3)">Contributors ↕</th>
+<th onclick="sortTable(4)">Signal ↕</th>
+</tr>
+</thead>
+<tbody id="tableBody"></tbody>
+</table>
+<p style="color:#64748b;font-size:.8rem;margin-top:.5rem">Click column headers to sort. Data from <a href="https://signals.gitdealflow.com" style="color:#60a5fa">VC Deal Flow Signal</a>, Q3 2026.</p>
+</div>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="https://signals.gitdealflow.com">Signals Database</a>
+<a href="https://signals.gitdealflow.com/methodology">Methodology</a>
+<a href="/pricing">Pricing</a>
+<a href="/tools">Tools</a>
+<a href="/faq">FAQ</a>
+</div>
+</div>
+<!-- ===== NEWSLETTER SIGNUP ===== -->
+<div class="gdf-newsletter-form" data-source="benchmark"></div>
+<script defer="" src="/newsletter-form.js"></script>
+<div class="toast" id="toast">Copied!</div>
+<script>
+// ===== INLINE DATA: 324 Startups from VC Deal Flow Signal (Q3 2026) =====
+var SIGNALS_DATA = {"startups": [{"n": "aipoch", "v": 307, "c": 8, "r": 1, "s": "healthcare", "sn": "Healthcare", "t": "Deploy frequency spike", "g": "APAC", "st": "Seed", "gh": "https://github.com/aipoch"}, {"n": "insightsengineering", "v": 2, "c": 9, "r": 2, "s": "healthcare", "sn": "Healthcare", "t": "Deploy frequency spike", "g": "EU", "st": "Seed", "gh": "https://github.com/insightsengineering"}, {"n": "HCW-home", "v": 2, "c": 6, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/HCW-home"}, {"n": "sunlabuiuc", "v": 3, "c": 56, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/sunlabuiuc"}, {"n": "third-culture-software", "v": 28, "c": 28, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/third-culture-software"}, {"n": "HeliosSoftware", "v": 134, "c": 14, "r": 1, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/HeliosSoftware"}, {"n": "zapplyjobs", "v": 1388, "c": 7, "r": 2, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "US", "st": "Pre-seed", "gh": "https://github.com/zapplyjobs"}, {"n": "simpledotorg", "v": 2, "c": 18, "r": 1, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/simpledotorg"}, {"n": "hpi-studyu", "v": 51, "c": 17, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Engineering hiring burst", "g": "EU", "st": "Seed", "gh": "https://github.com/hpi-studyu"}, {"n": "healthchainai", "v": 10, "c": 14, "r": 1, "s": "healthcare", "sn": "Healthcare", "t": "Engineering hiring burst", "g": "UK", "st": "Seed", "gh": "https://github.com/healthchainai"}, {"n": "aphp", "v": 6, "c": 14, "r": 3, "s": "healthcare", "sn": "Healthcare", "t": "Infrastructure buildout", "g": "EU", "st": "Seed", "gh": "https://github.com/aphp"}, {"n": "HasteHealth", "v": 43, "c": 6, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/HasteHealth"}, {"n": "the-momentum", "v": 17, "c": 52, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/the-momentum"}, {"n": "samply", "v": 36, "c": 20, "r": 1, "s": "healthcare", "sn": "Healthcare", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/samply"}, {"n": "OHIF", "v": 28, "c": 100, "r": 1, "s": "healthcare", "sn": "Healthcare", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/OHIF"}, {"n": "medplum", "v": 71, "c": 100, "r": 3, "s": "healthcare", "sn": "Healthcare", "t": "Infrastructure buildout", "g": "US", "st": "Growth", "gh": "https://github.com/medplum"}, {"n": "andes", "v": 3, "c": 3, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/andes"}, {"n": "FreedomIntelligence", "v": 55, "c": 16, "r": 4, "s": "healthcare", "sn": "Healthcare", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/FreedomIntelligence"}, {"n": "ohcnetwork", "v": 13, "c": 100, "r": 5, "s": "healthcare", "sn": "Healthcare", "t": "Infrastructure buildout", "g": "APAC", "st": "Growth", "gh": "https://github.com/ohcnetwork"}, {"n": "hapifhir", "v": 11, "c": 100, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/hapifhir"}, {"n": "tuva-health", "v": 1, "c": 48, "r": 2, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/tuva-health"}, {"n": "fedbiomed", "v": 5, "c": 23, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/fedbiomed"}, {"n": "earthians", "v": 4, "c": 86, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Engineering hiring burst", "g": "APAC", "st": "Growth", "gh": "https://github.com/earthians"}, {"n": "masslight", "v": 53, "c": 28, "r": 0, "s": "healthcare", "sn": "Healthcare", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/masslight"}, {"n": "ccao-data", "v": 3, "c": 11, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/ccao-data"}, {"n": "isaqb-org", "v": 7, "c": 5, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/isaqb-org"}, {"n": "INGInious", "v": 11, "c": 60, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/INGInious"}, {"n": "ob-f", "v": 5, "c": 35, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/ob-f"}, {"n": "The-Mu-Foundation", "v": 2, "c": 22, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/The-Mu-Foundation"}, {"n": "KDE", "v": 5, "c": 100, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/KDE"}, {"n": "OpenCircuits", "v": 34, "c": 71, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "US", "st": "Growth", "gh": "https://github.com/OpenCircuits"}, {"n": "learningeconomy", "v": 47, "c": 15, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/learningeconomy"}, {"n": "zoonk", "v": 55, "c": 5, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/zoonk"}, {"n": "Vacademy-io", "v": 697, "c": 23, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "APAC", "st": "Series A/B", "gh": "https://github.com/Vacademy-io"}, {"n": "hedyorg", "v": 28, "c": 100, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "EU", "st": "Growth", "gh": "https://github.com/hedyorg"}, {"n": "eduhub-org", "v": 65, "c": 18, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/eduhub-org"}, {"n": "chipmates", "v": 68, "c": 6, "r": 1, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/chipmates"}, {"n": "otter-sec", "v": 49, "c": 9, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/otter-sec"}, {"n": "spectrocloud", "v": 28, "c": 92, "r": 1, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "US", "st": "Growth", "gh": "https://github.com/spectrocloud"}, {"n": "learning-commons-org", "v": 10, "c": 9, "r": 1, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/learning-commons-org"}, {"n": "sonic-pi-net", "v": 64, "c": 100, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/sonic-pi-net"}, {"n": "scribe-org", "v": 6, "c": 59, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "EU", "st": "Growth", "gh": "https://github.com/scribe-org"}, {"n": "classroomio", "v": 48, "c": 30, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/classroomio"}, {"n": "hpi-schul-cloud", "v": 16, "c": 100, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "EU", "st": "Growth", "gh": "https://github.com/hpi-schul-cloud"}, {"n": "OpenOLAT", "v": 121, "c": 16, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "EU", "st": "Seed", "gh": "https://github.com/OpenOLAT"}, {"n": "AvaCodeSolutions", "v": 59, "c": 8, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/AvaCodeSolutions"}, {"n": "StudyDrift", "v": 66, "c": 3, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/StudyDrift"}, {"n": "DSACMS", "v": 30, "c": 31, "r": 5, "s": "edtech", "sn": "EdTech", "t": "Infrastructure buildout", "g": "US", "st": "Series A/B", "gh": "https://github.com/DSACMS"}, {"n": "iblai", "v": 106, "c": 11, "r": 1, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/iblai"}, {"n": "foundation50", "v": 188, "c": 7, "r": 3, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/foundation50"}, {"n": "buddhist-uni", "v": 10, "c": 11, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/buddhist-uni"}, {"n": "towardsai", "v": 28, "c": 3, "r": 3, "s": "edtech", "sn": "EdTech", "t": "Engineering hiring burst", "g": "US", "st": "Pre-seed", "gh": "https://github.com/towardsai"}, {"n": "quizfreely", "v": 27, "c": 3, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/quizfreely"}, {"n": "ai-shifu", "v": 54, "c": 22, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "APAC", "st": "Series A/B", "gh": "https://github.com/ai-shifu"}, {"n": "cpinitiative", "v": 121, "c": 100, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/cpinitiative"}, {"n": "codeforlife-education", "v": 1, "c": 3, "r": 1, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "UK", "st": "Pre-seed", "gh": "https://github.com/codeforlife-education"}, {"n": "elimu-ai", "v": 8, "c": 12, "r": 0, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/elimu-ai"}, {"n": "haxtheweb", "v": 5, "c": 42, "r": 1, "s": "edtech", "sn": "EdTech", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/haxtheweb"}, {"n": "ecomplus", "v": 1, "c": 6, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "LATAM", "st": "Pre-seed", "gh": "https://github.com/ecomplus"}, {"n": "vuestorefront", "v": 2, "c": 100, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/vuestorefront"}, {"n": "swellstores", "v": 2, "c": 29, "r": 2, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "US", "st": "Series A/B", "gh": "https://github.com/swellstores"}, {"n": "solidusio", "v": 1, "c": 95, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/solidusio"}, {"n": "innocommerce", "v": 34, "c": 16, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/innocommerce"}, {"n": "bic-org", "v": 3, "c": 3, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/bic-org"}, {"n": "vanilophp", "v": 1, "c": 22, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "EU", "st": "Series A/B", "gh": "https://github.com/vanilophp"}, {"n": "wcpos", "v": 105, "c": 6, "r": 2, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/wcpos"}, {"n": "packdigital", "v": 4, "c": 9, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "US", "st": "Seed", "gh": "https://github.com/packdigital"}, {"n": "beikeshop", "v": 3, "c": 21, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "APAC", "st": "Series A/B", "gh": "https://github.com/beikeshop"}, {"n": "checkout", "v": 8, "c": 26, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/checkout"}, {"n": "saleor", "v": 44, "c": 100, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/saleor"}, {"n": "tempoxyz", "v": 100, "c": 20, "r": 4, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/tempoxyz"}, {"n": "rapidez", "v": 4, "c": 15, "r": 1, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Framework migration", "g": "EU", "st": "Seed", "gh": "https://github.com/rapidez"}, {"n": "medusajs", "v": 178, "c": 100, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "US", "st": "Growth", "gh": "https://github.com/medusajs"}, {"n": "evershopcommerce", "v": 30, "c": 46, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/evershopcommerce"}, {"n": "biblys", "v": 54, "c": 5, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/biblys"}, {"n": "thirtybees", "v": 1, "c": 100, "r": 1, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Framework migration", "g": "EU", "st": "Growth", "gh": "https://github.com/thirtybees"}, {"n": "juspay", "v": 102, "c": 100, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Framework migration", "g": "APAC", "st": "Growth", "gh": "https://github.com/juspay"}, {"n": "BuilderIO", "v": 496, "c": 43, "r": 1, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/BuilderIO"}, {"n": "MahoCommerce", "v": 25, "c": 13, "r": 1, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/MahoCommerce"}, {"n": "moov-io", "v": 22, "c": 3, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/moov-io"}, {"n": "vendurehq", "v": 52, "c": 100, "r": 1, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/vendurehq"}, {"n": "Adyen", "v": 16, "c": 13, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Framework migration", "g": "EU", "st": "Seed", "gh": "https://github.com/Adyen"}, {"n": "AnthropicBots", "v": 137, "c": 68, "r": 2, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/AnthropicBots"}, {"n": "bagisto", "v": 6, "c": 4, "r": 2, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Framework migration", "g": "APAC", "st": "Pre-seed", "gh": "https://github.com/bagisto"}, {"n": "mercurjs", "v": 18, "c": 7, "r": 0, "s": "ecommerce-infrastructure", "sn": "E-commerce Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/mercurjs"}, {"n": "pluginsGLPI", "v": 2, "c": 9, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Engineering hiring burst", "g": "EU", "st": "Seed", "gh": "https://github.com/pluginsGLPI"}, {"n": "Velocidex", "v": 9, "c": 100, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Deploy frequency spike", "g": "APAC", "st": "Growth", "gh": "https://github.com/Velocidex"}, {"n": "phamos-eu", "v": 41, "c": 3, "r": 1, "s": "supply-chain", "sn": "Supply Chain", "t": "Deploy frequency spike", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/phamos-eu"}, {"n": "hightower-systems", "v": 1, "c": 3, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/hightower-systems"}, {"n": "eftechcombr", "v": 1, "c": 4, "r": 1, "s": "supply-chain", "sn": "Supply Chain", "t": "Deploy frequency spike", "g": "LATAM", "st": "Pre-seed", "gh": "https://github.com/eftechcombr"}, {"n": "PyVRP", "v": 3, "c": 9, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Deploy frequency spike", "g": "EU", "st": "Seed", "gh": "https://github.com/PyVRP"}, {"n": "phoenixctms", "v": 81, "c": 4, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/phoenixctms"}, {"n": "Part-DB", "v": 32, "c": 53, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Deploy frequency spike", "g": "EU", "st": "Growth", "gh": "https://github.com/Part-DB"}, {"n": "fleetbase", "v": 44, "c": 12, "r": 1, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "APAC", "st": "Seed", "gh": "https://github.com/fleetbase"}, {"n": "OCSInventory-NG", "v": 6, "c": 8, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "EU", "st": "Seed", "gh": "https://github.com/OCSInventory-NG"}, {"n": "temporalio", "v": 11, "c": 29, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/temporalio"}, {"n": "aureuserp", "v": 75, "c": 20, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/aureuserp"}, {"n": "relizaio", "v": 35, "c": 5, "r": 2, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "Canada", "st": "Pre-seed", "gh": "https://github.com/relizaio"}, {"n": "pyck-ai", "v": 40, "c": 4, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Engineering hiring burst", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/pyck-ai"}, {"n": "celerp", "v": 16, "c": 3, "r": 4, "s": "supply-chain", "sn": "Supply Chain", "t": "Infrastructure buildout", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/celerp"}, {"n": "Grashjs", "v": 43, "c": 11, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/Grashjs"}, {"n": "ever-co", "v": 61, "c": 80, "r": 1, "s": "supply-chain", "sn": "Supply Chain", "t": "Engineering hiring burst", "g": "US", "st": "Growth", "gh": "https://github.com/ever-co"}, {"n": "rspace-os", "v": 20, "c": 16, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "UK", "st": "Seed", "gh": "https://github.com/rspace-os"}, {"n": "medulla-tech", "v": 1, "c": 9, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "EU", "st": "Seed", "gh": "https://github.com/medulla-tech"}, {"n": "gosqasorg", "v": 7, "c": 24, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/gosqasorg"}, {"n": "KyrptonaughtMC", "v": 2, "c": 24, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/KyrptonaughtMC"}, {"n": "Epic-Breakfast-Productions", "v": 2, "c": 16, "r": 0, "s": "supply-chain", "sn": "Supply Chain", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/Epic-Breakfast-Productions"}, {"n": "aws-samples", "v": 1, "c": 5, "r": 9, "s": "supply-chain", "sn": "Supply Chain", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/aws-samples"}, {"n": "asksurf-ai", "v": 2, "c": 5, "r": 1, "s": "web3", "sn": "Web3", "t": "Deploy frequency spike", "g": "US", "st": "Pre-seed", "gh": "https://github.com/asksurf-ai"}, {"n": "margelo", "v": 1, "c": 40, "r": 1, "s": "web3", "sn": "Web3", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/margelo"}, {"n": "gochain", "v": 7, "c": 100, "r": 0, "s": "web3", "sn": "Web3", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/gochain"}, {"n": "Inferara", "v": 31, "c": 8, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "APAC", "st": "Seed", "gh": "https://github.com/Inferara"}, {"n": "OpenZeppelin", "v": 19, "c": 15, "r": 3, "s": "web3", "sn": "Web3", "t": "Infrastructure buildout", "g": "Unknown", "st": "Seed", "gh": "https://github.com/OpenZeppelin"}, {"n": "decentralized-identity", "v": 11, "c": 23, "r": 1, "s": "web3", "sn": "Web3", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/decentralized-identity"}, {"n": "dfinity", "v": 20, "c": 8, "r": 0, "s": "web3", "sn": "Web3", "t": "Deploy frequency spike", "g": "EU", "st": "Seed", "gh": "https://github.com/dfinity"}, {"n": "wevm", "v": 65, "c": 26, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/wevm"}, {"n": "growthepie", "v": 6, "c": 9, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/growthepie"}, {"n": "lifinance", "v": 57, "c": 5, "r": 2, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/lifinance"}, {"n": "kairos-io", "v": 20, "c": 27, "r": 1, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/kairos-io"}, {"n": "solana-foundation", "v": 119, "c": 15, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "EU", "st": "Seed", "gh": "https://github.com/solana-foundation"}, {"n": "autonomys", "v": 3, "c": 49, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/autonomys"}, {"n": "NethermindEth", "v": 33, "c": 17, "r": 3, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/NethermindEth"}, {"n": "chainstack", "v": 46, "c": 16, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/chainstack"}, {"n": "wabiverse", "v": 21, "c": 100, "r": 1, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "US", "st": "Growth", "gh": "https://github.com/wabiverse"}, {"n": "kuestcom", "v": 60, "c": 9, "r": 3, "s": "web3", "sn": "Web3", "t": "Infrastructure buildout", "g": "US", "st": "Seed", "gh": "https://github.com/kuestcom"}, {"n": "axone-protocol", "v": 8, "c": 34, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "EU", "st": "Series A/B", "gh": "https://github.com/axone-protocol"}, {"n": "KyberNetwork", "v": 44, "c": 78, "r": 2, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "APAC", "st": "Growth", "gh": "https://github.com/KyberNetwork"}, {"n": "argotorg", "v": 32, "c": 100, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/argotorg"}, {"n": "aptos-labs", "v": 39, "c": 100, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/aptos-labs"}, {"n": "MixinNetwork", "v": 53, "c": 10, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/MixinNetwork"}, {"n": "tributary-so", "v": 191, "c": 5, "r": 1, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/tributary-so"}, {"n": "subsquid", "v": 7, "c": 8, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/subsquid"}, {"n": "Hexens", "v": 1, "c": 5, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "UK", "st": "Pre-seed", "gh": "https://github.com/Hexens"}, {"n": "0xLazAI", "v": 10, "c": 20, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/0xLazAI"}, {"n": "sarvalabs", "v": 1, "c": 4, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/sarvalabs"}, {"n": "Official-MoonDao", "v": 98, "c": 30, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/Official-MoonDao"}, {"n": "tradingstrategy-ai", "v": 110, "c": 15, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/tradingstrategy-ai"}, {"n": "neus", "v": 26, "c": 3, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "US", "st": "Pre-seed", "gh": "https://github.com/neus"}, {"n": "baizhiheizi", "v": 91, "c": 8, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/baizhiheizi"}, {"n": "gear-tech", "v": 40, "c": 3, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/gear-tech"}, {"n": "MystenLabs", "v": 172, "c": 4, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/MystenLabs"}, {"n": "DTVMStack", "v": 7, "c": 18, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/DTVMStack"}, {"n": "gofractally", "v": 28, "c": 13, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/gofractally"}, {"n": "IntersectMBO", "v": 12, "c": 22, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/IntersectMBO"}, {"n": "DimensionDev", "v": 13, "c": 71, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/DimensionDev"}, {"n": "foundry-rs", "v": 137, "c": 100, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/foundry-rs"}, {"n": "besu-eth", "v": 24, "c": 100, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/besu-eth"}, {"n": "Consensys", "v": 24, "c": 100, "r": 2, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/Consensys"}, {"n": "remix-project-org", "v": 21, "c": 100, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/remix-project-org"}, {"n": "immutable", "v": 7, "c": 21, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "APAC", "st": "Series A/B", "gh": "https://github.com/immutable"}, {"n": "ChainSafe", "v": 45, "c": 100, "r": 4, "s": "web3", "sn": "Web3", "t": "Infrastructure buildout", "g": "Canada", "st": "Growth", "gh": "https://github.com/ChainSafe"}, {"n": "kleros", "v": 4, "c": 33, "r": 3, "s": "web3", "sn": "Web3", "t": "Infrastructure buildout", "g": "EU", "st": "Series A/B", "gh": "https://github.com/kleros"}, {"n": "SeismicSystems", "v": 14, "c": 8, "r": 0, "s": "web3", "sn": "Web3", "t": "Engineering hiring burst", "g": "US", "st": "Seed", "gh": "https://github.com/SeismicSystems"}, {"n": "ar-io", "v": 12, "c": 25, "r": 4, "s": "web3", "sn": "Web3", "t": "Infrastructure buildout", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/ar-io"}, {"n": "onflow", "v": 6, "c": 99, "r": 0, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/onflow"}, {"n": "status-im", "v": 5, "c": 100, "r": 1, "s": "web3", "sn": "Web3", "t": "Framework migration", "g": "EU", "st": "Growth", "gh": "https://github.com/status-im"}, {"n": "Open-Cap-Stack", "v": 4, "c": 10, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Deploy frequency spike", "g": "US", "st": "Seed", "gh": "https://github.com/Open-Cap-Stack"}, {"n": "saas-js", "v": 11, "c": 37, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/saas-js"}, {"n": "XCO-Agency", "v": 30, "c": 6, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Deploy frequency spike", "g": "US", "st": "Pre-seed", "gh": "https://github.com/XCO-Agency"}, {"n": "atrocore", "v": 33, "c": 18, "r": 10, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Infrastructure buildout", "g": "EU", "st": "Seed", "gh": "https://github.com/atrocore"}, {"n": "mugnavo", "v": 8, "c": 10, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/mugnavo"}, {"n": "temporalio", "v": 53, "c": 100, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/temporalio"}, {"n": "OpnForm", "v": 6, "c": 30, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "EU", "st": "Series A/B", "gh": "https://github.com/OpnForm"}, {"n": "metorial", "v": 98, "c": 4, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/metorial"}, {"n": "constructorfabric", "v": 113, "c": 16, "r": 8, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Infrastructure buildout", "g": "Unknown", "st": "Seed", "gh": "https://github.com/constructorfabric"}, {"n": "churnkey", "v": 11, "c": 3, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/churnkey"}, {"n": "yzxingtu2026", "v": 11, "c": 4, "r": 1, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/yzxingtu2026"}, {"n": "open-condo-software", "v": 24, "c": 50, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "LATAM", "st": "Growth", "gh": "https://github.com/open-condo-software"}, {"n": "lomiafrica", "v": 61, "c": 9, "r": 2, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/lomiafrica"}, {"n": "polarsource", "v": 203, "c": 100, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/polarsource"}, {"n": "iflytek", "v": 7, "c": 5, "r": 2, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "APAC", "st": "Pre-seed", "gh": "https://github.com/iflytek"}, {"n": "archtechx", "v": 2, "c": 71, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/archtechx"}, {"n": "jmix-framework", "v": 9, "c": 84, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/jmix-framework"}, {"n": "Synapsr", "v": 9, "c": 4, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/Synapsr"}, {"n": "zenstackhq", "v": 1, "c": 78, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "US", "st": "Growth", "gh": "https://github.com/zenstackhq"}, {"n": "pneumaticapp", "v": 4, "c": 8, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/pneumaticapp"}, {"n": "goodrain", "v": 2, "c": 20, "r": 0, "s": "enterprise-saas", "sn": "Enterprise SaaS", "t": "Framework migration", "g": "APAC", "st": "Series A/B", "gh": "https://github.com/goodrain"}, {"n": "ohs-foundation", "v": 2, "c": 28, "r": 3, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Infrastructure buildout", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/ohs-foundation"}, {"n": "mloda-ai", "v": 18, "c": 7, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Deploy frequency spike", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/mloda-ai"}, {"n": "ConduitIO", "v": 73, "c": 23, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/ConduitIO"}, {"n": "drt-hub", "v": 43, "c": 30, "r": 1, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "APAC", "st": "Series A/B", "gh": "https://github.com/drt-hub"}, {"n": "subsquid", "v": 3, "c": 7, "r": 1, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/subsquid"}, {"n": "AbsaOSS", "v": 8, "c": 9, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/AbsaOSS"}, {"n": "bruin-data", "v": 19, "c": 13, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Engineering hiring burst", "g": "UK", "st": "Seed", "gh": "https://github.com/bruin-data"}, {"n": "rudderlabs", "v": 14, "c": 19, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/rudderlabs"}, {"n": "scribe-org", "v": 4, "c": 62, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "EU", "st": "Growth", "gh": "https://github.com/scribe-org"}, {"n": "superlinked", "v": 2, "c": 87, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/superlinked"}, {"n": "Zipstack", "v": 12, "c": 29, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/Zipstack"}, {"n": "ZemerTeam", "v": 61, "c": 5, "r": 2, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Engineering hiring burst", "g": "US", "st": "Pre-seed", "gh": "https://github.com/ZemerTeam"}, {"n": "estuary", "v": 39, "c": 42, "r": 1, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/estuary"}, {"n": "dagucloud", "v": 23, "c": 77, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/dagucloud"}, {"n": "Point72", "v": 3, "c": 22, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Engineering hiring burst", "g": "US", "st": "Series A/B", "gh": "https://github.com/Point72"}, {"n": "PostHog", "v": 1621, "c": 100, "r": 6, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Engineering hiring burst", "g": "US", "st": "Growth", "gh": "https://github.com/PostHog"}, {"n": "DataSQRL", "v": 17, "c": 14, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/DataSQRL"}, {"n": "cryostatio", "v": 7, "c": 10, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/cryostatio"}, {"n": "open-telemetry", "v": 22, "c": 100, "r": 1, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/open-telemetry"}, {"n": "tuva-health", "v": 1, "c": 48, "r": 3, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Infrastructure buildout", "g": "US", "st": "Series A/B", "gh": "https://github.com/tuva-health"}, {"n": "rocketride-org", "v": 25, "c": 44, "r": 1, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/rocketride-org"}, {"n": "redpanda-data", "v": 91, "c": 100, "r": 1, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "US", "st": "Growth", "gh": "https://github.com/redpanda-data"}, {"n": "airbytehq", "v": 1, "c": 31, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/airbytehq"}, {"n": "slothflowlabs", "v": 43, "c": 8, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/slothflowlabs"}, {"n": "datajuicer", "v": 1, "c": 50, "r": 0, "s": "data-infrastructure", "sn": "Data Infrastructure", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/datajuicer"}, {"n": "splintered-reality", "v": 5, "c": 15, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/splintered-reality"}, {"n": "Flexxbotics", "v": 4, "c": 4, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/Flexxbotics"}, {"n": "foxglove", "v": 3, "c": 19, "r": 4, "s": "robotics", "sn": "Robotics", "t": "Infrastructure buildout", "g": "Unknown", "st": "Seed", "gh": "https://github.com/foxglove"}, {"n": "OpenSCvx", "v": 7, "c": 6, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Deploy frequency spike", "g": "US", "st": "Pre-seed", "gh": "https://github.com/OpenSCvx"}, {"n": "newton-physics", "v": 72, "c": 82, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/newton-physics"}, {"n": "livekit", "v": 18, "c": 73, "r": 2, "s": "robotics", "sn": "Robotics", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/livekit"}, {"n": "robot-descriptions", "v": 10, "c": 25, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/robot-descriptions"}, {"n": "reductstore", "v": 5, "c": 7, "r": 1, "s": "robotics", "sn": "Robotics", "t": "Framework migration", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/reductstore"}, {"n": "cyberbotics", "v": 2, "c": 100, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Engineering hiring burst", "g": "US", "st": "Growth", "gh": "https://github.com/cyberbotics"}, {"n": "zapplyjobs", "v": 810, "c": 7, "r": 2, "s": "robotics", "sn": "Robotics", "t": "Framework migration", "g": "US", "st": "Pre-seed", "gh": "https://github.com/zapplyjobs"}, {"n": "commaai", "v": 23, "c": 100, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/commaai"}, {"n": "3D-Vision-World", "v": 6, "c": 15, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/3D-Vision-World"}, {"n": "copper-project", "v": 16, "c": 34, "r": 3, "s": "robotics", "sn": "Robotics", "t": "Infrastructure buildout", "g": "US", "st": "Series A/B", "gh": "https://github.com/copper-project"}, {"n": "selfpatch", "v": 62, "c": 7, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/selfpatch"}, {"n": "ihmcrobotics", "v": 4, "c": 79, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/ihmcrobotics"}, {"n": "gbionics", "v": 8, "c": 100, "r": 4, "s": "robotics", "sn": "Robotics", "t": "Infrastructure buildout", "g": "Unknown", "st": "Growth", "gh": "https://github.com/gbionics"}, {"n": "borglab", "v": 3, "c": 100, "r": 0, "s": "robotics", "sn": "Robotics", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/borglab"}, {"n": "disclose", "v": 19, "c": 8, "r": 7, "s": "legal-tech", "sn": "Legal Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/disclose"}, {"n": "securitybunker", "v": 1, "c": 3, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/securitybunker"}, {"n": "licensee", "v": 4, "c": 14, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/licensee"}, {"n": "stella", "v": 219, "c": 3, "r": 1, "s": "legal-tech", "sn": "Legal Tech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/stella"}, {"n": "TrianaLab", "v": 15, "c": 3, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/TrianaLab"}, {"n": "publicmap", "v": 1, "c": 6, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/publicmap"}, {"n": "logicaldoc", "v": 15, "c": 4, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/logicaldoc"}, {"n": "iblai", "v": 56, "c": 11, "r": 1, "s": "legal-tech", "sn": "Legal Tech", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/iblai"}, {"n": "Open-Cap-Table-Coalition", "v": 4, "c": 20, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/Open-Cap-Table-Coalition"}, {"n": "dealfluence", "v": 19, "c": 6, "r": 1, "s": "legal-tech", "sn": "Legal Tech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/dealfluence"}, {"n": "maize-tech", "v": 1, "c": 4, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/maize-tech"}, {"n": "i-dot-ai", "v": 2, "c": 6, "r": 1, "s": "legal-tech", "sn": "Legal Tech", "t": "Framework migration", "g": "UK", "st": "Pre-seed", "gh": "https://github.com/i-dot-ai"}, {"n": "jlawyerorg", "v": 1, "c": 8, "r": 0, "s": "legal-tech", "sn": "Legal Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/jlawyerorg"}, {"n": "microblink", "v": 1, "c": 17, "r": 1, "s": "hr-tech", "sn": "HR Tech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/microblink"}, {"n": "ever-co", "v": 5, "c": 34, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Deploy frequency spike", "g": "US", "st": "Series A/B", "gh": "https://github.com/ever-co"}, {"n": "laudspeaker", "v": 1, "c": 13, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Deploy frequency spike", "g": "US", "st": "Seed", "gh": "https://github.com/laudspeaker"}, {"n": "exyte", "v": 3, "c": 15, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Deploy frequency spike", "g": "US", "st": "Seed", "gh": "https://github.com/exyte"}, {"n": "akaunting", "v": 34, "c": 100, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/akaunting"}, {"n": "namiml", "v": 2, "c": 5, "r": 2, "s": "hr-tech", "sn": "HR Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/namiml"}, {"n": "wp-erp", "v": 9, "c": 59, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/wp-erp"}, {"n": "Cla-Code-Community", "v": 22, "c": 16, "r": 1, "s": "hr-tech", "sn": "HR Tech", "t": "Engineering hiring burst", "g": "LATAM", "st": "Seed", "gh": "https://github.com/Cla-Code-Community"}, {"n": "horilla", "v": 4, "c": 47, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/horilla"}, {"n": "speedyapply", "v": 9, "c": 5, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/speedyapply"}, {"n": "usertour", "v": 13, "c": 6, "r": 0, "s": "hr-tech", "sn": "HR Tech", "t": "Framework migration", "g": "APAC", "st": "Pre-seed", "gh": "https://github.com/usertour"}, {"n": "radcrew", "v": 28, "c": 6, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/radcrew"}, {"n": "bigprof-software", "v": 1, "c": 3, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/bigprof-software"}, {"n": "rosteleset", "v": 10, "c": 3, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/rosteleset"}, {"n": "etewiah", "v": 5, "c": 22, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/etewiah"}, {"n": "tae0y", "v": 7, "c": 3, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/tae0y"}, {"n": "aelassas", "v": 1, "c": 6, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/aelassas"}, {"n": "Synapsr", "v": 49, "c": 4, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Framework migration", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/Synapsr"}, {"n": "bloom-housing", "v": 19, "c": 40, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/bloom-housing"}, {"n": "Qloapps", "v": 4, "c": 17, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Framework migration", "g": "APAC", "st": "Seed", "gh": "https://github.com/Qloapps"}, {"n": "SFDigitalServices", "v": 12, "c": 35, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/SFDigitalServices"}, {"n": "opengeos", "v": 176, "c": 12, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Engineering hiring burst", "g": "US", "st": "Seed", "gh": "https://github.com/opengeos"}, {"n": "open-condo-software", "v": 44, "c": 50, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Framework migration", "g": "LATAM", "st": "Growth", "gh": "https://github.com/open-condo-software"}, {"n": "orangecoding", "v": 4, "c": 43, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/orangecoding"}, {"n": "WillowInc", "v": 7, "c": 14, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Engineering hiring burst", "g": "APAC", "st": "Seed", "gh": "https://github.com/WillowInc"}, {"n": "AleksNeStu", "v": 6, "c": 6, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/AleksNeStu"}, {"n": "ahacker-1", "v": 1, "c": 3, "r": 0, "s": "proptech", "sn": "PropTech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/ahacker-1"}, {"n": "PhotoFlare", "v": 17, "c": 21, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/PhotoFlare"}, {"n": "Fields2Cover", "v": 5, "c": 22, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Engineering hiring burst", "g": "EU", "st": "Series A/B", "gh": "https://github.com/Fields2Cover"}, {"n": "cran-task-views", "v": 2, "c": 13, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/cran-task-views"}, {"n": "sapic", "v": 4, "c": 7, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Deploy frequency spike", "g": "US", "st": "Pre-seed", "gh": "https://github.com/sapic"}, {"n": "fineprint-global", "v": 14, "c": 9, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/fineprint-global"}, {"n": "rspatial", "v": 32, "c": 49, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/rspatial"}, {"n": "LiteFarmOrg", "v": 186, "c": 65, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Framework migration", "g": "Canada", "st": "Growth", "gh": "https://github.com/LiteFarmOrg"}, {"n": "FoodOntology", "v": 26, "c": 12, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/FoodOntology"}, {"n": "o3de", "v": 34, "c": 100, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/o3de"}, {"n": "nmi-agro", "v": 100, "c": 7, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Framework migration", "g": "EU", "st": "Pre-seed", "gh": "https://github.com/nmi-agro"}, {"n": "ARPA-SIMC", "v": 14, "c": 12, "r": 0, "s": "agtech", "sn": "AgTech", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/ARPA-SIMC"}, {"n": "MothCocoon", "v": 8, "c": 3, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/MothCocoon"}, {"n": "rpgppengine", "v": 31, "c": 4, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/rpgppengine"}, {"n": "TheVessels", "v": 55, "c": 5, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/TheVessels"}, {"n": "o2-engine", "v": 18, "c": 4, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Deploy frequency spike", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/o2-engine"}, {"n": "bevyengine", "v": 147, "c": 100, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Deploy frequency spike", "g": "US", "st": "Growth", "gh": "https://github.com/bevyengine"}, {"n": "QuartermindGames", "v": 2, "c": 4, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "UK", "st": "Pre-seed", "gh": "https://github.com/QuartermindGames"}, {"n": "gurkenlabs", "v": 5, "c": 31, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "EU", "st": "Series A/B", "gh": "https://github.com/gurkenlabs"}, {"n": "RouteVN", "v": 64, "c": 7, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/RouteVN"}, {"n": "boardgameio", "v": 7, "c": 100, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/boardgameio"}, {"n": "castle-engine", "v": 28, "c": 24, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/castle-engine"}, {"n": "PCGEx", "v": 70, "c": 12, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "Canada", "st": "Seed", "gh": "https://github.com/PCGEx"}, {"n": "phase-rs", "v": 715, "c": 88, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "US", "st": "Growth", "gh": "https://github.com/phase-rs"}, {"n": "LacledesLAN", "v": 1, "c": 3, "r": 2, "s": "gaming", "sn": "Gaming", "t": "Engineering hiring burst", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/LacledesLAN"}, {"n": "TheXTech", "v": 34, "c": 33, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/TheXTech"}, {"n": "Mountea-Framework", "v": 18, "c": 4, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/Mountea-Framework"}, {"n": "calagopus", "v": 38, "c": 24, "r": 1, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "EU", "st": "Series A/B", "gh": "https://github.com/calagopus"}, {"n": "thunder-engine", "v": 4, "c": 17, "r": 0, "s": "gaming", "sn": "Gaming", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/thunder-engine"}, {"n": "ossimlabs", "v": 1, "c": 34, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/ossimlabs"}, {"n": "SatDump", "v": 7, "c": 58, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/SatDump"}, {"n": "CelestiaProject", "v": 7, "c": 34, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/CelestiaProject"}, {"n": "Official-MoonDao", "v": 104, "c": 30, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/Official-MoonDao"}, {"n": "spedas", "v": 27, "c": 39, "r": 3, "s": "space-tech", "sn": "Space Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/spedas"}, {"n": "starwards", "v": 14, "c": 5, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/starwards"}, {"n": "OpenCyphal", "v": 3, "c": 24, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/OpenCyphal"}, {"n": "DaedalusDock", "v": 23, "c": 100, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/DaedalusDock"}, {"n": "NASA-AMMOS", "v": 19, "c": 76, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/NASA-AMMOS"}, {"n": "open-space-collective", "v": 47, "c": 5, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/open-space-collective"}, {"n": "ut-issl", "v": 54, "c": 4, "r": 3, "s": "space-tech", "sn": "Space Tech", "t": "Engineering hiring burst", "g": "APAC", "st": "Pre-seed", "gh": "https://github.com/ut-issl"}, {"n": "OpenC3", "v": 110, "c": 49, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/OpenC3"}, {"n": "mx-space", "v": 36, "c": 26, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "APAC", "st": "Series A/B", "gh": "https://github.com/mx-space"}, {"n": "elodin-sys", "v": 10, "c": 19, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "US", "st": "Seed", "gh": "https://github.com/elodin-sys"}, {"n": "naev", "v": 78, "c": 100, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/naev"}, {"n": "endless-sky", "v": 22, "c": 54, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "US", "st": "Growth", "gh": "https://github.com/endless-sky"}, {"n": "orbiternassp", "v": 7, "c": 37, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/orbiternassp"}, {"n": "RocketPy-Team", "v": 24, "c": 72, "r": 0, "s": "space-tech", "sn": "Space Tech", "t": "Engineering hiring burst", "g": "Unknown", "st": "Growth", "gh": "https://github.com/RocketPy-Team"}, {"n": "pysnippet", "v": 14, "c": 8, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Deploy frequency spike", "g": "Unknown", "st": "Seed", "gh": "https://github.com/pysnippet"}, {"n": "VismaLietuva", "v": 8, "c": 31, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Deploy frequency spike", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/VismaLietuva"}, {"n": "Yellow-Dog-Man", "v": 4, "c": 55, "r": 1, "s": "social-community", "sn": "Social & Community", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/Yellow-Dog-Man"}, {"n": "nextcloud", "v": 5, "c": 74, "r": 1, "s": "social-community", "sn": "Social & Community", "t": "Deploy frequency spike", "g": "Unknown", "st": "Growth", "gh": "https://github.com/nextcloud"}, {"n": "eclipse-zenoh", "v": 5, "c": 22, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/eclipse-zenoh"}, {"n": "unacms", "v": 87, "c": 11, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "Unknown", "st": "Seed", "gh": "https://github.com/unacms"}, {"n": "bakaphp", "v": 395, "c": 15, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "LATAM", "st": "Seed", "gh": "https://github.com/bakaphp"}, {"n": "coollabsio", "v": 65, "c": 41, "r": 1, "s": "social-community", "sn": "Social & Community", "t": "Engineering hiring burst", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/coollabsio"}, {"n": "Mininglamp-OSS", "v": 40, "c": 17, "r": 7, "s": "social-community", "sn": "Social & Community", "t": "Infrastructure buildout", "g": "APAC", "st": "Seed", "gh": "https://github.com/Mininglamp-OSS"}, {"n": "HopHubProject", "v": 6, "c": 5, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/HopHubProject"}, {"n": "GetStream", "v": 9, "c": 32, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/GetStream"}, {"n": "flaskbb", "v": 2, "c": 62, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/flaskbb"}, {"n": "EBWiki", "v": 2, "c": 81, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "Unknown", "st": "Growth", "gh": "https://github.com/EBWiki"}, {"n": "nats-io", "v": 2, "c": 15, "r": 1, "s": "social-community", "sn": "Social & Community", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/nats-io"}, {"n": "opensensorhub", "v": 3, "c": 22, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "Unknown", "st": "Series A/B", "gh": "https://github.com/opensensorhub"}, {"n": "activist-org", "v": 5, "c": 100, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "EU", "st": "Growth", "gh": "https://github.com/activist-org"}, {"n": "opensource-socialnetwork", "v": 3, "c": 23, "r": 1, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "US", "st": "Series A/B", "gh": "https://github.com/opensource-socialnetwork"}, {"n": "PastVu", "v": 6, "c": 12, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Engineering hiring burst", "g": "Unknown", "st": "Seed", "gh": "https://github.com/PastVu"}, {"n": "trovu", "v": 1, "c": 3, "r": 0, "s": "social-community", "sn": "Social & Community", "t": "Framework migration", "g": "Unknown", "st": "Pre-seed", "gh": "https://github.com/trovu"}], "sector_avgs": {"healthcare": {"name": "Healthcare", "avgCommitVelocity": 94.7, "avgContributors": 36.4, "avgNewRepos": 1.1, "signalStrength": 46.0}, "edtech": {"name": "EdTech", "avgCommitVelocity": 60.9, "avgContributors": 33.6, "avgNewRepos": 0.5, "signalStrength": 44.0}, "ecommerce-infrastructure": {"name": "E-commerce Infrastructure", "avgCommitVelocity": 53.7, "avgContributors": 39.6, "avgNewRepos": 0.6, "signalStrength": 74.0}, "supply-chain": {"name": "Supply Chain", "avgCommitVelocity": 23.2, "avgContributors": 19.6, "avgNewRepos": 0.8, "signalStrength": 61.0}, "web3": {"name": "Web3", "avgCommitVelocity": 37.6, "avgContributors": 37.7, "avgNewRepos": 0.8, "signalStrength": 48.0}, "enterprise-saas": {"name": "Enterprise SaaS", "avgCommitVelocity": 33.3, "avgContributors": 31.8, "avgNewRepos": 1.1, "signalStrength": 33.0}, "data-infrastructure": {"name": "Data Infrastructure", "avgCommitVelocity": 86.1, "avgContributors": 38.6, "avgNewRepos": 0.8, "signalStrength": 32.0}, "robotics": {"name": "Robotics", "avgCommitVelocity": 62.2, "avgContributors": 45.5, "avgNewRepos": 0.9, "signalStrength": 59.0}, "legal-tech": {"name": "Legal Tech", "avgCommitVelocity": 27.5, "avgContributors": 7.4, "avgNewRepos": 0.8, "signalStrength": 62.0}, "hr-tech": {"name": "HR Tech", "avgCommitVelocity": 9.4, "avgContributors": 28.8, "avgNewRepos": 0.4, "signalStrength": 64.0}, "proptech": {"name": "PropTech", "avgCommitVelocity": 23.4, "avgContributors": 16.7, "avgNewRepos": 0.0, "signalStrength": 56.0}, "agtech": {"name": "AgTech", "avgCommitVelocity": 39.5, "avgContributors": 28.8, "avgNewRepos": 0.0, "signalStrength": 55.0}, "gaming": {"name": "Gaming", "avgCommitVelocity": 73.2, "avgContributors": 27.2, "avgNewRepos": 0.2, "signalStrength": 47.0}, "space-tech": {"name": "Space Tech", "avgCommitVelocity": 32.9, "avgContributors": 42.6, "avgNewRepos": 0.3, "signalStrength": 44.0}, "social-community": {"name": "Social & Community", "avgCommitVelocity": 34.8, "avgContributors": 33.1, "avgNewRepos": 0.6, "signalStrength": 47.0}}, "meta": {"name": "VC Deal Flow Signal", "description": "Startup engineering acceleration data from public GitHub activity. Commit velocity, contributor growth, and breakout signals across startup sectors.", "website": "https://signals.gitdealflow.com", "methodology": "https://signals.gitdealflow.com/methodology", "period": {"slug": "q3-2026", "name": "Q3 2026"}, "availablePeriods": [{"slug": "q3-2026", "name": "Q3 2026", "current": true}, {"slug": "q2-2026", "name": "Q2 2026", "current": false}, {"slug": "q1-2026", "name": "Q1 2026", "current": false}, {"slug": "q4-2025", "name": "Q4 2025", "current": false}, {"slug": "q3-2025", "name": "Q3 2025", "current": false}], "lastUpdated": "2026-07-28T11:08:45.217Z", "totalSectors": 15, "totalStartups": 324, "license": "Free for personal and editorial use. Attribution required: cite as 'VC Deal Flow Signal (signals.gitdealflow.com)'. Commercial redistribution prohibited.", "citation": "VC Deal Flow Signal (signals.gitdealflow.com), Q3 2026 data."}};
+
+// ===== DATA PROCESSING =====
+var allStartups = SIGNALS_DATA.startups;
+var sectorAvgs = SIGNALS_DATA.sector_avgs;
+
+// Compute percentile for each startup
+function computePercentiles() {
+    var velSorted = [...allStartups].sort(function(a,b){ return a.v - b.v; });
+    var n = allStartups.length;
+    var velMap = {};
+    velSorted.forEach(function(s, i){ velMap[s.n] = Math.round((i/n)*100); });
+
+    // Sector percentiles
+    var sectorMap = {};
+    allStartups.forEach(function(s){
+        if(!sectorMap[s.s]) sectorMap[s.s] = [];
+        sectorMap[s.s].push(s);
+    });
+    var sectorPct = {};
+    Object.keys(sectorMap).forEach(function(slug){
+        var list = sectorMap[slug].sort(function(a,b){ return a.v - b.v; });
+        list.forEach(function(s, i){
+            sectorPct[s.n] = Math.round((i/list.length)*100);
+        });
+    });
+
+    // Global rank
+    var globalRank = {};
+    var byVelDesc = [...allStartups].sort(function(a,b){ return b.v - a.v; });
+    byVelDesc.forEach(function(s, i){ globalRank[s.n] = i+1; });
+
+    return {velPercentile: velMap, sectorPercentile: sectorPct, globalRank: globalRank};
+}
+
+var percentiles = computePercentiles();
+
+function findStartup(query) {
+    var q = query.toLowerCase().trim();
+    // Exact match first
+    for(var i=0;i<allStartups.length;i++){
+        var s = allStartups[i];
+        if(s.n.toLowerCase() === q) return s;
+        // Check github org
+        var gh = s.gh.split('/').pop().toLowerCase();
+        if(gh === q) return s;
+    }
+    // Partial match
+    for(var i=0;i<allStartups.length;i++){
+        var s = allStartups[i];
+        if(s.n.toLowerCase().includes(q)) return s;
+        var gh = s.gh.split('/').pop().toLowerCase();
+        if(gh.includes(q)) return s;
+    }
+    return null;
+}
+
+function getSectorStartups(slug) {
+    return allStartups.filter(function(s){ return s.s === slug; });
+}
+
+function getSignalStrength(signalType) {
+    var strong = {"Deploy frequency spike": 100, "Engineering hiring burst": 85, "Infrastructure buildout": 70, "Framework migration": 40};
+    return strong[signalType] || 30;
+}
+
+function searchBenchmark() {
+    var input = document.getElementById('searchInput');
+    var query = input.value.trim();
+    if(!query) return;
+
+    var loader = document.getElementById('loader');
+    var result = document.getElementById('result');
+    var notFound = document.getElementById('notFound');
+    var btn = document.getElementById('searchBtn');
+
+    result.classList.remove('visible');
+    notFound.classList.remove('visible');
+    loader.classList.add('visible');
+    btn.disabled = true;
+
+    setTimeout(function() {
+        var startup = findStartup(query);
+
+        loader.classList.remove('visible');
+        btn.disabled = false;
+
+        if(startup) {
+            displayResult(startup);
+            result.classList.add('visible');
+            result.scrollIntoView({behavior:'smooth',block:'start'});
+        } else {
+            notFound.classList.add('visible');
+        }
+    }, 400);
+}
+
+function displayResult(s) {
+    var sectorInfo = sectorAvgs[s.s] || {name:s.sn, avgCommitVelocity:0, avgContributors:0, avgNewRepos:0, signalStrength:50};
+
+    document.getElementById('startupName').textContent = s.n;
+    document.getElementById('startupSector').textContent = 'Sector: ' + sectorInfo.name;
+
+    var velPct = percentiles.velPercentile[s.n] || 50;
+    document.getElementById('percentileRank').textContent = velPct + '%';
+
+    var secPct = percentiles.sectorPercentile[s.n] || 50;
+    var secSize = getSectorStartups(s.s).length;
+    var gRank = percentiles.globalRank[s.n] || '—';
+
+    document.getElementById('sRank').textContent = secPct + '%';
+    document.getElementById('sectorOutOf').textContent = 'in ' + sectorInfo.name;
+
+    document.getElementById('globalRank').textContent = '#' + gRank;
+    document.getElementById('compVelocity').textContent = s.v;
+    document.getElementById('compContributors').textContent = s.c;
+
+    // Comparison bars (user vs sector avg)
+    var bars = document.getElementById('comparisonBars');
+    var metrics = [
+        {label:'Commit Velocity', user:s.v, avg:Math.round(sectorInfo.avgCommitVelocity), max:Math.max(s.v, Math.round(sectorInfo.avgCommitVelocity), 10)},
+        {label:'Contributors', user:s.c, avg:Math.round(sectorInfo.avgContributors), max:Math.max(s.c, Math.round(sectorInfo.avgContributors), 10)},
+        {label:'New Repos (14d)', user:s.r, avg:Math.round(sectorInfo.avgNewRepos), max:Math.max(s.r, Math.round(sectorInfo.avgNewRepos), 2)},
+        {label:'Signal Strength', user:getSignalStrength(s.t), avg:sectorInfo.signalStrength, max:100}
+    ];
+
+    bars.innerHTML = '<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div> Your Startup</div><div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div> Sector Average</div></div>';
+
+    metrics.forEach(function(m) {
+        var userPct = Math.max((m.user / m.max) * 100, 2);
+        var avgPct = Math.max((m.avg / m.max) * 100, 2);
+        bars.innerHTML +=
+            '<div class="bar"><div class="bar-label">' + m.label + '</div>' +
+            '<div class="bar-track"><div class="bar-fill user" style="width:' + userPct + '%"></div></div>' +
+            '<div class="bar-val" style="color:#60a5fa">' + m.user + '</div></div>' +
+            '<div class="bar"><div class="bar-label"></div>' +
+            '<div class="bar-track"><div class="bar-fill avg" style="width:' + avgPct + '%"></div></div>' +
+            '<div class="bar-val" style="color:#a78bfa">' + m.avg + '</div></div>';
+    });
+
+    // Sector standing bars
+    var secBars = document.getElementById('sectorBars');
+    var secStartups = getSectorStartups(s.s).sort(function(a,b){ return b.v - a.v; });
+    document.getElementById('sectorSize').textContent = secStartups.length;
+    document.getElementById('sectorName2').textContent = sectorInfo.name;
+
+    secBars.innerHTML = '';
+    var maxSecVel = secStartups[0] ? secStartups[0].v : 1;
+    secStartups.forEach(function(s2, i) {
+        var pct = Math.max((s2.v / maxSecVel) * 100, 2);
+        var isUser = s2.n === s.n;
+        var fillClass = isUser ? 'user' : 'sector';
+        var color = isUser ? '#60a5fa' : '#34d399';
+        secBars.innerHTML +=
+            '<div class="bar"><div class="bar-label" style="width:140px">' + (isUser ? '▶ ' : '') + s2.n + '</div>' +
+            '<div class="bar-track"><div class="bar-fill ' + fillClass + '" style="width:' + pct + '%;' + (isUser ? 'background:linear-gradient(90deg,#60a5fa,#3b82f6)' : '') + '"></div></div>' +
+            '<div class="bar-val" style="color:' + color + '">' + s2.v + '</div></div>';
+    });
+
+    // Share text
+    var shareText = document.getElementById('shareText');
+    shareText.textContent = 'I just benchmarked ' + s.n + ' on GitDealFlow!\n' +
+        '📊 Percentile: ' + velPct + '% among 324 startups\n' +
+        '🏷️ Sector: ' + sectorInfo.name + ' (' + secPct + '% percentile)\n' +
+        '⚡ Velocity: ' + s.v + ' commits/14d\n' +
+        '👥 Contributors: ' + s.c + '\n' +
+        '🔗 Compare your team: https://gitdealflow.com/benchmark?startup=' + encodeURIComponent(s.n);
+
+    // Badge code
+    var badgeCode = document.getElementById('badgeCode');
+    badgeCode.textContent = '<a href="https://gitdealflow.com/benchmark?startup=' + encodeURIComponent(s.n) + '">\n' +
+        '  <img src="https://img.shields.io/badge/🏆_GitDealFlow_Benchmark-' + velPct + '%%25_velocity-60a5fa"\n' +
+        '       alt="GitDealFlow Benchmark: ' + s.n + ' ranks in the ' + velPct + 'th percentile" loading="lazy" width="auto" height="auto">\n' +
+        '</a>';
+
+    // Reset tabs to overview
+    switchTab('overview');
+}
+
+function switchTab(tab) {
+    document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+    document.querySelectorAll('.tab-content').forEach(function(t){ t.classList.remove('active'); });
+    document.querySelector('.tab[data-tab="' + tab + '"]').classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+}
+
+function copyShareText() {
+    var text = document.getElementById('shareText').textContent;
+    navigator.clipboard.writeText(text).then(function(){
+        showToast('Copied share text!');
+    });
+}
+
+function copyPermalink() {
+    var startupName = document.getElementById('startupName').textContent;
+    if(startupName && startupName !== '—') {
+        var url = window.location.origin + '/benchmark?startup=' + encodeURIComponent(startupName);
+        navigator.clipboard.writeText(url).then(function(){
+            showToast('Copied permalink!');
+        });
+    }
+}
+
+function copyBadgeCode() {
+    var text = document.getElementById('badgeCode').textContent;
+    navigator.clipboard.writeText(text).then(function(){
+        showToast('Copied badge HTML!');
+    });
+}
+
+function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 2000);
+}
+
+// ===== TABLE =====
+var tableSortCol = -1;
+var tableSortAsc = true;
+
+function renderTable(data) {
+    var tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    data.forEach(function(s) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td><a href="/benchmark?startup=' + encodeURIComponent(s.n) + '" style="color:#e2e8f0;text-decoration:none">' + s.n + '</a></td>' +
+            '<td style="color:#60a5fa">' + s.sn + '</td>' +
+            '<td>' + s.v + '</td>' +
+            '<td>' + s.c + '</td>' +
+            '<td style="color:#94a3b8;font-size:.8rem">' + s.t + '</td>';
+        if(s.gh) {
+            tr.style.cursor = 'pointer';
+            tr.onclick = function(){ window.location.href = s.gh; };
+        }
+        tbody.appendChild(tr);
+    });
+}
+
+renderTable(allStartups);
+
+function filterTable() {
+    var q = document.getElementById('tableSearch').value.toLowerCase();
+    var filtered = allStartups.filter(function(s) {
+        return s.n.toLowerCase().includes(q) || s.sn.toLowerCase().includes(q) || s.s.toLowerCase().includes(q) || s.t.toLowerCase().includes(q);
+    });
+    renderTable(filtered);
+}
+
+function sortTable(col) {
+    if(tableSortCol === col) tableSortAsc = !tableSortAsc;
+    else { tableSortCol = col; tableSortAsc = true; }
+    var keys = ['n', 'sn', 'v', 'c', 't'];
+    var key = keys[col];
+    var sorted = [...allStartups].sort(function(a,b) {
+        var va = a[key], vb = b[key];
+        if(typeof va === 'number') return tableSortAsc ? va - vb : vb - va;
+        va = String(va).toLowerCase(); vb = String(vb).toLowerCase();
+        return tableSortAsc ? (va < vb ? -1 : va > vb ? 1 : 0) : (va < vb ? 1 : va > vb ? -1 : 0);
+    });
+    renderTable(sorted);
+    document.getElementById('tableSearch').value = '';
+}
+
+// Handle Enter key
+document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if(e.key === 'Enter') searchBenchmark();
+});
+
+// ===== URL parameter on load =====
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    var startupParam = params.get('startup');
+    if(startupParam) {
+        document.getElementById('searchInput').value = startupParam;
+        searchBenchmark();
+    }
+
+    // Build suggestions from startup names
+    var datalist = document.getElementById('suggestions');
+    allStartups.forEach(function(s) {
+        var opt = document.createElement('option');
+        opt.value = s.n;
+        datalist.appendChild(opt);
+    });
+})();
+</script>
+<script defer="" src="/api/track.js"></script>
+<script defer="" src="/share.js"></script>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Velocity</a>
+<a href="/scout" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Scout</a>
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/tools" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Tools</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups Hiring Burst</a>
+</div>
+</div>
+</body></html>

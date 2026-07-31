@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>API Documentation — VC Deal Flow Signal Developer Docs | GitDealFlow</title>
+<meta content="Complete API documentation for VC Deal Flow Signal. REST endpoints, MCP server, A2A agent protocol, NLWeb. Free access, no API key required." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://gitdealflow.com/documentation" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="GitDealFlow" property="og:site_name"/>
+<meta content="API Documentation — VC Deal Flow Signal Developer Docs | GitDealFlow" property="og:title"/>
+<meta content="Complete API documentation for VC Deal Flow Signal. REST endpoints, MCP server, A2A agent protocol, NLWeb. Free access, no API key required." property="og:description"/>
+<meta content="https://gitdealflow.com/documentation" property="og:url"/>
+<meta content="https://signals.gitdealflow.com/opengraph-image" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@sipiteno" name="twitter:site"/>
+<meta content="@sipiteno" name="twitter:creator"/>
+<meta content="API Documentation — VC Deal Flow Signal Developer Docs | GitDealFlow" name="twitter:title"/>
+<meta content="Complete API documentation for VC Deal Flow Signal. REST endpoints, MCP server, A2A agent protocol, NLWeb. Free access, no API key required." name="twitter:description"/>
+<meta content="https://signals.gitdealflow.com/opengraph-image" name="twitter:image"/>
+<meta content="#0f172a" name="theme-color"/>
+<meta content="dark" name="color-scheme"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="/styles.css" rel="stylesheet"/>
+<!-- ===== SCHEMA.ORG JSON-LD ===== -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gitdealflow.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "API Documentation"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "API Documentation \u2014 VC Deal Flow Signal Developer Docs | GitDealFlow",
+      "description": "Complete API documentation for VC Deal Flow Signal. REST endpoints, MCP server, A2A agent protocol, NLWeb. Free access, no API key required.",
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "API Documentation — VC Deal Flow Signal Developer Docs",
+    "url": "https://gitdealflow.com/documentation",
+    "description": "Complete API documentation for VC Deal Flow Signal with REST, MCP, A2A, and NLWeb endpoints.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://gitdealflow.com/#website"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "@id": "https://gitdealflow.com/documentation#breadcrumb"
+    }
+  }
+  </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "VC Deal Flow Signal API Documentation",
+    "description": "Developer documentation for the VC Deal Flow Signal API. Covers REST endpoints, MCP server, A2A protocol, NLWeb, and code examples.",
+    "author": {
+      "@type": "Organization",
+      "name": "GitDealFlow"
+    },
+    "datePublished": "2026-01-15",
+    "dateModified": "2026-07-30",
+    "proficiencyLevel": "Intermediate",
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "VC Deal Flow Signal API",
+      "applicationCategory": "API"
+    }
+  }
+  </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "@id": "https://gitdealflow.com/documentation#webapp",
+    "name": "VC Deal Flow Signal API",
+    "url": "https://signals.gitdealflow.com/api",
+    "applicationCategory": "API",
+    "operatingSystem": "Web",
+    "browserRequirements": "Requires HTTP client for API access",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the VC Deal Flow Signal API",
+    "description": "Step-by-step guide to querying startup engineering velocity data via REST API.",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Send a GET request to /api/signals.json", "text": "Use curl or your HTTP client of choice to fetch the full signals dataset." },
+      { "@type": "HowToStep", "position": 2, "name": "Filter by sector", "text": "Append ?sector=fintech to filter startups by sector." },
+      { "@type": "HowToStep", "position": 3, "name": "Search for a startup", "text": "Use the /api/search endpoint with a q parameter." },
+      { "@type": "HowToStep", "position": 4, "name": "Get individual startup details", "text": "Use /api/startup/{name} for detailed velocity data." }
+    ],
+    "tool": { "@type": "HowToTool", "name": "curl or HTTP client" },
+    "totalTime": "PT5M"
+  }
+  </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need an API key to use GitDealFlow APIs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All GitDealFlow APIs — REST, MCP, A2A, and NLWeb — are free and require no authentication. No signup, no API key, no rate limiting for reasonable use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What endpoints are available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer eight surfaces: signals.json (full dataset), search, startup details, sector filter, MCP server (stdio and HTTP), A2A agent protocol, NLWeb endpoint, and function-calling API. All documented in this page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the rate limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We do not enforce strict rate limits for reasonable use. The API is designed for free access during evaluation. Enterprise plans offer dedicated rate limits of up to 10,000 requests/hour."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What format is the data returned in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The REST API returns JSON. A CSV export is available at /api/signals.csv. The MCP server returns structured tool results. The A2A endpoint uses JSON-RPC 2.0 format."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often is the data updated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The dataset refreshes every Sunday with the latest week's velocity signals. The signals.json endpoint always returns the most current data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the API with Claude, ChatGPT, or Cursor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The MCP server works with Claude Desktop, Claude Code, Cursor, and any MCP-compatible host. Use npx -y @gitdealflow/mcp-signal for stdio mode or POST https://signals.gitdealflow.com/api/mcp/rpc for HTTP mode."
+        }
+      }
+    ]
+  }
+  </script>
+<style>
+    .docs-page { background: #0b1120; min-height: 100vh; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .docs-container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+    nav { max-width: 1100px; margin: 0 auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
+    nav a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; }
+    nav a:hover { color: #60a5fa; }
+    .logo { font-weight: 700; font-size: 1.1rem; color: #f1f5f9; }
+    .logo span { color: #60a5fa; }
+    h1 { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; }
+    .hero-subtitle { color: #94a3b8; text-align: center; max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.6; font-size: 1.05rem; }
+
+    .toc { max-width: 800px; margin: 0 auto 2.5rem; background: #0f172a; border: 1px solid #1e293b; border-radius: 1rem; padding: 1.5rem; }
+    .toc h2 { font-size: 1rem; color: #f1f5f9; margin-bottom: 0.75rem; }
+    .toc ul { columns: 2; list-style: none; padding: 0; margin: 0; }
+    .toc li { margin-bottom: 0.4rem; }
+    .toc a { color: #60a5fa; text-decoration: none; font-size: 0.88rem; }
+    .toc a:hover { text-decoration: underline; }
+
+    .endpoint-section { max-width: 800px; margin: 0 auto 2.5rem; }
+    .endpoint-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 0.75rem; margin-bottom: 1rem; overflow: hidden; }
+    .endpoint-header { padding: 1rem 1.25rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid #1e293b; }
+    .method { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; font-family: monospace; text-transform: uppercase; }
+    .method.get { background: rgba(52, 211, 153, 0.15); color: #34d399; }
+    .method.post { background: rgba(96, 165, 250, 0.15); color: #60a5fa; }
+    .endpoint-url { font-family: monospace; font-size: 0.9rem; color: #f1f5f9; }
+    .endpoint-body { padding: 1rem 1.25rem; }
+    .endpoint-body p { color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.75rem; }
+    .endpoint-body p:last-child { margin-bottom: 0; }
+    .endpoint-body code { display: block; background: #1e293b; padding: 0.75rem 1rem; border-radius: 0.375rem; font-family: monospace; font-size: 0.82rem; color: #e2e8f0; overflow-x: auto; white-space: pre; margin-bottom: 0.75rem; }
+
+    .language-tabs { display: flex; gap: 0.25rem; margin-bottom: 0.75rem; }
+    .lang-tab { padding: 0.3rem 0.75rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; background: #1e293b; color: #64748b; border: none; cursor: pointer; }
+    .lang-tab:hover { color: #e2e8f0; }
+
+    .faq-section { max-width: 700px; margin: 0 auto 3rem; }
+    .faq-section h2 { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 1.5rem; }
+    .faq-item { background: #0f172a; border: 1px solid #1e293b; border-radius: 0.75rem; margin-bottom: 0.75rem; overflow: hidden; }
+    .faq-question { width: 100%; padding: 1rem 1.25rem; background: none; border: none; color: #e2e8f0; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-align: left; display: flex; justify-content: space-between; align-items: center; }
+    .faq-question:hover { color: #60a5fa; }
+    .faq-question .arrow { font-size: 1.1rem; transition: transform 0.2s; }
+    .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
+    .faq-answer { padding: 0 1.25rem 1rem; color: #94a3b8; font-size: 0.88rem; line-height: 1.6; display: none; }
+    .faq-item.open .faq-answer { display: block; }
+
+    .cta-section { text-align: center; padding: 2rem; background: #0f172a; border: 1px solid #1e293b; border-radius: 1rem; max-width: 550px; margin: 0 auto 3rem; }
+    .cta-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-section p { color: #94a3b8; font-size: 0.88rem; margin-bottom: 1rem; }
+    .cta-btn { display: inline-block; padding: 0.85rem 2rem; background: #60a5fa; color: #0b1120; border: none; border-radius: 0.5rem; font-size: 1rem; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; transition: background 0.2s; }
+    .cta-btn:hover { background: #3b82f6; }
+
+    .footer-links { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: #64748b; text-decoration: none; font-size: 0.85rem; }
+    .footer-links a:hover { color: #60a5fa; }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.5rem; }
+      .toc ul { columns: 1; }
+    }
+  </style>
+<meta content="Documentation, startup engineering velocity, GitHub signals, deal flow, venture capital, startup funding" name="news_keywords"/>
+<meta content="Documentation" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="GitHub signals" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body class="docs-page">
+<header style="border-bottom:1px solid #1e293b;background:#0b1120">
+<nav>
+<a class="logo" href="/">GitDeal<span>Flow</span></a>
+<div>
+<a href="/" style="margin-right:1.5rem">Home</a>
+<a href="/pricing" style="margin-right:1.5rem">Pricing</a>
+<a href="/tools">Tools</a>
+</div>
+</nav>
+</header>
+<div class="docs-container">
+<!-- Hero -->
+<h1>API Documentation</h1>
+<p class="hero-subtitle">
+    Everything you need to integrate VC Deal Flow Signal into your workflow. 
+    All APIs are free and require no authentication. No API key, no signup, no rate limits.
+  </p>
+<!-- TOC -->
+<div class="toc">
+<h2>📋 Endpoints</h2>
+<ul>
+<li><a href="#signals">GET /api/signals.json</a></li>
+<li><a href="#search">GET /api/search</a></li>
+<li><a href="#startup">GET /api/startup/{name}</a></li>
+<li><a href="#sector">GET /api/sector/{slug}</a></li>
+<li><a href="#mcp">MCP Server (stdio + HTTP)</a></li>
+<li><a href="#a2a">A2A Agent Protocol</a></li>
+<li><a href="#nlweb">NLWeb Endpoint</a></li>
+<li><a href="#function">Function-Calling API</a></li>
+</ul>
+</div>
+<!-- REST API Base -->
+<div class="endpoint-section">
+<h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">REST API</h2>
+<p style="color:#94a3b8; margin-bottom:1.5rem;">Base URL: <code style="background:#1e293b; padding:0.15rem 0.4rem; border-radius:3px; font-family:monospace;">https://signals.gitdealflow.com</code></p>
+<!-- signals.json -->
+<div class="endpoint-card" id="signals">
+<div class="endpoint-header">
+<span class="method get">GET</span>
+<span class="endpoint-url">/api/signals.json</span>
+</div>
+<div class="endpoint-body">
+<p>Returns the full VC Deal Flow Signal dataset as a JSON array. Each entry contains startup name, sector, velocity score, contributor count, commit count, and acceleration rating.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code>curl https://signals.gitdealflow.com/api/signals.json</code>
+<p>Optional query parameters:</p>
+<code>?sector=fintech          # Filter by sector slug
+?limit=10              # Limit results
+?sort=velocity         # Sort by velocity score</code>
+</div>
+</div>
+<!-- Search -->
+<div class="endpoint-card" id="search">
+<div class="endpoint-header">
+<span class="method get">GET</span>
+<span class="endpoint-url">/api/search?q={query}</span>
+</div>
+<div class="endpoint-body">
+<p>Search for startups by name, sector, or keyword. Returns matching results with velocity signals.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code>curl "https://signals.gitdealflow.com/api/search?q=ai"</code>
+</div>
+</div>
+<!-- Startup Details -->
+<div class="endpoint-card" id="startup">
+<div class="endpoint-header">
+<span class="method get">GET</span>
+<span class="endpoint-url">/api/startup/{name}</span>
+</div>
+<div class="endpoint-body">
+<p>Get detailed signal data for a specific startup. The name is case-insensitive and supports fuzzy matching.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code>curl https://signals.gitdealflow.com/api/startup/posthog</code>
+</div>
+</div>
+<!-- Sector Filter -->
+<div class="endpoint-card" id="sector">
+<div class="endpoint-header">
+<span class="method get">GET</span>
+<span class="endpoint-url">/api/sector/{slug}</span>
+</div>
+<div class="endpoint-body">
+<p>Filter startups by sector. Available sectors: fintech, ai-ml, developer-tools, cybersecurity, healthcare, climate-tech, enterprise-saas, data-infrastructure, web3, robotics, edtech, ecommerce-infrastructure, supply-chain, legal-tech, hr-tech, proptech, agtech, gaming, space-tech, social-community.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code>curl https://signals.gitdealflow.com/api/sector/fintech</code>
+</div>
+</div>
+</div>
+<!-- MCP Server -->
+<div class="endpoint-section" id="mcp">
+<h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">MCP Server</h2>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="method get" style="background:rgba(168,85,247,0.15);color:#a855f7;">MCP</span>
+<span class="endpoint-url">stdio + Streamable HTTP</span>
+</div>
+<div class="endpoint-body">
+<p>The Model Context Protocol server provides six read-only tools for AI agents. All tools are idempotent and require no authentication.</p>
+<p style="font-weight:600; color:#f1f5f9;">Installation (stdio):</p>
+<code>npx -y @gitdealflow/mcp-signal</code>
+<p style="font-weight:600; color:#f1f5f9;">HTTP mode:</p>
+<code>POST https://signals.gitdealflow.com/api/mcp/rpc</code>
+<p style="font-weight:600; color:#f1f5f9;">Available tools:</p>
+<code>get_trending_startups     # Top 20 across all sectors
+search_startups_by_sector   # Filter by sector slug
+get_startup_signal          # Individual startup details
+get_signals_summary         # Dataset overview
+get_scout_receipts          # Scout Score for a GitHub user
+get_methodology             # Full methodology</code>
+</div>
+</div>
+</div>
+<!-- A2A Agent Protocol -->
+<div class="endpoint-section" id="a2a">
+<h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">A2A Agent Protocol</h2>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="method post">POST</span>
+<span class="endpoint-url">/api/a2a</span>
+</div>
+<div class="endpoint-body">
+<p>Google A2A-compatible JSON-RPC 2.0 endpoint for agent-to-agent communication. Accepts structured queries and returns startup signal data.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code>curl -X POST https://signals.gitdealflow.com/api/a2a \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"get_trending","params":{},"id":1}'</code>
+</div>
+</div>
+</div>
+<!-- NLWeb -->
+<div class="endpoint-section" id="nlweb">
+<h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">NLWeb Endpoint</h2>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="method post">POST</span>
+<span class="endpoint-url">/api/nlweb</span>
+</div>
+<div class="endpoint-body">
+<p>Microsoft NLWeb-compatible conversational endpoint. Accepts natural-language queries, returns schema.org-typed JSON-LD answers.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code>curl -X POST https://signals.gitdealflow.com/api/nlweb \
+  -H "Content-Type: application/json" \
+  -d '{"query": "trending fintech startups this week"}'</code>
+</div>
+</div>
+</div>
+<!-- Function-Calling API -->
+<div class="endpoint-section" id="function">
+<h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">Function-Calling API</h2>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="method get">GET</span>
+<span class="endpoint-url">/api/agent/tools</span>
+</div>
+<div class="endpoint-body">
+<p>OpenAPI-compatible function definitions for use with OpenAI, Anthropic, or Gemini SDKs. Returns tool schemas that can be directly passed as function definitions.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code># Get tool definitions
+curl https://signals.gitdealflow.com/api/agent/tools
+
+# Call a tool
+curl -X POST https://signals.gitdealflow.com/api/agent/call \
+  -H "Content-Type: application/json" \
+  -d '{"tool":"get_trending_startups","args":{}}'</code>
+</div>
+</div>
+</div>
+<!-- CSV Export -->
+<div class="endpoint-section">
+<h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">CSV Export</h2>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="method get">GET</span>
+<span class="endpoint-url">/api/signals.csv</span>
+</div>
+<div class="endpoint-body">
+<p>Download the full dataset as CSV for use in spreadsheets, Python, R, or any data analysis tool.</p>
+<div class="language-tabs">
+<span class="lang-tab" style="background:#334155;color:#e2e8f0;">curl</span>
+</div>
+<code>curl https://signals.gitdealflow.com/api/signals.csv</code>
+</div>
+</div>
+</div>
+<!-- Code Examples -->
+<div class="endpoint-section">
+<h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">Code Examples</h2>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="endpoint-url" style="font-weight:600;">Python</span>
+</div>
+<div class="endpoint-body">
+<code>import requests
+
+# Fetch all signals
+data = requests.get(
+    "https://signals.gitdealflow.com/api/signals.json"
+).json()
+
+# Filter for fintech
+fintech = [s for s in data if s.get("sector") == "fintech"]
+print(f"Found {len(fintech)} fintech startups")</code>
+</div>
+</div>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="endpoint-url" style="font-weight:600;">JavaScript / Node.js</span>
+</div>
+<div class="endpoint-body">
+<code>const data = await fetch(
+  "https://signals.gitdealflow.com/api/signals.json"
+).then(r =&gt; r.json());
+
+console.log(`Tracking ${data.length} startups`);</code>
+</div>
+</div>
+<div class="endpoint-card">
+<div class="endpoint-header">
+<span class="endpoint-url" style="font-weight:600;">MCP (Claude Desktop / Cursor)</span>
+</div>
+<div class="endpoint-body">
+<code>// Add to your MCP client config:
+{
+  "mcpServers": {
+    "vc-deal-flow-signal": {
+      "command": "npx",
+      "args": ["-y", "@gitdealflow/mcp-signal"]
+    }
+  }
+}</code>
+</div>
+</div>
+</div>
+<!-- FAQ -->
+<div class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+<button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do I need an API key to use GitDealFlow APIs?
+        <span class="arrow">▼</span>
+</button>
+<div class="faq-answer">No. All GitDealFlow APIs — REST, MCP, A2A, and NLWeb — are free and require no authentication. No signup, no API key, no rate limiting for reasonable use.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What endpoints are available?
+        <span class="arrow">▼</span>
+</button>
+<div class="faq-answer">We offer eight surfaces: signals.json (full dataset), search, startup details, sector filter, MCP server (stdio and HTTP), A2A agent protocol, NLWeb endpoint, and function-calling API. All documented in this page.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What are the rate limits?
+        <span class="arrow">▼</span>
+</button>
+<div class="faq-answer">We do not enforce strict rate limits for reasonable use. The API is designed for free access during evaluation. Enterprise plans offer dedicated rate limits of up to 10,000 requests/hour.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What format is the data returned in?
+        <span class="arrow">▼</span>
+</button>
+<div class="faq-answer">The REST API returns JSON. A CSV export is available at /api/signals.csv. The MCP server returns structured tool results. The A2A endpoint uses JSON-RPC 2.0 format.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        How often is the data updated?
+        <span class="arrow">▼</span>
+</button>
+<div class="faq-answer">The dataset refreshes every Sunday with the latest week's velocity signals. The signals.json endpoint always returns the most current data.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can I use the API with Claude, ChatGPT, or Cursor?
+        <span class="arrow">▼</span>
+</button>
+<div class="faq-answer">Yes. The MCP server works with Claude Desktop, Claude Code, Cursor, and any MCP-compatible host. Use npx -y @gitdealflow/mcp-signal for stdio mode or POST https://signals.gitdealflow.com/api/mcp/rpc for HTTP mode.</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="cta-section">
+<h2>Ready to Build?</h2>
+<p>Try the API right now with curl — no signup needed. Or subscribe for the Sunday email digest.</p>
+<a class="cta-btn" href="/subscribe">Get the Sunday Email →</a>
+<p style="margin-top: 0.75rem; font-size: 0.8rem; color: #64748b;">Or <a href="/products" style="color: #60a5fa;">upgrade to premium data exports</a></p>
+</div>
+<!-- Footer -->
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/pricing">Pricing</a>
+<a href="/products">Premium Data</a>
+<a href="/tools">Tools</a>
+<a href="/subscribe">Subscribe Free</a>
+<a href="/enterprise">Enterprise</a>
+<a href="/vs-crunchbase">vs Crunchbase</a>
+<a href="/documentation">API Docs</a>
+<a href="/case-studies">Case Studies</a>
+<a href="https://signals.gitdealflow.com">Signals</a>
+</div>
+</div>
+<script>
+  // Open first FAQ item by default
+  document.querySelector('.faq-item').classList.add('open');
+</script>
+<script defer="" src="/share.js"></script>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</body>
+</html>

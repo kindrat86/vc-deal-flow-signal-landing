@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup Pulse — Live Engineering Velocity Visualizer | GitDealFlow</title>
+<meta name="description" content="Watch 369 startups pulse in real-time. Each particle is a startup — size = velocity, color = signal type, movement = energy. Bloomberg Terminal for startup signals.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://gitdealflow.com/pulse">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GitDealFlow">
+<meta property="og:title" content="Startup Pulse — Live Engineering Velocity Visualizer">
+<meta property="og:description" content="Watch 369 startups pulse in real-time. Each particle is a startup — size = velocity, color = signal type, movement = energy.">
+<meta property="og:image" content="https://gitdealflow.com/api/og/pulse">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@data_nerd">
+<meta name="news_keywords" content="startup pulse, engineering velocity, data visualization, startup tracker, deal flow, venture capital">
+<meta property="article:tag" content="Startup Pulse">
+<meta property="article:tag" content="Engineering Velocity">
+<meta property="article:tag" content="Data Visualization">
+<meta property="article:tag" content="Deal Flow">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [{
+    "@type": "Article",
+    "headline": "Startup Pulse — Live Engineering Velocity Visualizer | GitDealFlow",
+    "description": "Watch 369 startups pulse in real-time. Each particle is a startup — size = velocity, color = signal type, movement = energy.",
+    "image": "https://gitdealflow.com/og.png",
+    "datePublished": "2026-07-30",
+    "dateModified": "2026-07-30",
+    "author": {"@type": "Person", "name": "The Data Nerd"},
+    "publisher": {"@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com/"}
+  }, {
+    "@type": "WebPage",
+    "name": "Startup Pulse — Live Engineering Velocity Visualizer",
+    "url": "https://gitdealflow.com/pulse"
+  }]
+}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#05080f;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow:hidden;height:100vh;width:100vw}
+#pulse-canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0}
+#overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10;pointer-events:none}
+#header{position:fixed;top:20px;left:30px;z-index:20}
+#header h1{font-size:20px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px}
+#header h1 span{color:#60a5fa}
+#header .tagline{font-size:11px;color:#64748b;margin-top:2px;letter-spacing:0.5px;text-transform:uppercase}
+#stats{position:fixed;top:20px;right:30px;z-index:20;text-align:right;pointer-events:none}
+#stats .num{font-size:28px;font-weight:700;color:#60a5fa}
+#stats .lbl{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:1px}
+#tooltip{position:fixed;z-index:30;background:#0f172ae8;border:1px solid #1e293b;border-radius:10px;padding:14px 18px;min-width:200px;pointer-events:none;opacity:0;transition:opacity 0.2s;backdrop-filter:blur(8px)}
+#tooltip.visible{opacity:1}
+#tooltip .name{font-size:15px;font-weight:700;color:#f1f5f9;margin-bottom:4px}
+#tooltip .stat{display:flex;justify-content:space-between;gap:20px;font-size:12px;padding:2px 0}
+#tooltip .stat .k{color:#64748b}
+#tooltip .stat .v{color:#e2e8f0;font-weight:600}
+#tooltip .sig{display:inline-block;padding:1px 8px;border-radius:9999px;font-size:10px;margin-top:6px}
+#footer{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:20;font-size:10px;color:#334155;letter-spacing:0.5px;text-align:center;pointer-events:none}
+#footer a{color:#475569;text-decoration:none;pointer-events:auto}
+#footer a:hover{color:#60a5fa}
+#legend{position:fixed;bottom:20px;right:30px;z-index:20;text-align:right;pointer-events:none}
+#legend .item{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:2px 0;font-size:10px;color:#64748b}
+#legend .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.loading{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;text-align:center}
+.loading .spin{width:40px;height:40px;border:3px solid #1e293b;border-top-color:#60a5fa;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 15px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading p{color:#64748b;font-size:13px}
+</style>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<div class="loading" id="loading"><div class="spin"></div><p>Loading startup pulse…</p></div>
+<canvas id="pulse-canvas"></canvas>
+<div id="header">
+  <h1>Startup Pulse — Engineering Velocity <span>Live</span></h1>
+  <div class="tagline">Startup Pulse · Live</div>
+  <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+    <a href="/radar" style="color:#60a5fa;font-size:11px">📡 Radar</a>
+    <a href="/leaderboard" style="color:#60a5fa;font-size:11px">📊 Leaderboard</a>
+    <a href="/embed-gallery" style="color:#60a5fa;font-size:11px">🪪 Badge</a>
+  </div>
+</div>
+<div id="stats">
+  <div class="num" id="startup-count">—</div>
+  <div class="lbl">Startups Tracked</div>
+</div>
+<div id="tooltip"></div>
+<div id="legend">
+  <div class="item"><span class="dot" style="background:#22c55e"></span> Accelerating</div>
+  <div class="item"><span class="dot" style="background:#60a5fa"></span> Steady</div>
+  <div class="item"><span class="dot" style="background:#f59e0b"></span> Decelerating</div>
+  <div class="item"><span class="dot" style="background:#a855f7"></span> Breakout</div>
+</div>
+<div id="footer">
+  <a href="https://gitdealflow.com">gitdealflow.com</a> · <a href="https://gitdealflow.com/explorer">Explorer</a>
+</div>
+<script>
+// === Startup Pulse — Live Particle Visualization ===
+const API = 'https://signals.gitdealflow.com/api/signals.json';
+const COLORS = {
+  'hiring-burst': '#22c55e',
+  'accelerant': '#60a5fa',
+  'breakout': '#a855f7',
+  'steady': '#64748b',
+  'Framework migration': '#f59e0b',
+  'default': '#475569',
+};
+const COLOR_NAMES = {
+  '#22c55e': 'Accelerating',
+  '#60a5fa': 'Steady',
+  '#a855f7': 'Breakout',
+  '#64748b': 'Tracked',
+  '#f59e0b': 'Decelerating',
+  '#475569': 'Tracked',
+};
+
+// Particles
+let particles = [];
+let mouse = { x: 0, y: 0 };
+let canvas, ctx;
+
+function getColor(signalType) {
+  return COLORS[signalType] || COLORS['default'];
+}
+
+class Particle {
+  constructor(startup, idx, total) {
+    this.startup = startup;
+    this.name = startup.name || 'Unknown';
+    this.velocity = parseInt(startup.commitVelocity14d) || 0;
+    this.contributors = parseInt(startup.contributors) || 0;
+    this.signalType = startup.signalType || 'tracked';
+    this.velChange = parseFloat(String(startup.commitVelocityChange || '0').replace(/%/g, '')) || 0;
+    
+    // Position — random but avoid clustering
+    const angle = (2 * Math.PI * idx) / total + Math.random() * 0.3;
+    const radius = Math.random() * Math.min(canvas.width, canvas.height) * 0.35;
+    this.x = canvas.width / 2 + Math.cos(angle) * radius;
+    this.y = canvas.height / 2 + Math.sin(angle) * radius;
+    
+    // Movement
+    this.vx = (Math.random() - 0.5) * 0.3;
+    this.vy = (Math.random() - 0.5) * 0.3;
+    this.baseSpeed = Math.min(1, Math.max(0.1, this.velocity / 200));
+    this.orbitAngle = angle;
+    this.orbitRadius = radius;
+    this.orbitSpeed = 0.0003 + (1 - this.velocity / 500) * 0.001;
+    
+    // Size
+    this.size = Math.max(3, Math.min(12, 3 + (this.velocity / 500) * 9));
+    this.glowSize = this.size * 3;
+    
+    // Color
+    this.color = getColor(this.signalType);
+    
+    // Pulse
+    this.pulsePhase = Math.random() * Math.PI * 2;
+    this.pulseSpeed = 0.02 + Math.random() * 0.03;
+  }
+
+  update() {
+    // Orbit motion — slow circular drift
+    this.orbitAngle += this.orbitSpeed;
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+    this.x = cx + Math.cos(this.orbitAngle) * this.orbitRadius;
+    this.y = cy + Math.sin(this.orbitAngle) * this.orbitRadius;
+    
+    // Add subtle random jitter
+    this.x += (Math.random() - 0.5) * 0.5;
+    this.y += (Math.random() - 0.5) * 0.5;
+    
+    // Pulse phase
+    this.pulsePhase += this.pulseSpeed;
+    
+    // Mouse repulsion
+    const dx = this.x - mouse.x;
+    const dy = this.y - mouse.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < 100 && dist > 0) {
+      const force = (100 - dist) / 100 * 2;
+      this.x += (dx / dist) * force;
+      this.y += (dy / dist) * force;
+    }
+  }
+
+  draw(ctx) {
+    const pulse = Math.sin(this.pulsePhase) * 0.2 + 0.8;
+    const r = this.size * pulse;
+    const gr = this.glowSize * pulse;
+    
+    // Glow
+    const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, gr);
+    grad.addColorStop(0, this.color + '44');
+    grad.addColorStop(1, this.color + '00');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, gr, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Core dot
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, r, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Label for larger particles
+    if (this.size > 6) {
+      ctx.fillStyle = '#94a3b844';
+      ctx.font = '8px system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(this.name.length > 12 ? this.name.slice(0, 11) + '…' : this.name, this.x, this.y + r + 10);
+    }
+  }
+
+  contains(px, py) {
+    const dx = this.x - px;
+    const dy = this.y - py;
+    return Math.sqrt(dx * dx + dy * dy) < 20;
+  }
+}
+
+async function loadData() {
+  try {
+    const resp = await fetch(API);
+    const json = await resp.json();
+    const allStartups = [];
+    
+    // Flatten all startups from sectors + trending
+    const seen = new Set();
+    (json.trending || []).forEach(s => {
+      if (s.name) { allStartups.push(s); seen.add(s.name.toLowerCase()); }
+    });
+    (json.sectors || []).forEach(sec => {
+      (sec.startups || []).forEach(s => {
+        if (s.name && !seen.has(s.name.toLowerCase())) {
+          allStartups.push(s);
+          seen.add(s.name.toLowerCase());
+        }
+      });
+    });
+    
+    return allStartups;
+  } catch (e) {
+    console.error('Failed to load data', e);
+    return [];
+  }
+}
+
+function init() {
+  canvas = document.getElementById('pulse-canvas');
+  ctx = canvas.getContext('2d');
+  resize();
+  
+  document.getElementById('loading').style.display = 'none';
+  
+  loadData().then(startups => {
+    document.getElementById('startup-count').textContent = startups.length;
+    particles = startups.map((s, i) => new Particle(s, i, startups.length));
+    animate();
+  });
+  
+  // Events
+  window.addEventListener('resize', resize);
+  canvas.addEventListener('mousemove', e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  canvas.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+}
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Draw subtle grid
+  ctx.strokeStyle = '#0f172a';
+  ctx.lineWidth = 0.5;
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  for (let r = 100; r < Math.max(canvas.width, canvas.height) * 0.5; r += 100) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+  
+  // Check hover for tooltip
+  let hovered = null;
+  for (const p of particles) {
+    if (p.contains(mouse.x, mouse.y)) {
+      hovered = p;
+      break;
+    }
+  }
+  
+  // Update and draw
+  for (const p of particles) {
+    p.update();
+    p.draw(ctx);
+  }
+  
+  // Tooltip
+  const tooltip = document.getElementById('tooltip');
+  if (hovered) {
+    const s = hovered.startup;
+    const arrow = hovered.velChange >= 0 ? '▲' : '▼';
+    const chColor = hovered.velChange >= 0 ? '#22c55e' : '#ef4444';
+    tooltip.innerHTML = `
+      <div class="name">${hovered.name}</div>
+      <div class="stat"><span class="k">Velocity</span><span class="v">${hovered.velocity}</span></div>
+      <div class="stat"><span class="k">Change</span><span class="v" style="color:${chColor}">${arrow} ${Math.abs(hovered.velChange)}%</span></div>
+      <div class="stat"><span class="k">Contributors</span><span class="v">${hovered.contributors}</span></div>
+      <div class="sig" style="background:${hovered.color}22;color:${hovered.color};border:1px solid ${hovered.color}44">${hovered.signalType}</div>
+    `;
+    tooltip.style.left = Math.min(mouse.x + 20, window.innerWidth - 220) + 'px';
+    tooltip.style.top = Math.min(mouse.y + 20, window.innerHeight - 180) + 'px';
+    tooltip.classList.add('visible');
+  } else {
+    tooltip.classList.remove('visible');
+  }
+  
+  requestAnimationFrame(animate);
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

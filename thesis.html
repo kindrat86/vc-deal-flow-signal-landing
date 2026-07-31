@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VC Investment Thesis Generator — Data-Backed Startup Recommendations | GitDealFlow</title>
+<meta content="Generate a personalized VC investment thesis with data-backed startup recommendations. Select sector, stage, and geography to discover your ideal investment focus." name="description"/>
+<link href="https://gitdealflow.com/thesis" rel="canonical"/>
+<meta content="VC Investment Thesis Generator" property="og:title"/>
+<meta content="Generate a data-backed startup investment thesis in seconds. Select your sector, stage, and geography." property="og:description"/>
+<meta content="https://gitdealflow.com/thesis" property="og:url"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GitDealFlow Investment Thesis Generator",
+      "url": "https://gitdealflow.com/thesis",
+      "applicationCategory": "BusinessApplication",
+      "description": "Generate data-backed VC investment thesis with specific startup recommendations based on sector, stage, and geography preferences.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "VC Investment Thesis Generator \u2014 Data-Backed Startup Recommendations | GitDealFlow",
+      "description": "Generate a personalized VC investment thesis with data-backed startup recommendations. Select sector, stage, and geography to discover your ideal investment focus.",
+      "image": "https://gitdealflow.com/og.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.5}
+    a{color:#60a5fa}
+    .container{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
+    header{text-align:center;padding:3rem 1.5rem;border-bottom:1px solid #1e293b;background:linear-gradient(180deg,#0f172a,#0b1120)}
+    header h1{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem}
+    header p{color:#94a3b8;max-width:450px;margin:0 auto}
+
+    .form{max-width:500px;margin:2rem auto}
+    .form-group{margin-bottom:1.25rem}
+    .form-group label{display:block;color:#cbd5e1;font-weight:600;font-size:.9rem;margin-bottom:.5rem}
+    .form-group select,.form-group input[type=range]{width:100%;padding:.7rem;border:2px solid #1e293b;border-radius:10px;background:#0b1120;color:#e8eaed;font-size:.9rem;outline:none}
+    .form-group select:focus{border-color:#60a5fa}
+    .form-group .range-val{color:#60a5fa;font-weight:700;font-size:.9rem;margin-top:.3rem;text-align:right}
+
+    .submit-btn{width:100%;padding:.85rem;border:none;border-radius:12px;background:linear-gradient(135deg,#60a5fa,#3b82f6);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;margin-top:.5rem}
+
+    .thesis{display:none;background:#0f172a;border:1px solid #1e293b;border-radius:16px;padding:2rem;margin:2rem 0}
+    .thesis.visible{display:block}
+    .thesis h2{color:#f1f5f9;font-size:1.2rem;margin-bottom:.5rem}
+    .thesis .meta{color:#64748b;font-size:.8rem;margin-bottom:1rem}
+    .thesis .statement{padding:1rem;background:#0b1120;border:1px solid #1e293b;border-radius:12px;margin:1rem 0;color:#cbd5e1;font-style:italic;line-height:1.6;font-size:.95rem}
+    .thesis .rec-list{display:grid;gap:.75rem;margin:1.5rem 0}
+    .thesis .rec{background:#0b1120;border:1px solid #1e293b;border-radius:10px;padding:1rem;display:flex;justify-content:space-between;align-items:center}
+    .thesis .rec .rn{color:#f1f5f9;font-weight:600}
+    .thesis .rec .rd{color:#64748b;font-size:.85rem}
+    .thesis .rec .rv{font-weight:700;color:#4ade80;font-size:.9rem}
+    .thesis .actions{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+    .thesis .actions button{padding:.6rem 1.25rem;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer}
+    .btn-x{background:#1e293b;color:#e8eaed;border:1px solid #334155}
+
+    .loading{padding:1rem;text-align:center;color:#475569}
+    .spinner{display:inline-block;width:18px;height:18px;border:2px solid #334155;border-top-color:#60a5fa;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:.4rem}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b;font-size:.8rem}
+
+    @media(max-width:640px){.thesis .rec{flex-direction:column;text-align:center;gap:.3rem}}
+  </style>
+<!-- Google Discover metadata -->
+<meta content="Thesis, deal flow, engineering velocity, venture capital, GitHub, startup" name="news_keywords"/>
+<meta content="Thesis" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta content="GitHub" property="article:tag"/>
+<meta content="startup" property="article:tag"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:published_time"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:modified_time"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta name="format-detection" content="telephone=no"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"}, {"@type": "ListItem", "position": 2, "name": "VC Investment Thesis Generator — Data-Backed Startup Recommendations", "item": "https://gitdealflow.com/thesis.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GitDealFlow?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow is a VC deal-flow signal tool that flags startups accelerating on GitHub 21–47 days before the round. Track engineering velocity across 4,200+ startup orgs."}}, {"@type": "Question", "name": "How does GitDealFlow work?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow reads public GitHub activity — commits, contributors, repos — to detect engineering acceleration. The signal helps investors find startups before fundraise announcements."}}, {"@type": "Question", "name": "Is GitDealFlow free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GitDealFlow offers a permanent free tier including the weekly Signal Digest and live board at signals.gitdealflow.com."}}]}</script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<header>
+<h1>📜 Investment Thesis Generator</h1>
+<p>Generate a data-backed VC investment thesis with specific startup recommendations</p>
+</header>
+<main class="container">
+<div class="form">
+<div class="form-group">
+<label>1. Sector Focus</label>
+<select id="sector">
+<option value="Any">Any Sector</option>
+<option value="Healthcare">Healthcare</option>
+<option value="EdTech">EdTech</option>
+<option value="E-commerce Infrastructure">E-commerce Infrastructure</option>
+<option value="Supply Chain">Supply Chain</option>
+<option value="Web3">Web3 / Crypto</option>
+<option value="Enterprise SaaS">Enterprise SaaS</option>
+<option value="Data Infrastructure">Data Infrastructure</option>
+<option value="Robotics">Robotics</option>
+<option value="Legal Tech">Legal Tech</option>
+<option value="HR Tech">HR Tech</option>
+<option value="PropTech">PropTech</option>
+<option value="AgTech">AgTech</option>
+<option value="Gaming">Gaming</option>
+<option value="Space Tech">Space Tech</option>
+<option value="Social &amp; Community">Social &amp; Community</option>
+</select>
+</div>
+<div class="form-group">
+<label>2. Stage Preference</label>
+<select id="stage">
+<option value="Any">Any Stage</option>
+<option value="Pre-seed">Pre-seed</option>
+<option value="Seed">Seed</option>
+<option value="Series A-B">Series A-B</option>
+<option value="Growth">Growth</option>
+</select>
+</div>
+<div class="form-group">
+<label>3. Geography</label>
+<select id="geography">
+<option value="Any">Any Geography</option>
+<option value="United States">United States</option>
+<option value="Europe">Europe</option>
+<option value="Asia">Asia</option>
+<option value="UK">United Kingdom</option>
+<option value="Global">Global</option>
+</select>
+</div>
+<div class="form-group">
+<label>4. Risk Tolerance</label>
+<input id="risk" max="10" min="1" type="range" value="5"/>
+<div class="range-val" id="risk-label">5 — Balanced</div>
+</div>
+<button class="submit-btn" id="generate-btn">🎯 Generate Thesis</button>
+</div>
+<div class="loading" id="status"></div>
+<div class="thesis" id="thesis">
+<h2 id="thesis-title">Investment Thesis</h2>
+<div class="meta" id="thesis-meta"></div>
+<div class="statement" id="thesis-statement"></div>
+<h3 style="color:#f1f5f9;font-size:1rem;margin-top:1.5rem;">🏆 Recommended Startups</h3>
+<div class="rec-list" id="rec-list"></div>
+<div class="actions">
+<button class="btn-x" id="share-x">𝕏 Share Thesis</button>
+<button class="btn-x" id="regenerate">🔄 Regenerate</button>
+</div>
+</div>
+</main>
+<section class="vs-section">
+<div class="related">
+<h2 style="color:#e2e8f0;margin-top:0;border:none;padding:0;font-size:1.2rem">Related Resources</h2>
+<ul>
+<li><a href="/sectors/healthcare">Healthcare Startups — Engineering Velocity Rankings (Q3 2026) | GitDealFlow</a></li>
+<li><a href="/sectors/web3">Web3 Startups — Engineering Velocity Rankings (Q3 2026) | GitDealFlow</a></li>
+<li><a href="/sectors/legal-tech">Legal Tech Startups -- Engineering Velocity Rankings | GitDealFlow</a></li>
+<li><a href="/sectors/space-tech">Space Tech Startups -- Engineering Velocity Rankings | GitDealFlow</a></li>
+<li><a href="/sectors/agtech">AgTech Startups -- Engineering Velocity Rankings | GitDealFlow</a></li>
+</ul>
+</div>
+</section>
+<footer>
+<p>Powered by <a href="https://signals.gitdealflow.com">VC Deal Flow Signal</a> · <a href="https://gitdealflow.com">GitDealFlow</a></p>
+<p>Data: 324+ startups, 15 sectors, Q3 2026</p>
+<footer style="text-align:center;padding:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.75rem;margin-top:3rem;">
+<a href="https://gitdealflow.com" style="color:#60a5fa;text-decoration:none;">GitDealFlow</a>
+  ·
+  <a href="https://signals.gitdealflow.com" style="color:#60a5fa;text-decoration:none;">Signals</a>
+  ·
+  <a href="https://sipi.bot" style="color:#60a5fa;text-decoration:none;">Sipi.bot</a>
+  ·
+  <a href="https://voicelogpro.com" style="color:#60a5fa;text-decoration:none;">VoiceLogPro</a>
+  ·
+  <a href="https://invisibleexit.com" style="color:#60a5fa;text-decoration:none;">InvisibleExit</a>
+  ·
+  <a href="https://unlocksaas.com" style="color:#60a5fa;text-decoration:none;">UnlockSaaS</a>
+  ·
+  <a href="https://churnlens.site" style="color:#60a5fa;text-decoration:none;">ChurnLens</a>
+  ·
+  <a href="https://sanctionsai.dev" style="color:#60a5fa;text-decoration:none;">SanctionsAI</a>
+  ·
+  <a href="https://carshake.online" style="color:#60a5fa;text-decoration:none;">CarShake</a>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</footer>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div></footer>
+<script>
+(function(){
+  var API = 'https://signals.gitdealflow.com/api/signals.json';
+  var allStartups = [];
+
+  fetch(API).then(function(r){return r.json()}).then(function(d){
+    (d.sectors||[]).forEach(function(s){
+      (s.startups||[]).forEach(function(st){
+        st.sector = s.name;
+        allStartups.push(st);
+      });
+    });
+    (d.trending||[]).forEach(function(st){
+      if(!allStartups.find(function(x){return x.name===st.name})){
+        allStartups.push(st);
+      }
+    });
+    document.getElementById('status').textContent = allStartups.length + ' startups loaded';
+  }).catch(function(){
+    document.getElementById('status').textContent = 'Error loading data';
+  });
+
+  document.getElementById('risk').addEventListener('input', function(){
+    var labels = ['Ultra Conservative','Conservative','Conservative-Moderate','Moderate','Balanced','Balanced-Aggressive','Moderately Aggressive','Aggressive','Very Aggressive','Ultra Aggressive'];
+    document.getElementById('risk-label').textContent = this.value + ' — ' + (labels[this.value-1]||'Balanced');
+  });
+
+  function esc(s){var d=document.createElement('div');d.textContent=String(s==null?'':s);return d.innerHTML}
+
+  function sectorSignalArchetype(sector){
+    var map = {
+      'Web3': 'Deploy frequency spike and infrastructure buildout',
+      'Healthcare': 'Deploy frequency spike and framework migration',
+      'EdTech': 'Deploy frequency spike and engineering hiring burst',
+      'Enterprise SaaS': 'Engineering hiring burst and deploy frequency spike',
+      'Supply Chain': 'Engineering hiring burst and framework migration',
+      'Data Infrastructure': 'Infrastructure buildout and deploy frequency spike',
+      'Robotics': 'Infrastructure buildout and engineering hiring burst',
+      'Space Tech': 'Infrastructure buildout and framework migration'
+    };
+    return map[sector] || 'Deploy frequency spike and engineering hiring burst';
+  }
+
+  function generate(){
+    var sector = document.getElementById('sector').value;
+    var stage = document.getElementById('stage').value;
+    var geo = document.getElementById('geography').value;
+    var risk = parseInt(document.getElementById('risk').value);
+
+    var status = document.getElementById('status');
+    status.innerHTML = '<span class="spinner"></span> Analyzing 324+ startups...';
+
+    // Filter
+    var filtered = allStartups.filter(function(s){
+      if(sector!=='Any' && s.sector!==sector) return false;
+      if(stage!=='Any' && (s.stage||'')!==stage) return false;
+      if(geo!=='Any'){
+        var sg = (s.geography||'');
+        if(geo==='Europe' && sg!=='Europe' && sg!=='UK') return false;
+        if(geo==='Asia' && sg!=='Asia') return false;
+        if(geo==='United States' && sg!=='United States') return false;
+        if(geo==='United Kingdom' && sg!=='UK') return false;
+      }
+      return true;
+    });
+
+    if(filtered.length < 2){
+      status.textContent = 'Not enough startups match these criteria. Try broader filters.';
+      return;
+    }
+
+    // Rank by velocity
+    function parseV(x){return parseInt(String(x||'0').replace('%','').replace('+',''))||0}
+    filtered.sort(function(a,b){return parseV(b.commitVelocityChange)-parseV(a.commitVelocityChange)});
+
+    var top3 = filtered.slice(0,3);
+    var sectorLabel = sector==='Any' ? 'across all sectors' : sector;
+    var stageLabel = stage==='Any' ? 'all stages' : stage;
+    var geoLabel = geo==='Any' ? 'globally' : geo;
+    var archetype = sectorSignalArchetype(sector);
+
+    // Risk descriptors
+    var riskAdj = risk <= 3 ? 'defensive' : risk <= 6 ? 'balanced' : 'aggressive';
+    var riskPhrase = risk <= 3 ? 'strong unit economics and proven revenue models' : risk <= 6 ? 'accelerating team-building and sustainable velocity' : 'high-velocity, high-upside breakout potential';
+
+    var thesis = 'We believe the most compelling venture opportunity in ' + sectorLabel + ' (' + stageLabel + ', ' + geoLabel + ') lies in startups exhibiting ' + archetype + ' as leading indicators of product-market fit and fundraise readiness. Our analysis of ' + filtered.length + ' tracked companies shows that teams demonstrating ' + riskPhrase + ' consistently outperform sector medians. We target founders who ship code at accelerating velocity — not just talk about shipping. The data validates that ' + archetype + ' patterns precede fundraise announcements by 3-6 weeks. This ' + riskAdj + ' thesis prioritizes ' + top3.map(function(s){return s.name}).join(', ') + ' as high-conviction candidates based on their current engineering trajectory and signal quality.';
+
+    // Render
+    document.getElementById('thesis-title').textContent = sectorLabel + ' Investment Thesis — ' + stageLabel;
+    document.getElementById('thesis-meta').textContent = 'Based on ' + filtered.length + ' matched startups · Generated ' + new Date().toLocaleDateString() + ' · CC BY 4.0';
+    document.getElementById('thesis-statement').textContent = thesis;
+
+    var recHtml = '';
+    top3.forEach(function(s){
+      recHtml += '<div class="rec"><div><div class="rn">' + esc(s.name) + '</div><div class="rd">' + esc(s.sector||'N/A') + ' · ' + esc(s.stage||'N/A') + ' · ' + esc(s.geography||'N/A') + ' · ' + esc(s.signalType||'Active') + '</div></div><div style="text-align:right"><div class="rv">' + (s.commitVelocityChange||'+0%') + '</div><div style="color:#64748b;font-size:.75rem;">' + (s.commitVelocity14d||0) + ' c/14d</div></div></div>';
+    });
+    document.getElementById('rec-list').innerHTML = recHtml;
+
+    document.getElementById('thesis').classList.add('visible');
+    status.textContent = '';
+
+    window.location.hash = 's='+encodeURIComponent(sector)+'&st='+encodeURIComponent(stage)+'&g='+encodeURIComponent(geo)+'&r='+risk;
+  }
+
+  document.getElementById('generate-btn').addEventListener('click', generate);
+  document.getElementById('regenerate').addEventListener('click', generate);
+  document.getElementById('share-x').addEventListener('click', function(){
+    var title = document.getElementById('thesis-title').textContent;
+    var text = encodeURIComponent('I just generated a data-backed investment thesis using @gitdealflow — ' + title + '. Generate yours: https://gitdealflow.com/thesis');
+    window.open('https://x.com/intent/tweet?text=' + text, '_blank', 'width=600,height=400');
+  });
+
+  // Restore from hash
+  function restore(){
+    var hash = window.location.hash.replace(/^#/,'');
+    if(!hash) return;
+    try{
+      var p = new URLSearchParams(hash);
+      if(p.has('s')) document.getElementById('sector').value = p.get('s');
+      if(p.has('st')) document.getElementById('stage').value = p.get('st');
+      if(p.has('g')) document.getElementById('geography').value = p.get('g');
+      if(p.has('r')) document.getElementById('risk').value = p.get('r');
+      if(p.has('s')||p.has('st')) setTimeout(generate, 500);
+    }catch(e){}
+  }
+
+  restore();
+  window.addEventListener('hashchange', restore);
+})();
+</script>
+<script defer="" src="/share.js"></script>
+</body>
+</html>

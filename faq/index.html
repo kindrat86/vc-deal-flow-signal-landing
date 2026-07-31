@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Startup Engineering Velocity FAQ — Complete Guide (2026) | GitDealFlow</title>
+<meta content="Everything you need to know about startup engineering velocity: how it's measured, why it matters for VCs, how to benchmark your team, and more." name="description"/>
+<link href="https://gitdealflow.com/faq" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="GitDealFlow" property="og:site_name"/>
+<meta content="Startup Engineering Velocity FAQ — Complete Guide (2026)" property="og:title"/>
+<meta content="Everything you need to know about startup engineering velocity: how it's measured, why it matters for VCs, how to benchmark your team, and more." property="og:description"/>
+<meta content="https://gitdealflow.com/faq" property="og:url"/>
+<meta content="https://gitdealflow.com/opengraph-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@sipiteno" name="twitter:site"/>
+<meta content="@sipiteno" name="twitter:creator"/>
+<meta content="Startup Engineering Velocity FAQ — Complete Guide (2026)" name="twitter:title"/>
+<meta content="Everything you need to know about startup engineering velocity: how it's measured, why it matters for VCs, how to benchmark your team, and more." name="twitter:description"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<!-- Google Discover -->
+<meta content="startup engineering velocity FAQ, VC signals FAQ, engineering velocity guide, startup benchmarking, deal flow" name="news_keywords"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="VC signals" property="article:tag"/>
+<meta content="startup FAQ" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta name="format-detection" content="telephone=no"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.6}
+a{color:#60a5fa;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:780px;margin:0 auto;padding:1.5rem}
+header{text-align:center;padding:2.5rem 1.5rem;border-bottom:1px solid #1e293b}
+header h1{font-size:1.7rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 .5rem}
+header p{color:#94a3b8;font-size:.9rem;margin:0}
+h2{color:#f1f5f9;font-size:1.2rem;margin:2.5rem 0 .75rem;padding-bottom:.5rem;border-bottom:2px solid #1e293b}
+h2:first-of-type{margin-top:1.5rem}
+h3{color:#e2e8f0;font-size:1rem;margin:1.5rem 0 .5rem}
+details{background:#131c2e;border:1px solid #1e293b;border-radius:10px;padding:.85rem 1.1rem;margin:.6rem 0;transition:border-color .2s}
+details:hover{border-color:#334155}
+summary{cursor:pointer;font-weight:600;color:#e2e8f0;padding:.15rem 0;font-size:.9rem}
+details[open] summary{margin-bottom:.6rem;color:#f1f5f9}
+details p{color:#94a3b8;font-size:.85rem;margin:.35rem 0;line-height:1.7}
+details ul{color:#94a3b8;font-size:.85rem;margin:.35rem 0;padding-left:1.2rem}
+details li{margin:.15rem 0}
+.toc{background:#131c2e;border:1px solid #1e293b;border-radius:12px;padding:1.25rem;margin:1.5rem 0}
+.toc h3{color:#94a3b8;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;margin:0 0 .75rem}
+.toc a{display:block;padding:.3rem 0;color:#94a3b8;font-size:.85rem}
+.toc a:hover{color:#60a5fa}
+.toc .sec{margin-left:.75rem;font-size:.8rem}
+.breadcrumb{color:#475569;font-size:.75rem;margin-bottom:1rem}
+.breadcrumb a{color:#64748b}
+.breadcrumb a:hover{color:#60a5fa}
+.category-label{display:inline-block;padding:.2rem .6rem;border-radius:999px;font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem}
+.cat-velocity{background:#064e3b;color:#6ee7b7}
+.cat-investors{background:#1e1b4b;color:#a78bfa}
+.cat-founders{background:#1c1917;color:#fdba74}
+.cat-data{background:#1e3a5f;color:#93c5fd}
+.cat-tools{background:#3b0764;color:#d8b4fe}
+.cta-box{text-align:center;background:linear-gradient(135deg,rgba(37,99,235,.1),rgba(124,58,237,.1));border:1px solid #1e293b;border-radius:12px;padding:2rem;margin:2rem 0}
+.cta-box h3{color:#f1f5f9;font-size:1.1rem;margin:0 0 .5rem}
+.cta-box p{color:#94a3b8;font-size:.85rem;margin:.3rem 0}
+.cta-btn{display:inline-block;padding:.7rem 1.5rem;border-radius:8px;font-weight:600;font-size:.9rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;text-decoration:none;margin:.7rem 0}
+.cta-btn:hover{text-decoration:none;opacity:.9}
+.links{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:1rem 0}
+.links a{padding:.45rem .9rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#94a3b8;font-size:.8rem}
+.links a:hover{background:#334155;color:#f1f5f9}
+footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b;font-size:.8rem;margin-top:2rem}
+footer a{color:#475569}
+footer a:hover{color:#60a5fa}
+@media(max-width:600px){header h1{font-size:1.3rem}.container{padding:1rem}}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Startup Engineering Velocity FAQ Hub",
+      "url": "https://gitdealflow.com/faq",
+      "description": "Comprehensive FAQ about startup engineering velocity, VC signals, methodology, and tools from GitDealFlow.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://gitdealflow.com"
+      },
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30"
+    },
+    {
+      "@type": "Article",
+      "headline": "Startup Engineering Velocity FAQ \u2014 Complete Guide (2026) | GitDealFlow",
+      "description": "Everything you need to know about startup engineering velocity: how it's measured, why it matters for VCs, how to benchmark your team, and more.",
+      "image": "https://gitdealflow.com/opengraph-image.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"},
+    {"@type": "ListItem", "position": 2, "name": "FAQ Hub", "item": "https://gitdealflow.com/faq"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is engineering velocity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Engineering velocity is a measure of how quickly and consistently a startup's engineering team ships code. GitDealFlow measures it using public GitHub commit activity: commit volume per 14-day window, active contributor count, contributor growth rate, and new repository creation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is engineering velocity measured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Engineering velocity is calculated from public GitHub data: commit volume over a rolling 14-day window, unique active contributors, contributor growth rate compared to the previous window, and new repository creation. Velocity change is expressed as a percentage increase or decrease compared to the prior period. See the full methodology at gitdealflow.com/methodology."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does engineering velocity matter for startups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Engineering velocity is a leading indicator of startup health and trajectory. High-velocity teams ship faster, iterate quicker, and reach product-market fit sooner. For investors, velocity spikes often precede fundraise announcements by 21–47 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do VCs use velocity signals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VCs use engineering velocity signals to build forward-looking deal pipelines. Instead of reacting to fundraise announcements, they monitor acceleration signals — commit spikes, hiring bursts, infrastructure buildouts — and reach out during the 21–47 day lead window before the competitive process begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the lead time before a funding round?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Peer-reviewed research (SSRN 6606558) demonstrates that engineering velocity spikes precede fundraise announcements by a median of 31 days, with a range of 21–47 days. The lead time varies by sector, company stage, and signal type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is scout score calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scout Score (0–100) measures a GitHub user's ability to identify breakout startups early, based on their starring history. Users who starred startups before they became unicorns receive higher scores. Compute yours at gitdealflow.com/scout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do founders check their startup's velocity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Founders can use GitDealFlow's free Velocity Checker at gitdealflow.com/check-velocity. Enter a GitHub org or repo slug to see commit cadence, contributor trends, and acceleration signals. No login required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do founders appear in the dataset?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Startups appear automatically if they have a public GitHub organization with active development. There is no submission process. GitDealFlow tracks ~400 startup GitHub orgs across 20 sectors. If your startup is missing, it likely means the dataset hasn't identified your organization yet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can founders improve their engineering velocity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Improving engineering velocity starts with consistent commits, growing your contributor base, and building publicly. Specific tactics: ship daily, increase CI/CD frequency, onboard new contributors, open-source useful components, and maintain a steady commit cadence over weeks — not just bursts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the startup data come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All data comes from public GitHub API events. GitDealFlow tracks commit activity, contributor growth, and repository expansion across ~400 carefully curated startup GitHub organizations. No private repositories or internal metrics are ever accessed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often is the data updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The dataset refreshes weekly from public GitHub API events. Each refresh captures a rolling 14-day window of commit activity. The sitemap's lastmod timestamps update automatically on each refresh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many startups are tracked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitDealFlow tracks approximately 4,200+ startup GitHub organizations across 20 sectors, including healthcare, fintech, enterprise SaaS, web3, AI/ML, robotics, legal tech, HR tech, proptech, agtech, gaming, space tech, and more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the velocity checker free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Velocity Checker is completely free with no login required. It provides instant engineering velocity lookup for any GitHub org or repo slug."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I subscribe to the weekly digest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subscribe at gitdealflow.com/subscribe. The weekly Signal Digest delivers 5 trending startups to your inbox every Sunday, along with sector velocity rankings and analysis. Free tier includes the digest; premium adds API access and historical data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Premium includes full API access (JSON, CSV, MCP server), historical data exports, custom sector alerts, priority support, and early access to new tools. See gitdealflow.com/pricing for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the different signal types?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The dataset classifies engineering acceleration into four signals: Deploy Frequency Spike (tooling/process improvements), Engineering Hiring Burst (headcount growth), Infrastructure Buildout (scaling), and Framework Migration (technical debt cleanup). Each signal type has a different lead-time profile for fundraising."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use GitDealFlow data for my fund or research?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The dataset is published under CC BY 4.0 license. The methodology is detailed in a peer-reviewed working paper at SSRN 6606558. Use the JSON API (signals.gitdealflow.com/api/signals.json), CSV export, or the MCP server (npx -y @gitdealflow/mcp-signal)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GitDealFlow have an API for programmatic access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GitDealFlow offers multiple programmatic surfaces: a JSON API (GET signals.gitdealflow.com/api/signals.json), MCP server (npx -y @gitdealflow/mcp-signal), A2A endpoint, OpenAPI 3.1 spec, and CSV export. All are free and require no authentication. See gitdealflow.com/api for documentation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GitDealFlow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitDealFlow is a deal-flow signal tool for investors — not a fund. It reads startups' public GitHub engineering activity to flag the ones accelerating early, 21–47 days before fundraise announcements. It's an independent project operated by a pseudonymous team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What sectors does GitDealFlow cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitDealFlow covers 20 sectors: AI/ML, Healthcare, Fintech, Enterprise SaaS, Web3, E-commerce Infrastructure, Data Infrastructure, Robotics, Legal Tech, HR Tech, PropTech, AgTech, Gaming, Space Tech, Social & Community, Supply Chain, EdTech, DevTools, Cybersecurity, and Climate Tech."
+      }
+    }
+  ]
+}
+</script>
+<script defer="" src="/share.js"></script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<header>
+<h1>Frequently Asked Questions About Startup Engineering Velocity</h1>
+<p>Everything you need to know — from how velocity works to how VCs and founders use it</p>
+</header>
+<main class="container">
+<div class="breadcrumb">
+<a href="/">Home</a> › <span>FAQ Hub</span>
+</div>
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+<h3>Table of Contents</h3>
+<a href="#about-velocity">About Engineering Velocity</a>
+<a class="sec" href="#for-investors">For Investors</a>
+<a class="sec" href="#for-founders">For Founders</a>
+<a class="sec" href="#data-methodology">Data &amp; Methodology</a>
+<a class="sec" href="#tools-pricing">Tools &amp; Pricing</a>
+</div>
+<!-- ===== CATEGORY 1: ABOUT ENGINEERING VELOCITY ===== -->
+<h2 id="about-velocity">About Engineering Velocity</h2>
+<details>
+<summary>What is engineering velocity?</summary>
+<p>Engineering velocity is a measure of how quickly and consistently a startup's engineering team ships code. GitDealFlow calculates it using public GitHub commit activity across four dimensions:</p>
+<ul>
+<li><strong>Commit volume</strong> — total commits in a rolling 14-day window</li>
+<li><strong>Active contributors</strong> — unique developers committing code</li>
+<li><strong>Contributor growth</strong> — rate of new contributor onboarding</li>
+<li><strong>Repository expansion</strong> — new public repos being actively developed</li>
+</ul>
+<p>The resulting velocity change is expressed as a percentage increase or decrease compared to the previous 14-day period. Learn more at our <a href="/methodology">full methodology page</a>.</p>
+</details>
+<details>
+<summary>How is engineering velocity measured?</summary>
+<p>Engineering velocity is calculated by analyzing public GitHub commit data over rolling 14-day windows. The measurement has four components: raw commit volume, unique contributor count, contributor growth rate (compared to the prior window), and new repository activity. Each startup's velocity change is normalized and expressed as a percentage. A +100% change means the startup shipped twice as much engineering output as the prior period. <a href="/methodology">Full methodology →</a></p>
+</details>
+<details>
+<summary>Why does engineering velocity matter for startups?</summary>
+<p>Engineering velocity is a <strong>leading indicator</strong> of startup health. High-velocity teams ship faster, iterate quicker on user feedback, and reach product-market fit sooner. For investors, it's an early signal: velocity spikes typically precede fundraise announcements by 21–47 days. For founders, maintaining strong velocity signals to investors that your team is building momentum. For a deeper look, see the <a href="/what-is-engineering-velocity">full guide on engineering velocity</a>.</p>
+</details>
+<details>
+<summary>What are the different signal types?</summary>
+<p>GitDealFlow classifies acceleration into four signal types, each indicating a different pattern of startup activity:</p>
+<ul>
+<li><strong>Deploy Frequency Spike</strong> — rapid increase in deployment cadence, often signaling process/tooling improvements</li>
+<li><strong>Engineering Hiring Burst</strong> — sudden increase in new contributors, indicating team growth</li>
+<li><strong>Infrastructure Buildout</strong> — creation of infrastructure repos, configs, and deployment pipelines (scaling)</li>
+<li><strong>Framework Migration</strong> — major dependency and architecture changes (technical debt cleanup)</li>
+</ul>
+<p>Each signal type has a different lead-time profile for fundraising. See <a href="/signal-types-comparison">signal types comparison →</a></p>
+</details>
+<details>
+<summary>What sectors does GitDealFlow cover?</summary>
+<p>GitDealFlow tracks startups across <strong>20 sectors</strong>: AI/ML, Healthcare, Fintech, Enterprise SaaS, Web3, E-commerce Infrastructure, Data Infrastructure, Robotics, Legal Tech, HR Tech, PropTech, AgTech, Gaming, Space Tech, Social &amp; Community, Supply Chain, EdTech, DevTools, Cybersecurity, and Climate Tech. Each sector has its own velocity trends and benchmarks. See <a href="/sectors">all sectors →</a></p>
+</details>
+<!-- ===== CATEGORY 2: FOR INVESTORS ===== -->
+<h2 id="for-investors">For Investors</h2>
+<details>
+<summary>How do VCs use velocity signals?</summary>
+<p>VCs use engineering velocity signals to build <strong>forward-looking deal pipelines</strong>. By monitoring startup GitHub activity — commit spikes, contributor growth, infrastructure buildouts — VCs spot acceleration before fundraise announcements. This allows them to reach out during the 21–47 day lead window, before the competitive process attracts every other firm. Many leading VCs use GitDealFlow to supplement their sourcing workflow alongside platforms like <a href="/vs/cb-insights">CB Insights</a> and <a href="/vs/crunchbase">Crunchbase</a>.</p>
+</details>
+<details>
+<summary>What's the lead time before a funding round?</summary>
+<p>Peer-reviewed research documented in <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6606558">SSRN working paper 6606558</a> found that engineering velocity spikes precede fundraise announcements by a <strong>median of 31 days</strong>, with a range of 21–47 days. The lead time varies by: sector (healthcare has longer lead times than web3), company stage (seed rounds show tighter correlation), and signal type (infrastructure buildouts lead longer than deploy spikes).</p>
+</details>
+<details>
+<summary>How is scout score calculated?</summary>
+<p><strong>Scout Score</strong> (0–100) measures a GitHub user's ability to identify breakout startups early, based on their starring history on GitHub. Users who starred startups before they became unicorns receive higher scores. The algorithm cross-references a curated list of validated unicorns and tracks when each user starred them. <a href="/scout">Compute your Scout Score →</a></p>
+</details>
+<details>
+<summary>How does GitDealFlow compare to other VC tools?</summary>
+<p>GitDealFlow is unique because it's based on <strong>public GitHub data</strong> — not proprietary data sources or manual research. This makes it transparent, always current, and accessible to anyone. Compare to <a href="/vs/cb-insights">CB Insights</a>, <a href="/vs/crunchbase">Crunchbase</a>, <a href="/vs/pitchbook">PitchBook</a>, <a href="/vs/tracxn">Tracxn</a>, <a href="/vs/dealroom">Dealroom</a>, and <a href="/vs/grata">Grata</a> on our <a href="/vs">comparisons page</a>.</p>
+</details>
+<details>
+<summary>Can I integrate GitDealFlow into my existing deal flow tools?</summary>
+<p>Yes. GitDealFlow offers multiple integration surfaces: a <strong>JSON API</strong> (signals.gitdealflow.com/api/signals.json), <strong>MCP server</strong> (npx -y @gitdealflow/mcp-signal) for AI coding assistants, <strong>A2A endpoint</strong> for multi-agent orchestration, <strong>OpenAPI 3.1 spec</strong>, and <strong>CSV exports</strong>. All are free and require no API key. See <a href="/api">API docs →</a></p>
+</details>
+<!-- ===== CATEGORY 3: FOR FOUNDERS ===== -->
+<h2 id="for-founders">For Founders</h2>
+<details>
+<summary>How do founders check their startup's velocity?</summary>
+<p>Founders can use the <strong>free Velocity Checker</strong> at <a href="/check-velocity">gitdealflow.com/check-velocity</a>. Enter your GitHub organization or repo slug to see: commit cadence over rolling windows, contributor trends and growth rate, acceleration signals, and comparison to sector benchmarks. No login or registration required — results are instant.</p>
+</details>
+<details>
+<summary>How do startups appear in the dataset?</summary>
+<p>Startups appear automatically if they have a <strong>public GitHub organization</strong> with active development. There's no submission or application process. GitDealFlow's curation algorithm identifies startup GitHub orgs across 20 sectors. If your startup is missing, it likely means the dataset hasn't identified your organization — try checking your GitHub org's activity or reach out via <a href="https://t.me/gitdealflow">Telegram</a>.</p>
+</details>
+<details>
+<summary>How can founders improve their engineering velocity?</summary>
+<p>Improving velocity starts with <strong>consistent, visible engineering output</strong>. Practical tactics that work:</p>
+<ul>
+<li>Ship code daily — even small commits maintain momentum</li>
+<li>Increase CI/CD frequency — automated deployments amplify output</li>
+<li>Open-source useful components — increases your public GitHub presence</li>
+<li>Maintain steady contributor growth — onboard new team members regularly</li>
+<li>Avoid feast-or-famine commit patterns — consistent cadence beats spikes</li>
+</ul>
+<p>For more context, see <a href="/for-founders">our guide for founders →</a></p>
+</details>
+<details>
+<summary>Can founders use velocity data to time their fundraise?</summary>
+<p>Absolutely. Founders can monitor their own velocity trends on GitDealFlow to understand how investors see them. A <strong>rising velocity trend over 2–4 weeks</strong> signals strong fundraising positioning. We recommend maintaining or increasing velocity for at least 3 weeks before starting the fundraise process, as investors increasingly check these public signals before first meetings.</p>
+</details>
+<details>
+<summary>Is my private code safe? Do you read code?</summary>
+<p>Yes — we read <strong>no code ever</strong>. GitDealFlow only accesses <strong>public metadata</strong>: commit counts, contributor counts, and repository names from public GitHub API endpoints. We never clone repositories, inspect code, access private repos, or use any authenticated endpoints that could reveal proprietary code. Privacy and security by design.</p>
+</details>
+<!-- ===== CATEGORY 4: DATA & METHODOLOGY ===== -->
+<h2 id="data-methodology">Data &amp; Methodology</h2>
+<details>
+<summary>Where does the startup data come from?</summary>
+<p>All data comes from <strong>public GitHub API events</strong>. GitDealFlow's pipeline regularly fetches commit activity, contributor profiles, and repository metadata for ~4,200+ startup GitHub organizations. No private repositories, internal metrics, or proprietary data sources are ever used. The dataset is fully reproducible from public data. See <a href="/methodology">methodology →</a></p>
+</details>
+<details>
+<summary>How often is the data updated?</summary>
+<p>The dataset is refreshed <strong>weekly</strong> from public GitHub API events. Each refresh captures a rolling 14-day window of commit activity. The data typically updates every Sunday, with fresh results available by Monday morning UTC. Follow <a href="https://signals.gitdealflow.com/feed.xml">the RSS feed</a> for update notifications.</p>
+</details>
+<details>
+<summary>How many startups are tracked?</summary>
+<p>GitDealFlow tracks approximately <strong>4,200+ startup GitHub organizations</strong> across 20 sectors. The dataset grows each week as new startups are identified. Startups range from pre-seed to Series C+ across geographies including the US, Europe, APAC, LATAM, and the UK.</p>
+</details>
+<details>
+<summary>Is the dataset peer-reviewed?</summary>
+<p>Yes. The methodology and findings have been submitted for academic peer review. A working paper is available at <strong><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6606558">SSRN 6606558</a></strong>. The paper details the data collection methodology, statistical validation of the velocity-fundraising correlation, and the 21–47 day lead time findings.</p>
+</details>
+<details>
+<summary>Can I use GitDealFlow data for my fund or research?</summary>
+<p>Yes — the dataset is published under <strong>CC BY 4.0 license</strong> for both commercial and non-commercial use with attribution. Access the full dataset via the <a href="https://signals.gitdealflow.com/api/signals.json">JSON API</a>, <a href="https://signals.gitdealflow.com/api/signals.csv">CSV export</a>, or the <a href="https://signals.gitdealflow.com/api/openapi.json">OpenAPI 3.1 spec</a>. No API key or registration needed.</p>
+</details>
+<!-- ===== CATEGORY 5: TOOLS & PRICING ===== -->
+<h2 id="tools-pricing">Tools &amp; Pricing</h2>
+<details>
+<summary>Is the velocity checker free?</summary>
+<p>Yes. The <a href="/check-velocity">Velocity Checker</a> is <strong>100% free</strong> — no login, no signup, no limits. Enter any GitHub org or repository slug to see their engineering velocity metrics instantly. It's designed to be the quickest way to check any startup's GitHub pulse.</p>
+</details>
+<details>
+<summary>How do I subscribe to the weekly digest?</summary>
+<p>Subscribe at <a href="/subscribe">gitdealflow.com/subscribe</a>. The <strong>free weekly Signal Digest</strong> delivers 5 trending startups to your inbox every Sunday, including: startup name, sector, velocity change, signal type, and a brief analysis of why they're accelerating.</p>
+</details>
+<details>
+<summary>What's included in premium?</summary>
+<p>Premium subscription unlocks: <strong>full API access</strong> with higher rate limits, <strong>historical data exports</strong> (CSV/JSON), <strong>custom sector alerts</strong> when selected sectors heat up, <strong>priority support</strong>, and early access to new tools and features. See <a href="/pricing">pricing →</a></p>
+</details>
+<details>
+<summary>What tools does GitDealFlow offer?</summary>
+<p>GitDealFlow provides a suite of free tools for investors and founders:</p>
+<ul>
+<li><a href="/check-velocity">Velocity Checker</a> — instant startup engineering velocity lookup</li>
+<li><a href="/scout">Scout Score</a> — compute your GitHub scout score (0–100)</li>
+<li><a href="/startup-funding-predictor">Startup Funding Predictor</a> — estimate fundraise timing</li>
+<li><a href="/benchmark">Velocity Benchmark</a> — compare velocity across sectors</li>
+<li><a href="/trending-this-week">Startups to Watch This Week</a> — weekly trending list</li>
+<li><a href="/sector-radar">Sector Radar</a> — interactive sector velocity dashboard</li>
+<li><a href="/glossary">VC Glossary</a> — 28+ defined terms</li>
+<li><a href="/widget">Embeddable Widget</a> — add velocity badges to your site</li>
+</ul>
+</details>
+<details>
+<summary>Does GitDealFlow offer an enterprise plan?</summary>
+<p>Yes. Enterprise plans include <strong>custom dataset exports</strong>, dedicated API endpoints, white-labeled reports, and priority onboarding. Contact us via <a href="https://t.me/gitdealflow">Telegram</a> to discuss your needs. See <a href="/enterprise">enterprise →</a></p>
+</details>
+<!-- CTA -->
+<div class="cta-box">
+<h3>Still have questions?</h3>
+<p>Check our detailed guides or reach out to the community</p>
+<div class="links" style="margin-top:.5rem">
+<a href="/methodology">Methodology</a>
+<a href="/check-velocity">Velocity Checker</a>
+<a href="/subscribe">Subscribe to Weekly Digest</a>
+<a href="https://t.me/gitdealflow">Telegram Community</a>
+</div>
+</div>
+<!-- RELATED SECTOR FAQS -->
+<div style="text-align:center;margin:2rem 0;padding:1rem 0;border-top:1px solid #1e293b">
+<p style="color:#64748b;font-size:.75rem;margin-bottom:.5rem">Sector-specific FAQs:</p>
+<div class="links">
+<a href="/faq-healthcare">Healthcare</a>
+<a href="/faq-edtech">EdTech</a>
+<a href="/faq-ecommerce-infrastructure">E-commerce Infrastructure</a>
+<a href="/faq-supply-chain">Supply Chain</a>
+<a href="/faq-web3">Web3</a>
+<a href="/faq-enterprise-saas">Enterprise SaaS</a>
+<a href="/faq-data-infrastructure">Data Infrastructure</a>
+<a href="/faq-robotics">Robotics</a>
+<a href="/faq-legal-tech">Legal Tech</a>
+<a href="/faq-hr-tech">HR Tech</a>
+<a href="/faq-proptech">PropTech</a>
+<a href="/faq-agtech">AgTech</a>
+<a href="/faq-gaming">Gaming</a>
+<a href="/faq-space-tech">Space Tech</a>
+<a href="/faq-social-community">Social &amp; Community</a>
+</div>
+</div>
+</main>
+<footer>
+<p>© 2026 GitDealFlow. Based on real public GitHub data. <a href="https://signals.gitdealflow.com">signals.gitdealflow.com</a></p>
+<p style="margin-top:.3rem"><a href="/">Home</a> · <a href="/subscribe">Subscribe</a> · <a href="/startups">All Startups</a> · <a href="/pricing">Pricing</a> · <a href="/methodology">Methodology</a></p>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

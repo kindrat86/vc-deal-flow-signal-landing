@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Startup Badges — Embed Engineering Signals in Your README | GitDealFlow</title>
+<meta content="Free SVG badges for 324+ tracked startups. Show your startup's engineering velocity signal in your GitHub README. Create viral backlinks, one line of code." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://gitdealflow.com/startup-badges" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="GitDealFlow" property="og:site_name"/>
+<meta content="Startup Badges — Embed Engineering Signals in Your README | GitDealFlow" property="og:title"/>
+<meta content="Free SVG badges for 324+ tracked startups. One line of code. Light up your README with real-time engineering velocity signals from the VC Deal Flow Signal dataset." property="og:description"/>
+<meta content="https://gitdealflow.com/startup-badges" property="og:url"/>
+<meta content="https://signals.gitdealflow.com/opengraph-image" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@sipiteno" name="twitter:site"/>
+<meta content="@sipiteno" name="twitter:creator"/>
+<meta content="Startup Badges — Embed Engineering Signals in Your README" name="twitter:title"/>
+<meta content="Free SVG badges for 324+ tracked startups. Show your startup's engineering velocity in one line of code." name="twitter:description"/>
+<meta content="https://signals.gitdealflow.com/opengraph-image" name="twitter:image"/>
+<link href="https://signals.gitdealflow.com/api/signals.json" rel="alternate" title="VC Deal Flow Signal Data" type="application/json"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://gitdealflow.com/startup-badges",
+      "url": "https://gitdealflow.com/startup-badges",
+      "name": "Startup Badges \u2014 Embed Engineering Signals in Your README",
+      "description": "Free SVG badges for 324+ tracked startups showing engineering velocity signals. Viral backlink loop for founders.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://gitdealflow.com"
+      },
+      "about": {
+        "@type": "Dataset",
+        "name": "VC Deal Flow Signal",
+        "description": "Startup engineering acceleration data from public GitHub activity"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gitdealflow.com/startup-badges#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gitdealflow.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://gitdealflow.com/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Startup Badges"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gitdealflow.com/startup-badges#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I embed a startup badge in my GitHub README?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add one line of Markdown to your README: <code>![VC Deal Flow Signal](https://gitdealflow.com/api/badge/startup/STRIPE)</code> replacing STRIPE with your startup's slug (lowercased GitHub org name)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the badge API free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, completely free. No registration, no API key, no rate limits. The badges are cached aggressively and served via our global CDN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data does the badge show?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each badge shows the startup name, signal type (color-coded: green for hiring burst, blue for deploy spike, amber for infrastructure buildout, gray for framework migration), 14-day commit velocity change with +/- sign, commit count, contributor count, stage badge, and sector \u2014 sourced from public GitHub activity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often is the data updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The signals dataset is updated weekly. Badges are CDN-cached for up to 24 hours to ensure fast loading."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My startup isn't tracked yet. Can I still get a badge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! If your startup isn't in our dataset, the endpoint returns a 'Create Your Own Badge' that links to our velocity checker. Visit https://gitdealflow.com/check-velocity to see your startup's engineering velocity."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Startup Badges \u2014 Embed Engineering Signals in Your README | GitDealFlow",
+      "description": "Free SVG badges for 324+ tracked startups. Show your startup's engineering velocity signal in your GitHub README. Create viral backlinks, one line of code.",
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0b1120;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    header {
+      border-bottom: 1px solid #1e293b;
+      background: #0b1120;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; }
+    nav a:hover { color: #60a5fa; }
+    .logo { font-weight: 700; font-size: 1.1rem; color: #f1f5f9; }
+    .logo span { color: #60a5fa; }
+    nav .links { display: flex; gap: 1rem; align-items: center; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    h1 span { background: linear-gradient(135deg,#60a5fa,#a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.05rem; max-width: 700px; }
+    .subtitle strong { color: #e2e8f0; }
+
+    /* Cards */
+    .card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card p, .card li { color: #94a3b8; font-size: 0.9rem; }
+    .card ol, .card ul { padding-left: 1.25rem; }
+    .card li { margin-bottom: 0.4rem; }
+
+    /* Searchable dropdown */
+    .search-section { position: relative; }
+    #startupSearch {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #0b1120;
+      border: 1px solid #334155;
+      border-radius: 0.5rem;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #startupSearch:focus { border-color: #60a5fa; }
+    #startupSearch::placeholder { color: #475569; }
+    #searchResults {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: 320px;
+      overflow-y: auto;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-top: none;
+      border-radius: 0 0 0.5rem 0.5rem;
+      z-index: 50;
+    }
+    #searchResults .result-item {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1e293b;
+      transition: background 0.15s;
+    }
+    #searchResults .result-item:hover { background: #1e293b; }
+    #searchResults .result-item .name { color: #e2e8f0; font-weight: 600; }
+    #searchResults .result-item .meta { color: #64748b; font-size: 0.8rem; }
+    #searchResults .result-item .sector { color: #60a5fa; font-size: 0.75rem; }
+    .result-count { color: #64748b; font-size: 0.8rem; padding: 0.5rem 1rem; border-bottom: 1px solid #1e293b; }
+
+    /* Badge preview */
+    #badgePreview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 140px;
+      background: #0b1120;
+      border: 1px solid #334155;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    #badgePreview img { max-width: 100%; border-radius: 0.375rem; }
+
+    .code-block {
+      background: #0b1120;
+      border: 1px solid #334155;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      overflow-x: auto;
+      margin: 0.75rem 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .copy-btn {
+      padding: 0.5rem 1rem;
+      background: #1e293b;
+      color: #94a3b8;
+      border: 1px solid #334155;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .copy-btn:hover { background: #334155; color: #e2e8f0; }
+    .copy-btn.copied { background: #22c55e; color: #052e16; border-color: #22c55e; }
+
+    /* Slug grid */
+    .slug-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.4rem;
+    }
+    .slug-grid a {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      background: #0b1120;
+      border: 1px solid #1e293b;
+      border-radius: 0.25rem;
+      color: #94a3b8;
+      text-decoration: none;
+      font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+      font-size: 0.75rem;
+      transition: all 0.15s;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .slug-grid a:hover {
+      border-color: #60a5fa;
+      color: #60a5fa;
+    }
+
+    /* Loading */
+    .loading { color: #64748b; font-size: 0.9rem; text-align: center; padding: 2rem; }
+    .loading .spinner { display: inline-block; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .badge-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin: 1rem 0; }
+    .badge-row img { border-radius: 0.375rem; }
+
+    .toast {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #22c55e;
+      color: #052e16;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 999;
+    }
+    .toast.show { opacity: 1; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .feature-grid .feat {
+      background: #0b1120;
+      border: 1px solid #1e293b;
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+    .feature-grid .feat strong { color: #60a5fa; }
+    .feature-grid .feat span { color: #94a3b8; font-size: 0.85rem; }
+
+    .selected-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: #0b1120;
+      border: 1px solid #1e293b;
+      border-radius: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .selected-info .label { color: #64748b; font-size: 0.8rem; }
+    .selected-info .value { color: #e2e8f0; font-weight: 600; font-family: ui-monospace, monospace; font-size: 0.85rem; }
+
+    .footer-links {
+      border-top: 1px solid #1e293b;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a { color: #64748b; text-decoration: none; font-size: 0.85rem; }
+    .footer-links a:hover { color: #60a5fa; }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.5rem; }
+      .slug-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    }
+  </style>
+<meta content="Startup Badges, startup engineering velocity, GitHub signals, deal flow, venture capital, startup funding" name="news_keywords"/>
+<meta content="Startup Badges" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="GitHub signals" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="/">GitDeal<span>Flow</span></a>
+<div class="links">
+<a href="https://signals.gitdealflow.com">Signals</a>
+<a href="/tools">Tools</a>
+<a href="/embed">Embed</a>
+</div>
+</nav>
+</header>
+<div class="container">
+<h1>🏷️ <span>Startup Badges</span></h1>
+<p class="subtitle">
+    Free SVG badges for <strong>324+ tracked startups</strong>. Show your engineering velocity signal in your GitHub README.
+    Every badge is a <strong>free backlink</strong> — the viral distribution loop for our dataset.
+  </p>
+<!-- How it works -->
+<div class="card">
+<h2>⚡ How It Works</h2>
+<ol>
+<li>Search for your startup below</li>
+<li>Copy the one-line Markdown embed code</li>
+<li>Paste it in your <code>README.md</code> or website</li>
+<li>Your badge auto-updates weekly with fresh data</li>
+</ol>
+</div>
+<!-- Search & Preview -->
+<div class="card search-section">
+<h2>🔍 Find Your Startup</h2>
+<p style="margin-bottom:0.75rem">Type a startup name or GitHub org slug to see its badge and embed code.</p>
+<input autocomplete="off" id="startupSearch" placeholder="e.g. Stripe, Vercel, aipoch, nextcloud..." type="text"/>
+<div id="searchResults"></div>
+<div id="badgePreview">
+<div class="loading"><span class="spinner">⟳</span> Loading startup data…</div>
+</div>
+<div id="embedSection" style="display:none">
+<p style="color:#94a3b8;font-size:0.85rem;margin-bottom:0.25rem">📋 Markdown embed code:</p>
+<div class="code-block" id="embedCode"></div>
+<button class="copy-btn" data-action="copy-badge" data-startup="" data-track="badge_copy" id="copyEmbedBtn" onclick="copyEmbedCode()">📋 Copy to Clipboard</button>
+<div class="selected-info" id="selectedInfo" style="display:none"></div>
+</div>
+<p style="color:#64748b;font-size:0.8rem;margin-top:0.75rem">
+      💡 The badge is an <code>&lt;img&gt;</code> tag pointing to our API. It updates automatically when we refresh the dataset.
+    </p>
+</div>
+<!-- Badge Types -->
+<div class="card">
+<h2>🎨 Signal Type Colors</h2>
+<p style="margin-bottom:0.75rem">Each badge shows the startup's current signal type, color-coded for quick scanning:</p>
+<div class="feature-grid">
+<div class="feat"><strong style="color:#22c55e">● Engineering Hiring Burst</strong><br/><span>Rapid team expansion</span></div>
+<div class="feat"><strong style="color:#3b82f6">● Deploy Frequency Spike</strong><br/><span>Shipping acceleration</span></div>
+<div class="feat"><strong style="color:#f59e0b">● Infrastructure Buildout</strong><br/><span>Scaling infrastructure</span></div>
+<div class="feat"><strong style="color:#6b7280">● Framework Migration</strong><br/><span>Tech stack transition</span></div>
+</div>
+</div>
+<!-- All known startup slugs -->
+<div class="card" id="slugList">
+<h2>📋 All Tracked Startups <span id="startupCount" style="color:#94a3b8;font-size:0.85rem;font-weight:400"></span></h2>
+<p style="margin-bottom:0.75rem">Click any slug to preview its badge. The slug is the last segment of the GitHub organization URL, lowercased.</p>
+<div class="slug-grid" id="slugGridContainer"></div>
+</div>
+<!-- FAQ -->
+<div class="card">
+<h2>❓ FAQ</h2>
+<div style="margin-top:0.5rem">
+<p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">How do I embed a badge in my GitHub README?</p>
+<p style="color:#94a3b8;margin-bottom:1rem">Add this to your README.md, replacing <code>STARTUP-SLUG</code> with your startup's slug:<br/>
+<code style="background:#0b1120;padding:0.2rem 0.4rem;border-radius:0.25rem;font-size:0.85rem">![VC Deal Flow Signal](https://gitdealflow.com/api/badge/startup/STARTUP-SLUG)</code></p>
+<p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">Is this free?</p>
+<p style="color:#94a3b8;margin-bottom:1rem">Yes, completely free. No registration, API key, or rate limits. Cached on our CDN for fast global loading.</p>
+<p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">How often is data refreshed?</p>
+<p style="color:#94a3b8;margin-bottom:1rem">The signals dataset is updated weekly. Badges are CDN-cached up to 24 hours between refreshes.</p>
+<p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">My startup isn't listed. Can I get a badge?</p>
+<p style="color:#94a3b8">Yes! If a slug isn't found, the API returns a "Create Your Own Badge" linking to <a href="/check-velocity" style="color:#60a5fa">gitdealflow.com/check-velocity</a>.</p>
+</div>
+</div>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="https://signals.gitdealflow.com">Signals Database</a>
+<a href="/tools">Free Tools</a>
+<a href="/embed">Embeddable Widgets</a>
+<a href="/check-velocity">Velocity Checker</a>
+<a href="/methodology">Methodology</a>
+</div>
+</div>
+<div class="toast" id="toast">Copied to clipboard!</div>
+<script>
+const SIGNALS_URL = 'https://signals.gitdealflow.com/api/signals.json';
+const BADGE_BASE = 'https://gitdealflow.com/api/badge/startup';
+
+const searchInput = document.getElementById('startupSearch');
+const searchResults = document.getElementById('searchResults');
+const badgePreview = document.getElementById('badgePreview');
+const embedSection = document.getElementById('embedSection');
+const embedCode = document.getElementById('embedCode');
+const selectedInfo = document.getElementById('selectedInfo');
+const slugGrid = document.getElementById('slugGridContainer');
+const startupCount = document.getElementById('startupCount');
+
+let allStartups = []; // {slug, name, sector, stage, signalType}
+
+// Fetch signals data and build UI
+async function init() {
+  try {
+    const res = await fetch(SIGNALS_URL);
+    const data = await res.json();
+
+    for (const sector of data.sectors) {
+      for (const s of sector.startups) {
+        const slug = s.profileUrl
+          ? s.profileUrl.split('/').pop()
+          : s.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        allStartups.push({ slug, name: s.name, sector: sector.name, stage: s.stage, signalType: s.signalType });
+      }
+    }
+
+    allStartups.sort((a, b) => a.name.localeCompare(b.name));
+    startupCount.textContent = `— ${allStartups.length} startups`;
+
+    // Build slug grid
+    slugGrid.innerHTML = allStartups.map(s =>
+      `<a href="#" data-slug="${s.slug}" onclick="event.preventDefault();selectStartup('${s.slug}')">${s.slug}</a>`
+    ).join('');
+
+    // Show first startup as default preview
+    if (allStartups.length > 0) {
+      selectStartup(allStartups[0].slug);
+    } else {
+      badgePreview.innerHTML = '<div class="loading">No startup data available</div>';
+    }
+  } catch (err) {
+    badgePreview.innerHTML = `<div class="loading" style="color:#f87171">⚠ Error loading startup data: ${err.message}</div>`;
+  }
+}
+
+// Filter search results
+searchInput.addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if (!q) {
+    searchResults.style.display = 'none';
+    return;
+  }
+
+  const matches = allStartups.filter(s =>
+    s.name.toLowerCase().includes(q) ||
+    s.slug.toLowerCase().includes(q) ||
+    s.sector.toLowerCase().includes(q)
+  ).slice(0, 30);
+
+  if (matches.length === 0) {
+    searchResults.innerHTML = `<div class="result-item" style="color:#64748b;justify-content:center">No matching startups — <a href="#" style="color:#60a5fa" onclick="event.preventDefault();openVelocityCheck()">check velocity instead?</a></div>`;
+  } else {
+    searchResults.innerHTML = `<div class="result-count">${matches.length} startup${matches.length !== 1 ? 's' : ''} found</div>` +
+      matches.map(m =>
+        `<div class="result-item" onclick="selectStartup('${m.slug}');searchInput.value='${m.name}';searchResults.style.display='none'">
+          <div>
+            <div class="name">${m.name}</div>
+            <div class="meta">${m.stage} · ${m.sector}</div>
+          </div>
+          <div class="sector">${m.signalType}</div>
+        </div>`
+      ).join('');
+  }
+  searchResults.style.display = 'block';
+});
+
+// Hide search results on blur
+searchInput.addEventListener('blur', function() {
+  setTimeout(() => { searchResults.style.display = 'none'; }, 200);
+});
+searchInput.addEventListener('focus', function() {
+  if (this.value.trim()) {
+    this.dispatchEvent(new Event('input'));
+  }
+});
+
+function openVelocityCheck() {
+  window.location.href = '/check-velocity';
+}
+
+// Select a startup and show its badge
+function selectStartup(slug) {
+  badgePreview.innerHTML = `<div class="loading"><span class="spinner">⟳</span> Loading badge…</div>`;
+  embedSection.style.display = 'none';
+
+  const img = new Image();
+  const badgeUrl = `${BADGE_BASE}/${encodeURIComponent(slug)}`;
+
+  img.onload = function() {
+    badgePreview.innerHTML = '';
+    badgePreview.appendChild(img);
+    embedSection.style.display = 'block';
+    embedCode.textContent = `[![VC Deal Flow Signal](${badgeUrl})](https://gitdealflow.com)`;
+
+    // Show slug info
+    const startup = allStartups.find(s => s.slug === slug);
+    if (startup) {
+      selectedInfo.style.display = 'flex';
+      selectedInfo.innerHTML = `
+        <span class="label">Slug:</span>
+        <span class="value">${startup.slug}</span>
+        <span class="label">Sector:</span>
+        <span class="value">${startup.sector}</span>
+        <span class="label">Stage:</span>
+        <span class="value">${startup.stage}</span>
+      `;
+    } else {
+      selectedInfo.style.display = 'none';
+    }
+  };
+
+  img.onerror = function() {
+    // Try direct load anyway (the SVG might have CORS issues on error handler)
+    badgePreview.innerHTML = `<div class="loading" style="color:#f87171">⚠ Could not load badge for "${slug}"</div>`;
+    embedSection.style.display = 'block';
+    embedCode.textContent = `[![VC Deal Flow Signal](${badgeUrl})](https://gitdealflow.com)`;
+    selectedInfo.style.display = 'none';
+  };
+
+  img.src = badgeUrl;
+  img.alt = `VC Deal Flow Signal — ${slug}`;
+  img.style.maxWidth = '100%';
+  img.style.borderRadius = '0.375rem';
+}
+
+function copyEmbedCode() {
+  const text = embedCode.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copyEmbedBtn');
+    btn.textContent = '✅ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '📋 Copy to Clipboard';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+// Legacy copy helper for toast
+window.copyText = function(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const text = el.textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+  });
+};
+
+init();
+</script>
+<script defer="" src="/api/track.js"></script>
+<!-- ===== NEWSLETTER SIGNUP ===== -->
+<div class="gdf-newsletter-form" data-source="startup-badges"></div>
+<script defer="" src="/newsletter-form.js"></script>
+<script defer="" src="/share.js"></script>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</body>
+</html>

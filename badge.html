@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GitDealFlow — Embeddable Stats Badge</title>
+<meta content="Embed GitDealFlow's live stats badge on your site. Shows startups tracked, sectors monitored, and weekly signals." name="description"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+    .container { max-width: 820px; margin: 0 auto; padding: 60px 24px; }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle { color: #94a3b8; font-size: 16px; margin-bottom: 48px; }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      color: #e2e8f0;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 28px 0 10px;
+      color: #cbd5e1;
+    }
+    p { color: #94a3b8; margin-bottom: 16px; font-size: 14px; }
+    a { color: #60a5fa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Badge preview */
+    .badge-preview {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .badge-preview img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    /* Code blocks */
+    .code-block {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 16px 20px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+    }
+    pre {
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace;
+      font-size: 13px;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .code-block .comment { color: #64748b; }
+    .code-block .tag { color: #60a5fa; }
+    .code-block .attr { color: #a78bfa; }
+    .code-block .string { color: #34d399; }
+
+    /* Copy button */
+    .code-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .code-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .copy-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      padding: 4px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.15s ease;
+    }
+    .copy-btn:hover {
+      background: #334155;
+      color: #e2e8f0;
+    }
+    .copy-btn.copied {
+      background: #065f46;
+      border-color: #059669;
+      color: #34d399;
+    }
+
+    /* Usage options */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 600px) {
+      .options-grid { grid-template-columns: 1fr; }
+    }
+    .option-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .option-card h3 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+    }
+    .option-card p {
+      font-size: 13px;
+      margin: 0 0 12px 0;
+    }
+    .option-card .badge-sm {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Markdown preview */
+    .markdown-example {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .markdown-example code {
+      color: #34d399;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #1e293b;
+      margin: 48px 0;
+    }
+
+    .footer {
+      text-align: center;
+      color: #475569;
+      font-size: 13px;
+      margin-top: 48px;
+    }
+  </style>
+<meta content="Badge, startup engineering velocity, GitHub signals, deal flow, venture capital, startup funding" name="news_keywords"/>
+<meta content="Badge" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="GitHub signals" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "GitDealFlow \u2014 Embeddable Stats Badge",
+      "description": "Embed GitDealFlow's live stats badge on your site. Shows startups tracked, sectors monitored, and weekly signals.",
+      "image": "https://gitdealflow.com/og.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script><link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://gitdealflow.com/badge" rel="canonical"/>
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@data_nerd" name="twitter:site"/>
+<meta content="@data_nerd" name="twitter:creator"/>
+<meta content="Embeddable Engineering Velocity Badge for GitHub README" name="twitter:title"/>
+<meta content="Explore startup engineering velocity signals at GitDealFlow." name="twitter:description"/>
+<meta content="https://gitdealflow.com/og.png" name="twitter:image"/>
+<meta name="format-detection" content="telephone=no"/>
+</head>
+<body>
+<div class="container">
+<h1>📊 Live Stats Badge</h1>
+<p class="subtitle">Embed GitDealFlow's real-time badge on your website, README, or dashboard.</p>
+<!-- Live preview -->
+<h2>Live Preview</h2>
+<div class="badge-preview">
+<img alt="GitDealFlow Stats" id="live-badge" src="/api/badge/stats"/ loading="lazy" width="auto" height="auto">
+</div>
+<p style="text-align:center;font-size:13px;">
+      The badge above updates automatically as our dataset grows.
+      <br/>
+<a href="/api/badge/stats" target="_blank">Open raw SVG →</a>
+</p>
+<hr/>
+<!-- Embed: HTML -->
+<h2>Embed Options</h2>
+<div class="code-header">
+<span class="code-label">HTML — &lt;img&gt; tag</span>
+<button class="copy-btn" onclick="copyCode(this, 'html-embed')">Copy</button>
+</div>
+<div class="code-block">
+<pre id="html-embed">&lt;img src="https://gitdealflow.com/api/badge/stats"
+     alt="GitDealFlow — Startup Engineering Signals"&gt;</pre>
+</div>
+<div class="code-header">
+<span class="code-label">Markdown</span>
+<button class="copy-btn" onclick="copyCode(this, 'md-embed')">Copy</button>
+</div>
+<div class="code-block">
+<pre id="md-embed">![GitDealFlow Stats](https://gitdealflow.com/api/badge/stats)</pre>
+</div>
+<div class="code-header">
+<span class="code-label">HTML — with link (clickable badge)</span>
+<button class="copy-btn" onclick="copyCode(this, 'link-embed')">Copy</button>
+</div>
+<div class="code-block">
+<pre id="link-embed">&lt;a href="https://gitdealflow.com" target="_blank"&gt;
+  &lt;img src="https://gitdealflow.com/api/badge/stats"
+       alt="GitDealFlow — Startup Engineering Signals"&gt;
+&lt;/a&gt;</pre>
+</div>
+<hr/>
+<!-- Usage ideas -->
+<h2>Where to Use It</h2>
+<div class="options-grid">
+<div class="option-card">
+<h3>📌 GitHub README</h3>
+<p>Show your project visitors that you cite real startup data.</p>
+<div class="badge-sm">
+<img alt="stats" src="/api/badge/stats" style="max-width:100%;border-radius:4px;"/ loading="lazy" width="auto" height="auto">
+</div>
+</div>
+<div class="option-card">
+<h3>🌐 Blog Sidebar</h3>
+<p>Embed in your blog or newsletter to show live stats.</p>
+<div class="badge-sm">
+<img alt="stats" src="/api/badge/stats" style="max-width:100%;border-radius:4px;"/ loading="lazy" width="auto" height="auto">
+</div>
+</div>
+<div class="option-card">
+<h3>📰 Research Papers</h3>
+<p>Cite the dataset with a live badge in your paper's online version.</p>
+</div>
+<div class="option-card">
+<h3>📊 Dashboard Widget</h3>
+<p>Drop into any dashboard that supports external images.</p>
+</div>
+</div>
+<hr/>
+<!-- API details -->
+<h2>API Reference</h2>
+<h3>Endpoint</h3>
+<div class="code-block">
+<pre>GET https://gitdealflow.com/api/badge/stats</pre>
+</div>
+<h3>Response Headers</h3>
+<div class="code-block">
+<pre><span class="comment">// Content negotiation</span>
+Content-Type: image/svg+xml; charset=utf-8
+Access-Control-Allow-Origin: *
+
+<span class="comment">// Caching — CDN caches for 1h, browser for 5min</span>
+Cache-Control: public, s-maxage=3600, max-age=300, stale-while-revalidate=86400
+
+<span class="comment">// Security</span>
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY</pre>
+</div>
+<h3>Caching Behavior</h3>
+<p>
+      The badge is cached at the CDN edge for <strong>1 hour</strong> (s-maxage=3600)
+      and in the browser for <strong>5 minutes</strong> (max-age=300).
+      During revalidation, <strong>stale content is served for up to 24 hours</strong>
+      (stale-while-revalidate=86400), so the badge never goes blank.
+    </p>
+<h3>CORS</h3>
+<p>
+      The endpoint allows cross-origin requests via
+      <code>Access-Control-Allow-Origin: *</code>, so it works from any domain,
+      including <code>&lt;img&gt;</code> tags, CSS <code>background-image</code>,
+      and SVG <code>&lt;use&gt;</code> elements.
+    </p>
+<hr/>
+<h2>Stats Legend</h2>
+<div class="options-grid">
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:20px;">
+<strong style="color:#60a5fa;">400+ Startups Tracked</strong>
+<p style="font-size:13px;margin:6px 0 0;">Active GitHub orgs monitored for commit velocity, contributor growth, and repository expansion.</p>
+</div>
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:20px;">
+<strong style="color:#60a5fa;">20 Sectors Monitored</strong>
+<p style="font-size:13px;margin:6px 0 0;">From AI/ML and fintech to space tech and robotics — each with curated org lists.</p>
+</div>
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:20px;">
+<strong style="color:#60a5fa;">1,200+ Weekly Signals</strong>
+<p style="font-size:13px;margin:6px 0 0;">Breakout engineering teams surfaced 3-6 weeks before fundraise announcements.</p>
+</div>
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:20px;">
+<strong style="color:#60a5fa;">SSRN Research</strong>
+<p style="font-size:13px;margin:6px 0 0;">Academic preprint at SSRN (ID 6606558). Formal citation available for academic use.</p>
+</div>
+</div>
+<div class="footer">
+<a href="https://gitdealflow.com">gitdealflow.com</a> ·
+      <a href="https://signals.gitdealflow.com">signals.gitdealflow.com</a> ·
+      <a href="https://gitdealflow.com/api">API docs</a>
+</div>
+</div>
+<script>
+  function copyCode(btn, elementId) {
+    const text = document.getElementById(elementId).textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+  </script>
+<script defer="" src="/share.js"></script>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</body>
+</html>

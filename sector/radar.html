@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sector Velocity Radar — Interactive Startup Engineering Dashboard | GitDealFlow</title>
+<meta content="Interactive radar visualization of startup engineering velocity across 15 sectors. Compare commit momentum, hiring bursts, infrastructure buildouts, and deploy spikes per sector. Free VC research tool." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://gitdealflow.com/sector-radar" rel="canonical"/>
+<meta content="Sector Velocity Radar — Interactive Startup Engineering Dashboard" property="og:title"/>
+<meta content="Compare engineering velocity across 15 sectors. Hover for startup counts, top accelerators, and signal distribution. Free interactive VC research tool." property="og:description"/>
+<meta content="https://signals.gitdealflow.com/opengraph-image" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="https://gitdealflow.com/sector-radar" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Sector Velocity Radar — Interactive Startup Engineering Dashboard" name="twitter:title"/>
+<meta content="Interactive radar of startup engineering velocity across 15 sectors. Free VC research tool." name="twitter:description"/>
+<meta content="sector velocity, startup engineering radar, sector comparison, VC sector analysis, startup velocity by sector, engineering momentum, GitDealFlow" name="news_keywords"/>
+<meta content="sector analysis,engineering velocity,startup radar,VC tools,deal flow" name="article:tag"/>
+<meta content="index,follow,max-image-preview:large" name="googlebot"/>
+<meta content="notranslate" name="google"/>
+<meta name="format-detection" content="telephone=no"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": [
+        "WebApplication",
+        "WebPage"
+      ],
+      "name": "Sector Velocity Radar \u2014 Interactive Startup Engineering Dashboard",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Interactive radar dashboard comparing startup engineering velocity across 15 sectors. Built on real GitHub commit data.",
+      "featureList": [
+        "Radial velocity visualization for 15 sectors",
+        "Per-sector signal distribution breakdown",
+        "Top accelerating startup per sector",
+        "Live search and filter by sector name",
+        "Auto-scaling canvas for any screen size"
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Sector Velocity Radar \u2014 Interactive Startup Engineering Dashboard | GitDealFlow",
+      "description": "Interactive radar visualization of startup engineering velocity across 15 sectors. Compare commit momentum, hiring bursts, infrastructure buildouts, and deploy spikes per sector. Free VC research tool.",
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://gitdealflow.com/tools"},
+      {"@type": "ListItem", "position": 3, "name": "Sector Velocity Radar"}
+    ]
+  }
+  </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "GitDealFlow Startup Engineering Signals Dataset",
+    "description": "Engineering velocity metrics for ~400 tracked startup GitHub organizations across 15 sectors. Commit velocity, contributor growth, and acceleration signals updated weekly.",
+    "url": "https://signals.gitdealflow.com/api/signals.json",
+    "sameAs": "https://gitdealflow.com/dataset",
+    "keywords": ["startup velocity", "engineering metrics", "GitHub activity", "VC signals", "sector analysis"],
+    "temporalCoverage": "2024-01/2026-07",
+    "variableMeasured": [
+      {"@type": "PropertyValue", "name": "commit_velocity_change", "unitText": "Percent"},
+      {"@type": "PropertyValue", "name": "contributor_growth", "unitText": "Percent"},
+      {"@type": "PropertyValue", "name": "hiring_bursts", "unitText": "Count"}
+    ],
+    "creator": {
+      "@type": "Organization",
+      "name": "GitDealFlow",
+      "url": "https://gitdealflow.com"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "contentUrl": "https://signals.gitdealflow.com/api/signals.json",
+        "encodingFormat": "application/json"
+      },
+      {
+        "@type": "DataDownload",
+        "contentUrl": "https://signals.gitdealflow.com/api/signals.csv",
+        "encodingFormat": "text/csv"
+      }
+    ]
+  }
+  </script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #0b1120;
+      color: #e2e8f0;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid #1e293b;
+      background: #0b1120;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; }
+    nav a:hover { color: #60a5fa; }
+    .logo { font-weight: 700; font-size: 1.1rem; color: #f1f5f9; }
+    .logo span { color: #60a5fa; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .page-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .page-title .icon { font-size: 1.5rem; }
+
+    .subtitle {
+      color: #94a3b8;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      max-width: 700px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .search-wrapper {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+      max-width: 360px;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      padding: 0.65rem 1rem 0.65rem 2.4rem;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 0.5rem;
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-wrapper input:focus {
+      border-color: #3b82f6;
+    }
+
+    .search-wrapper input::placeholder {
+      color: #475569;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #475569;
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    .legend {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .chart-wrapper {
+      position: relative;
+      background: #0b1120;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      min-height: 500px;
+    }
+
+    .chart-wrapper canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+
+    /* Tooltip overlay */
+    #tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 50;
+      max-width: 260px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      line-height: 1.5;
+    }
+
+    #tooltip.visible {
+      opacity: 1;
+    }
+
+    #tooltip .tt-name {
+      font-weight: 600;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    #tooltip .tt-velocity {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #60a5fa;
+    }
+
+    #tooltip .tt-meta {
+      color: #94a3b8;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Detail panel */
+    #detail-panel {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 400px;
+      height: 100vh;
+      background: #0f172a;
+      border-left: 1px solid #1e293b;
+      z-index: 200;
+      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+    }
+
+    #detail-panel.open {
+      right: 0;
+    }
+
+    #detail-panel .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 1px solid #1e293b;
+      color: #94a3b8;
+      width: 32px;
+      height: 32px;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    #detail-panel .close-btn:hover {
+      background: #1e293b;
+      color: #e2e8f0;
+    }
+
+    .dp-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .dp-sector-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .dp-sector-name .dp-color-badge {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .dp-velocity-big {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0.75rem 0 0.25rem;
+    }
+
+    .dp-velocity-label {
+      color: #64748b;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .dp-stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .dp-stat-card {
+      background: #0b1120;
+      border: 1px solid #1e293b;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+    }
+
+    .dp-stat-card .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+
+    .dp-stat-card .stat-label {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 0.15rem;
+    }
+
+    .dp-stat-card .stat-accent-blue { color: #60a5fa; }
+    .dp-stat-card .stat-accent-green { color: #34d399; }
+    .dp-stat-card .stat-accent-yellow { color: #fbbf24; }
+    .dp-stat-card .stat-accent-red { color: #f87171; }
+    .dp-stat-card .stat-accent-purple { color: #a78bfa; }
+
+    .dp-top-startup {
+      background: #0b1120;
+      border: 1px solid #1e293b;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .dp-top-startup .label {
+      font-size: 0.75rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .dp-top-startup .name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .dp-top-startup .velocity {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #34d399;
+    }
+
+    .dp-signal-bars {
+      margin-top: 1rem;
+    }
+
+    .dp-signal-bars .sb-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+    }
+
+    .signal-bar-item {
+      margin-bottom: 0.6rem;
+    }
+
+    .signal-bar-item .sb-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .signal-bar-item .sb-row .sb-label {
+      color: #94a3b8;
+    }
+
+    .signal-bar-item .sb-row .sb-value {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .signal-bar-track {
+      height: 4px;
+      background: #1e293b;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .signal-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.5s ease;
+    }
+
+    .dp-footer-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .dp-footer-link:hover {
+      background: #334155;
+    }
+
+    /* Overlay when panel is open */
+    #panel-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 150;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s;
+    }
+
+    #panel-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* No results */
+    .no-results {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #475569;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .no-results.visible {
+      display: block;
+    }
+
+    /* Footer stats bar */
+    .stats-bar {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 1rem 0;
+      border-top: 1px solid #1e293b;
+      margin-top: 1rem;
+    }
+
+    .stats-bar .stat {
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+
+    .stats-bar .stat strong {
+      color: #e2e8f0;
+    }
+
+    .footer-links {
+      border-top: 1px solid #1e293b;
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a:hover {
+      color: #60a5fa;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      .page-title { font-size: 1.35rem; }
+      .controls { flex-direction: column; align-items: stretch; }
+      .search-wrapper { max-width: none; }
+      #detail-panel { width: 100%; right: -100%; }
+      .dp-stat-grid { grid-template-columns: 1fr 1fr; }
+      .stats-bar { gap: 1rem; }
+    }
+  </style>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="/">GitDeal<span>Flow</span></a>
+<div>
+<a href="https://signals.gitdealflow.com" style="margin-right:1rem">Signals</a>
+<a href="/tools">Tools</a>
+</div>
+</nav>
+</header>
+<div class="container">
+<h1 class="page-title">
+<span class="icon">📡</span>
+    Sector Velocity Radar
+  </h1>
+<p class="subtitle">
+    Interactive radial visualization of startup engineering velocity across 15 sectors.
+    Bubble size = average commit-velocity change (%). Hover any sector for details,
+    click to drill into signal distribution, top accelerators, and startup counts.
+  </p>
+<div class="controls">
+<div class="search-wrapper">
+<span class="search-icon">🔍</span>
+<input autocomplete="off" id="search-input" placeholder="Search sectors..." type="text"/>
+</div>
+<div class="legend">
+<span style="color:#64748b;font-weight:600;">Velocity:</span>
+<span class="legend-item"><span class="legend-dot" style="background:#34d399"></span> High (180+)</span>
+<span class="legend-item"><span class="legend-dot" style="background:#fbbf24"></span> Mid (100–179)</span>
+<span class="legend-item"><span class="legend-dot" style="background:#f87171"></span> Low (&lt;100)</span>
+</div>
+</div>
+<div class="chart-wrapper">
+<canvas id="radar-canvas"></canvas>
+<div id="tooltip"></div>
+<div class="no-results" id="no-results">No sectors match your search</div>
+</div>
+<div class="stats-bar">
+<div class="stat">Sectors tracked: <strong id="stat-sectors">15</strong></div>
+<div class="stat">Total startups: <strong id="stat-startups">324</strong></div>
+<div class="stat">Avg velocity: <strong id="stat-avg-velocity">—</strong></div>
+<div class="stat">Data: <strong>GitHub commit activity</strong></div>
+</div>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/tools">All Tools</a>
+<a href="/check-velocity">Velocity Checker</a>
+<a href="/dataset">Dataset</a>
+<a href="https://signals.gitdealflow.com/api/signals.json">API →</a>
+</div>
+</div>
+<!-- Detail panel -->
+<div id="panel-overlay"></div>
+<div id="detail-panel">
+<button aria-label="Close panel" class="close-btn" id="panel-close">✕</button>
+<div id="panel-content"></div>
+</div>
+<script>
+(function() {
+  'use strict';
+
+  // ── Inline data ────────────────────────────────────────────────
+  var SECTOR_DATA = {
+    sectors: [
+      {name: 'Healthcare',          startupCount: 24, avgVelocityChange: 92,  topStartup: 'aipoch',           topVelocity: '+1362%', hiringBurstCount: 5,  infraBuildoutCount: 3,  deploySpikeCount: 2,  frameworkMigrationCount: 14},
+      {name: 'EdTech',              startupCount: 34, avgVelocityChange: 210, topStartup: 'ccao-data',        topVelocity: '+999%',  hiringBurstCount: 7,  infraBuildoutCount: 3,  deploySpikeCount: 5,  frameworkMigrationCount: 19},
+      {name: 'AI/ML',              startupCount: 28, avgVelocityChange: 156, topStartup: 'photoflare',       topVelocity: '+1600%', hiringBurstCount: 6,  infraBuildoutCount: 5,  deploySpikeCount: 8,  frameworkMigrationCount: 9},
+      {name: 'Fintech',             startupCount: 22, avgVelocityChange: 78,  topStartup: 'null',             topVelocity: '+600%',  hiringBurstCount: 4,  infraBuildoutCount: 2,  deploySpikeCount: 3,  frameworkMigrationCount: 13},
+      {name: 'DevTools',            startupCount: 35, avgVelocityChange: 185, topStartup: 'vuestorefront',    topVelocity: '+999%',  hiringBurstCount: 8,  infraBuildoutCount: 6,  deploySpikeCount: 10, frameworkMigrationCount: 11},
+      {name: 'eCommerce',           startupCount: 18, avgVelocityChange: 220, topStartup: 'ecomplus',         topVelocity: '+999%',  hiringBurstCount: 3,  infraBuildoutCount: 2,  deploySpikeCount: 7,  frameworkMigrationCount: 6},
+      {name: 'Cybersecurity',       startupCount: 20, avgVelocityChange: 95,  topStartup: 'Velocidex',        topVelocity: '+999%',  hiringBurstCount: 5,  infraBuildoutCount: 4,  deploySpikeCount: 6,  frameworkMigrationCount: 5},
+      {name: 'Infrastructure',      startupCount: 30, avgVelocityChange: 145, topStartup: 'coollabsio',       topVelocity: '+250%',  hiringBurstCount: 7,  infraBuildoutCount: 8,  deploySpikeCount: 9,  frameworkMigrationCount: 6},
+      {name: 'Data & Analytics',    startupCount: 16, avgVelocityChange: 88,  topStartup: 'pandas-dev',       topVelocity: '+500%',  hiringBurstCount: 3,  infraBuildoutCount: 2,  deploySpikeCount: 4,  frameworkMigrationCount: 7},
+      {name: 'Gaming',              startupCount: 12, avgVelocityChange: 175, topStartup: 'Yellow-Dog-Man',   topVelocity: '+999%',  hiringBurstCount: 2,  infraBuildoutCount: 1,  deploySpikeCount: 5,  frameworkMigrationCount: 4},
+      {name: 'Enterprise SaaS',     startupCount: 40, avgVelocityChange: 110, topStartup: 'GetStream',         topVelocity: '+300%',  hiringBurstCount: 10, infraBuildoutCount: 4,  deploySpikeCount: 12, frameworkMigrationCount: 14},
+      {name: 'HR Tech',             startupCount: 8,  avgVelocityChange: 65,  topStartup: 'zapplyjobs',       topVelocity: '+2%',    hiringBurstCount: 2,  infraBuildoutCount: 1,  deploySpikeCount: 2,  frameworkMigrationCount: 3},
+      {name: 'Marketing & Sales',   startupCount: 14, avgVelocityChange: 130, topStartup: 'solidusio',        topVelocity: '+999%',  hiringBurstCount: 3,  infraBuildoutCount: 2,  deploySpikeCount: 5,  frameworkMigrationCount: 4},
+      {name: 'Mobile',              startupCount: 11, avgVelocityChange: 95,  topStartup: 'nextcloud',        topVelocity: '+150%',  hiringBurstCount: 2,  infraBuildoutCount: 1,  deploySpikeCount: 4,  frameworkMigrationCount: 4},
+      {name: 'Crypto/Web3',         startupCount: 12, avgVelocityChange: 60,  topStartup: 'eclipse-zenoh',    topVelocity: '+150%',  hiringBurstCount: 2,  infraBuildoutCount: 1,  deploySpikeCount: 3,  frameworkMigrationCount: 6}
+    ]
+  };
+
+  // ── Color palette (15 distinct colors) ─────────────────────────
+  var COLORS = [
+    '#3b82f6', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b',
+    '#ef4444', '#ec4899', '#14b8a6', '#f97316', '#6366f1',
+    '#84cc16', '#0ea5e9', '#a855f7', '#22d3ee', '#d946ef'
+  ];
+
+  // ── Velocity threshold colors ──────────────────────────────────
+  function velocityColor(v) {
+    if (v >= 180) return '#34d399';
+    if (v >= 100) return '#fbbf24';
+    return '#f87171';
+  }
+
+  function velocityGlow(v) {
+    if (v >= 180) return 'rgba(52,211,153,0.15)';
+    if (v >= 100) return 'rgba(251,191,36,0.12)';
+    return 'rgba(248,113,113,0.12)';
+  }
+
+  // ── DOM refs ───────────────────────────────────────────────────
+  var canvas = document.getElementById('radar-canvas');
+  var ctx = canvas.getContext('2d');
+  var tooltip = document.getElementById('tooltip');
+  var noResults = document.getElementById('no-results');
+  var searchInput = document.getElementById('search-input');
+  var detailPanel = document.getElementById('detail-panel');
+  var panelContent = document.getElementById('panel-content');
+  var panelOverlay = document.getElementById('panel-overlay');
+  var panelClose = document.getElementById('panel-close');
+
+  // ── State ──────────────────────────────────────────────────────
+  var sectors = SECTOR_DATA.sectors;
+  var totalSectors = sectors.length;
+  var nodes = [];         // rendered node positions
+  var hoveredIndex = -1;
+  var selectedIndex = -1;
+  var animFrame = null;
+  var animTime = 0;
+  var dpr = 1;
+
+  // ── Compute dimensions ─────────────────────────────────────────
+  function getContainerSize() {
+    var wrapper = canvas.parentElement;
+    var w = wrapper.clientWidth;
+    var h = Math.max(500, window.innerHeight * 0.7);
+    return { w: Math.floor(w), h: Math.floor(h) };
+  }
+
+  function resize() {
+    var size = getContainerSize();
+    var rect = canvas.parentElement.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = size.w * dpr;
+    canvas.height = size.h * dpr;
+    canvas.style.width = size.w + 'px';
+    canvas.style.height = size.h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    layout(size.w, size.h);
+    draw();
+  }
+
+  // ── Layout: position nodes radially ────────────────────────────
+  function layout(cw, ch) {
+    var cx = cw / 2;
+    var cy = ch / 2;
+    var radius = Math.min(cw, ch) * 0.34;
+    // Clamp radius to avoid edge clipping
+    radius = Math.max(radius, 140);
+    radius = Math.min(radius, Math.min(cw, ch) * 0.42);
+
+    var maxVel = 0;
+    for (var i = 0; i < totalSectors; i++) {
+      if (sectors[i].avgVelocityChange > maxVel) maxVel = sectors[i].avgVelocityChange;
+    }
+
+    nodes = [];
+    var filtered = getFilteredIndices();
+
+    for (var i = 0; i < totalSectors; i++) {
+      var angle = (i / totalSectors) * Math.PI * 2 - Math.PI / 2;
+      var v = sectors[i].avgVelocityChange;
+      // Min radius 10px, max 52px, scaled linearly
+      var bubbleR = 10 + (v / maxVel) * 42;
+      var x = cx + Math.cos(angle) * radius;
+      var y = cy + Math.sin(angle) * radius;
+
+      nodes.push({
+        index: i,
+        x: x,
+        y: y,
+        angle: angle,
+        bubbleR: bubbleR,
+        visible: filtered.indexOf(i) !== -1,
+        sector: sectors[i]
+      });
+    }
+  }
+
+  function getFilteredIndices() {
+    var query = searchInput.value.trim().toLowerCase();
+    if (!query) {
+      var all = [];
+      for (var i = 0; i < totalSectors; i++) all.push(i);
+      return all;
+    }
+    var results = [];
+    for (var i = 0; i < totalSectors; i++) {
+      if (sectors[i].name.toLowerCase().indexOf(query) !== -1) {
+        results.push(i);
+      }
+    }
+    return results;
+  }
+
+  // ── Drawing ────────────────────────────────────────────────────
+  function draw() {
+    if (!canvas || !ctx) return;
+    var cw = canvas.width / dpr;
+    var ch = canvas.height / dpr;
+    var cx = cw / 2;
+    var cy = ch / 2;
+
+    // Clear
+    ctx.clearRect(0, 0, cw, ch);
+
+    // Background subtle radial gradient
+    var grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, Math.min(cw, ch) * 0.5);
+    grad.addColorStop(0, 'rgba(59,130,246,0.04)');
+    grad.addColorStop(0.5, 'rgba(59,130,246,0.02)');
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, cw, ch);
+
+    // Concentric guide rings
+    var ringDist = Math.min(cw, ch) * 0.085;
+    var maxRing = 4;
+    ctx.strokeStyle = 'rgba(30,41,59,0.6)';
+    ctx.lineWidth = 1;
+    for (var r = 1; r <= maxRing; r++) {
+      ctx.beginPath();
+      ctx.arc(cx, cy, ringDist * r, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    // Ring labels
+    ctx.fillStyle = '#475569';
+    ctx.font = '10px -apple-system, BlinkMacSystemFont, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+    var ringValues = ['60', '120', '180', '240'];
+    for (var r = 1; r <= maxRing; r++) {
+      ctx.fillText(ringValues[r-1] || '', cx + 4, cy - ringDist * r - 6);
+    }
+
+    // Connecting lines from center to each VISIBLE node
+    ctx.strokeStyle = 'rgba(30,41,59,0.4)';
+    ctx.lineWidth = 1;
+    for (var i = 0; i < nodes.length; i++) {
+      if (!nodes[i].visible) continue;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(nodes[i].x, nodes[i].y);
+      ctx.stroke();
+    }
+
+    // Draw bubble shadows
+    for (var i = 0; i < nodes.length; i++) {
+      if (!nodes[i].visible) continue;
+      var n = nodes[i];
+      var v = n.sector.avgVelocityChange;
+      var glow = velocityGlow(v);
+      var glowGrad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.bubbleR * 2.5);
+      glowGrad.addColorStop(0, glow);
+      glowGrad.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = glowGrad;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.bubbleR * 2.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Draw bubbles
+    for (var i = 0; i < nodes.length; i++) {
+      if (!nodes[i].visible) continue;
+      var n = nodes[i];
+      var v = n.sector.avgVelocityChange;
+      var color = COLORS[n.index % COLORS.length];
+      var isHovered = (hoveredIndex === n.index);
+      var isSelected = (selectedIndex === n.index);
+      var baseR = n.bubbleR;
+
+      // Hover/selected ring
+      if (isHovered || isSelected) {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, baseR + 5, 0, Math.PI * 2);
+        ctx.strokeStyle = isSelected ? '#60a5fa' : 'rgba(255,255,255,0.3)';
+        ctx.lineWidth = isSelected ? 2.5 : 1.5;
+        ctx.stroke();
+      }
+
+      // Bubble fill
+      var grad = ctx.createRadialGradient(n.x - baseR * 0.3, n.y - baseR * 0.3, 0, n.x, n.y, baseR);
+      grad.addColorStop(0, lightenColor(color, 30));
+      grad.addColorStop(1, color);
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, baseR, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Border
+      ctx.strokeStyle = 'rgba(255,255,255,0.12)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Draw labels (after bubbles so they sit on top)
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.font = '11px -apple-system, BlinkMacSystemFont, sans-serif';
+
+    for (var i = 0; i < nodes.length; i++) {
+      if (!nodes[i].visible) continue;
+      var n = nodes[i];
+      var labelY = n.y - n.bubbleR - 6;
+
+      // Label background
+      var label = n.sector.name;
+      var labelH = 14;
+      var labelW = ctx.measureText(label).width + 8;
+      ctx.fillStyle = 'rgba(11,17,32,0.75)';
+      var lx = n.x - labelW / 2;
+      var ly = labelY - 2;
+      roundRect(ctx, lx, ly, labelW, labelH + 4, 3);
+      ctx.fill();
+
+      ctx.fillStyle = '#e2e8f0';
+      ctx.textBaseline = 'bottom';
+      ctx.font = '11px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.fillText(label, n.x, labelY + 2);
+
+      // Velocity value below bubble
+      ctx.textBaseline = 'top';
+      ctx.font = 'bold 12px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.fillStyle = velocityColor(n.sector.avgVelocityChange);
+      ctx.fillText('+' + n.sector.avgVelocityChange + '%', n.x, n.y + n.bubbleR + 4);
+    }
+
+    // Center label
+    ctx.fillStyle = 'rgba(148,163,184,0.3)';
+    ctx.font = '10px -apple-system, BlinkMacSystemFont, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('ENGINEERING VELOCITY', cx, cy + 6);
+    ctx.fillStyle = 'rgba(148,163,184,0.2)';
+    ctx.font = '9px -apple-system, BlinkMacSystemFont, sans-serif';
+    ctx.fillText('by Sector', cx, cy + 20);
+  }
+
+  function lightenColor(hex, percent) {
+    var num = parseInt(hex.replace('#',''), 16);
+    var r = Math.min(255, (num >> 16) + percent);
+    var g = Math.min(255, ((num >> 8) & 0x00FF) + percent);
+    var b = Math.min(255, (num & 0x0000FF) + percent);
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+  }
+
+  function roundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w - r, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    ctx.lineTo(x + w, y + h - r);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    ctx.lineTo(x + r, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    ctx.lineTo(x, y + r);
+    ctx.quadraticCurveTo(x, y, x + r, y);
+    ctx.closePath();
+  }
+
+  // ── Hit detection ──────────────────────────────────────────────
+  function findNode(px, py) {
+    // Search in reverse order (draw order = top visually)
+    for (var i = nodes.length - 1; i >= 0; i--) {
+      if (!nodes[i].visible) continue;
+      var n = nodes[i];
+      var dx = px - n.x;
+      var dy = py - n.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      // Click area = bubble radius + 8px padding
+      if (dist <= n.bubbleR + 10) return n.index;
+    }
+    return -1;
+  }
+
+  // ── Tooltip ────────────────────────────────────────────────────
+  function showTooltip(index, cx2, cy2) {
+    var s = sectors[index];
+    if (!s) return;
+    tooltip.innerHTML =
+      '<div class="tt-name">' + s.name + '</div>' +
+      '<div class="tt-velocity">+' + s.avgVelocityChange + '%</div>' +
+      '<div class="tt-meta">' + s.startupCount + ' startups · Top: ' + s.topStartup + ' (' + s.topVelocity + ')</div>';
+    var wrapper = canvas.parentElement;
+    var rect = wrapper.getBoundingClientRect();
+    var tx = cx2 + 16;
+    var ty = cy2 - 20;
+    // Keep tooltip within wrapper
+    var tw = 260;
+    var th = 80;
+    if (tx + tw > rect.width - 10) tx = cx2 - tw - 16;
+    if (ty < 10) ty = 10;
+    if (ty + th > rect.height - 10) ty = rect.height - th - 10;
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top = ty + 'px';
+    tooltip.classList.add('visible');
+  }
+
+  function hideTooltip() {
+    tooltip.classList.remove('visible');
+  }
+
+  // ── Detail panel ───────────────────────────────────────────────
+  function openDetail(index) {
+    selectedIndex = index;
+    var s = sectors[index];
+    var color = COLORS[index % COLORS.length];
+    var vColor = velocityColor(s.avgVelocityChange);
+    var maxSignal = Math.max(s.hiringBurstCount, s.infraBuildoutCount, s.deploySpikeCount, s.frameworkMigrationCount) || 1;
+
+    panelContent.innerHTML =
+      '<div class="dp-header">' +
+        '<div class="dp-sector-name">' +
+          '<span class="dp-color-badge" style="background:' + color + '"></span>' +
+          s.name +
+        '</div>' +
+        '<div class="dp-velocity-big" style="color:' + vColor + '">+' + s.avgVelocityChange + '%</div>' +
+        '<div class="dp-velocity-label">Average Commit Velocity Change</div>' +
+      '</div>' +
+      '<div class="dp-stat-grid">' +
+        '<div class="dp-stat-card">' +
+          '<div class="stat-value stat-accent-blue">' + s.startupCount + '</div>' +
+          '<div class="stat-label">Tracked Startups</div>' +
+        '</div>' +
+        '<div class="dp-stat-card">' +
+          '<div class="stat-value stat-accent-green">' + s.topVelocity + '</div>' +
+          '<div class="stat-label">Top Startup Velocity</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="dp-top-startup">' +
+        '<div class="label">Top Accelerating Startup</div>' +
+        '<div class="name">' + s.topStartup + '</div>' +
+        '<div class="velocity">' + s.topVelocity + ' velocity change</div>' +
+      '</div>' +
+      '<div class="dp-signal-bars">' +
+        '<div class="sb-title">Signal Distribution</div>' +
+        signalBar('Hiring Bursts', s.hiringBurstCount, maxSignal, '#34d399') +
+        signalBar('Infra Buildouts', s.infraBuildoutCount, maxSignal, '#60a5fa') +
+        signalBar('Deploy Spikes', s.deploySpikeCount, maxSignal, '#fbbf24') +
+        signalBar('Framework Migrations', s.frameworkMigrationCount, maxSignal, '#a78bfa') +
+      '</div>' +
+      '<a href="/sectors/' + s.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '" class="dp-footer-link">View ' + s.name + ' Startups →</a>';
+
+    detailPanel.classList.add('open');
+    panelOverlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    draw();
+  }
+
+  function signalBar(label, value, max, color) {
+    var pct = (value / max) * 100;
+    return '<div class="signal-bar-item">' +
+      '<div class="sb-row"><span class="sb-label">' + label + '</span><span class="sb-value">' + value + '</span></div>' +
+      '<div class="signal-bar-track"><div class="signal-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>' +
+    '</div>';
+  }
+
+  function closeDetail() {
+    selectedIndex = -1;
+    detailPanel.classList.remove('open');
+    panelOverlay.classList.remove('show');
+    document.body.style.overflow = '';
+    draw();
+  }
+
+  // ── Stats bar ──────────────────────────────────────────────────
+  function updateStats() {
+    var total = 0;
+    var sum = 0;
+    for (var i = 0; i < sectors.length; i++) {
+      total += sectors[i].startupCount;
+      sum += sectors[i].avgVelocityChange;
+    }
+    document.getElementById('stat-sectors').textContent = sectors.length;
+    document.getElementById('stat-startups').textContent = total;
+    document.getElementById('stat-avg-velocity').textContent = '+' + Math.round(sum / sectors.length) + '%';
+  }
+
+  // ── Mouse / touch events ──────────────────────────────────────
+  function getCanvasCoords(e) {
+    var rect = canvas.getBoundingClientRect();
+    var clientX, clientY;
+    if (e.touches) {
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
+      e.preventDefault();
+    } else {
+      clientX = e.clientX;
+      clientY = e.clientY;
+    }
+    return { x: clientX - rect.left, y: clientY - rect.top };
+  }
+
+  function onMouseMove(e) {
+    var pos = getCanvasCoords(e);
+    var idx = findNode(pos.x, pos.y);
+
+    if (idx !== hoveredIndex) {
+      hoveredIndex = idx;
+      if (idx === -1) {
+        hideTooltip();
+        canvas.style.cursor = 'default';
+      } else {
+        canvas.style.cursor = 'pointer';
+        showTooltip(idx, pos.x, pos.y);
+      }
+      draw();
+    } else if (idx !== -1) {
+      // Update tooltip position while hovering same node
+      showTooltip(idx, pos.x, pos.y);
+    }
+  }
+
+  function onMouseLeave() {
+    hoveredIndex = -1;
+    hideTooltip();
+    draw();
+  }
+
+  function onClick(e) {
+    var pos = getCanvasCoords(e);
+    var idx = findNode(pos.x, pos.y);
+    if (idx !== -1) {
+      openDetail(idx);
+    }
+  }
+
+  function onTouchStart(e) {
+    var pos = getCanvasCoords(e);
+    var idx = findNode(pos.x, pos.y);
+    if (idx !== -1) {
+      openDetail(idx);
+    } else {
+      closeDetail();
+    }
+  }
+
+  // ── Search ─────────────────────────────────────────────────────
+  var searchDebounce = null;
+  searchInput.addEventListener('input', function() {
+    if (searchDebounce) clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(function() {
+      closeDetail();
+      var cw = canvas.width / dpr;
+      var ch = canvas.height / dpr;
+      layout(cw, ch);
+
+      var visible = 0;
+      for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].visible) visible++;
+      }
+
+      if (visible === 0) {
+        noResults.classList.add('visible');
+      } else {
+        noResults.classList.remove('visible');
+      }
+
+      draw();
+    }, 150);
+  });
+
+  // ── Panel controls ─────────────────────────────────────────────
+  panelClose.addEventListener('click', closeDetail);
+  panelOverlay.addEventListener('click', closeDetail);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeDetail();
+  });
+
+  // ── Canvas events ──────────────────────────────────────────────
+  canvas.addEventListener('mousemove', onMouseMove);
+  canvas.addEventListener('mouseleave', onMouseLeave);
+  canvas.addEventListener('click', onClick);
+  canvas.addEventListener('touchstart', onTouchStart, { passive: false });
+
+  // ── Resize ─────────────────────────────────────────────────────
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      closeDetail();
+      resize();
+    }, 150);
+  });
+
+  // ── Init ───────────────────────────────────────────────────────
+  updateStats();
+  resize();
+
+})();
+</script>
+<script defer="" src="/api/track.js"></script>
+<script defer="" src="/share.js"></script>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</body>
+</html>

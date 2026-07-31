@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Startup Radar — Find Similar Startups by Engineering Signal | GitDealFlow</title>
+<meta content="Enter any startup name and discover similar companies based on engineering velocity, signal type, sector, and contributor patterns. Free, no login." name="description"/>
+<link href="https://gitdealflow.com/radar" rel="canonical"/>
+<meta content="Startup Radar — Find Similar Startups" property="og:title"/>
+<meta content="Enter a startup → discover similar companies by engineering signal patterns." property="og:description"/>
+<meta content="https://gitdealflow.com/radar" property="og:url"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GitDealFlow Startup Radar",
+      "url": "https://gitdealflow.com/radar",
+      "applicationCategory": "BusinessApplication",
+      "description": "Find startups similar to any tracked company based on engineering velocity, signal type, and sector patterns.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Startup Radar \u2014 Find Similar Startups by Engineering Signal | GitDealFlow",
+      "description": "Enter any startup name and discover similar companies based on engineering velocity, signal type, sector, and contributor patterns. Free, no login.",
+      "image": "https://gitdealflow.com/og.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.5}
+    a{color:#60a5fa}
+    .container{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
+    header{text-align:center;padding:3rem 1.5rem;border-bottom:1px solid #1e293b;background:linear-gradient(180deg,#0f172a,#0b1120)}
+    header h1{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem}
+    header p{color:#94a3b8;max-width:450px;margin:0 auto}
+
+    .search-box{max-width:480px;margin:2rem auto;text-align:center}
+    .search-box input{width:100%;padding:.85rem 1rem;border:2px solid #1e293b;border-radius:12px;background:#0b1120;color:#e8eaed;font-size:1rem;outline:none;margin-bottom:.75rem}
+    .search-box input:focus{border-color:#60a5fa}
+    .search-box button{width:100%;padding:.85rem;border:none;border-radius:12px;background:linear-gradient(135deg,#60a5fa,#3b82f6);color:#fff;font-size:1rem;font-weight:600;cursor:pointer}
+    .examples{font-size:.8rem;color:#475569;margin-top:.5rem}
+    .examples a{color:#60a5fa;cursor:pointer}
+
+    .status{text-align:center;padding:.5rem;color:#94a3b8;min-height:2rem}
+
+    .results{display:none;margin:1.5rem 0}
+    .results.visible{display:block}
+
+    .source-card{background:#0f172a;border:1px solid #60a5fa;border-radius:16px;padding:1.25rem;margin-bottom:1.5rem}
+    .source-card .sc-name{font-size:1.1rem;font-weight:700;color:#f1f5f9}
+    .source-card .sc-meta{color:#64748b;font-size:.85rem;margin-top:.25rem}
+    .source-card .sc-tags{display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap}
+    .source-card .sc-tag{padding:.2rem .5rem;border-radius:999px;font-size:.75rem;font-weight:600;background:#1e293b;color:#93c5fd}
+
+    .similar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+    .sim-card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem;cursor:pointer;transition:border-color .2s}
+    .sim-card:hover{border-color:#60a5fa}
+    .sim-card .sim-name{color:#f1f5f9;font-weight:600;font-size:.95rem}
+    .sim-card .sim-detail{color:#64748b;font-size:.8rem;margin-top:.2rem}
+    .sim-card .sim-score{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-size:.7rem;font-weight:600;margin-top:.35rem}
+    .sim-card .sim-signal{font-size:.75rem;color:#93c5fd;margin-top:.25rem}
+
+    .similarity-bar{height:4px;background:#1e293b;border-radius:2px;overflow:hidden;margin-top:.5rem}
+    .similarity-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,#60a5fa,#a78bfa);transition:width .5s}
+
+    footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b;font-size:.8rem}
+
+    @media(max-width:640px){.similar-grid{grid-template-columns:1fr}}
+  </style>
+<!-- Google Discover metadata -->
+<meta content="Radar, deal flow, engineering velocity, venture capital, GitHub, startup" name="news_keywords"/>
+<meta content="Radar" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta content="GitHub" property="article:tag"/>
+<meta content="startup" property="article:tag"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:published_time"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:modified_time"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"}, {"@type": "ListItem", "position": 2, "name": "Startup Radar — Find Similar Startups by Engineering Signal", "item": "https://gitdealflow.com/radar.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GitDealFlow?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow is a VC deal-flow signal tool that flags startups accelerating on GitHub 21–47 days before the round. Track engineering velocity across 4,200+ startup orgs."}}, {"@type": "Question", "name": "How does GitDealFlow work?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow reads public GitHub activity — commits, contributors, repos — to detect engineering acceleration. The signal helps investors find startups before fundraise announcements."}}, {"@type": "Question", "name": "Is GitDealFlow free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GitDealFlow offers a permanent free tier including the weekly Signal Digest and live board at signals.gitdealflow.com."}}]}</script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@data_nerd" name="twitter:site"/>
+<meta content="@data_nerd" name="twitter:creator"/>
+<meta content="Sector Velocity Radar — Startup Engineering Signals Dashboard" name="twitter:title"/>
+<meta content="Explore startup engineering velocity signals at GitDealFlow." name="twitter:description"/>
+<meta content="https://gitdealflow.com/og.png" name="twitter:image"/>
+<meta name="format-detection" content="telephone=no"/>
+</head>
+<body>
+<header>
+<h1>📡 Startup Radar</h1>
+<p>Enter a startup → discover similar companies by engineering signal patterns</p>
+</header>
+<main class="container">
+<div class="search-box">
+<input autocomplete="off" id="radar-input" placeholder="e.g. Supabase, Vercel, aipoch" type="text"/>
+<button id="radar-btn">🔍 Find Similar Startups</button>
+<div class="examples">
+<a id="ex1">Supabase</a> · <a id="ex2">Vercel</a> · <a id="ex3">aipoch</a> · <a id="ex4">margelo</a>
+</div>
+</div>
+<div class="status" id="status"></div>
+<div class="results" id="results">
+<div class="source-card" id="source-card"></div>
+<h2 style="color:#f1f5f9;font-size:1.1rem;margin-bottom:.75rem;">🔗 Similar Startups by Signal Pattern</h2>
+<div class="similar-grid" id="similar-grid"></div>
+</div>
+<div style="text-align:center;margin-top:2rem;padding:1rem;background:#0f172a;border:1px solid #1e293b;border-radius:12px;">
+<p style="color:#64748b;font-size:.85rem;">🤖 <strong style="color:#cbd5e1;">Powered by signals.gitdealflow.com</strong> — 324+ startups, 15 sectors, updated weekly</p>
+<p style="color:#475569;font-size:.75rem;margin-top:.25rem;">Also try: <a href="/compare">Compare Startups</a> · <a href="/grader">StartUp Grader</a> · <a href="/scout">Scout Score</a></p>
+</div>
+</main>
+<section class="vs-section">
+<div class="related">
+<h2 style="color:#e2e8f0;margin-top:0;border:none;padding:0;font-size:1.2rem">Related Resources</h2>
+<ul>
+<li><a href="/compare">Compare Startups — Head-to-Head Engineering Velocity | GitDealFlow</a></li>
+<li><a href="/compare/ccao-data-vs-ecomplus">ccao-data vs ecomplus — Head-to-Head Startup Engineering Velocity Comparison | G</a></li>
+<li><a href="/compare/ccao-data-vs-inginious">ccao-data vs INGInious — Head-to-Head Startup Engineering Velocity Comparison | </a></li>
+<li><a href="/compare/ccao-data-vs-ob-f">ccao-data vs ob-f — Head-to-Head Startup Engineering Velocity Comparison | GitDe</a></li>
+<li><a href="/compare/ccao-data-vs-the-mu-foundation">ccao-data vs The-Mu-Foundation — Head-to-Head Startup Engineering Velocity Compa</a></li>
+</ul>
+</div>
+</section>
+<footer>
+<p><a href="https://gitdealflow.com">GitDealFlow</a> · <a href="https://signals.gitdealflow.com">Signals</a></p>
+<footer style="text-align:center;padding:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.75rem;margin-top:3rem;">
+<a href="https://gitdealflow.com" style="color:#60a5fa;text-decoration:none;">GitDealFlow</a>
+  ·
+  <a href="https://signals.gitdealflow.com" style="color:#60a5fa;text-decoration:none;">Signals</a>
+  ·
+  <a href="https://sipi.bot" style="color:#60a5fa;text-decoration:none;">Sipi.bot</a>
+  ·
+  <a href="https://voicelogpro.com" style="color:#60a5fa;text-decoration:none;">VoiceLogPro</a>
+  ·
+  <a href="https://invisibleexit.com" style="color:#60a5fa;text-decoration:none;">InvisibleExit</a>
+  ·
+  <a href="https://unlocksaas.com" style="color:#60a5fa;text-decoration:none;">UnlockSaaS</a>
+  ·
+  <a href="https://churnlens.site" style="color:#60a5fa;text-decoration:none;">ChurnLens</a>
+  ·
+  <a href="https://sanctionsai.dev" style="color:#60a5fa;text-decoration:none;">SanctionsAI</a>
+  ·
+  <a href="https://carshake.online" style="color:#60a5fa;text-decoration:none;">CarShake</a>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</footer>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div></footer>
+<script>
+(function(){
+  var API = 'https://signals.gitdealflow.com/api/signals.json';
+  var allStartups = [];
+  var radarBtn = document.getElementById('radar-btn');
+  var input = document.getElementById('radar-input');
+  var results = document.getElementById('results');
+  var statusEl = document.getElementById('status');
+  var sourceCard = document.getElementById('source-card');
+  var similarGrid = document.getElementById('similar-grid');
+
+  fetch(API).then(function(r){return r.json()}).then(function(d){
+    (d.sectors||[]).forEach(function(s){
+      (s.startups||[]).forEach(function(st){
+        st.sector = s.name;
+        st.sectorSlug = s.slug;
+        allStartups.push(st);
+      });
+    });
+    (d.trending||[]).forEach(function(st){
+      if(!allStartups.find(function(x){return x.name===st.name})){
+        allStartups.push(st);
+      }
+    });
+  }).catch(function(){});
+
+  function esc(s){var d=document.createElement('div');d.textContent=String(s==null?'':s);return d.innerHTML}
+
+  function find(q){
+    q = q.trim().toLowerCase();
+    var e = allStartups.filter(function(s){return s.name.toLowerCase()===q});
+    if(e.length) return e[0];
+    var p = allStartups.filter(function(s){return s.name.toLowerCase().includes(q)});
+    if(p.length) return p[0];
+    var ps = q.split(/[^a-z0-9]/);
+    for(var i=0;i<ps.length;i++){
+      if(ps[i].length<3) continue;
+      var f = allStartups.filter(function(s){return s.name.toLowerCase().includes(ps[i])});
+      if(f.length) return f[0];
+    }
+    return null;
+  }
+
+  function similarity(a, b){
+    if(!a||!b) return 0;
+    var score = 0;
+    // Same sector = 30 points
+    if(a.sector === b.sector) score += 30;
+    // Same signal type = 25 points
+    if(a.signalType === b.signalType) score += 25;
+    // Same stage = 15 points
+    if(a.stage === b.stage) score += 15;
+    // Same geography = 15 points
+    if(a.geography === b.geography) score += 15;
+    // Commit velocity proximity = 15 points
+    var va = a.commitVelocity14d||0;
+    var vb = b.commitVelocity14d||0;
+    var maxV = Math.max(va,vb)||1;
+    var diff = Math.abs(va-vb)/maxV;
+    score += Math.round(15 * (1-diff));
+    return Math.min(100, score);
+  }
+
+  function radar(){
+    var q = input.value.trim();
+    if(!q){statusEl.textContent='Enter a startup name';return}
+
+    var src = find(q);
+    if(!src){
+      statusEl.textContent='Startup not found. Try: Supabase, Vercel, aipoch, PhotoFlare';
+      return;
+    }
+
+    statusEl.textContent='';
+    results.classList.add('visible');
+
+    // Source card
+    sourceCard.innerHTML =
+      '<div class="sc-name">🎯 ' + esc(src.name) + '</div>' +
+      '<div class="sc-meta">' + esc(src.sector||'N/A') + ' · ' + esc(src.stage||'N/A') + ' · ' + esc(src.geography||'N/A') + '</div>' +
+      '<div class="sc-tags">' +
+        '<span class="sc-tag">' + (src.commitVelocityChange||'+0%') + ' velocity Δ</span>' +
+        '<span class="sc-tag">' + (src.commitVelocity14d||0) + ' c/14d</span>' +
+        '<span class="sc-tag">' + esc(src.signalType||'Active') + '</span>' +
+      '</div>';
+
+    // Find similar: score + sort
+    var scored = allStartups
+      .filter(function(s){return s.name !== src.name})
+      .map(function(s){return{startup:s,score:similarity(src,s)}})
+      .sort(function(a,b){return b.score-a.score})
+      .slice(0,8);
+
+    if(!scored.length){
+      similarGrid.innerHTML = '<div style="text-align:center;padding:1rem;color:#475569;">No similar startups found</div>';
+      return;
+    }
+
+    var html = '';
+    scored.forEach(function(item){
+      var s = item.startup;
+      var sigColor = '#93c5fd';
+      if(s.signalType==='Deploy frequency spike') sigColor='#4ade80';
+      else if(s.signalType==='Engineering hiring burst') sigColor='#fbbf24';
+      else if(s.signalType==='Framework migration') sigColor='#f87171';
+
+      html += '<div class="sim-card" onclick="window.location.hash='q='+encodeURIComponent(s.name)+'';document.getElementById('radar-input').value='+JSON.stringify(s.name)+';radar()">' +
+        '<div class="sim-name">' + esc(s.name) + '</div>' +
+        '<div class="sim-detail">' + esc(s.sector||'N/A') + ' · ' + esc(s.stage||'N/A') + '</div>' +
+        '<div class="sim-score" style="background:#1e293b;color:'+sigColor+'">' + esc(s.signalType||'Active') + '</div>' +
+        '<div style="display:flex;justify-content:space-between;margin-top:.4rem;font-size:.75rem;color:#64748b">' +
+          '<span>' + (s.commitVelocityChange||'+0%') + '</span>' +
+          '<span>' + (s.commitVelocity14d||0) + ' c/14d</span>' +
+        '</div>' +
+        '<div class="similarity-bar"><div class="similarity-fill" style="width:'+item.score+'%"></div></div>' +
+        '<div style="font-size:.7rem;color:#475569;margin-top:.2rem;text-align:right;">' + item.score + '% similar</div>' +
+        '</div>';
+    });
+    similarGrid.innerHTML = html;
+
+    // URL hash
+    window.location.hash = 'q=' + encodeURIComponent(src.name);
+  }
+
+  // Hash restore
+  function restore(){
+    var hash = window.location.hash.replace(/^#/,'');
+    if(!hash) return;
+    try{
+      var p = new URLSearchParams(hash);
+      if(p.has('q')){
+        input.value = p.get('q');
+        radar();
+      }
+    }catch(e){}
+  }
+
+  radarBtn.addEventListener('click', radar);
+  input.addEventListener('keydown', function(e){if(e.key==='Enter')radar()});
+
+  document.getElementById('ex1').addEventListener('click',function(){input.value='Supabase';radar()});
+  document.getElementById('ex2').addEventListener('click',function(){input.value='Vercel';radar()});
+  document.getElementById('ex3').addEventListener('click',function(){input.value='aipoch';radar()});
+  document.getElementById('ex4').addEventListener('click',function(){input.value='margelo';radar()});
+
+  restore();
+  window.addEventListener('hashchange', restore);
+})();
+</script>
+<script defer="" src="/share.js"></script>
+</body>
+</html>

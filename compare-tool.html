@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Startup Engineering Velocity Comparison Tool | GitDealFlow</title>
+<meta content="Compare 2-3 startups side by side by engineering velocity, commit count, contributor growth, and signal type. Free tool from the VC Deal Flow Signal dataset." name="description"/>
+<link href="https://gitdealflow.com/compare-tool" rel="canonical"/>
+<meta content="Startup Engineering Velocity Comparison Tool" property="og:title"/>
+<meta content="https://gitdealflow.com/opengraph-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Startup Velocity Comparison Tool",
+      "url": "https://gitdealflow.com/compare-tool",
+      "applicationCategory": "DeveloperApplication",
+      "description": "Compare 2-3 startups by engineering velocity, commits, and contributor growth.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Startup Engineering Velocity Comparison Tool | GitDealFlow",
+      "description": "Compare 2-3 startups side by side by engineering velocity, commit count, contributor growth, and signal type. Free tool from the VC Deal Flow Signal dataset.",
+      "image": "https://gitdealflow.com/opengraph-image.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.6}
+a{color:#60a5fa}.container{max-width:800px;margin:0 auto;padding:1.5rem}
+header{text-align:center;padding:2rem 1.5rem;border-bottom:1px solid #1e293b}
+header h1{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+header p{color:#94a3b8;font-size:.8rem;margin-top:.35rem}
+.tool{margin-top:1.5rem}
+select{width:100%;padding:.6rem;background:#0f172a;border:1px solid #1e293b;border-radius:8px;color:#f1f5f9;font-size:.85rem;margin-bottom:.5rem;outline:none}
+select:focus{border-color:#60a5fa}
+.grid{display:none;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin-top:1rem}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem}
+.card h3{color:#f1f5f9;font-size:.85rem;margin-bottom:.5rem}
+.row{display:flex;justify-content:space-between;padding:.25rem 0;font-size:.75rem;border-bottom:1px solid #1e293b}
+.lbl{color:#64748b}.val{font-weight:600}
+.pos{color:#4ade80}.neg{color:#f87171}
+.add{padding:.6rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#94a3b8;font-size:.8rem;cursor:pointer;text-align:center;margin-top:.5rem}
+.add:hover{background:#334155}
+.links{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:2rem 0}.links a{padding:.5rem 1rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#94a3b8;font-size:.8rem;text-decoration:none}
+footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b;font-size:.8rem}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to compare startup engineering velocity","description":"Use the VC Deal Flow Signal comparison tool to compare engineering velocity metrics across venture-backed startups.","step":[{"@type":"HowToStep","position":1,"name":"Select startups","text":"Navigate to the comparison tool and add startups by name or sector filter."},{"@type":"HowToStep","position":2,"name":"Compare metrics","text":"Side-by-side view shows velocity percentage, commit count, contributor growth, and signal type for each startup."},{"@type":"HowToStep","position":3,"name":"Repeat weekly","text":"Data refreshes every Monday. Check back to see which startups are accelerating fastest."}],"tool":{"@type":"SoftwareApplication","name":"VC Deal Flow Signal Comparison Tool","url":"https://gitdealflow.com/compare-tool"}}</script>
+<!-- Google Discover metadata -->
+<meta content="Compare Tool, deal flow, engineering velocity, venture capital, GitHub, startup" name="news_keywords"/>
+<meta content="Compare Tool" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta content="GitHub" property="article:tag"/>
+<meta content="startup" property="article:tag"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:published_time"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:modified_time"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta name="format-detection" content="telephone=no"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"}, {"@type": "ListItem", "position": 2, "name": "Startup Engineering Velocity Comparison Tool", "item": "https://gitdealflow.com/compare-tool.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GitDealFlow?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow is a VC deal-flow signal tool that flags startups accelerating on GitHub 21–47 days before the round. Track engineering velocity across 4,200+ startup orgs."}}, {"@type": "Question", "name": "How does GitDealFlow work?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow reads public GitHub activity — commits, contributors, repos — to detect engineering acceleration. The signal helps investors find startups before fundraise announcements."}}, {"@type": "Question", "name": "Is GitDealFlow free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GitDealFlow offers a permanent free tier including the weekly Signal Digest and live board at signals.gitdealflow.com."}}]}</script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+<header><h1>Velocity Comparison Tool</h1><p>Compare 2-3 startups side by side by engineering velocity</p><p style="color:#475569;font-size:.65rem;text-align:center;margin-top:.5rem;">Last updated: July 29, 2026</p>
+</header>
+<main class="container">
+<div class="tool">
+<select id="s1" onchange="compare()"><option value="">Select first startup...</option></select>
+<select id="s2" onchange="compare()"><option value="">Select second startup...</option></select>
+<select id="s3" onchange="compare()" style="display:none;"><option value="">Select third startup (optional)...</option></select>
+<div class="add" onclick="if(this.textContent.includes('Add')){document.getElementById('s3').style.display='block';this.style.display='none';}">+ Add third startup</div>
+<div class="grid" id="grid"></div>
+</div>
+<div class="links"><a href="/trending">Trending</a><a href="/heatmap">Heatmap</a><a href="/signal">Signal Types</a><a href="/startups">All Startups</a></div>
+</main>
+<section class="vs-section">
+<div class="related">
+<h2 style="color:#e2e8f0;margin-top:0;border:none;padding:0;font-size:1.2rem">Related Resources</h2>
+<ul>
+<li><a href="/compare/ccao-data-vs-ecomplus">ccao-data vs ecomplus — Head-to-Head Startup Engineering Velocity Comparison | G</a></li>
+<li><a href="/compare/ccao-data-vs-inginious">ccao-data vs INGInious — Head-to-Head Startup Engineering Velocity Comparison | </a></li>
+<li><a href="/compare/ccao-data-vs-ob-f">ccao-data vs ob-f — Head-to-Head Startup Engineering Velocity Comparison | GitDe</a></li>
+<li><a href="/compare/ccao-data-vs-the-mu-foundation">ccao-data vs The-Mu-Foundation — Head-to-Head Startup Engineering Velocity Compa</a></li>
+<li><a href="/compare">Compare Startups — Head-to-Head Engineering Velocity | GitDealFlow</a></li>
+</ul>
+</div>
+</section>
+<footer><a href="https://gitdealflow.com">GitDealFlow</a> · <a href="https://signals.gitdealflow.com">Signals</a> · <a href="/compare-tool">Compare Tool</a><div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</footer>
+<script>
+const STARTUPS = [
+  {slug:"3d-vision-world",name:"3D-Vision-World",sector:"Robotics",velocity:"-45%",commits:6,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/3D-Vision-World"},
+  {slug:"arpa-simc",name:"ARPA-SIMC",sector:"AgTech",velocity:"+999%",commits:3,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/ARPA-SIMC"},
+  {slug:"absaoss",name:"AbsaOSS",sector:"Data Infrastructure",velocity:"+33%",commits:8,contributors:0,signal:"Framework migration",github:"https://github.com/AbsaOSS"},
+  {slug:"acubesat",name:"AcubeSAT",sector:"Space Tech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/AcubeSAT"},
+  {slug:"adyen",name:"Adyen",sector:"E-commerce Infrastructure",velocity:"-69%",commits:17,contributors:0,signal:"Framework migration",github:"https://github.com/Adyen"},
+  {slug:"agmip-ggcmi",name:"AgMIP-GGCMI",sector:"AgTech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/AgMIP-GGCMI"},
+  {slug:"aleksnestu",name:"AleksNeStu",sector:"PropTech",velocity:"+200%",commits:39,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/AleksNeStu"},
+  {slug:"builderio",name:"BuilderIO",sector:"E-commerce Infrastructure",velocity:"-7%",commits:445,contributors:0,signal:"Framework migration",github:"https://github.com/BuilderIO"},
+  {slug:"celestiaproject",name:"CelestiaProject",sector:"Space Tech",velocity:"+150%",commits:10,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/CelestiaProject"},
+  {slug:"cla-code-community",name:"Cla-Code-Community",sector:"HR Tech",velocity:"+57%",commits:22,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/Cla-Code-Community"},
+  {slug:"conduitio",name:"ConduitIO",sector:"Data Infrastructure",velocity:"+421%",commits:73,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/ConduitIO"},
+  {slug:"consensys",name:"Consensys",sector:"Web3",velocity:"-41%",commits:24,contributors:0,signal:"Framework migration",github:"https://github.com/Consensys"},
+  {slug:"dsacms",name:"DSACMS",sector:"EdTech",velocity:"-23%",commits:30,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/DSACMS"},
+  {slug:"daedalusdock",name:"DaedalusDock",sector:"Space Tech",velocity:"-15%",commits:22,contributors:0,signal:"Framework migration",github:"https://github.com/DaedalusDock"},
+  {slug:"datasqrl",name:"DataSQRL",sector:"Data Infrastructure",velocity:"-45%",commits:17,contributors:0,signal:"Framework migration",github:"https://github.com/DataSQRL"},
+  {slug:"dimensiondev",name:"DimensionDev",sector:"Web3",velocity:"-38%",commits:13,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/DimensionDev"},
+  {slug:"ebwiki",name:"EBWiki",sector:"Social &amp; Community",velocity:"-67%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/EBWiki"},
+  {slug:"epic-breakfast-productions",name:"Epic-Breakfast-Productions",sector:"Supply Chain",velocity:"-52%",commits:13,contributors:0,signal:"Framework migration",github:"https://github.com/Epic-Breakfast-Productions"},
+  {slug:"fwgs",name:"FWGS",sector:"Gaming",velocity:"-33%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/FWGS"},
+  {slug:"far-beyond-pulsar",name:"Far-Beyond-Pulsar",sector:"Gaming",velocity:"+85%",commits:266,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/Far-Beyond-Pulsar"},
+  {slug:"fields2cover",name:"Fields2Cover",sector:"AgTech",velocity:"+999%",commits:5,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/Fields2Cover"},
+  {slug:"flaxengine",name:"FlaxEngine",sector:"Gaming",velocity:"-11%",commits:17,contributors:0,signal:"Framework migration",github:"https://github.com/FlaxEngine"},
+  {slug:"flexxbotics",name:"Flexxbotics",sector:"Robotics",velocity:"+999%",commits:4,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/Flexxbotics"},
+  {slug:"foodontology",name:"FoodOntology",sector:"AgTech",velocity:"+19%",commits:25,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/FoodOntology"},
+  {slug:"freedomintelligence",name:"FreedomIntelligence",sector:"Healthcare",velocity:"-8%",commits:69,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/FreedomIntelligence"},
+  {slug:"friendsofredaxo",name:"FriendsOfREDAXO",sector:"AgTech",velocity:"+999%",commits:2,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/FriendsOfREDAXO"},
+  {slug:"gdevelopapp",name:"GDevelopApp",sector:"Gaming",velocity:"-44%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/GDevelopApp"},
+  {slug:"gamesrightmeow",name:"GamesRightMeow",sector:"Gaming",velocity:"+999%",commits:8,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/GamesRightMeow"},
+  {slug:"getstream",name:"GetStream",sector:"Social &amp; Community",velocity:"-61%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/GetStream"},
+  {slug:"glistengine",name:"GlistEngine",sector:"Gaming",velocity:"+0%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/GlistEngine"},
+  {slug:"grashjs",name:"Grashjs",sector:"Supply Chain",velocity:"-5%",commits:39,contributors:0,signal:"Framework migration",github:"https://github.com/Grashjs"},
+  {slug:"hcw-home",name:"HCW-home",sector:"Healthcare",velocity:"+100%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/HCW-home"},
+  {slug:"hastehealth",name:"HasteHealth",sector:"Healthcare",velocity:"+62%",commits:47,contributors:0,signal:"Framework migration",github:"https://github.com/HasteHealth"},
+  {slug:"heliossoftware",name:"HeliosSoftware",sector:"Healthcare",velocity:"-37%",commits:27,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/HeliosSoftware"},
+  {slug:"hophubproject",name:"HopHubProject",sector:"Social &amp; Community",velocity:"-75%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/HopHubProject"},
+  {slug:"intersectmbo",name:"IntersectMBO",sector:"Web3",velocity:"-48%",commits:11,contributors:0,signal:"Framework migration",github:"https://github.com/IntersectMBO"},
+  {slug:"kde",name:"KDE",sector:"EdTech",velocity:"+400%",commits:5,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/KDE"},
+  {slug:"kudoai",name:"KudoAI",sector:"Social &amp; Community",velocity:"+50%",commits:15,contributors:0,signal:"Framework migration",github:"https://github.com/KudoAI"},
+  {slug:"kybernetwork",name:"KyberNetwork",sector:"Web3",velocity:"-18%",commits:23,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/KyberNetwork"},
+  {slug:"kyrptonaughtmc",name:"KyrptonaughtMC",sector:"Supply Chain",velocity:"-83%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/KyrptonaughtMC"},
+  {slug:"lacledeslan",name:"LacledesLAN",sector:"Gaming",velocity:"+0%",commits:1,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/LacledesLAN"},
+  {slug:"litefarmorg",name:"LiteFarmOrg",sector:"AgTech",velocity:"-20%",commits:105,contributors:0,signal:"Framework migration",github:"https://github.com/LiteFarmOrg"},
+  {slug:"mahocommerce",name:"MahoCommerce",sector:"E-commerce Infrastructure",velocity:"-37%",commits:24,contributors:0,signal:"Framework migration",github:"https://github.com/MahoCommerce"},
+  {slug:"mininglamp-oss",name:"Mininglamp-OSS",sector:"Social &amp; Community",velocity:"-27%",commits:40,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/Mininglamp-OSS"},
+  {slug:"moeraorg",name:"MoeraOrg",sector:"Social &amp; Community",velocity:"+0%",commits:6,contributors:0,signal:"Framework migration",github:"https://github.com/MoeraOrg"},
+  {slug:"mothcocoon",name:"MothCocoon",sector:"Gaming",velocity:"-86%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/MothCocoon"},
+  {slug:"mountea-framework",name:"Mountea-Framework",sector:"Gaming",velocity:"-47%",commits:18,contributors:0,signal:"Framework migration",github:"https://github.com/Mountea-Framework"},
+  {slug:"mystenlabs",name:"MystenLabs",sector:"Web3",velocity:"-19%",commits:172,contributors:0,signal:"Framework migration",github:"https://github.com/MystenLabs"},
+  {slug:"nasa-ammos",name:"NASA-AMMOS",sector:"Space Tech",velocity:"+133%",commits:14,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/NASA-AMMOS"},
+  {slug:"nethermindeth",name:"NethermindEth",sector:"Web3",velocity:"+50%",commits:33,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/NethermindEth"},
+  {slug:"official-moondao",name:"Official-MoonDao",sector:"Web3",velocity:"-69%",commits:31,contributors:0,signal:"Framework migration",github:"https://github.com/Official-MoonDao"},
+  {slug:"official-moondao",name:"Official-MoonDao",sector:"Space Tech",velocity:"-64%",commits:38,contributors:0,signal:"Framework migration",github:"https://github.com/Official-MoonDao"},
+  {slug:"open-cap-stack",name:"Open-Cap-Stack",sector:"Enterprise SaaS",velocity:"+999%",commits:4,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/Open-Cap-Stack"},
+  {slug:"open-cap-table-coalition",name:"Open-Cap-Table-Coalition",sector:"Legal Tech",velocity:"-69%",commits:4,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/Open-Cap-Table-Coalition"},
+  {slug:"openc3",name:"OpenC3",sector:"Space Tech",velocity:"-44%",commits:92,contributors:0,signal:"Framework migration",github:"https://github.com/OpenC3"},
+  {slug:"opencsgs",name:"OpenCSGs",sector:"Space Tech",velocity:"-39%",commits:31,contributors:0,signal:"Framework migration",github:"https://github.com/OpenCSGs"},
+  {slug:"opencircuits",name:"OpenCircuits",sector:"EdTech",velocity:"+386%",commits:34,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/OpenCircuits"},
+  {slug:"opencyphal",name:"OpenCyphal",sector:"Space Tech",velocity:"+0%",commits:3,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/OpenCyphal"},
+  {slug:"openolat",name:"OpenOLAT",sector:"EdTech",velocity:"-17%",commits:121,contributors:0,signal:"Framework migration",github:"https://github.com/OpenOLAT"},
+  {slug:"openscvx",name:"OpenSCvx",sector:"Robotics",velocity:"+250%",commits:7,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/OpenSCvx"},
+  {slug:"openzeppelin",name:"OpenZeppelin",sector:"Web3",velocity:"+12%",commits:19,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/OpenZeppelin"},
+  {slug:"opnform",name:"OpnForm",sector:"Enterprise SaaS",velocity:"-33%",commits:6,contributors:0,signal:"Framework migration",github:"https://github.com/OpnForm"},
+  {slug:"pcgex",name:"PCGEx",sector:"Gaming",velocity:"-21%",commits:60,contributors:0,signal:"Framework migration",github:"https://github.com/PCGEx"},
+  {slug:"packrat-ai",name:"PackRat-AI",sector:"Social &amp; Community",velocity:"-91%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/PackRat-AI"},
+  {slug:"part-db",name:"Part-DB",sector:"Supply Chain",velocity:"-86%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/Part-DB"},
+  {slug:"pastvu",name:"PastVu",sector:"Social &amp; Community",velocity:"+15%",commits:15,contributors:0,signal:"Framework migration",github:"https://github.com/PastVu"},
+  {slug:"photoflare",name:"PhotoFlare",sector:"AgTech",velocity:"+10%",commits:11,contributors:0,signal:"Framework migration",github:"https://github.com/PhotoFlare"},
+  {slug:"point72",name:"Point72",sector:"Data Infrastructure",velocity:"-40%",commits:3,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/Point72"},
+  {slug:"posthog",name:"PostHog",sector:"Data Infrastructure",velocity:"-45%",commits:1621,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/PostHog"},
+  {slug:"prowlengine",name:"ProwlEngine",sector:"Gaming",velocity:"-29%",commits:115,contributors:0,signal:"Framework migration",github:"https://github.com/ProwlEngine"},
+  {slug:"pyvrp",name:"PyVRP",sector:"Supply Chain",velocity:"-75%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/PyVRP"},
+  {slug:"qloapps",name:"Qloapps",sector:"PropTech",velocity:"+33%",commits:4,contributors:0,signal:"Framework migration",github:"https://github.com/Qloapps"},
+  {slug:"quartermindgames",name:"QuartermindGames",sector:"Gaming",velocity:"+100%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/QuartermindGames"},
+  {slug:"realistic-farming",name:"Realistic-Farming",sector:"AgTech",velocity:"-81%",commits:8,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/Realistic-Farming"},
+  {slug:"rocketpy-team",name:"RocketPy-Team",sector:"Space Tech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/RocketPy-Team"},
+  {slug:"routevn",name:"RouteVN",sector:"Gaming",velocity:"+15%",commits:75,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/RouteVN"},
+  {slug:"sama-communications",name:"SAMA-Communications",sector:"Social &amp; Community",velocity:"+999%",commits:1,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/SAMA-Communications"},
+  {slug:"sap-samples",name:"SAP-samples",sector:"PropTech",velocity:"+999%",commits:3,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/SAP-samples"},
+  {slug:"sfdigitalservices",name:"SFDigitalServices",sector:"PropTech",velocity:"-30%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/SFDigitalServices"},
+  {slug:"satdump",name:"SatDump",sector:"Space Tech",velocity:"+200%",commits:6,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/SatDump"},
+  {slug:"sciqlop",name:"SciQLop",sector:"Space Tech",velocity:"+270%",commits:37,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/SciQLop"},
+  {slug:"seismicsystems",name:"SeismicSystems",sector:"Web3",velocity:"-73%",commits:14,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/SeismicSystems"},
+  {slug:"sparcle-studio",name:"SpaRcle-Studio",sector:"Gaming",velocity:"+89%",commits:36,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/SpaRcle-Studio"},
+  {slug:"studydrift",name:"StudyDrift",sector:"EdTech",velocity:"-27%",commits:74,contributors:0,signal:"Framework migration",github:"https://github.com/StudyDrift"},
+  {slug:"synapsr",name:"Synapsr",sector:"Enterprise SaaS",velocity:"-70%",commits:9,contributors:0,signal:"Framework migration",github:"https://github.com/Synapsr"},
+  {slug:"synapsr",name:"Synapsr",sector:"PropTech",velocity:"-3%",commits:37,contributors:0,signal:"Framework migration",github:"https://github.com/Synapsr"},
+  {slug:"the-mu-foundation",name:"The-Mu-Foundation",sector:"EdTech",velocity:"+999%",commits:2,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/The-Mu-Foundation"},
+  {slug:"thevessels",name:"TheVessels",sector:"Gaming",velocity:"+358%",commits:55,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/TheVessels"},
+  {slug:"thextech",name:"TheXTech",sector:"Gaming",velocity:"-21%",commits:34,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/TheXTech"},
+  {slug:"trianalab",name:"TrianaLab",sector:"Legal Tech",velocity:"+7%",commits:15,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/TrianaLab"},
+  {slug:"vacademy-io",name:"Vacademy-io",sector:"EdTech",velocity:"-25%",commits:231,contributors:0,signal:"Framework migration",github:"https://github.com/Vacademy-io"},
+  {slug:"vismalietuva",name:"VismaLietuva",sector:"Social &amp; Community",velocity:"+999%",commits:8,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/VismaLietuva"},
+  {slug:"willowinc",name:"WillowInc",sector:"PropTech",velocity:"-32%",commits:13,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/WillowInc"},
+  {slug:"xco-agency",name:"XCO-Agency",sector:"Enterprise SaaS",velocity:"+200%",commits:30,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/XCO-Agency"},
+  {slug:"yellow-dog-man",name:"Yellow-Dog-Man",sector:"Social &amp; Community",velocity:"+999%",commits:4,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/Yellow-Dog-Man"},
+  {slug:"zemerteam",name:"ZemerTeam",sector:"Data Infrastructure",velocity:"-20%",commits:61,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/ZemerTeam"},
+  {slug:"zipstack",name:"Zipstack",sector:"Data Infrastructure",velocity:"-20%",commits:12,contributors:0,signal:"Framework migration",github:"https://github.com/Zipstack"},
+  {slug:"activist-org",name:"activist-org",sector:"Social &amp; Community",velocity:"-56%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/activist-org"},
+  {slug:"aelassas",name:"aelassas",sector:"PropTech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/aelassas"},
+  {slug:"ahacker-1",name:"ahacker-1",sector:"PropTech",velocity:"-86%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/ahacker-1"},
+  {slug:"ai-shifu",name:"ai-shifu",sector:"EdTech",velocity:"+74%",commits:99,contributors:0,signal:"Framework migration",github:"https://github.com/ai-shifu"},
+  {slug:"airbytehq",name:"airbytehq",sector:"Data Infrastructure",velocity:"-75%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/airbytehq"},
+  {slug:"akaunting",name:"akaunting",sector:"HR Tech",velocity:"+467%",commits:34,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/akaunting"},
+  {slug:"aphp",name:"aphp",sector:"Healthcare",velocity:"-36%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/aphp"},
+  {slug:"ar-io",name:"ar-io",sector:"Web3",velocity:"-83%",commits:12,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/ar-io"},
+  {slug:"archtechx",name:"archtechx",sector:"Enterprise SaaS",velocity:"-67%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/archtechx"},
+  {slug:"argotorg",name:"argotorg",sector:"Web3",velocity:"+10%",commits:32,contributors:0,signal:"Framework migration",github:"https://github.com/argotorg"},
+  {slug:"atrocore",name:"atrocore",sector:"Enterprise SaaS",velocity:"+10%",commits:33,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/atrocore"},
+  {slug:"aureuserp",name:"aureuserp",sector:"Supply Chain",velocity:"-66%",commits:22,contributors:0,signal:"Framework migration",github:"https://github.com/aureuserp"},
+  {slug:"aws-samples",name:"aws-samples",sector:"Supply Chain",velocity:"-96%",commits:1,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/aws-samples"},
+  {slug:"axone-protocol",name:"axone-protocol",sector:"Web3",velocity:"-27%",commits:101,contributors:0,signal:"Framework migration",github:"https://github.com/axone-protocol"},
+  {slug:"bagisto",name:"bagisto",sector:"E-commerce Infrastructure",velocity:"-77%",commits:6,contributors:0,signal:"Framework migration",github:"https://github.com/bagisto"},
+  {slug:"baizhiheizi",name:"baizhiheizi",sector:"Web3",velocity:"-16%",commits:91,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/baizhiheizi"},
+  {slug:"bakaphp",name:"bakaphp",sector:"Social &amp; Community",velocity:"-14%",commits:332,contributors:0,signal:"Framework migration",github:"https://github.com/bakaphp"},
+  {slug:"beikeshop",name:"beikeshop",sector:"E-commerce Infrastructure",velocity:"+200%",commits:3,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/beikeshop"},
+  {slug:"besu-eth",name:"besu-eth",sector:"Web3",velocity:"-41%",commits:24,contributors:0,signal:"Framework migration",github:"https://github.com/besu-eth"},
+  {slug:"bevyengine",name:"bevyengine",sector:"Gaming",velocity:"+167%",commits:147,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/bevyengine"},
+  {slug:"bic-org",name:"bic-org",sector:"E-commerce Infrastructure",velocity:"+999%",commits:3,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/bic-org"},
+  {slug:"bigprof-software",name:"bigprof-software",sector:"PropTech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/bigprof-software"},
+  {slug:"bloom-housing",name:"bloom-housing",sector:"PropTech",velocity:"-19%",commits:13,contributors:0,signal:"Framework migration",github:"https://github.com/bloom-housing"},
+  {slug:"boardgameio",name:"boardgameio",sector:"Gaming",velocity:"+40%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/boardgameio"},
+  {slug:"borglab",name:"borglab",sector:"Robotics",velocity:"-96%",commits:3,contributors:0,signal:"Framework migration",github:"https://github.com/borglab"},
+  {slug:"bruin-data",name:"bruin-data",sector:"Data Infrastructure",velocity:"+19%",commits:19,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/bruin-data"},
+  {slug:"calagopus",name:"calagopus",sector:"Gaming",velocity:"-52%",commits:38,contributors:0,signal:"Framework migration",github:"https://github.com/calagopus"},
+  {slug:"castle-engine",name:"castle-engine",sector:"Gaming",velocity:"+8%",commits:28,contributors:0,signal:"Framework migration",github:"https://github.com/castle-engine"},
+  {slug:"ccao-data",name:"ccao-data",sector:"EdTech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/ccao-data"},
+  {slug:"chickensoft-games",name:"chickensoft-games",sector:"Gaming",velocity:"+999%",commits:26,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/chickensoft-games"},
+  {slug:"churnkey",name:"churnkey",sector:"Enterprise SaaS",velocity:"-42%",commits:11,contributors:0,signal:"Framework migration",github:"https://github.com/churnkey"},
+  {slug:"classroomio",name:"classroomio",sector:"EdTech",velocity:"-32%",commits:34,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/classroomio"},
+  {slug:"commaai",name:"commaai",sector:"Robotics",velocity:"-45%",commits:23,contributors:0,signal:"Framework migration",github:"https://github.com/commaai"},
+  {slug:"community-shaders",name:"community-shaders",sector:"Gaming",velocity:"+267%",commits:11,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/community-shaders"},
+  {slug:"constructorfabric",name:"constructorfabric",sector:"Enterprise SaaS",velocity:"-38%",commits:113,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/constructorfabric"},
+  {slug:"coollabsio",name:"coollabsio",sector:"Social &amp; Community",velocity:"-69%",commits:46,contributors:0,signal:"Framework migration",github:"https://github.com/coollabsio"},
+  {slug:"copper-project",name:"copper-project",sector:"Robotics",velocity:"-57%",commits:16,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/copper-project"},
+  {slug:"cran-task-views",name:"cran-task-views",sector:"AgTech",velocity:"+999%",commits:4,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/cran-task-views"},
+  {slug:"cryostatio",name:"cryostatio",sector:"Data Infrastructure",velocity:"-46%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/cryostatio"},
+  {slug:"csvspecs",name:"csvspecs",sector:"Space Tech",velocity:"+999%",commits:2,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/csvspecs"},
+  {slug:"cyberbotics",name:"cyberbotics",sector:"Robotics",velocity:"-33%",commits:2,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/cyberbotics"},
+  {slug:"dagucloud",name:"dagucloud",sector:"Data Infrastructure",velocity:"-36%",commits:23,contributors:0,signal:"Framework migration",github:"https://github.com/dagucloud"},
+  {slug:"datajuicer",name:"datajuicer",sector:"Data Infrastructure",velocity:"-87%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/datajuicer"},
+  {slug:"dealfluence",name:"dealfluence",sector:"Legal Tech",velocity:"-77%",commits:19,contributors:0,signal:"Framework migration",github:"https://github.com/dealfluence"},
+  {slug:"deltachat",name:"deltachat",sector:"Social &amp; Community",velocity:"-5%",commits:20,contributors:0,signal:"Framework migration",github:"https://github.com/deltachat"},
+  {slug:"disclose",name:"disclose",sector:"Legal Tech",velocity:"+999%",commits:19,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/disclose"},
+  {slug:"drt-hub",name:"drt-hub",sector:"Data Infrastructure",velocity:"+59%",commits:43,contributors:0,signal:"Framework migration",github:"https://github.com/drt-hub"},
+  {slug:"earthians",name:"earthians",sector:"Healthcare",velocity:"-62%",commits:18,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/earthians"},
+  {slug:"eclipse-zenoh",name:"eclipse-zenoh",sector:"Social &amp; Community",velocity:"+150%",commits:5,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/eclipse-zenoh"},
+  {slug:"ecomplus",name:"ecomplus",sector:"E-commerce Infrastructure",velocity:"-67%",commits:1,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/ecomplus"},
+  {slug:"eftechcombr",name:"eftechcombr",sector:"Supply Chain",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/eftechcombr"},
+  {slug:"elimu-ai",name:"elimu-ai",sector:"EdTech",velocity:"-77%",commits:8,contributors:0,signal:"Framework migration",github:"https://github.com/elimu-ai"},
+  {slug:"elodin-sys",name:"elodin-sys",sector:"Space Tech",velocity:"-55%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/elodin-sys"},
+  {slug:"endless-sky",name:"endless-sky",sector:"Space Tech",velocity:"-53%",commits:14,contributors:0,signal:"Framework migration",github:"https://github.com/endless-sky"},
+  {slug:"entire-vc",name:"entire-vc",sector:"Social &amp; Community",velocity:"+367%",commits:14,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/entire-vc"},
+  {slug:"estuary",name:"estuary",sector:"Data Infrastructure",velocity:"-22%",commits:39,contributors:0,signal:"Framework migration",github:"https://github.com/estuary"},
+  {slug:"etewiah",name:"etewiah",sector:"PropTech",velocity:"+999%",commits:5,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/etewiah"},
+  {slug:"ever-co",name:"ever-co",sector:"Supply Chain",velocity:"+9%",commits:112,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/ever-co"},
+  {slug:"ever-co",name:"ever-co",sector:"HR Tech",velocity:"+999%",commits:5,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/ever-co"},
+  {slug:"evershopcommerce",name:"evershopcommerce",sector:"E-commerce Infrastructure",velocity:"+36%",commits:30,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/evershopcommerce"},
+  {slug:"exyte",name:"exyte",sector:"HR Tech",velocity:"+999%",commits:3,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/exyte"},
+  {slug:"farshadz1997",name:"farshadz1997",sector:"PropTech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/farshadz1997"},
+  {slug:"fedbiomed",name:"fedbiomed",sector:"Healthcare",velocity:"+117%",commits:13,contributors:0,signal:"Framework migration",github:"https://github.com/fedbiomed"},
+  {slug:"fineprint-global",name:"fineprint-global",sector:"AgTech",velocity:"+100%",commits:12,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/fineprint-global"},
+  {slug:"flame-engine",name:"flame-engine",sector:"Gaming",velocity:"+43%",commits:10,contributors:0,signal:"Framework migration",github:"https://github.com/flame-engine"},
+  {slug:"flaskbb",name:"flaskbb",sector:"Social &amp; Community",velocity:"-12%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/flaskbb"},
+  {slug:"fluttercandies",name:"fluttercandies",sector:"AgTech",velocity:"+999%",commits:42,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/fluttercandies"},
+  {slug:"foundation50",name:"foundation50",sector:"EdTech",velocity:"-31%",commits:188,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/foundation50"},
+  {slug:"foundry-rs",name:"foundry-rs",sector:"Web3",velocity:"+44%",commits:187,contributors:0,signal:"Framework migration",github:"https://github.com/foundry-rs"},
+  {slug:"foxglove",name:"foxglove",sector:"Robotics",velocity:"+999%",commits:3,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/foxglove"},
+  {slug:"gbionics",name:"gbionics",sector:"Robotics",velocity:"-73%",commits:8,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/gbionics"},
+  {slug:"gear-tech",name:"gear-tech",sector:"Web3",velocity:"-17%",commits:40,contributors:0,signal:"Framework migration",github:"https://github.com/gear-tech"},
+  {slug:"gochain",name:"gochain",sector:"Web3",velocity:"+999%",commits:7,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/gochain"},
+  {slug:"gofractally",name:"gofractally",sector:"Web3",velocity:"-36%",commits:28,contributors:0,signal:"Framework migration",github:"https://github.com/gofractally"},
+  {slug:"goodrain",name:"goodrain",sector:"Enterprise SaaS",velocity:"-92%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/goodrain"},
+  {slug:"gosqasorg",name:"gosqasorg",sector:"Supply Chain",velocity:"-11%",commits:16,contributors:0,signal:"Framework migration",github:"https://github.com/gosqasorg"},
+  {slug:"growthepie",name:"growthepie",sector:"Web3",velocity:"+75%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/growthepie"},
+  {slug:"gumlet",name:"gumlet",sector:"AgTech",velocity:"+999%",commits:6,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/gumlet"},
+  {slug:"gurkenlabs",name:"gurkenlabs",sector:"Gaming",velocity:"+0%",commits:4,contributors:0,signal:"Framework migration",github:"https://github.com/gurkenlabs"},
+  {slug:"hapifhir",name:"hapifhir",sector:"Healthcare",velocity:"-5%",commits:19,contributors:0,signal:"Framework migration",github:"https://github.com/hapifhir"},
+  {slug:"haxtheweb",name:"haxtheweb",sector:"EdTech",velocity:"-90%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/haxtheweb"},
+  {slug:"healthchainai",name:"healthchainai",sector:"Healthcare",velocity:"-67%",commits:3,contributors:0,signal:"Framework migration",github:"https://github.com/healthchainai"},
+  {slug:"hedyorg",name:"hedyorg",sector:"EdTech",velocity:"-33%",commits:10,contributors:0,signal:"Framework migration",github:"https://github.com/hedyorg"},
+  {slug:"heroiclabs",name:"heroiclabs",sector:"Gaming",velocity:"-50%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/heroiclabs"},
+  {slug:"horilla",name:"horilla",sector:"HR Tech",velocity:"-33%",commits:4,contributors:0,signal:"Framework migration",github:"https://github.com/horilla"},
+  {slug:"hpi-schul-cloud",name:"hpi-schul-cloud",sector:"EdTech",velocity:"-12%",commits:14,contributors:0,signal:"Framework migration",github:"https://github.com/hpi-schul-cloud"},
+  {slug:"hpi-studyu",name:"hpi-studyu",sector:"Healthcare",velocity:"+7%",commits:43,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/hpi-studyu"},
+  {slug:"hyperscale",name:"hyperscale",sector:"AgTech",velocity:"+0%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/hyperscale"},
+  {slug:"i-dot-ai",name:"i-dot-ai",sector:"Legal Tech",velocity:"-89%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/i-dot-ai"},
+  {slug:"iblai",name:"iblai",sector:"EdTech",velocity:"-48%",commits:83,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/iblai"},
+  {slug:"iblai",name:"iblai",sector:"Legal Tech",velocity:"-64%",commits:56,contributors:0,signal:"Framework migration",github:"https://github.com/iblai"},
+  {slug:"iflytek",name:"iflytek",sector:"Enterprise SaaS",velocity:"-59%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/iflytek"},
+  {slug:"ihmcrobotics",name:"ihmcrobotics",sector:"Robotics",velocity:"-60%",commits:4,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/ihmcrobotics"},
+  {slug:"immutable",name:"immutable",sector:"Web3",velocity:"-53%",commits:7,contributors:0,signal:"Framework migration",github:"https://github.com/immutable"},
+  {slug:"immutable",name:"immutable",sector:"Gaming",velocity:"+60%",commits:8,contributors:0,signal:"Framework migration",github:"https://github.com/immutable"},
+  {slug:"insightsengineering",name:"insightsengineering",sector:"Healthcare",velocity:"+999%",commits:2,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/insightsengineering"},
+  {slug:"jlawyerorg",name:"jlawyerorg",sector:"Legal Tech",velocity:"-97%",commits:1,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/jlawyerorg"},
+  {slug:"jmix-framework",name:"jmix-framework",sector:"Enterprise SaaS",velocity:"-69%",commits:9,contributors:0,signal:"Framework migration",github:"https://github.com/jmix-framework"},
+  {slug:"juspay",name:"juspay",sector:"E-commerce Infrastructure",velocity:"+55%",commits:17,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/juspay"},
+  {slug:"kairos-io",name:"kairos-io",sector:"Web3",velocity:"-88%",commits:19,contributors:0,signal:"Framework migration",github:"https://github.com/kairos-io"},
+  {slug:"korlibs",name:"korlibs",sector:"Gaming",velocity:"-52%",commits:13,contributors:0,signal:"Framework migration",github:"https://github.com/korlibs"},
+  {slug:"kuestcom",name:"kuestcom",sector:"Web3",velocity:"+30%",commits:60,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/kuestcom"},
+  {slug:"laudspeaker",name:"laudspeaker",sector:"HR Tech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/laudspeaker"},
+  {slug:"learning-commons-org",name:"learning-commons-org",sector:"EdTech",velocity:"-18%",commits:9,contributors:0,signal:"Framework migration",github:"https://github.com/learning-commons-org"},
+  {slug:"learningeconomy",name:"learningeconomy",sector:"EdTech",velocity:"+176%",commits:47,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/learningeconomy"},
+  {slug:"licensee",name:"licensee",sector:"Legal Tech",velocity:"+999%",commits:4,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/licensee"},
+  {slug:"lifinance",name:"lifinance",sector:"Web3",velocity:"+78%",commits:57,contributors:0,signal:"Framework migration",github:"https://github.com/lifinance"},
+  {slug:"livekit",name:"livekit",sector:"Robotics",velocity:"-14%",commits:18,contributors:0,signal:"Framework migration",github:"https://github.com/livekit"},
+  {slug:"logicaldoc",name:"logicaldoc",sector:"Legal Tech",velocity:"-29%",commits:15,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/logicaldoc"},
+  {slug:"lomiafrica",name:"lomiafrica",sector:"Enterprise SaaS",velocity:"-55%",commits:61,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/lomiafrica"},
+  {slug:"maize-tech",name:"maize-tech",sector:"Legal Tech",velocity:"-80%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/maize-tech"},
+  {slug:"margelo",name:"margelo",sector:"Web3",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/margelo"},
+  {slug:"masslight",name:"masslight",sector:"Healthcare",velocity:"-87%",commits:66,contributors:0,signal:"Framework migration",github:"https://github.com/masslight"},
+  {slug:"medplum",name:"medplum",sector:"Healthcare",velocity:"-32%",commits:71,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/medplum"},
+  {slug:"medulla-tech",name:"medulla-tech",sector:"Supply Chain",velocity:"-85%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/medulla-tech"},
+  {slug:"mercurjs",name:"mercurjs",sector:"E-commerce Infrastructure",velocity:"+933%",commits:31,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/mercurjs"},
+  {slug:"metorial",name:"metorial",sector:"Enterprise SaaS",velocity:"-34%",commits:98,contributors:0,signal:"Framework migration",github:"https://github.com/metorial"},
+  {slug:"microblink",name:"microblink",sector:"HR Tech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/microblink"},
+  {slug:"mloda-ai",name:"mloda-ai",sector:"Data Infrastructure",velocity:"+500%",commits:18,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/mloda-ai"},
+  {slug:"moov-io",name:"moov-io",sector:"E-commerce Infrastructure",velocity:"-21%",commits:22,contributors:0,signal:"Framework migration",github:"https://github.com/moov-io"},
+  {slug:"mugnavo",name:"mugnavo",sector:"Enterprise SaaS",velocity:"-11%",commits:8,contributors:0,signal:"Framework migration",github:"https://github.com/mugnavo"},
+  {slug:"mx-space",name:"mx-space",sector:"Space Tech",velocity:"-46%",commits:34,contributors:0,signal:"Framework migration",github:"https://github.com/mx-space"},
+  {slug:"naev",name:"naev",sector:"Space Tech",velocity:"-90%",commits:15,contributors:0,signal:"Framework migration",github:"https://github.com/naev"},
+  {slug:"namiml",name:"namiml",sector:"HR Tech",velocity:"+100%",commits:2,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/namiml"},
+  {slug:"nasa-jpl",name:"nasa-jpl",sector:"Space Tech",velocity:"-75%",commits:15,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/nasa-jpl"},
+  {slug:"nats-io",name:"nats-io",sector:"Social &amp; Community",velocity:"-18%",commits:37,contributors:0,signal:"Framework migration",github:"https://github.com/nats-io"},
+  {slug:"newton-physics",name:"newton-physics",sector:"Robotics",velocity:"+11%",commits:72,contributors:0,signal:"Framework migration",github:"https://github.com/newton-physics"},
+  {slug:"nextcloud",name:"nextcloud",sector:"Social &amp; Community",velocity:"+44%",commits:59,contributors:0,signal:"Framework migration",github:"https://github.com/nextcloud"},
+  {slug:"nmi-agro",name:"nmi-agro",sector:"AgTech",velocity:"-57%",commits:52,contributors:0,signal:"Framework migration",github:"https://github.com/nmi-agro"},
+  {slug:"o2-engine",name:"o2-engine",sector:"Gaming",velocity:"+200%",commits:18,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/o2-engine"},
+  {slug:"o3de",name:"o3de",sector:"AgTech",velocity:"-28%",commits:23,contributors:0,signal:"Framework migration",github:"https://github.com/o3de"},
+  {slug:"obss",name:"obss",sector:"Space Tech",velocity:"+50%",commits:6,contributors:0,signal:"Framework migration",github:"https://github.com/obss"},
+  {slug:"ohcnetwork",name:"ohcnetwork",sector:"Healthcare",velocity:"+67%",commits:20,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/ohcnetwork"},
+  {slug:"ohs-foundation",name:"ohs-foundation",sector:"Data Infrastructure",velocity:"+999%",commits:2,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/ohs-foundation"},
+  {slug:"onflow",name:"onflow",sector:"Web3",velocity:"-85%",commits:6,contributors:0,signal:"Framework migration",github:"https://github.com/onflow"},
+  {slug:"open-condo-software",name:"open-condo-software",sector:"Enterprise SaaS",velocity:"-55%",commits:24,contributors:0,signal:"Framework migration",github:"https://github.com/open-condo-software"},
+  {slug:"open-condo-software",name:"open-condo-software",sector:"PropTech",velocity:"-23%",commits:36,contributors:0,signal:"Framework migration",github:"https://github.com/open-condo-software"},
+  {slug:"open-space-collective",name:"open-space-collective",sector:"Space Tech",velocity:"-24%",commits:37,contributors:0,signal:"Framework migration",github:"https://github.com/open-space-collective"},
+  {slug:"open-telemetry",name:"open-telemetry",sector:"Data Infrastructure",velocity:"-48%",commits:22,contributors:0,signal:"Framework migration",github:"https://github.com/open-telemetry"},
+  {slug:"opengeos",name:"opengeos",sector:"PropTech",velocity:"-4%",commits:132,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/opengeos"},
+  {slug:"opensensorhub",name:"opensensorhub",sector:"Social &amp; Community",velocity:"-89%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/opensensorhub"},
+  {slug:"opensource-socialnetwork",name:"opensource-socialnetwork",sector:"Social &amp; Community",velocity:"+50%",commits:6,contributors:0,signal:"Framework migration",github:"https://github.com/opensource-socialnetwork"},
+  {slug:"orangecoding",name:"orangecoding",sector:"PropTech",velocity:"-50%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/orangecoding"},
+  {slug:"orbiternassp",name:"orbiternassp",sector:"Space Tech",velocity:"-81%",commits:3,contributors:0,signal:"Framework migration",github:"https://github.com/orbiternassp"},
+  {slug:"ossimlabs",name:"ossimlabs",sector:"Space Tech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/ossimlabs"},
+  {slug:"oxylusengine",name:"oxylusengine",sector:"Gaming",velocity:"-79%",commits:14,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/oxylusengine"},
+  {slug:"phase-rs",name:"phase-rs",sector:"Gaming",velocity:"-36%",commits:468,contributors:0,signal:"Framework migration",github:"https://github.com/phase-rs"},
+  {slug:"phoenixctms",name:"phoenixctms",sector:"Supply Chain",velocity:"+143%",commits:17,contributors:0,signal:"Framework migration",github:"https://github.com/phoenixctms"},
+  {slug:"pluginsglpi",name:"pluginsGLPI",sector:"Supply Chain",velocity:"-50%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/pluginsGLPI"},
+  {slug:"pneumaticapp",name:"pneumaticapp",sector:"Enterprise SaaS",velocity:"-89%",commits:4,contributors:0,signal:"Framework migration",github:"https://github.com/pneumaticapp"},
+  {slug:"polarsource",name:"polarsource",sector:"Enterprise SaaS",velocity:"-56%",commits:203,contributors:0,signal:"Framework migration",github:"https://github.com/polarsource"},
+  {slug:"poziomki-app",name:"poziomki-app",sector:"Social &amp; Community",velocity:"+999%",commits:9,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/poziomki-app"},
+  {slug:"project-valhalla",name:"project-valhalla",sector:"Gaming",velocity:"+67%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/project-valhalla"},
+  {slug:"publicmap",name:"publicmap",sector:"Legal Tech",velocity:"+0%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/publicmap"},
+  {slug:"pyck-ai",name:"pyck-ai",sector:"Supply Chain",velocity:"+43%",commits:30,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/pyck-ai"},
+  {slug:"pysnippet",name:"pysnippet",sector:"Social &amp; Community",velocity:"+999%",commits:14,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/pysnippet"},
+  {slug:"quic",name:"quic",sector:"PropTech",velocity:"-62%",commits:3,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/quic"},
+  {slug:"radcrew",name:"radcrew",sector:"PropTech",velocity:"+235%",commits:77,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/radcrew"},
+  {slug:"ragestudio",name:"ragestudio",sector:"Social &amp; Community",velocity:"+286%",commits:135,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/ragestudio"},
+  {slug:"rapidez",name:"rapidez",sector:"E-commerce Infrastructure",velocity:"+100%",commits:4,contributors:0,signal:"Framework migration",github:"https://github.com/rapidez"},
+  {slug:"redpanda-data",name:"redpanda-data",sector:"Data Infrastructure",velocity:"-71%",commits:91,contributors:0,signal:"Framework migration",github:"https://github.com/redpanda-data"},
+  {slug:"reductstore",name:"reductstore",sector:"Robotics",velocity:"-17%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/reductstore"},
+  {slug:"relizaio",name:"relizaio",sector:"Supply Chain",velocity:"-11%",commits:24,contributors:0,signal:"Framework migration",github:"https://github.com/relizaio"},
+  {slug:"rive-app",name:"rive-app",sector:"Gaming",velocity:"+3%",commits:33,contributors:0,signal:"Framework migration",github:"https://github.com/rive-app"},
+  {slug:"robot-descriptions",name:"robot-descriptions",sector:"Robotics",velocity:"-17%",commits:10,contributors:0,signal:"Framework migration",github:"https://github.com/robot-descriptions"},
+  {slug:"rocketride-org",name:"rocketride-org",sector:"Data Infrastructure",velocity:"-52%",commits:25,contributors:0,signal:"Framework migration",github:"https://github.com/rocketride-org"},
+  {slug:"rosteleset",name:"rosteleset",sector:"PropTech",velocity:"-78%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/rosteleset"},
+  {slug:"rpgppengine",name:"rpgppengine",sector:"Gaming",velocity:"+520%",commits:31,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/rpgppengine"},
+  {slug:"rspatial",name:"rspatial",sector:"AgTech",velocity:"+172%",commits:49,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/rspatial"},
+  {slug:"rudderlabs",name:"rudderlabs",sector:"Data Infrastructure",velocity:"+17%",commits:14,contributors:0,signal:"Framework migration",github:"https://github.com/rudderlabs"},
+  {slug:"saas-js",name:"saas-js",sector:"Enterprise SaaS",velocity:"+999%",commits:11,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/saas-js"},
+  {slug:"saleor",name:"saleor",sector:"E-commerce Infrastructure",velocity:"-41%",commits:17,contributors:0,signal:"Framework migration",github:"https://github.com/saleor"},
+  {slug:"sapic",name:"sapic",sector:"AgTech",velocity:"+999%",commits:4,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/sapic"},
+  {slug:"sarvalabs",name:"sarvalabs",sector:"Web3",velocity:"+0%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/sarvalabs"},
+  {slug:"scribe-org",name:"scribe-org",sector:"EdTech",velocity:"+0%",commits:6,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/scribe-org"},
+  {slug:"scribe-org",name:"scribe-org",sector:"Data Infrastructure",velocity:"+0%",commits:4,contributors:0,signal:"Framework migration",github:"https://github.com/scribe-org"},
+  {slug:"securitybunker",name:"securitybunker",sector:"Legal Tech",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/securitybunker"},
+  {slug:"selfpatch",name:"selfpatch",sector:"Robotics",velocity:"-57%",commits:62,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/selfpatch"},
+  {slug:"simpledotorg",name:"simpledotorg",sector:"Healthcare",velocity:"-50%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/simpledotorg"},
+  {slug:"slothflowlabs",name:"slothflowlabs",sector:"Data Infrastructure",velocity:"-76%",commits:43,contributors:0,signal:"Framework migration",github:"https://github.com/slothflowlabs"},
+  {slug:"solidusio",name:"solidusio",sector:"E-commerce Infrastructure",velocity:"+100%",commits:4,contributors:0,signal:"Framework migration",github:"https://github.com/solidusio"},
+  {slug:"sonic-pi-net",name:"sonic-pi-net",sector:"EdTech",velocity:"+5%",commits:64,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/sonic-pi-net"},
+  {slug:"spacelab-ufsc",name:"spacelab-ufsc",sector:"Space Tech",velocity:"+999%",commits:2,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/spacelab-ufsc"},
+  {slug:"spedas",name:"spedas",sector:"Space Tech",velocity:"+22%",commits:22,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/spedas"},
+  {slug:"speedyapply",name:"speedyapply",sector:"HR Tech",velocity:"-40%",commits:9,contributors:0,signal:"Framework migration",github:"https://github.com/speedyapply"},
+  {slug:"splintered-reality",name:"splintered-reality",sector:"Robotics",velocity:"+999%",commits:5,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/splintered-reality"},
+  {slug:"starwards",name:"starwards",sector:"Space Tech",velocity:"+0%",commits:17,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/starwards"},
+  {slug:"status-im",name:"status-im",sector:"Web3",velocity:"-89%",commits:5,contributors:0,signal:"Framework migration",github:"https://github.com/status-im"},
+  {slug:"stella",name:"stella",sector:"Legal Tech",velocity:"+237%",commits:219,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/stella"},
+  {slug:"subsquid",name:"subsquid",sector:"Data Infrastructure",velocity:"+50%",commits:3,contributors:0,signal:"Framework migration",github:"https://github.com/subsquid"},
+  {slug:"sunlabuiuc",name:"sunlabuiuc",sector:"Healthcare",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/sunlabuiuc"},
+  {slug:"superlinked",name:"superlinked",sector:"Data Infrastructure",velocity:"+0%",commits:2,contributors:0,signal:"Framework migration",github:"https://github.com/superlinked"},
+  {slug:"synadia-io",name:"synadia-io",sector:"Social &amp; Community",velocity:"-50%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/synadia-io"},
+  {slug:"tae0y",name:"tae0y",sector:"PropTech",velocity:"+999%",commits:7,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/tae0y"},
+  {slug:"techworkersco",name:"techworkersco",sector:"Social &amp; Community",velocity:"-33%",commits:2,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/techworkersco"},
+  {slug:"temporalio",name:"temporalio",sector:"Enterprise SaaS",velocity:"-12%",commits:53,contributors:0,signal:"Framework migration",github:"https://github.com/temporalio"},
+  {slug:"tempoxyz",name:"tempoxyz",sector:"E-commerce Infrastructure",velocity:"-54%",commits:59,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/tempoxyz"},
+  {slug:"the-momentum",name:"the-momentum",sector:"Healthcare",velocity:"-57%",commits:17,contributors:0,signal:"Framework migration",github:"https://github.com/the-momentum"},
+  {slug:"third-culture-software",name:"third-culture-software",sector:"Healthcare",velocity:"-19%",commits:17,contributors:0,signal:"Framework migration",github:"https://github.com/third-culture-software"},
+  {slug:"thirtybees",name:"thirtybees",sector:"E-commerce Infrastructure",velocity:"+0%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/thirtybees"},
+  {slug:"thunder-engine",name:"thunder-engine",sector:"Gaming",velocity:"-18%",commits:9,contributors:0,signal:"Framework migration",github:"https://github.com/thunder-engine"},
+  {slug:"towardsai",name:"towardsai",sector:"EdTech",velocity:"-42%",commits:28,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/towardsai"},
+  {slug:"trovu",name:"trovu",sector:"Social &amp; Community",velocity:"-86%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/trovu"},
+  {slug:"tuva-health",name:"tuva-health",sector:"Healthcare",velocity:"+999%",commits:3,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/tuva-health"},
+  {slug:"tuva-health",name:"tuva-health",sector:"Data Infrastructure",velocity:"-50%",commits:1,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/tuva-health"},
+  {slug:"unacms",name:"unacms",sector:"Social &amp; Community",velocity:"+300%",commits:8,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/unacms"},
+  {slug:"usertour",name:"usertour",sector:"HR Tech",velocity:"-85%",commits:13,contributors:0,signal:"Framework migration",github:"https://github.com/usertour"},
+  {slug:"ut-issl",name:"ut-issl",sector:"Space Tech",velocity:"+21%",commits:34,contributors:0,signal:"Infrastructure buildout",github:"https://github.com/ut-issl"},
+  {slug:"vanilophp",name:"vanilophp",sector:"E-commerce Infrastructure",velocity:"+999%",commits:1,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/vanilophp"},
+  {slug:"voxelize",name:"voxelize",sector:"Gaming",velocity:"+667%",commits:69,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/voxelize"},
+  {slug:"wevm",name:"wevm",sector:"Web3",velocity:"+999%",commits:5,contributors:0,signal:"Deploy frequency spike",github:"https://github.com/wevm"},
+  {slug:"wp-erp",name:"wp-erp",sector:"HR Tech",velocity:"+80%",commits:9,contributors:0,signal:"Framework migration",github:"https://github.com/wp-erp"},
+  {slug:"yzxingtu2026",name:"yzxingtu2026",sector:"Enterprise SaaS",velocity:"-45%",commits:11,contributors:0,signal:"Engineering hiring burst",github:"https://github.com/yzxingtu2026"},
+  {slug:"zapplyjobs",name:"zapplyjobs",sector:"Healthcare",velocity:"-19%",commits:3300,contributors:0,signal:"Framework migration",github:"https://github.com/zapplyjobs"},
+  {slug:"zapplyjobs",name:"zapplyjobs",sector:"Robotics",velocity:"-40%",commits:810,contributors:0,signal:"Framework migration",github:"https://github.com/zapplyjobs"},
+  {slug:"zenstackhq",name:"zenstackhq",sector:"Enterprise SaaS",velocity:"-86%",commits:1,contributors:0,signal:"Framework migration",github:"https://github.com/zenstackhq"},
+];
+
+const sel = ['s1','s2','s3'];
+function init(){const opts=s=>{let h='<option value="">Select...</option>';for(const st of STARTUPS)h+='<option value="'+st.slug+'">'+st.name+' ('+st.sector+')</option>';s.innerHTML=h};sel.forEach(id=>opts(document.getElementById(id)))}
+function compare(){
+const selected=[];
+for(const id of sel){const e=document.getElementById(id);if(e&&e.value)selected.push(STARTUPS.find(s=>s.slug===e.value))}
+const g=document.getElementById('grid');g.innerHTML='';g.style.display='none';
+if(selected.length<2)return;
+g.style.display='grid';g.style.gridTemplateColumns='repeat('+selected.length+',1fr)';
+for(const st of selected){
+const isP=!st.velocity.startsWith('-');const vc=st.velocity.replace('-','');
+let cards='<div class="card"><h3><a href="/startups/'+st.slug+'" style="color:#60a5fa;text-decoration:none;">'+st.name+'</a></h3>';
+cards+='<div class="row"><span class="lbl">Velocity</span><span class="val '+(isP?'pos':'neg')+'">'+st.velocity+'</span></div>';
+cards+='<div class="row"><span class="lbl">Commits (14d)</span><span class="val">'+st.commits.toLocaleString()+'</span></div>';
+cards+='<div class="row"><span class="lbl">Contributors</span><span class="val">'+st.contributors+'</span></div>';
+cards+='<div class="row"><span class="lbl">Signal</span><span class="val" style="color:#64748b;">'+st.signal+'</span></div>';
+cards+='<div class="row"><span class="lbl">Sector</span><span class="val" style="color:#64748b;">'+st.sector+'</span></div>';
+cards+='<div class="row"><span class="lbl">Badge</span><span class="val"><a href="/badge/'+st.slug+'" style="color:#60a5fa;font-size:.7rem;">embed</a></span></div>';
+cards+='</div>';g.innerHTML+=cards;
+}
+}
+init();
+</script>
+<script defer="" src="/share.js"></script>
+</body>
+</html>

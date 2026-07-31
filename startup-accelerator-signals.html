@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="https://gitdealflow.com/startup-accelerator-signals" rel="canonical"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<link href="https://signals.gitdealflow.com/feed.xml" rel="alternate" title="Weekly digest" type="application/rss+xml"/>
+<link href="https://gitdealflow.com/llms.txt" rel="alternate" title="LLMs.txt" type="text/plain"/>
+<link href="https://gitdealflow.com/agents.md" rel="alternate" title="Agents.md" type="text/markdown"/>
+<meta content="#0f172a" name="theme-color"/>
+<meta content="dark" name="color-scheme"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link as="style" href="/styles.css" rel="preload"/>
+<link href="/styles.css" rel="stylesheet"/>
+<link href="/ux.css" rel="stylesheet"/>
+<script>document.documentElement.className += ' js';</script>
+<link crossorigin="" href="https://signals.gitdealflow.com" rel="preconnect"/>
+<link href="https://signals.gitdealflow.com" rel="dns-prefetch"/>
+<meta content="GitDealFlow" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@sipiteno" name="twitter:site"/>
+<meta content="@sipiteno" name="twitter:creator"/>
+<meta content="The Data Nerd" name="author"/>
+<title>How to Pick Winning Accelerator Cohorts Using GitHub Engineering Signals | GitDealFlow</title>
+<meta content="Use GitHub engineering signals (commit velocity, contributor growth, infrastructure buildout) to select winning startup accelerator cohorts. Data-driven approach for accelerator deal flow." name="description"/>
+<meta content="How to Pick Winning Accelerator Cohorts Using GitHub Engineering Signals" property="og:title"/>
+<meta content="Use GitHub engineering signals (commit velocity, contributor growth, infrastructure buildout) to select winning startup accelerator cohorts." property="og:description"/>
+<meta content="How to Pick Winning Accelerator Cohorts Using GitHub Engineering Signals" name="twitter:title"/>
+<meta content="Use GitHub engineering signals to select winning accelerator cohorts. Data-driven approach." name="twitter:description"/>
+<meta content="accelerator deal flow, startup accelerator signals, Y Combinator selection, Techstars cohorts, startup scouting" name="news_keywords"/>
+<meta content="accelerator deal flow" property="article:tag"/>
+<meta content="startup accelerator signals" property="article:tag"/>
+<meta content="startup scouting" property="article:tag"/>
+<meta content="GitHub signals" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta name="format-detection" content="telephone=no"/>
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Pick Winning Accelerator Cohorts Using GitHub Engineering Signals",
+    "description": "Use GitHub engineering signals (commit velocity, contributor growth, infrastructure buildout) to select winning startup accelerator cohorts.",
+    "author": {"@type": "Person", "name": "The Data Nerd"},
+    "publisher": {"@type": "Organization", "name": "GitDealFlow", "url": "https://gitdealflow.com"},
+    "datePublished": "2026-07-30",
+    "dateModified": "2026-07-30",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://gitdealflow.com/startup-accelerator-signals"}
+  }</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gitdealflow.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Pick Winning Accelerator Cohorts Using GitHub Engineering Signals",
+          "item": "https://gitdealflow.com/startup-accelerator-signals.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "How to Pick Winning Accelerator Cohorts Using GitHub Engineering Signals | GitDealFlow",
+      "description": "Use GitHub engineering signals (commit velocity, contributor growth, infrastructure buildout) to select winning startup accelerator cohorts. Data-driven approach for accelerator deal flow.",
+      "image": "https://gitdealflow.com/og.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GitDealFlow?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow is a VC deal-flow signal tool that flags startups accelerating on GitHub 21–47 days before the round. Track engineering velocity across 4,200+ startup orgs."}}, {"@type": "Question", "name": "How does GitDealFlow work?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow reads public GitHub activity — commits, contributors, repos — to detect engineering acceleration. The signal helps investors find startups before fundraise announcements."}}, {"@type": "Question", "name": "Is GitDealFlow free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GitDealFlow offers a permanent free tier including the weekly Signal Digest and live board at signals.gitdealflow.com."}}]}</script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-brand-500 focus:text-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg" href="#main-content">Skip to main content</a>
+<header class="relative sticky top-0 z-50 border-b border-gray-800 bg-dark-900/95 backdrop-blur">
+<div class="mobile-compact-header max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+<a class="font-semibold tracking-tight text-white text-lg" href="/">GitDealFlow</a>
+<nav aria-label="Primary navigation" class="hidden md:flex items-center gap-5 text-sm font-medium text-gray-300">
+<a class="hover:text-white transition-colors" href="/">Home</a>
+<a class="hover:text-white transition-colors" href="https://signals.gitdealflow.com">Signals</a>
+<a class="hover:text-white transition-colors" href="/firstlook">First Look</a>
+<a class="hover:text-white transition-colors" href="/dashboard">Dashboard</a>
+<a class="hover:text-white transition-colors" href="/insider">Insider</a>
+<a class="hover:text-white transition-colors" href="/pricing">Pricing</a>
+<a class="hover:text-white transition-colors" href="/vs">Compare</a>
+</nav>
+</div>
+</header>
+<main aria-label="Main content" id="main-content">
+<section class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+<p class="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-3">Research</p>
+<h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">How to Pick Winning Accelerator Cohorts Using GitHub Engineering Signals</h1>
+<p class="text-gray-400 text-sm mb-8">Published 2026-07-30 · By The Data Nerd · 8 min read</p>
+<div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6">
+<p class="text-lg">Every accelerator partner faces the same problem: <strong class="text-white">300+ applications, 20 slots, and 90 seconds to decide which founding team can actually build.</strong> Most selection processes rely on pitch quality, founder pedigree, and market size — but none of those measure what matters most: <strong class="text-white">can this team ship?</strong></p>
+<p>This is where <strong class="text-white">GitHub engineering signals</strong> come in. By analyzing public Git activity before the application even lands, accelerators can pre-rank applicants on their ability to execute — before the first pitch.</p>
+<div class="rounded-2xl border border-brand-500/20 bg-brand-500/5 p-6 my-8">
+<p class="text-white font-bold text-lg mb-2">The insight</p>
+<p class="text-gray-300">Accelerator-relevant startups show specific GitHub patterns <strong class="text-white">weeks before they apply</strong>. Engineering hiring bursts, deploy frequency spikes, and infrastructure buildouts signal that a team is accelerating — the same signals tracked at GitDealFlow across 369 monitored startups.</p>
+</div>
+<h2 class="text-2xl font-bold text-white mt-10 mb-4">The 4 Accelerator-Relevant GitHub Signals</h2>
+<p>Across the 369 startups currently tracked in the GitDealFlow dataset (Q3 2026), here are the signal types observed:</p>
+<div class="grid md:grid-cols-2 gap-4 my-6">
+<div class="rounded-xl border border-gray-700 bg-dark-800 p-5"><p class="text-signal-400 font-bold mb-1">Framework migration</p><p class="text-gray-400 text-sm">197 startups</p><p class="text-gray-300 text-sm mt-2">Team re-architecting the codebase</p></div>
+<div class="rounded-xl border border-gray-700 bg-dark-800 p-5"><p class="text-signal-400 font-bold mb-1">Engineering hiring burst</p><p class="text-gray-400 text-sm">89 startups</p><p class="text-gray-300 text-sm mt-2">Contributor count spikes +30%+</p></div>
+<div class="rounded-xl border border-gray-700 bg-dark-800 p-5"><p class="text-signal-400 font-bold mb-1">Deploy frequency spike</p><p class="text-gray-400 text-sm">61 startups</p><p class="text-gray-300 text-sm mt-2">Commit velocity surges dramatically</p></div>
+<div class="rounded-xl border border-gray-700 bg-dark-800 p-5"><p class="text-signal-400 font-bold mb-1">Infrastructure buildout</p><p class="text-gray-400 text-sm">22 startups</p><p class="text-gray-300 text-sm mt-2">New repos, new infrastructure</p></div>
+</div>
+<h2 class="text-2xl font-bold text-white mt-10 mb-4">Current Trending Startups</h2>
+<p>The following startups show the strongest acceleration signals — exactly the type that would make strong accelerator candidates:</p>
+<div class="overflow-x-auto my-6">
+<table class="w-full text-sm">
+<thead class="text-gray-400 text-xs uppercase tracking-wider border-b border-gray-700">
+<tr><th class="text-left py-2">Startup</th><th class="text-left py-2">Stage</th><th class="text-right py-2">14-day commits</th><th class="text-right py-2">Velocity change</th><th class="text-right py-2">Signal</th></tr>
+</thead>
+<tbody>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">fleetbase</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">17</td><td class="py-2 text-right text-emerald-400">+1600%</td><td class="py-2 text-gray-400 text-xs">Engineering hiring burst</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">PhotoFlare</td><td class="py-2 text-gray-400">Series A/B</td><td class="py-2 text-right text-gray-300">17</td><td class="py-2 text-right text-emerald-400">+1600%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">aphp</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Infrastructure buildout</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">StanfordSpezi</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">5</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">ere-health</td><td class="py-2 text-gray-400">Series A/B</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">epic-open-source</td><td class="py-2 text-gray-400">Seed</td><td class="py-2 text-right text-gray-300">2</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Engineering hiring burst</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">insightsengineering</td><td class="py-2 text-gray-400">Seed</td><td class="py-2 text-right text-gray-300">2</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">tuva-health</td><td class="py-2 text-gray-400">Series A/B</td><td class="py-2 text-right text-gray-300">3</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Infrastructure buildout</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">ucfopen</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">ccao-data</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">The-Mu-Foundation</td><td class="py-2 text-gray-400">Series A/B</td><td class="py-2 text-right text-gray-300">2</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">swellstores</td><td class="py-2 text-gray-400">Series A/B</td><td class="py-2 text-right text-gray-300">2</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Engineering hiring burst</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">vuestorefront</td><td class="py-2 text-gray-400">Seed</td><td class="py-2 text-right text-gray-300">2</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">bic-org</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">3</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Engineering hiring burst</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">vanilophp</td><td class="py-2 text-gray-400">Series A/B</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">OCSInventory-NG</td><td class="py-2 text-gray-400">Growth</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">relizaio</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">6</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Engineering hiring burst</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">Velocidex</td><td class="py-2 text-gray-400">Growth</td><td class="py-2 text-right text-gray-300">7</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">hightower-systems</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+<tr class="border-b border-gray-700"><td class="py-2 font-medium text-gray-200">eftechcombr</td><td class="py-2 text-gray-400">Pre-seed</td><td class="py-2 text-right text-gray-300">1</td><td class="py-2 text-right text-emerald-400">+999%</td><td class="py-2 text-gray-400 text-xs">Deploy frequency spike</td></tr>
+</tbody>
+</table>
+</div>
+<h2 class="text-2xl font-bold text-white mt-10 mb-4">How to Apply This to Accelerator Selection</h2>
+<ol class="list-decimal pl-6 space-y-3">
+<li><strong class="text-white">Pre-screen by commit history.</strong> Before reading the application, check the startup's public GitHub. A 14-day commit velocity spike is a strong signal of active building.</li>
+<li><strong class="text-white">Look for velocity changes, not absolute numbers.</strong> A startup that jumped from 2 commits/week to 34 is more interesting than one with steady 40 commits/week.</li>
+<li><strong class="text-white">Check contributor growth.</strong> Pre-seed startups with growing contributor bases indicate the founder can recruit.</li>
+<li><strong class="text-white">Flag infrastructure buildouts.</strong> Startups creating new repos during the pre-accelerator phase are building for scale.</li>
+</ol>
+<div class="rounded-2xl border border-gray-700 bg-dark-800 p-6 my-8">
+<h3 class="text-xl font-bold text-white mb-3">Case Study: The Pre-Accelerator Signal</h3>
+<p class="text-gray-300">Supply chain startup <strong class="text-white">fleetbase</strong> showed a +1600% commit velocity increase and +73% contributor growth — all before any public accelerator announcement. The engineering signal predated the news by weeks, matching the <strong class="text-white">219 documented fundraises</strong> in the GitDealFlow SSRN research panel.</p>
+</div>
+<p>The same data powering the <a class="text-brand-500 underline" href="/dashboard">GitDealFlow Dashboard</a> feeds the <a class="text-brand-500 underline" href="https://signals.gitdealflow.com">signals API</a> across 15 sectors — filter by stage to surface pre-seed and seed companies accelerating today.</p>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-700">
+<p class="text-gray-400 text-sm">Further reading: <a class="text-brand-500 underline" href="/vc-sourcing-checklist">VC Sourcing Checklist: 10 Engineering Signals That Predict Fundraising</a> · <a class="text-brand-500 underline" href="/signal-types-comparison">The 4 Types of Startup Engineering Signals</a></p>
+</div>
+</section>
+</main>
+<section class="vs-section">
+<div class="related">
+<h2 style="color:#e2e8f0;margin-top:0;border:none;padding:0;font-size:1.2rem">Related Resources</h2>
+<ul>
+<li><a href="/engineering-velocity-guide">Engineering Velocity in Startups: How to Measure, Track, and Read the Signal | GitDealFlow</a></li>
+<li><a href="/due-diligence-github">GitHub in Due Diligence: 5 Engineering Metrics Every Investor Should Check | GitDealFlow</a></li>
+<li><a href="/startup-competitor-analysis">How to Analyze Startup Competitors Using Public GitHub Data | GitDealFlow</a></li>
+<li><a href="/signal-types-comparison">The 4 Types of Startup Engineering Signals: Deploy Spikes, Hiring Bursts, Buildouts &amp; Migrations | GitDealFlow</a></li>
+<li><a href="/sector-trends-2026-q3">15 Startup Sectors Analyzed: Engineering Trends for Q3 2026 | GitDealFlow</a></li>
+</ul>
+</div>
+</section>
+<footer class="border-t border-gray-800 bg-dark-900/80 py-12">
+<div class="mobile-section-pad max-w-5xl mx-auto px-4 sm:px-6 text-center">
+<p class="text-gray-300 mb-2 font-semibold">GitDealFlow is a deal-flow signal tool for investors — not a fund. It reads startups' public GitHub engineering activity to flag the ones accelerating early.</p>
+<div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm mb-5">
+<a class="py-2 inline-block hover:text-gray-300" href="/best/best-startup-signal-tools">Best tools</a>
+<a class="py-2 inline-block hover:text-gray-300" href="/vs">Comparisons</a>
+<a class="py-2 inline-block hover:text-gray-300" href="/for/angel-investors">For investors</a>
+<a class="py-2 inline-block hover:text-gray-300" href="/learn/what-is-a-deal-flow-signal">Learn</a>
+<a class="py-2 inline-block hover:text-gray-300" href="/glossary/scout-score">Glossary</a>
+<a class="py-2 inline-block hover:text-gray-300" href="/templates/deal-memo-template">Templates</a>
+</div>
+<div class="mb-5">
+<p class="text-gray-400 text-xs font-semibold uppercase tracking-wider text-center mb-3">Where the first movers already gather</p>
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a class="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-dark-800/80 px-3.5 py-2.5 min-h-[44px] text-sm text-gray-300 hover:border-signal-500/50 hover:text-white transition" href="https://t.me/gitdealflow" rel="me">Telegram channel</a>
+<a class="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-dark-800/80 px-3.5 py-2.5 min-h-[44px] text-sm text-gray-300 hover:border-signal-500/50 hover:text-white transition" href="https://x.com/sipiteno" rel="me">X / Twitter</a>
+<a class="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-dark-800/80 px-3.5 py-2.5 min-h-[44px] text-sm text-gray-300 hover:border-signal-500/50 hover:text-white transition" href="https://github.com/kindrat86" rel="me">GitHub</a>
+<a class="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-dark-800/80 px-3.5 py-2.5 min-h-[44px] text-sm text-gray-300 hover:border-signal-500/50 hover:text-white transition" href="https://signals.gitdealflow.com/feed.xml">RSS digest</a>
+</div>
+</div>
+<p class="text-gray-400 text-xs">© 2026 GitDealFlow. Proof surfaces live on signals.gitdealflow.com.</p>
+</div>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</footer>
+<script defer="" src="/ux.js"></script>
+<script defer="" src="/share.js"></script>
+</body>
+</html>

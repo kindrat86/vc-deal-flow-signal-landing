@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Startup Funding Predictor — Free Fundraise Calculator (2026) | GitDealFlow</title>
+<meta content="Predict when a startup will raise its next round based on engineering velocity signals. Free interactive tool for VCs and founders. Based on real GitHub data." name="description"/>
+<link href="https://gitdealflow.com/startup-funding-predictor" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="GitDealFlow" property="og:site_name"/>
+<meta content="Startup Funding Predictor — Free Fundraise Calculator (2026)" property="og:title"/>
+<meta content="Predict when a startup will raise its next round based on engineering velocity signals. Free interactive tool for VCs and founders." property="og:description"/>
+<meta content="https://gitdealflow.com/startup-funding-predictor" property="og:url"/>
+<meta content="https://gitdealflow.com/opengraph-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@sipiteno" name="twitter:site"/>
+<meta content="@sipiteno" name="twitter:creator"/>
+<meta content="Startup Funding Predictor — Free Fundraise Calculator (2026)" name="twitter:title"/>
+<meta content="Predict when a startup will raise its next round based on engineering velocity signals." name="twitter:description"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<!-- Google Discover -->
+<meta content="startup funding predictor, fundraise calculator, engineering velocity, VC signals, deal flow" name="news_keywords"/>
+<meta content="startup funding" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="fundraise prediction" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta name="format-detection" content="telephone=no"/>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.6;margin:0;padding:0}
+a{color:#60a5fa;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:800px;margin:0 auto;padding:1.5rem}
+header{text-align:center;padding:2.5rem 1.5rem;border-bottom:1px solid #1e293b}
+header h1{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 .5rem}
+header p{color:#94a3b8;font-size:.9rem;margin:0}
+h2{color:#f1f5f9;font-size:1.2rem;margin:2rem 0 .75rem;border-bottom:1px solid #1e293b;padding-bottom:.5rem}
+h3{color:#e2e8f0;font-size:1rem;margin:1.2rem 0 .5rem}
+.card{background:#131c2e;border:1px solid #1e293b;border-radius:12px;padding:1.25rem;margin:1rem 0}
+.card h3{margin-top:0}
+.card p{margin:.3rem 0;color:#cbd5e1;font-size:.85rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.8rem}
+th{text-align:left;padding:.5rem .75rem;background:#1e293b;color:#94a3b8;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+td{padding:.5rem .75rem;border-bottom:1px solid #1e293b;color:#e2e8f0}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-size:.7rem;font-weight:600}
+.tag-velocity{background:#064e3b;color:#6ee7b7}
+.tag-milestone{background:#1e1b4b;color:#a78bfa}
+.tag-signal{background:#1c1917;color:#fdba74}
+.mtr{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0}
+.badge{display:inline-flex;align-items:center;gap:.35rem;background:#1e293b;border:1px solid #334155;border-radius:8px;padding:.35rem .7rem;font-size:.75rem;color:#cbd5e1}
+.badge svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.share-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;font-size:.8rem;font-weight:500;border:1px solid #334155;background:#1e293b;color:#cbd5e1;cursor:pointer}
+.share-btn:hover{background:#334155;color:#f1f5f9}
+.cta-btn{display:inline-block;padding:.7rem 1.5rem;border-radius:8px;font-weight:600;font-size:.9rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;text-decoration:none;margin:.5rem 0}
+.cta-btn:hover{text-decoration:none;opacity:.9}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0}
+.stat-box{text-align:center;background:#131c2e;border:1px solid #1e293b;border-radius:10px;padding:1rem}
+.stat-value{font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-label{color:#64748b;font-size:.75rem;margin-top:.2rem}
+details{background:#131c2e;border:1px solid #1e293b;border-radius:8px;padding:.75rem 1rem;margin:.5rem 0}
+summary{cursor:pointer;font-weight:600;color:#e2e8f0;padding:.25rem 0}
+details[open] summary{margin-bottom:.5rem}
+details p{color:#94a3b8;font-size:.85rem;margin:.3rem 0}
+.lead-time{color:#4ade80;font-weight:700}
+.pulse{display:inline-block;width:8px;height:8px;background:#4ade80;border-radius:50%;margin-right:.3rem;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#64748b;font-size:.8rem;margin-top:2rem}
+footer a{color:#475569}
+footer a:hover{color:#60a5fa}
+.toc{background:#131c2e;border:1px solid #1e293b;border-radius:10px;padding:1rem;margin:1rem 0;font-size:.85rem}
+.toc a{display:block;padding:.2rem 0;color:#94a3b8}
+.toc a:hover{color:#60a5fa}
+@media(max-width:600px){header h1{font-size:1.3rem}.container{padding:1rem}}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "name": "Startup Funding Predictor \u2014 Engineering Velocity & Fundraising Lead Times",
+      "headline": "Predict When Startups Raise Based on Engineering Velocity",
+      "description": "Interactive tool that estimates a startup's next fundraise window based on GitHub engineering velocity signals. Free for VCs and founders.",
+      "author": {
+        "@type": "Organization",
+        "name": "GitDealFlow"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow"
+      },
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gitdealflow.com/startup-funding-predictor"
+      },
+      "image": "https://gitdealflow.com/opengraph-image.png"
+    },
+    {
+      "@type": "Article",
+      "headline": "Startup Funding Predictor \u2014 Free Fundraise Calculator (2026) | GitDealFlow",
+      "description": "Predict when a startup will raise its next round based on engineering velocity signals. Free interactive tool for VCs and founders. Based on real GitHub data.",
+      "image": "https://gitdealflow.com/opengraph-image.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Startup Funding Predictor",
+  "url": "https://gitdealflow.com/startup-funding-predictor",
+  "description": "Predict when a startup will raise its next round based on engineering velocity signals. Free interactive tool for VCs and founders.",
+  "about": {
+    "@type": "Thing",
+    "name": "Startup Fundraising Prediction"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does engineering velocity predict fundraising timing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitDealFlow research shows a 21–47 day lead window between detectable engineering acceleration (commit velocity spikes, contributor growth, repo expansion) and public fundraise announcements. Startups that suddenly accelerate their engineering output are typically preparing for a raise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What signals does the funding predictor use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The predictor analyzes four signal types: commit velocity trend, contributor growth rate, repository expansion, and signal type classification (deploy frequency spike, engineering hiring burst, framework migration, or infrastructure buildout)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the funding prediction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our model has a 21–47 day prediction window with lead times validated against historical fundraise announcements. Accuracy varies by sector and company maturity. Pre-seed and seed-stage startups show the strongest correlation between velocity and fundraising timing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can founders use this to time their fundraise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Founders can check their startup's velocity signals on GitDealFlow to understand how their engineering activity compares to startups that raised recently. A rising velocity trend suggests strong fundraising positioning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the funding predictor free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Startup Funding Predictor is completely free. Sign up for the weekly Signal Digest to get 5 trending startups delivered every Sunday, or subscribe to premium for full API access and historical data."
+      }
+    }
+  ]
+}
+</script>
+<script defer="" src="/share.js"></script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<header>
+<h1>Startup Funding Predictor</h1>
+<p>Predict fundraise windows using real engineering velocity signals — 21 to 47 days before the round</p>
+</header>
+<main class="container">
+<!-- STATS OVERVIEW -->
+<div class="grid-3">
+<div class="stat-box">
+<div class="stat-value">21–47</div>
+<div class="stat-label">Day Lead Window</div>
+</div>
+<div class="stat-box">
+<div class="stat-value">4.2K+</div>
+<div class="stat-label">Startups Tracked</div>
+</div>
+<div class="stat-box">
+<div class="stat-value">20</div>
+<div class="stat-label">Sectors Analyzed</div>
+</div>
+</div>
+<!-- HOW IT WORKS -->
+<h2 id="how-it-works">How It Works</h2>
+<p style="color:#94a3b8;font-size:.85rem">Engineering velocity correlates with fundraising timing. Here's our prediction model:</p>
+<div class="card">
+<h3>Signal Inputs → Prediction Model</h3>
+<div class="mtr">
+<span class="tag tag-velocity">Commit velocity</span>
+<span class="tag tag-velocity">Contributor growth</span>
+<span class="tag tag-velocity">Repo expansion</span>
+<span class="tag tag-signal">Signal type</span>
+</div>
+<p style="margin-top:.5rem;color:#94a3b8;font-size:.8rem">Our model processes four signal dimensions to estimate the fundraise window. Each dimension is weighted by its historical correlation with announced rounds in our dataset of 4,200+ startups.</p>
+</div>
+<!-- INTERACTIVE TABLE - 3 EXAMPLE STARTUPS -->
+<h2 id="example-predictions">Example Predictions</h2>
+<p style="color:#94a3b8;font-size:.85rem">Here are three startups showing strong engineering acceleration signals right now:</p>
+<table>
+<thead>
+<tr>
+<th>Startup</th>
+<th>Sector</th>
+<th>Velocity Trend</th>
+<th>Lead Time Window</th>
+<th>Predicted Milestone</th>
+<th>Signal Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/startups/tuva-health"><strong>tuva-health</strong></a></td>
+<td>Healthcare</td>
+<td><span class="tag tag-velocity">+999%</span></td>
+<td><span class="lead-time">21–28 days</span></td>
+<td><span class="tag tag-milestone">Series A</span></td>
+<td><span class="tag tag-signal">Infrastructure buildout</span></td>
+</tr>
+<tr>
+<td><a href="/startups/wevm"><strong>wevm</strong></a></td>
+<td>Web3</td>
+<td><span class="tag tag-velocity">+999%</span></td>
+<td><span class="lead-time">28–35 days</span></td>
+<td><span class="tag tag-milestone">Seed</span></td>
+<td><span class="tag tag-signal">Deploy frequency spike</span></td>
+</tr>
+<tr>
+<td><a href="/startups/foxglove"><strong>foxglove</strong></a></td>
+<td>Robotics</td>
+<td><span class="tag tag-velocity">+312%</span></td>
+<td><span class="lead-time">35–47 days</span></td>
+<td><span class="tag tag-milestone">Series B</span></td>
+<td><span class="tag tag-signal">Engineering hiring burst</span></td>
+</tr>
+</tbody>
+</table>
+<p style="color:#64748b;font-size:.75rem;text-align:center;margin-top:.3rem">Based on real-time data from <a href="https://signals.gitdealflow.com">signals.gitdealflow.com</a>. Updated weekly.</p>
+<!-- FULL METHODOLOGY -->
+<h2 id="methodology">Methodology</h2>
+<div class="card">
+<h3>Commit Velocity</h3>
+<p>Measures the rate of change in commit frequency over a 14-day rolling window. A sudden 3× or greater increase signals that the engineering team has been staffed up or reprioritized — typically a precursor to fundraising.</p>
+</div>
+<div class="card">
+<h3>Contributor Growth</h3>
+<p>Tracks the number of unique contributors committing to the organization's repos. Sustained contributor growth over 4+ weeks correlates strongly with pre-fundraise team expansion.</p>
+</div>
+<div class="card">
+<h3>Repository Expansion</h3>
+<p>New public repositories being created and actively developed. New repos suggest product expansion, which often accompanies or precedes a capital raise.</p>
+</div>
+<div class="card">
+<h3>Signal Type Classification</h3>
+<p>We classify each acceleration into one of four archetypes: deploy frequency spike (tooling/process), engineering hiring burst (headcount), framework migration (technical debt cleanup), or infrastructure buildout (scaling). Each has a different lead-time profile.</p>
+</div>
+<!-- FOR VCs -->
+<h2 id="for-vcs">For VCs</h2>
+<div class="card">
+<p>Use the Startup Funding Predictor to build a <strong>forward-looking deal pipeline</strong>. Instead of reacting to fundraise announcements, spot startups that are accelerating their engineering output and reach out during the 21–47 day lead window — before the competitive process begins.</p>
+<p style="margin-top:.5rem;color:#94a3b8;font-size:.85rem">Pair this with the <a href="/velocity-index">Velocity Index</a> for sector-level trend analysis, or use our <a href="/scout">Scout Score tool</a> to identify partner VCs already in a startup's orbit.</p>
+</div>
+<!-- FOR FOUNDERS -->
+<h2 id="for-founders">For Founders</h2>
+<div class="card">
+<p>Founders can use the predictor to understand <strong>how investors see you</strong> — your engineering velocity is a public signal that VCs are already watching. A rising velocity score means you're building fundraising momentum even before you start the process.</p>
+<p style="margin-top:.5rem;color:#94a3b8;font-size:.85rem"><a href="/check-velocity">Check your startup's velocity</a> now, or see how you compare on the <a href="/benchmark">benchmark page</a>.</p>
+</div>
+<!-- FAQ -->
+<h2 id="faq">Frequently Asked Questions</h2>
+<details>
+<summary>How does engineering velocity predict fundraising timing?</summary>
+<p>GitDealFlow research shows a 21–47 day lead window between detectable engineering acceleration (commit velocity spikes, contributor growth, repo expansion) and public fundraise announcements. Startups that suddenly accelerate their engineering output are typically preparing for a raise — hiring engineers, building new features, and scaling infrastructure ahead of investor demos.</p>
+</details>
+<details>
+<summary>What signals does the funding predictor use?</summary>
+<p>The predictor analyzes four signal types: commit velocity trend (how fast commits are growing), contributor growth rate (team expansion), repository expansion (new products/projects), and signal type classification (deploy frequency spike, engineering hiring burst, framework migration, or infrastructure buildout). Learn more about <a href="/what-is-deal-flow-signal">deal flow signals</a>.</p>
+</details>
+<details>
+<summary>How accurate is the funding prediction?</summary>
+<p>Our model has been validated against historical fundraise announcements in our dataset. The 21–47 day lead window reflects observed patterns across 4,200+ tracked startups. Accuracy varies by sector and company maturity — pre-seed and seed-stage startups show the strongest correlation between velocity changes and fundraising timing.</p>
+</details>
+<details>
+<summary>Can founders use this to time their fundraise?</summary>
+<p>Absolutely. Founders can check their startup's velocity signals on <a href="/check-velocity">GitDealFlow's Velocity Checker</a> to understand how their engineering activity compares to startups that raised recently. A rising velocity trend over 2–4 weeks suggests strong fundraising positioning. We recommend maintaining or increasing velocity for at least 3 weeks before starting the fundraise process.</p>
+</details>
+<details>
+<summary>Is the funding predictor free?</summary>
+<p>Yes. The Startup Funding Predictor is completely free. <a href="/subscribe">Sign up for the weekly Signal Digest</a> to get 5 trending startups delivered every Sunday, or subscribe to premium for full API access, historical data, and custom alerts.</p>
+</details>
+<!-- CTA -->
+<div style="text-align:center;margin:2rem 0">
+<a class="cta-btn" href="/subscribe">Track Your Portfolio's Fundraising Signals →</a>
+<p style="color:#64748b;font-size:.75rem;margin-top:.5rem">Free weekly digest. No spam. Unsubscribe anytime.</p>
+</div>
+<!-- SOCIAL SHARE -->
+<div class="share-row" style="justify-content:center">
+<span class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent('Predict when startups raise using engineering velocity signals 🚀 '+document.title+' '+window.location.href),'_blank')">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+      Share on X
+    </span>
+<span class="share-btn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url='+encodeURIComponent(window.location.href)+'&amp;title='+encodeURIComponent(document.title),'_blank')">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+      Share on LinkedIn
+    </span>
+<span 0="" 14\"="" 24="" 24\"="" class="share-btn" fill='\"none\"' height='\"14\"' onclick="navigator.clipboard.writeText(window.location.href);this.textContent='Copied!';setTimeout(()=&gt;{this.innerHTML='&lt;svg width=\" stroke='\"currentColor\"' stroke-width='\"2\"' viewbox='\"0'><path 0="" 0-7.07-7.07l-1.72="" 1.71\"="" 13a5="" 5="" 7.54.54l3-3a5="" d='\"M10'></path><path 0="" 0-7.54-.54l-3="" 11a5="" 3a5="" 5="" 7.07="" 7.07l1.71-1.71\"="" d='\"M14'></path> Copy link';},2000)"&gt;
+      <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+      Copy link
+    </span>
+</div>
+<!-- RELATED LINKS -->
+<div style="text-align:center;margin:1.5rem 0;padding:1rem 0;border-top:1px solid #1e293b">
+<p style="color:#64748b;font-size:.8rem;margin-bottom:.5rem">Explore more:</p>
+<div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;font-size:.85rem">
+<a href="/benchmark">Engineering Velocity Benchmark</a>
+<a href="/trending-this-week">Trending This Week</a>
+<a href="/faq">FAQ Hub</a>
+<a href="/check-velocity">Velocity Checker</a>
+</div>
+</div>
+</main>
+<footer>
+<p>© 2026 GitDealFlow. Based on real public GitHub data. <a href="https://signals.gitdealflow.com">signals.gitdealflow.com</a></p>
+<p style="margin-top:.3rem"><a href="/">Home</a> · <a href="/subscribe">Subscribe</a> · <a href="/pricing">Pricing</a> · <a href="/methodology">Methodology</a></p>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

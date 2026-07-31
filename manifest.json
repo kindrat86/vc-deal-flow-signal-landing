@@ -1,0 +1,13 @@
+{
+  "name": "GitDealFlow — Startup Engineering Velocity Signals",
+  "short_name": "GitDealFlow",
+  "description": "Track startup engineering velocity, commit momentum, and breakout signals across 15 sectors. Free GitHub-based data for deal flow analysis.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

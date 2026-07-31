@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Startup Engineering Momentum — Embeddable Widget | GitDealFlow</title>
+<meta content="Embeddable widget showing the top 5 trending startups by GitHub engineering velocity. Free to embed on any blog, newsletter, or startup directory." name="description"/>
+<link href="https://gitdealflow.com/widget" rel="canonical"/>
+<meta content="Embeddable Startup Momentum Widget" property="og:title"/>
+<meta content="Live widget showing trending startups by engineering velocity. Free to embed." property="og:description"/>
+<meta content="https://gitdealflow.com/widget" property="og:url"/>
+<meta content="https://signals.gitdealflow.com/opengraph-image" property="og:image"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GitDealFlow Startup Momentum Widget",
+      "url": "https://gitdealflow.com/widget",
+      "applicationCategory": "Widget",
+      "description": "Free embeddable widget showing the top 5 trending startups by GitHub engineering velocity. Add it to any blog, newsletter, or startup directory.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Startup Engineering Momentum \u2014 Embeddable Widget | GitDealFlow",
+      "description": "Embeddable widget showing the top 5 trending startups by GitHub engineering velocity. Free to embed on any blog, newsletter, or startup directory.",
+      "image": "https://signals.gitdealflow.com/opengraph-image",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0b1120;
+      color: #e8eaed;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: #60a5fa; }
+    
+    .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+    
+    header {
+      text-align: center;
+      padding: 4rem 1.5rem 2rem;
+      border-bottom: 1px solid #1e293b;
+      background: linear-gradient(180deg, #0f172a, #0b1120);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+    header p { color: #94a3b8; max-width: 500px; margin: 0 auto; }
+
+    /* ── Tab system ── */
+    .tabs { display: flex; gap: 0.25rem; background: #1e293b; border-radius: 12px; padding: 0.25rem; margin: 2rem 0; }
+    .tab-btn {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 10px;
+      background: transparent;
+      color: #64748b;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn.active { background: #334155; color: #f1f5f9; }
+
+    /* ── Live preview ── */
+    .preview-wrap {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+    }
+    .preview-header {
+      padding: 0.75rem 1rem;
+      background: #1e293b;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .preview-header span { color: #64748b; font-size: 0.8rem; }
+    .preview-body { padding: 0; }
+    .preview-body iframe {
+      width: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ── Widget embed (what others embed) ── */
+    .widget-preview {
+      background: #0c1425;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2a3a5c;
+    }
+    .widget-preview .widget-head {
+      padding: 0.6rem 1rem;
+      background: linear-gradient(135deg, #1e3a5f, #1a2a4a);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #93c5fd;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .widget-preview .widget-head a { color: #93c5fd; font-size: 0.75rem; text-decoration: none; }
+    .widget-preview .widget-item {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .widget-preview .widget-item:last-child { border-bottom: none; }
+    .widget-item .name { color: #f1f5f9; font-weight: 600; font-size: 0.9rem; }
+    .widget-item .meta { color: #64748b; font-size: 0.75rem; }
+    .widget-item .change { color: #4ade80; font-weight: 600; font-size: 0.85rem; }
+
+    /* ── Embed code ── */
+    .embed-section {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .embed-section h3 {
+      color: #94a3b8;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+    .embed-section textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background: #0b1120;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      color: #94a3b8;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.8rem;
+      resize: vertical;
+      min-height: 80px;
+      outline: none;
+    }
+    .embed-section textarea:focus { border-color: #60a5fa; }
+    .embed-section button {
+      margin-top: 0.75rem;
+      padding: 0.6rem 1.25rem;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #60a5fa, #3b82f6);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .embed-section button:hover { opacity: 0.9; }
+
+    /* ── CTA section ── */
+    .cta-section {
+      text-align: center;
+      padding: 2rem;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      margin: 2rem 0;
+    }
+    .cta-section h2 { color: #f1f5f9; font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .cta-section p { color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; }
+    .cta-section .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #60a5fa, #3b82f6);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid #1e293b;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+<!-- Google Discover metadata -->
+<meta content="Widget, deal flow, engineering velocity, venture capital, GitHub, startup" name="news_keywords"/>
+<meta content="Widget" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta content="GitHub" property="article:tag"/>
+<meta content="startup" property="article:tag"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:published_time"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:modified_time"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta name="format-detection" content="telephone=no"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gitdealflow.com/"}, {"@type": "ListItem", "position": 2, "name": "Startup Engineering Momentum — Embeddable Widget", "item": "https://gitdealflow.com/widget.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GitDealFlow?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow is a VC deal-flow signal tool that flags startups accelerating on GitHub 21–47 days before the round. Track engineering velocity across 4,200+ startup orgs."}}, {"@type": "Question", "name": "How does GitDealFlow work?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow reads public GitHub activity — commits, contributors, repos — to detect engineering acceleration. The signal helps investors find startups before fundraise announcements."}}, {"@type": "Question", "name": "Is GitDealFlow free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GitDealFlow offers a permanent free tier including the weekly Signal Digest and live board at signals.gitdealflow.com."}}]}</script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<header>
+<h1>🧩 Embeddable Widget</h1>
+<p>Add live trending startup data to your blog, newsletter, or directory with one line of HTML.</p>
+</header>
+<main class="container">
+<!-- Tab: Preview vs Code -->
+<div class="tabs">
+<button class="tab-btn active" data-tab="preview">Live Preview</button>
+<button class="tab-btn" data-tab="code">Embed Code</button>
+<button class="tab-btn" data-tab="who">Who uses it</button>
+</div>
+<!-- Tab: Live Preview -->
+<div class="tab-content" id="tab-preview">
+<div class="preview-wrap">
+<div class="preview-header">
+<span>🧩 Startup Momentum Widget (live)</span>
+<a href="https://gitdealflow.com" style="font-size:0.75rem;color:#60a5fa;text-decoration:none;">Powered by GitDealFlow ↗</a>
+</div>
+<div class="preview-body" id="widget-live">
+<div style="text-align:center;padding:3rem;color:#475569;">Loading trending startups...</div>
+</div>
+</div>
+</div>
+<!-- Tab: Embed Code -->
+<div class="tab-content" id="tab-code" style="display:none;">
+<div class="embed-section">
+<h3>Option A: Iframe (any website)</h3>
+<textarea id="code-iframe" readonly=""><iframe frameborder="0" height="380" src="https://gitdealflow.com/embed/momentum" title="Startup Momentum Widget" width="100%"></iframe></textarea>
+<button id="copy-iframe">📋 Copy Iframe Code</button>
+</div>
+<div class="embed-section">
+<h3>Option B: Markdown (Ghost, Substack, Medium)</h3>
+<textarea id="code-markdown" readonly="">{% raw %}
+[See trending startups by engineering velocity](https://gitdealflow.com/trending) — data from GitDealFlow
+{% endraw %}</textarea>
+<button id="copy-markdown">📋 Copy Link</button>
+</div>
+</div>
+<!-- Tab: Who it's for -->
+<div class="tab-content" id="tab-who" style="display:none;">
+<div style="display:grid;gap:1rem;margin:1.5rem 0;">
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.25rem;">
+<h3 style="color:#f1f5f9;margin-bottom:0.5rem;">📝 Startup Blogs</h3>
+<p style="color:#64748b;font-size:0.9rem;">Show live trending data alongside your editorial picks. Adds credibility and keeps your content fresh automatically.</p>
+</div>
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.25rem;">
+<h3 style="color:#f1f5f9;margin-bottom:0.5rem;">📬 VC Newsletters</h3>
+<p style="color:#64748b;font-size:0.9rem;">Embed the widget in your weekly roundup. Your readers see real acceleration data without leaving the email.</p>
+</div>
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.25rem;">
+<h3 style="color:#f1f5f9;margin-bottom:0.5rem;">🏢 Startup Directories</h3>
+<p style="color:#64748b;font-size:0.9rem;">Add a "Trending on GitHub" section to your directory pages. Differentiates your site from generic listings.</p>
+</div>
+<div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.25rem;">
+<h3 style="color:#f1f5f9;margin-bottom:0.5rem;">🎓 University Entrepreneurship Centers</h3>
+<p style="color:#64748b;font-size:0.9rem;">Show students which startups are building fastest. Free educational tool for entrepreneurship programs.</p>
+</div>
+</div>
+</div>
+<!-- Stats bar -->
+<div class="cta-section">
+<h2>📊 Trending Startups by Engineering Velocity</h2>
+<p>Updated every Monday from public GitHub data. 324+ startups across 15 sectors.</p>
+<a class="btn" href="https://signals.gitdealflow.com/trending">View Full Trending Board →</a>
+</div>
+<!-- FAQ -->
+<div style="border-top:1px solid #1e293b;padding-top:2rem;margin-top:2rem;">
+<h2 style="color:#f1f5f9;font-size:1.2rem;margin-bottom:1.5rem;">Frequently Asked Questions</h2>
+<div style="display:grid;gap:1rem;">
+<details style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem;">
+<summary style="color:#cbd5e1;font-weight:600;cursor:pointer;">Is the widget free?</summary>
+<p style="color:#64748b;font-size:0.9rem;margin-top:0.75rem;">Yes, completely free. No attribution required (though appreciated). No rate limits. No account needed.</p>
+</details>
+<details style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem;">
+<summary style="color:#cbd5e1;font-weight:600;cursor:pointer;">How often does the data update?</summary>
+<p style="color:#64748b;font-size:0.9rem;margin-top:0.75rem;">The widget refreshes every Monday ~09:00 UTC when we run the weekly signal sweep. The data is cached and updated in real-time from the API.</p>
+</details>
+<details style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem;">
+<summary style="color:#cbd5e1;font-weight:600;cursor:pointer;">Can I customize the widget?</summary>
+<p style="color:#64748b;font-size:0.9rem;margin-top:0.75rem;">The default widget shows top 5 trending startups. You can filter by sector by adding ?sector=fintech to the iframe URL. Contact us for custom integrations.</p>
+</details>
+</div>
+</div>
+</main>
+<section class="vs-section">
+<div class="related">
+<h2 style="color:#e2e8f0;margin-top:0;border:none;padding:0;font-size:1.2rem">Related Resources</h2>
+<ul>
+<li><a href="/how-to/how-to-find-ai-startups-before-they-raise">How to Find AI Startups Before They Raise — GitHub Signals for the Hottest Secto</a></li>
+<li><a href="/how-to/how-to-build-a-weekly-deal-flow-routine">How to Build a Weekly Deal-Flow Routine — The 30-Minute Monday System for Invest</a></li>
+<li><a href="/how-to/how-to-evaluate-engineering-momentum">How to Evaluate Engineering Momentum — The 4 Metrics That Predict a Fundraise</a></li>
+<li><a href="/how-to/how-to-use-alternative-data-for-vc-sourcing">How to Use Alternative Data for VC Sourcing — Beyond Crunchbase and PitchBook</a></li>
+<li><a href="/glossary/github-org-activity">GitHub Org Activity — GitDealFlow Aggregate Signal Source</a></li>
+</ul>
+</div>
+</section>
+<footer>
+<p>Data from <a href="https://signals.gitdealflow.com">VC Deal Flow Signal</a> · <a href="https://gitdealflow.com">GitDealFlow</a> · <a href="https://gitdealflow.com/privacy">Privacy</a></p>
+<p style="margin-top:0.5rem;">Free embeddable widget · Open data · CC BY 4.0 license</p>
+<footer style="text-align:center;padding:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.75rem;margin-top:3rem;">
+<a href="https://gitdealflow.com" style="color:#60a5fa;text-decoration:none;">GitDealFlow</a>
+  ·
+  <a href="https://signals.gitdealflow.com" style="color:#60a5fa;text-decoration:none;">Signals</a>
+  ·
+  <a href="https://sipi.bot" style="color:#60a5fa;text-decoration:none;">Sipi.bot</a>
+  ·
+  <a href="https://voicelogpro.com" style="color:#60a5fa;text-decoration:none;">VoiceLogPro</a>
+  ·
+  <a href="https://invisibleexit.com" style="color:#60a5fa;text-decoration:none;">InvisibleExit</a>
+  ·
+  <a href="https://unlocksaas.com" style="color:#60a5fa;text-decoration:none;">UnlockSaaS</a>
+  ·
+  <a href="https://churnlens.site" style="color:#60a5fa;text-decoration:none;">ChurnLens</a>
+  ·
+  <a href="https://sanctionsai.dev" style="color:#60a5fa;text-decoration:none;">SanctionsAI</a>
+  ·
+  <a href="https://carshake.online" style="color:#60a5fa;text-decoration:none;">CarShake</a>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div></footer>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div></footer>
+<script>
+(function() {
+  // ── Tab system ──
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+      document.getElementById('tab-' + this.dataset.tab).style.display = 'block';
+    });
+  });
+
+  // ── Load live data ──
+  const API = 'https://signals.gitdealflow.com/api/signals.json';
+  const widgetLive = document.getElementById('widget-live');
+
+  fetch(API)
+    .then(r => r.json())
+    .then(data => {
+      const trending = (data.trending || []).slice(0, 5);
+      if (!trending.length) {
+        widgetLive.innerHTML = '<div style="text-align:center;padding:3rem;color:#475569;">No data available</div>';
+        return;
+      }
+
+      // Render the widget design
+      const html = `<div class="widget-preview">
+        <div class="widget-head">
+          <span>🚀 Trending Startups</span>
+          <a href="https://gitdealflow.com" target="_blank">GitDealFlow ↗</a>
+        </div>
+        ${trending.map(s => `
+          <div class="widget-item">
+            <div>
+              <div class="name">${s.name}</div>
+              <div class="meta">${s.signalType || 'Active'} · ${s.geography || 'Global'}</div>
+            </div>
+            <div>
+              <div class="change">${s.commitVelocityChange || '+0%'}</div>
+              <div class="meta">${s.commitVelocity14d || 0} commits/14d</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>`;
+      widgetLive.innerHTML = html;
+    })
+    .catch(() => {
+      widgetLive.innerHTML = '<div style="text-align:center;padding:3rem;color:#475569;">Could not load data. <a href="https://signals.gitdealflow.com/trending" style="color:#60a5fa;">View on signals →</a></div>';
+    });
+
+  // ── Copy buttons ──
+  document.getElementById('copy-iframe').addEventListener('click', function() {
+    navigator.clipboard.writeText(document.getElementById('code-iframe').value);
+    this.textContent = '✅ Copied!';
+    setTimeout(() => { this.textContent = '📋 Copy Iframe Code'; }, 2000);
+  });
+  document.getElementById('copy-markdown').addEventListener('click', function() {
+    navigator.clipboard.writeText(document.getElementById('code-markdown').value);
+    this.textContent = '✅ Copied!';
+    setTimeout(() => { this.textContent = '📋 Copy Link'; }, 2000);
+  });
+})();
+</script>
+<script defer="" src="/share.js"></script>
+</body>
+</html>

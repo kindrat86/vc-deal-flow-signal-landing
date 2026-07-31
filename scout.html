@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free VC Scout Score — Are You a Startup Whisperer? (2026) | GitDealFlow</title>
+<meta content="Free tool: Check your invisible Scout Score — how good are you at spotting breakout startups before they raise? Based on your GitHub starring history vs 75 validated unicorns." name="description"/>
+<link href="https://gitdealflow.com/scout" rel="canonical"/>
+<meta a="" are="" content="Free VC Scout Score — Are You a Startup Whisperer? (2026) | GitDealFlow" property="og:title" score="" scout="" startup="" vc="" whisperer?"="" you="" —=""/>
+<meta content="Free tool: check how closely your GitHub starring matches unicorn founders. 0-100 Scout Score. Share your score and challenge friends!" property="og:description"/>
+<meta content="https://gitdealflow.com/opengraph-image.png" property="og:image"/>
+<meta content="https://gitdealflow.com/scout" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@data_nerd" name="twitter:site"/>
+<meta a="" are="" content="Free VC Scout Score — Are You a Startup Whisperer? (2026) | GitDealFlow" name="twitter:title" score="" scout="" startup="" vc="" whisperer?"="" you="" —=""/>
+<meta content="Free tool: check how closely your GitHub starring matches unicorn founders. 0-100 Scout Score." name="twitter:description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="Scout Score, VC, startup scouting, GitHub, unicorn, developer tool, viral" name="news_keywords"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "VC Scout Score",
+      "url": "https://gitdealflow.com/scout",
+      "applicationCategory": "DeveloperApplication",
+      "description": "Score your GitHub scouting taste against validated unicorn startups. Free, instant, no signup.",
+      "operatingSystem": "All",
+      "browserRequirements": "JavaScript enabled",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Free VC Scout Score \u2014 Are You a Startup Whisperer? (2026) | GitDealFlow",
+      "description": "Free tool: Check your invisible Scout Score \u2014 how good are you at spotting breakout startups before they raise? Based on your GitHub starring history vs 75 validated unicorns.",
+      "image": "https://gitdealflow.com/opengraph-image.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {
+        "@type": "Person",
+        "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Check Your VC Scout Score",
+  "description": "Find out your invisible startup scouting score in three simple steps.",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Enter your GitHub username",
+      "text": "Type your GitHub username into the input field above."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Click 'Check My Score'",
+      "text": "Press the button to analyze your starring history against ~75 validated unicorn startup outcomes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Share your Scout Score",
+      "text": "Copy your unique shareable link, tweet your score, or embed a scout badge on your GitHub README."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Scout Score free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely free. No registration, no API key, no rate limits. Check as many GitHub usernames as you want."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What data does the Scout Score use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Scout Score is computed from public GitHub starring history compared against ~75 validated unicorn startup outcomes. No private data is accessed — only public GitHub activity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the Scout Score calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your score (0-100) measures how closely your GitHub star history correlates with companies that became unicorns. Scoring higher means you spotted breakout startups before they blew up — the mark of a true startup whisperer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I embed the Scout Score badge on my site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! You can embed an SVG badge showing your Scout Score anywhere. Use the embed code provided after checking your score, or hit the API directly at /api/scout-score?user=YOUR_USERNAME for a dynamic SVG badge."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#60a5fa;text-decoration:none}.container{max-width:600px;margin:0 auto;padding:2rem 1.5rem}
+
+/* Hero */
+.hero{text-align:center;padding:3.5rem 1.5rem 2.5rem;border-bottom:1px solid #1e293b;background:radial-gradient(ellipse at top center,rgba(96,165,250,0.06) 0%,transparent 70%)}
+.hero-badge{display:inline-block;padding:.25rem .75rem;border-radius:999px;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);color:#60a5fa;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
+.hero h1{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,#60a5fa 0%,#a78bfa 50%,#f472b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2;margin-bottom:.75rem}
+.hero p{color:#94a3b8;font-size:.95rem;max-width:480px;margin:0 auto}
+
+/* Input section */
+.search-section{padding:2rem 1.5rem;text-align:center}
+.input-group{display:flex;gap:.5rem;max-width:480px;margin:0 auto}
+@media(max-width:480px){.input-group{flex-direction:column}}
+input[type=text]{flex:1;padding:.8rem 1rem;background:#0f172a;border:1px solid #1e293b;border-radius:12px;color:#f1f5f9;font-size:1rem;outline:none;transition:all .2s}
+input[type=text]:focus{border-color:#60a5fa;box-shadow:0 0 0 3px rgba(96,165,250,0.12)}
+button{flex-shrink:0;padding:.8rem 1.5rem;background:linear-gradient(135deg,#60a5fa,#a78bfa);border:none;border-radius:12px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap}
+button:hover{opacity:.9;transform:translateY(-1px)}
+button:active{transform:translateY(0)}
+button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* Loading */
+#loading{display:none;text-align:center;margin-top:2rem}
+.spinner{width:32px;height:32px;border:3px solid #1e293b;border-top-color:#60a5fa;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 1rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Error */
+#error{display:none;text-align:center;margin-top:1.5rem;padding:1rem 1.5rem;background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2);border-radius:12px;color:#f87171;font-size:.85rem;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* Result card */
+#result{display:none;margin-top:2rem}
+.score-card{background:linear-gradient(135deg,#0f172a 0%,#131c33 100%);border:1px solid #1e293b;border-radius:20px;padding:2rem;text-align:center}
+.score-number{font-size:4rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.score-label{color:#64748b;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem}
+.score-level{display:inline-block;margin-top:1rem;padding:.35rem 1rem;border-radius:999px;font-size:.85rem;font-weight:600}
+.level-novice{background:rgba(100,116,139,0.15);color:#94a3b8;border:1px solid rgba(100,116,139,0.2)}
+.level-tracker{background:rgba(251,191,36,0.1);color:#fbbf24;border:1px solid rgba(251,191,36,0.2)}
+.level-scout{background:rgba(96,165,250,0.1);color:#60a5fa;border:1px solid rgba(96,165,250,0.2)}
+.level-elite{background:rgba(167,139,250,0.1);color:#a78bfa;border:1px solid rgba(167,139,250,0.2)}
+.level-maven{background:rgba(34,197,94,0.1);color:#22c55e;border:1px solid rgba(34,197,94,0.2)}
+.score-percentile{color:#64748b;font-size:.85rem;margin-top:.75rem}
+.score-summary{color:#cbd5e1;font-size:.9rem;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #1e293b;line-height:1.5}
+
+/* Startup picks */
+.startup-picks{margin-top:1.5rem}
+.startup-picks h3{color:#94a3b8;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem}
+.startup-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem}
+.startup-chip{display:flex;align-items:center;gap:.5rem;padding:.5rem .75rem;background:#0f172a;border:1px solid #1e293b;border-radius:8px;font-size:.8rem;color:#cbd5e1}
+.startup-chip .org-icon{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+
+/* Share section */
+.share-section{margin-top:1.5rem;background:#0f172a;border:1px solid #1e293b;border-radius:16px;padding:1.5rem}
+.share-section h3{color:#f1f5f9;font-size:.9rem;margin-bottom:1rem}
+.share-buttons{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;font-weight:500;border:none;cursor:pointer;transition:all .15s;color:#fff}
+.share-btn:hover{opacity:.85}
+.share-twitter{background:#1d9bf0}
+.share-telegram{background:#26a5e4}
+.share-copy{background:#1e293b;color:#94a3b8;border:1px solid #334155}
+.share-copy:hover{background:#334155;color:#e2e8f0}
+.share-link{display:block;width:100%;padding:.5rem .75rem;background:#0b1120;border:1px solid #1e293b;border-radius:8px;color:#64748b;font-size:.75rem;font-family:'SF Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:.5rem}
+
+/* Embed section */
+.embed-section{margin-top:1.5rem;background:#0f172a;border:1px solid #1e293b;border-radius:16px;padding:1.5rem}
+.embed-section h3{color:#f1f5f9;font-size:.9rem;margin-bottom:.5rem}
+.embed-section p{color:#64748b;font-size:.8rem;margin-bottom:1rem}
+.embed-badge-preview{text-align:center;padding:.75rem;background:#0b1120;border:1px solid #1e293b;border-radius:8px;margin-bottom:.75rem}
+.code-block{background:#0b1120;border:1px solid #1e293b;border-radius:8px;padding:.75rem;font-family:'SF Mono','Menlo',monospace;font-size:.72rem;color:#94a3b8;overflow-x:auto;margin-bottom:.5rem;white-space:pre-wrap;word-break:break-all}
+
+/* How it works */
+.how-section{margin-top:2.5rem}
+.how-section h2{color:#f1f5f9;font-size:1.1rem;margin-bottom:1rem}
+.steps{display:flex;flex-direction:column;gap:.75rem}
+.step{display:flex;gap:.75rem;align-items:flex-start;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem}
+.step-number{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#60a5fa,#a78bfa);color:#fff;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step-text{color:#94a3b8;font-size:.85rem;line-height:1.5}
+
+/* FAQ section */
+.faq-section{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid #1e293b}
+.faq-section h2{color:#f1f5f9;font-size:1.1rem;margin-bottom:1rem}
+.faq-item{background:#0f172a;border:1px solid #1e293b;border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+.faq-q{padding:1rem 1.25rem;font-size:.9rem;font-weight:600;color:#e2e8f0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .15s}
+.faq-q:hover{background:rgba(255,255,255,0.02)}
+.faq-q .arrow{color:#64748b;font-size:.75rem;transition:transform .2s}
+.faq-q.active .arrow{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 1.25rem 1rem 1.25rem;color:#94a3b8;font-size:.85rem;line-height:1.6}
+
+/* Footer */
+footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid #1e293b;margin-top:3rem}
+footer .links{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+footer .links a{color:#64748b;font-size:.8rem}
+footer .links a:hover{color:#60a5fa}
+footer .copy{color:#475569;font-size:.72rem}
+
+/* Toast */
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:#22c55e;color:#052e16;padding:.5rem 1rem;border-radius:8px;font-weight:600;font-size:.85rem;opacity:0;transition:all .3s;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* Api section */
+.api-section{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid #1e293b}
+.api-section h2{color:#f1f5f9;font-size:1.1rem;margin-bottom:.5rem}
+.api-section p{color:#64748b;font-size:.85rem;margin-bottom:1rem}
+</style>
+<meta content="Scout, startup engineering velocity, GitHub signals, deal flow, venture capital, startup funding" name="news_keywords"/>
+<meta content="Scout" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="GitHub signals" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: 'memory', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<div class="hero">
+<div class="hero-badge">Free Tool</div>
+<h1>VC Scout Score</h1>
+<p>Check your invisible scout score — how good are you at spotting breakout startups before they blow up? Every GitHub user has one.</p>
+</div>
+<div class="search-section">
+<div class="input-group">
+<input autocomplete="off" id="username" placeholder="Enter GitHub username..." spellcheck="false" type="text"/>
+<button data-track="scout_check" id="checkBtn" onclick="check()">Check My Score</button>
+</div>
+</div>
+<div id="loading">
+<div class="spinner"></div>
+<p style="color:#64748b;font-size:.85rem">Analyzing your starring history...</p>
+</div>
+<div id="error"></div>
+<div id="result">
+<div class="score-card">
+<div class="score-number" id="score">--</div>
+<div class="score-label">Scout Score / 100</div>
+<div class="score-level" id="level"></div>
+<div class="score-percentile" id="percentile"></div>
+<div class="score-summary" id="desc"></div>
+</div>
+<div class="startup-picks" id="startupPicks" style="display:none">
+<h3>Startups you spotted early</h3>
+<div class="startup-grid" id="startupGrid"></div>
+</div>
+<div class="share-section">
+<h3>📣 Share your score</h3>
+<div class="share-buttons">
+<button class="share-btn share-twitter" id="shareTwitter">𝕏 Share on X</button>
+<button class="share-btn share-telegram" id="shareTelegram">✈️ Share on Telegram</button>
+<button class="share-btn share-copy" id="copyLink">🔗 Copy shareable link</button>
+</div>
+<div class="share-link" id="shareUrl"></div>
+</div>
+<div class="embed-section" id="embedSection">
+<h3>🛡️ Embed your Scout Score badge</h3>
+<p>Add your dynamic Scout Score badge to your GitHub README, personal site, or anywhere HTML works.</p>
+<div class="embed-badge-preview" id="badgePreview"></div>
+<div class="code-block" id="embedCode"></div>
+<button class="share-btn share-copy" onclick="copyEmbedCode()" style="margin-top:.5rem">📋 Copy embed code</button>
+</div>
+</div>
+<div class="container">
+<div class="how-section">
+<h2>📋 How It Works</h2>
+<div class="steps">
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-text">Enter any GitHub username — yours, a friend's, or a colleague's. No login required.</div>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<div class="step-text">We analyze their public star history against ~75 validated unicorn startup outcomes using the GitDealFlow Signal MCP toolkit.</div>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<div class="step-text">Get a Scout Score from 0-100, badge level, and a unique shareable URL. Tweet your score or embed a badge on your README!</div>
+</div>
+</div>
+</div>
+<div class="faq-section">
+<h2>❓ Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">Is the Scout Score free? <span class="arrow">▼</span></div>
+<div class="faq-a">Yes, completely free. No registration, no API key, no rate limits. Check as many GitHub usernames as you want — use it on your own profile, friends, colleagues, or anyone.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">What data does the Scout Score use? <span class="arrow">▼</span></div>
+<div class="faq-a">The Scout Score is computed from public GitHub starring history compared against ~75 validated unicorn startup outcomes. No private data is accessed — only public GitHub activity that's already visible to anyone. We never store or cache individual scores.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">How is the Scout Score calculated? <span class="arrow">▼</span></div>
+<div class="faq-a">Your score (0-100) measures how closely your GitHub star history correlates with companies that became unicorns. Scoring higher means you spotted breakout startups before they blew up — you have the instinct of a top VC scout. The algorithm uses the GitDealFlow Signal dataset tracking ~400 startups and their engineering velocity signals. <a href="https://signals.gitdealflow.com/methodology">Read the methodology →</a></div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">Can I embed the Scout Score badge on my site? <span class="arrow">▼</span></div>
+<div class="faq-a">Yes! After checking a score, you'll see an embed section with a ready-to-use SVG badge URL. Add it to your GitHub profile README, personal website, or portfolio with a single <code>&lt;img&gt;</code> tag. The badge updates dynamically as new data becomes available.</div>
+</div>
+</div>
+<div class="api-section">
+<h2>🔌 API Access</h2>
+<p>Programmatic access via the GitDealFlow MCP server or HTTP API.</p>
+<div class="code-block">npx -y @gitdealflow/mcp-signal</div>
+<p style="margin-top:.5rem">Tool: <code>get_scout_receipts(github_username)</code></p>
+<p style="margin-top:.5rem">HTTP: <code>GET /api/scout-score?user=USERNAME</code> (SVG badge)</p>
+<p>Or <code>GET /api/scout-score?user=USERNAME&amp;format=json</code> (JSON data)</p>
+</div>
+</div>
+<footer>
+<div class="links">
+<a href="https://gitdealflow.com">Home</a>
+<a href="https://gitdealflow.com/tools">Tools</a>
+<a href="https://signals.gitdealflow.com">Signals</a>
+<a href="https://gitdealflow.com/about">About</a>
+</div>
+<div class="copy">GitDealFlow · Startup Engineering Signals · Data from public GitHub activity</div>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Velocity</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Benchmark</a>
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/tools" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Tools</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups Hiring Burst</a>
+</div>
+</div>
+</footer>
+<div class="toast" id="toast"></div>
+<script>
+// Check for ?user= in URL on page load
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const userFromUrl = params.get('user');
+  if (userFromUrl) {
+    document.getElementById('username').value = userFromUrl;
+    check();
+  }
+})();
+
+// Clean up URL after load (remove ?user= but keep it for sharing)
+(function() {
+  const url = new URL(window.location);
+  if (url.searchParams.has('user')) {
+    // Replace state with clean URL but keep the param for sharing
+    const cleanUrl = url.pathname + url.search;
+    window.history.replaceState({}, '', cleanUrl);
+  }
+})();
+
+async function check() {
+  const u = document.getElementById('username').value.trim();
+  const error = document.getElementById('error');
+  const loading = document.getElementById('loading');
+  const result = document.getElementById('result');
+  const btn = document.getElementById('checkBtn');
+
+  error.style.display = 'none';
+  loading.style.display = 'none';
+  result.style.display = 'none';
+
+  if (!u) {
+    showError('Please enter a GitHub username');
+    return;
+  }
+
+  // Update URL with user param (without reload)
+  const url = new URL(window.location);
+  url.searchParams.set('user', u);
+  window.history.replaceState({}, '', url);
+
+  btn.disabled = true;
+  btn.textContent = 'Checking...';
+  loading.style.display = 'block';
+
+  try {
+    const res = await fetch('https://signals.gitdealflow.com/api/mcp/rpc', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        jsonrpc: '2.0',
+        method: 'tools/call',
+        params: {
+          name: 'get_scout_receipts',
+          arguments: { github_username: u }
+        },
+        id: 1
+      })
+    });
+
+    if (!res.ok) {
+      throw new Error(`API responded with ${res.status}`);
+    }
+
+    const data = await res.json();
+    const text = data.result?.content?.[0]?.text || '';
+
+    let parsed;
+    try {
+      parsed = JSON.parse(text);
+    } catch {
+      // Try extracting score with regex
+      const match = text.match(/\b(\d{1,3})\b/);
+      const score = match ? parseInt(match[1]) : 0;
+      renderResult(score, 'Tracker', 50, text.slice(0, 200), [], u);
+      return;
+    }
+
+    const score = parsed.scout_score !== undefined ? parsed.scout_score :
+                  parsed.score !== undefined ? parsed.score : 0;
+    const summary = parsed.summary || parsed.description || '';
+    const percentile = parsed.percentile !== undefined ? parsed.percentile : null;
+    const startups = parsed.startups || parsed.matches || [];
+
+    renderResult(score, getLevel(score), percentile, summary, startups, u);
+  } catch (err) {
+    showError('Could not calculate score: ' + err.message + '. The MCP server may be temporarily unavailable.');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Check My Score';
+    loading.style.display = 'none';
+  }
+}
+
+function getLevel(score) {
+  if (score >= 85) return 'Maven';
+  if (score >= 65) return 'Elite';
+  if (score >= 40) return 'Scout';
+  if (score >= 20) return 'Tracker';
+  return 'Novice';
+}
+
+function renderResult(score, level, percentile, summary, startups, username) {
+  const scoreEl = document.getElementById('score');
+  const levelEl = document.getElementById('level');
+  const percentileEl = document.getElementById('percentile');
+  const descEl = document.getElementById('desc');
+  const result = document.getElementById('result');
+
+  scoreEl.textContent = score;
+
+  const levelClass = 'level-' + level.toLowerCase();
+  levelEl.className = 'score-level ' + levelClass;
+  levelEl.textContent = level;
+
+  if (percentile !== null) {
+    percentileEl.textContent = 'Better than ~' + percentile + '% of GitHub users';
+  } else {
+    percentileEl.textContent = '';
+  }
+
+  if (summary) {
+    descEl.textContent = summary;
+  } else {
+    const messages = {
+      'Maven': 'Extraordinary startup instincts. You consistently spot unicorns before the market. VCs would pay for your GitHub watchlist.',
+      'Elite': 'Strong scouting instincts. You regularly identify breakout startups before they hit the mainstream. Your taste is sharp.',
+      'Scout': 'Solid startup radar. You catch some breakout companies early and recognize potential. With a little focus, you could be elite.',
+      'Tracker': 'Developing instinct. You follow some interesting startups but miss many of the big breakout stories. Try starring more early-stage repos.',
+      'Novice': 'Early in your scouting journey. Your star history doesn\'t yet overlap much with unicorn outcomes. Time to start exploring!'
+    };
+    descEl.textContent = messages[level] || 'Your score indicates your startup scouting potential.';
+  }
+
+  // Set the share URL
+  const shareUrl = window.location.origin + '/scout?user=' + encodeURIComponent(username);
+  document.getElementById('shareUrl').textContent = shareUrl;
+
+  // Share buttons
+  document.getElementById('shareTwitter').onclick = function() {
+    const tweetText = encodeURIComponent('My VC Scout Score: ' + score + '/100 (' + level + ')! Check yours:');
+    window.open('https://twitter.com/intent/tweet?text=' + tweetText + '&url=' + encodeURIComponent(shareUrl), '_blank', 'width=600,height=400');
+  };
+  document.getElementById('shareTelegram').onclick = function() {
+    window.open('https://t.me/share/url?url=' + encodeURIComponent(shareUrl) + '&text=' + encodeURIComponent('My VC Scout Score: ' + score + '/100 (' + level + ')!'), '_blank', 'width=600,height=400');
+  };
+  document.getElementById('copyLink').onclick = function() {
+    navigator.clipboard.writeText(shareUrl).then(function() { showToast('Link copied! Share it with friends.'); });
+  };
+
+  // Embed badge
+  const badgeUrl = window.location.origin + '/api/scout-score?user=' + encodeURIComponent(username);
+  document.getElementById('badgePreview').innerHTML = '<img src="' + badgeUrl + '" alt="Scout Score for ' + username + '" style="max-width:100%" loading="lazy" width="auto" height="auto">';
+  document.getElementById('embedCode').textContent = '<a href="https://gitdealflow.com/scout?user=' + encodeURIComponent(username) + '">\n  <img src="' + badgeUrl + '" alt="VC Scout Score for ' + username + '" loading="lazy" width="auto" height="auto">\n</a>';
+
+  // Startup picks
+  const startupPicks = document.getElementById('startupPicks');
+  const startupGrid = document.getElementById('startupGrid');
+  if (startups && startups.length > 0) {
+    startupPicks.style.display = 'block';
+    startupGrid.innerHTML = startups.map(function(s) {
+      const name = typeof s === 'string' ? s : (s.name || s.org || '');
+      const color = typeof s === 'object' && s.color ? s.color : '#60a5fa';
+      return '<div class="startup-chip"><span class="org-icon" style="background:' + color + '"></span>' + name + '</div>';
+    }).join('');
+  } else {
+    startupPicks.style.display = 'none';
+  }
+
+  result.style.display = 'block';
+  result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function showError(msg) {
+  const error = document.getElementById('error');
+  error.textContent = msg;
+  error.style.display = 'block';
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 2500);
+}
+
+function toggleFaq(el) {
+  el.classList.toggle('active');
+  const answer = el.nextElementSibling;
+  if (answer.style.display === 'block') {
+    answer.style.display = 'none';
+  } else {
+    answer.style.display = 'block';
+  }
+}
+
+function copyEmbedCode() {
+  const code = document.getElementById('embedCode');
+  navigator.clipboard.writeText(code.textContent).then(function() { showToast('Embed code copied!'); });
+}
+
+// Allow Enter key
+document.getElementById('username').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') check();
+});
+</script>
+<script defer="" src="/api/track.js"></script>
+<script defer="" src="/share.js"></script>
+</body>
+</html>

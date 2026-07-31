@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>Embeddable Startup Badges & Widgets — GitHub README & Website | GitDealFlow</title>
+<meta name="description" content="Free embeddable startup velocity badges and widgets. Add live engineering signal data to your GitHub README, blog, or website. Copy-paste markdown and HTML snippets."/>
+<link href="https://gitdealflow.com/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://gitdealflow.com/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="https://gitdealflow.com/embed" rel="canonical"/>
+<meta property="og:title" content="Embeddable Startup Badges — GitHub README & Website Widgets"/>
+<meta property="og:description" content="Free embeddable startup velocity badges. Add live signal data to your GitHub README, blog, or website."/>
+<meta property="og:url" content="https://gitdealflow.com/embed"/><meta property="og:image" content="https://gitdealflow.com/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@data_nerd"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#0b1120;color:#e2e8f0}
+.c{max-width:800px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:2rem;font-weight:800;margin-bottom:.5rem;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h2{font-size:1.2rem;font-weight:700;margin:1.5rem 0 1rem;color:#f1f5f9}
+p{color:#94a3b8;line-height:1.6;margin-bottom:1rem;font-size:.92rem}
+.card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.code{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:1rem;font-family:'SF Mono','Fira Code',monospace;font-size:.8rem;line-height:1.6;color:#e2e8f0;overflow-x:auto;word-break:break-all}
+.cm{color:#64748b}.tg{color:#60a5fa}.at{color:#a78bfa}.st{color:#34d399}
+.btn{display:inline-block;margin-top:.6rem;background:#3b82f6;color:#fff;border:none;padding:.45rem 1.1rem;border-radius:8px;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .15s}
+.btn:hover{background:#2563eb}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:#0b1120;border:1px solid #334155;border-radius:6px;font-size:.85rem;color:#e2e8f0;text-decoration:none;margin:.5rem 0}
+.badge-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
+.preview{margin:1rem 0;padding:1rem;background:#0b1120;border-radius:8px;border:1px solid #334155;text-align:center}
+a{color:#60a5fa;text-decoration:none}
+ft{display:block;margin-top:3rem;padding:2rem 0;text-align:center;color:#64748b;font-size:.82rem}
+ft a{color:#64748b}
+</style></head><body><div class="c">
+<h1>🪪 Embeddable Startup Badges</h1>
+<p>Add live startup engineering signal data to your <strong>GitHub README, blog, or website</strong>. Badges auto-update weekly from the <a href="https://signals.gitdealflow.com">VC Deal Flow Signal</a> dataset.</p>
+
+<div class="card">
+<h2>📡 Live Count Badge</h2>
+<p>Shows total startups tracked. Perfect for GitHub profile READMEs.</p>
+<div class="preview"><span class="badge"><span class="badge-dot"></span> 369+ Startups Tracked</span></div>
+<div class="code"><span class="cm">&lt;!-- GitHub README --&gt;</span>
+[![Tracked by GitDealFlow](https://img.shields.io/badge/📡_369%2B_startups_tracked-0b1120?style=flat-square)](https://gitdealflow.com)</div>
+<button class="btn" onclick="navigator.clipboard.writeText('[![Tracked by GitDealFlow](https://img.shields.io/badge/📡_369%2B_startups_tracked-0b1120?style=flat-square)](https://gitdealflow.com)').then(()=>{this.textContent='✓ Copied!';setTimeout(()=>{this.textContent='Copy Markdown'},2000)})">Copy Markdown</button>
+</div>
+
+<div class="card">
+<h2>⚡ Live Signal Badge</h2>
+<p>Show a specific startup's signal. Replace <code>{slug}</code> with any tracked startup slug.</p>
+<div class="preview"><span class="badge"><span class="badge-dot"></span> fleetbase: +1600% Engineering Hiring Burst</span></div>
+<div class="code"><span class="cm">&lt;!-- Markdown template --&gt;</span>
+[![{slug} signal](https://img.shields.io/badge/{slug}-tracked-0b1120?style=flat-square)](https://signals.gitdealflow.com/startup/{slug})</div>
+<button class="btn" onclick="navigator.clipboard.writeText('[![{slug} signal](https://img.shields.io/badge/{slug}-tracked-0b1120?style=flat-square)](https://signals.gitdealflow.com/startup/{slug})').then(()=>{this.textContent='✓ Copied!';setTimeout(()=>{this.textContent='Copy Template'},2000)})">Copy Template</button>
+</div>
+
+<div class="card">
+<h2>📊 Pulse Embed Widget</h2>
+<p>Embed the live Startup Pulse chart on your blog or site.</p>
+<div class="code"><span class="tg">&lt;iframe</span> <span class="at">src</span>=<span class="st">"https://gitdealflow.com/pulse?embed=1"</span>
+ <span class="at">width</span>=<span class="st">"100%"</span> <span class="at">height</span>=<span class="st">"600"</span>
+ <span class="at">frameborder</span>=<span class="st">"0"</span> <span class="at">loading</span>=<span class="st">"lazy"</span><span class="tg">&gt;&lt;/iframe&gt;</span></div>
+<button class="btn" onclick="navigator.clipboard.writeText('<iframe src=&quot;https://gitdealflow.com/pulse?embed=1&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; loading=&quot;lazy&quot;></iframe>').then(()=>{this.textContent='✓ Copied!';setTimeout(()=>{this.textContent='Copy HTML'},2000)})">Copy HTML</button>
+</div>
+
+<div class="card">
+<h2>🏷️ HTML Badge (Any Site)</h2>
+<p>For blogs and CMS sites.</p>
+<div class="code"><span class="tg">&lt;a</span> <span class="at">href</span>=<span class="st">"https://gitdealflow.com"</span>
+   <span class="at">style</span>=<span class="st">"display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:#0b1120;border:1px solid #334155;border-radius:6px;color:#e2e8f0;text-decoration:none;font-size:.85rem"</span><span class="tg">&gt;</span>
+  <span class="tg">&lt;span</span> <span class="at">style</span>=<span class="st">"width:8px;height:8px;border-radius:50%;background:#22c55e"</span><span class="tg">&gt;&lt;/span&gt;</span>
+  Tracked by GitDealFlow
+<span class="tg">&lt;/a&gt;</span></div>
+<button class="btn" onclick="navigator.clipboard.writeText('<a href=&quot;https://gitdealflow.com&quot; style=&quot;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:#0b1120;border:1px solid #334155;border-radius:6px;color:#e2e8f0;text-decoration:none;font-size:.85rem&quot;><span style=&quot;width:8px;height:8px;border-radius:50%;background:#22c55e&quot;></span> Tracked by GitDealFlow</a>').then(()=>{this.textContent='✓ Copied!';setTimeout(()=>{this.textContent='Copy HTML'},2000)})">Copy HTML</button>
+</div>
+
+<div class="card">
+<h2>📖 Dataset Citation (Academic)</h2>
+<p>For papers and research citing the dataset.</p>
+<div class="code"><span class="cm">@misc{vc_deal_flow_signal_2026,</span>
+<span class="cm">  title = {VC Deal Flow Signal — Public Engineering Velocity Dataset},</span>
+<span class="cm">  url = {https://signals.gitdealflow.com},</span>
+<span class="cm">  author = {The Data Nerd},</span>
+<span class="cm">  year = {2026},</span>
+<span class="cm">}</span></div>
+<button class="btn" onclick="navigator.clipboard.writeText('@misc{vc_deal_flow_signal_2026,
+  title = {VC Deal Flow Signal — Public Engineering Velocity Dataset},
+  url = {https://signals.gitdealflow.com},
+  author = {The Data Nerd},
+  year = {2026},
+}').then(()=>{this.textContent='✓ Copied!';setTimeout(()=>{this.textContent='Copy BibTeX'},2000)})">Copy BibTeX</button>
+</div>
+
+<p style="color:#64748b;font-size:.82rem">Badges respect our <code>robots.txt</code> rules. See the <a href="/leaderboard">Leaderboard</a> or <a href="/radar">Signal Radar</a> for interactive data.</p>
+</div>
+<ft>Data from <a href="https://signals.gitdealflow.com">VC Deal Flow Signal</a> · <a href="/">Home</a> · <a href="/sitemap.xml">Sitemap</a></ft>
+</body></html>
