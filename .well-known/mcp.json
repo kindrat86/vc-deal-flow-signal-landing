@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1.0",
+  "servers": [
+    {
+      "id": "io.github.kindrat86/vc-deal-flow-signal",
+      "name": "VC Deal Flow Signal",
+      "description": "Track startup engineering velocity from GitHub data",
+      "url": "https://signals.gitdealflow.com/.well-known/mcp.json",
+      "install": {
+        "cmd": "npx",
+        "args": [
+          "-y",
+          "@gitdealflow/mcp-signal"
+        ]
+      }
+    }
+  ]
+}

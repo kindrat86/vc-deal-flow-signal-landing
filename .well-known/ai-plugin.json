@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "VC Deal Flow Signal",
+  "name_for_model": "vc_deal_flow_signal",
+  "description_for_human": "Track startup engineering velocity from GitHub data across 313 startups in 15 sectors.",
+  "description_for_model": "Plugin for accessing VC Deal Flow Signal data. Use this to get information about startup engineering velocity, trending startups, and sector analysis.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://signals.gitdealflow.com/api/openapi.json"
+  },
+  "contact_email": "signals@gitdealflow.com",
+  "legal_info_url": "https://gitdealflow.com/terms"
+}

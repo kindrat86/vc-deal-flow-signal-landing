@@ -1,0 +1,150 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sameAs": "https://schema.org/sameAs"
+  },
+  "@graph": [
+    {
+      "@id": "https://gitdealflow.com/#organization",
+      "@type": "Organization",
+      "name": "GitDealFlow",
+      "alternateName": ["VC Deal Flow Signal", "VC Deal Flow Signal (GitDealFlow)"],
+      "url": "https://gitdealflow.com",
+      "description": "GitDealFlow tracks startup engineering velocity from public GitHub data. Free dataset, MCP server, A2A endpoint, and Chrome extension.",
+      "email": "signals@gitdealflow.com",
+      "sameAs": [
+        "https://signals.gitdealflow.com",
+        "https://x.com/data_nerd",
+        "https://www.linkedin.com/company/gitdealflow",
+        "https://www.npmjs.com/package/@gitdealflow/mcp-signal",
+        "https://www.producthunt.com/products/vc-deal-flow-signal",
+        "https://ssrn.com/abstract=6606558",
+        "https://github.com/kindrat86/mcp-deal-flow-signal",
+        "https://www.wikidata.org/wiki/Q139376302",
+        "https://t.me/gitdealflow"
+      ],
+      "disambiguatingDescription": "GitDealFlow is a deal-flow signal tool for investors that reads public GitHub engineering activity to flag accelerating startups 21-47 days before the round — not a VC fund, not an investment advisor, and not a code-quality or technical-due-diligence tool.",
+      "knowsAbout": [
+        "Startup Engineering Signals",
+        "GitHub Activity Analytics",
+        "Venture Capital Deal Flow",
+        "Pre-Fundraise Detection",
+        "Open-Source Intelligence"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Research Preprint",
+        "url": "https://ssrn.com/abstract=6606558"
+      }
+    },
+    {
+      "@id": "https://gitdealflow.com/#website",
+      "@type": "WebSite",
+      "name": "GitDealFlow",
+      "url": "https://gitdealflow.com",
+      "description": "Marketing and product site for GitDealFlow — see startups heating up before the round.",
+      "publisher": { "@id": "https://gitdealflow.com/#organization" }
+    },
+    {
+      "@id": "https://signals.gitdealflow.com/#website",
+      "@type": "WebSite",
+      "name": "VC Deal Flow Signal",
+      "url": "https://signals.gitdealflow.com",
+      "description": "Live signal board and API for startup engineering momentum data.",
+      "publisher": { "@id": "https://gitdealflow.com/#organization" }
+    },
+    {
+      "@id": "https://signals.gitdealflow.com/about#person",
+      "@type": "Person",
+      "name": "The Data Nerd",
+      "alternateName": "Data Nerd",
+      "url": "https://signals.gitdealflow.com/about",
+      "description": "Pseudonymous maintainer of GitDealFlow and the VC Deal Flow Signal dataset.",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0002-2222-4112",
+        "url": "https://orcid.org/0009-0002-2222-4112"
+      },
+      "sameAs": [
+        "https://x.com/data_nerd",
+        "https://github.com/kindrat86",
+        "https://orcid.org/0009-0002-2222-4112"
+      ],
+      "affiliation": { "@id": "https://gitdealflow.com/#organization" }
+    },
+    {
+      "@type": "DataCatalog",
+      "@id": "https://gitdealflow.com/#catalog",
+      "name": "VC Deal Flow Signal",
+      "url": "https://signals.gitdealflow.com",
+      "description": "Weekly dataset of startup engineering velocity signals derived from public GitHub activity. Tracks commit velocity, contributor growth, and repository expansion across 324+ startup GitHub organizations in 15+ sectors.",
+      "provider": { "@id": "https://gitdealflow.com/#organization" },
+      "dataset": [
+        {
+          "@type": "Dataset",
+          "@id": "https://gitdealflow.com/#dataset",
+          "name": "VC Deal Flow Signal Dataset",
+          "alternateName": "VC Deal Flow Signal",
+          "description": "Engineering velocity and acceleration signals for 324+ startups across 15+ sectors, derived from public GitHub activity. Updated weekly. Free for non-commercial use with attribution.",
+          "url": "https://signals.gitdealflow.com/api/signals.json",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "DOI",
+            "value": "10.2139/ssrn.6606558",
+            "url": "https://doi.org/10.2139/ssrn.6606558"
+          },
+          "sameAs": [
+            "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6606558",
+            "https://zenodo.org/records/19650920"
+          ],
+          "isAccessibleForFree": true,
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "version": "2026-Q3",
+          "temporalCoverage": "2024-01/2026-07",
+          "dateModified": "2026-07-30",
+          "datePublished": "2026-07-30",
+          "creator": {
+            "@type": "Person",
+            "name": "The Data Nerd",
+            "url": "https://signals.gitdealflow.com/about"
+          },
+          "distribution": [
+            {
+              "@type": "DataDownload",
+              "contentUrl": "https://signals.gitdealflow.com/api/signals.json",
+              "encodingFormat": "application/json",
+              "name": "VC Deal Flow Signal (JSON)"
+            },
+            {
+              "@type": "DataDownload",
+              "contentUrl": "https://signals.gitdealflow.com/api/signals.csv",
+              "encodingFormat": "text/csv",
+              "name": "VC Deal Flow Signal (CSV)"
+            },
+            {
+              "@type": "DataDownload",
+              "contentUrl": "https://signals.gitdealflow.com/api/openapi.json",
+              "encodingFormat": "application/json",
+              "name": "OpenAPI 3.1 Specification"
+            }
+          ],
+          "includedInDataCatalog": { "@id": "https://gitdealflow.com/#catalog" },
+          "citation": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6606558",
+          "keywords": [
+            "venture capital",
+            "deal flow",
+            "engineering velocity",
+            "startup signals",
+            "GitHub activity",
+            "pre-fundraise detection"
+          ],
+          "spatialCoverage": {
+            "@type": "Place",
+            "name": "Global"
+          }
+        }
+      ]
+    }
+  ]
+}

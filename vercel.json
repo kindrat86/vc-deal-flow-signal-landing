@@ -61,6 +61,58 @@
     {
       "source": "/.well-known/security.txt",
       "destination": "https://signals.gitdealflow.com/.well-known/security.txt"
+    },
+    {
+      "source": "/startups-to-watch-this-week",
+      "destination": "/startups-to-watch-this-week.html"
+    },
+    {
+      "source": "/startups-in-israel",
+      "destination": "/startups-in-israel.html"
+    },
+    {
+      "source": "/startup-funding-predictor",
+      "destination": "/startup-funding-predictor.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq-hub.html"
+    },
+    {
+      "source": "/data",
+      "destination": "/data.html"
+    },
+    {
+      "source": "/archive",
+      "destination": "/archive.html"
+    },
+    {
+      "source": "/press",
+      "destination": "/press.html"
+    },
+    {
+      "source": "/github-readme-badge",
+      "destination": "/github-readme-badge.html"
+    },
+    {
+      "source": "/explorer",
+      "destination": "/explorer.html"
+    },
+    {
+      "source": "/a/startups-like-:slug",
+      "destination": "/a/startups-like-:slug.html"
+    },
+    {
+      "source": "/g/:slug",
+      "destination": "/g/:slug.html"
+    },
+    {
+      "source": "/s/:slug",
+      "destination": "/s/:slug.html"
+    },
+    {
+      "source": "/pulse",
+      "destination": "/pulse.html"
     }
   ],
   "redirects": [

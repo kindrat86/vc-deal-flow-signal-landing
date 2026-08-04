@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="nopinit" name="pinterest"/>
+<meta charset="utf-8"/>
+<meta content="https://gitdealflow.com/opengraph-image.png" property="og:image"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Methodology — VC Deal Flow Signal Engineering Velocity Index | GitDealFlow</title>
+<meta content="How the VC Deal Flow Signal dataset measures startup engineering velocity from public GitHub activity. Commit velocity, contributor growth, signal types, and methodology notes (SSRN 6606558)." name="description"/>
+<link href="https://gitdealflow.com/methodology" rel="canonical"/>
+<meta content="VC Deal Flow Signal — Methodology" property="og:title"/>
+<meta content="How we measure startup engineering velocity from public GitHub data." property="og:description"/>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.8}a{color:#60a5fa}.container{max-width:640px;margin:0 auto;padding:2rem 1.5rem}header{text-align:center;padding:3rem 1.5rem;border-bottom:1px solid #1e293b}header h1{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}header p{color:#94a3b8;font-size:.9rem}h2{color:#f1f5f9;font-size:1.2rem;margin:2rem 0 .75rem}h3{color:#cbd5e1;font-size:1rem;margin:1.5rem 0 .5rem}p{color:#cbd5e1;margin-bottom:1rem}ul{color:#cbd5e1;padding-left:1.5rem;margin-bottom:1rem}ul li{margin-bottom:.4rem}.card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.5rem;margin:1.5rem 0}.card h3{color:#f1f5f9;margin-top:0}.links{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:2rem 0}.links a{padding:.5rem 1rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#94a3b8;font-size:.85rem;text-decoration:none}footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#94a3b8;font-size:.8rem}</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Methodology",
+      "url": "https://gitdealflow.com/methodology",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://gitdealflow.com"
+      },
+      "datePublished": "2026-07-30T08:00:00+00:00",
+      "dateModified": "2026-07-30T08:00:00+00:00"
+    },
+    {
+      "@type": "Article",
+      "headline": "Methodology \u2014 VC Deal Flow Signal Engineering Velocity Index | GitDealFlow",
+      "description": "How the VC Deal Flow Signal dataset measures startup engineering velocity from public GitHub activity. Commit velocity, contributor growth, signal types, and methodology notes (SSRN 6606558).",
+      "image": "https://gitdealflow.com/opengraph-image.png",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "author": {"@type": "Person", "@id": "https://signals.gitdealflow.com/about#person", "name": "The Data Nerd",
+        "url": "https://signals.gitdealflow.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitDealFlow",
+        "url": "https://gitdealflow.com/"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gitdealflow.com"},{"@type":"ListItem","position":2,"name":"Methodology","item":"https://gitdealflow.com/methodology"}]}
+</script>
+<!-- Google Discover metadata -->
+<meta content="Methodology, deal flow, engineering velocity, venture capital, GitHub, startup" name="news_keywords"/>
+<meta content="Methodology" property="article:tag"/>
+<meta content="deal flow" property="article:tag"/>
+<meta content="engineering velocity" property="article:tag"/>
+<meta content="venture capital" property="article:tag"/>
+<meta content="GitHub" property="article:tag"/>
+<meta content="startup" property="article:tag"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:published_time"/>
+<meta content="2026-07-30T08:00:00+00:00" property="article:modified_time"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta name="format-detection" content="telephone=no"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GitDealFlow?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow is a VC deal-flow signal tool that flags startups accelerating on GitHub 21–47 days before the round. Track engineering velocity across 4,200+ startup orgs."}}, {"@type": "Question", "name": "How does GitDealFlow work?", "acceptedAnswer": {"@type": "Answer", "text": "GitDealFlow reads public GitHub activity — commits, contributors, repos — to detect engineering acceleration. The signal helps investors find startups before fundraise announcements."}}, {"@type": "Question", "name": "Is GitDealFlow free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GitDealFlow offers a permanent free tier including the weekly Signal Digest and live board at signals.gitdealflow.com."}}]}</script>
+<link rel="alternate" type="application/rss+xml" title="GitDealFlow Startup Signals" href="https://gitdealflow.com/feed.xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(s,i,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capture has_opted_out_capture opt_in_capture reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([s,i,a])}(document,window.posthog||[]);
+posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'https://eu.i.posthog.com', persistence: (navigator.doNotTrack=='1'||window.globalPrivacyControl)?'memory':'localStorage+cookie', cross_subdomain_cookie: true, disable_session_recording: true, person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+<header><h1>Methodology</h1><p>How startup engineering velocity is measured</p></header>
+<main class="container">
+<p><strong>VC Deal Flow Signal</strong> measures startup engineering momentum by analyzing public GitHub activity across ~400 startup organizations in 15 sectors. The dataset is updated weekly and published under CC BY 4.0.</p>
+<h2>Core Metrics</h2>
+<div class="card"><h3>Commit Velocity (14-day)</h3><p>The total number of commits pushed to all public repositories in the last 14 days. This is the primary measure of engineering output velocity.</p></div>
+<div class="card"><h3>Velocity Change (%)</h3><p>The percentage change in commit velocity compared to the previous 14-day window. Positive values indicate acceleration; negative values indicate deceleration.</p></div>
+<div class="card"><h3>Contributors</h3><p>The number of unique GitHub users who pushed commits in the measurement window. Rapid contributor growth suggests team expansion.</p></div>
+<div class="card"><h3>Contributor Growth</h3><p>Percentage change in active contributors. A hiring burst signal is flagged when contributor count increases sharply.</p></div>
+<div class="card"><h3>New Repositories</h3><p>The number of new public repositories created in the measurement period. Infrastructure buildout signals are triggered when new repo creation accelerates.</p></div>
+<h2>Signal Types</h2>
+<p>The dataset identifies four signal types based on patterns in the metrics above:</p>
+<ul><li><a href="/signals/deploy-frequency-spike">Deploy Frequency Spike</a> — Shipping acceleration across repositories</li><li><a href="/signals/engineering-hiring-burst">Engineering Hiring Burst</a> — Rapid contributor growth</li><li><a href="/signals/infrastructure-buildout">Infrastructure Buildout</a> — New repository creation wave</li><li><a href="/signals/framework-migration">Framework Migration</a> — Technology stack transformation</li></ul>
+<h2>Validation</h2>
+<p>The methodology is validated in a working paper (SSRN 6606558) showing that velocity spikes precede fundraise announcements by a median of 31 days.</p>
+<div class="links"><a href="https://ssrn.com/abstract=6606558">Read the paper on SSRN</a><a href="https://signals.gitdealflow.com">Full dataset on Signals</a><a href="https://gitdealflow.com">GitDealFlow home</a></div>
+</main>
+<section class="vs-section">
+<div class="related">
+<h2 style="color:#e2e8f0;margin-top:0;border:none;padding:0;font-size:1.2rem">Related Resources</h2>
+<ul>
+<li><a href="/faq">FAQ — VC Deal Flow Signal &amp; GitDealFlow | Startup Engineering Analytics</a></li>
+<li><a href="/blog/most-active-open-source-startups-2026">Most Active Open Source Startups of 2026 — Engineering Velocity Rankings | GitDe</a></li>
+<li><a href="/blog/how-to-use-github-activity-venture-capital-signal">How to Use GitHub Activity as a Venture Capital Signal — Complete Guide | GitDea</a></li>
+<li><a href="/glossary/commit-velocity">Commit Velocity — GitDealFlow GitHub Signal Metric</a></li>
+<li><a href="/glossary">Startup Engineering Glossary — 16 Key Terms for VC Deal Flow Signal | GitDealFlo</a></li>
+</ul>
+</div>
+</section>
+<footer><a href="https://gitdealflow.com">GitDealFlow</a> · <a href="https://signals.gitdealflow.com">Signals</a> · CC BY 4.0<footer style="text-align:center;padding:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.75rem;margin-top:3rem;">
+<a href="https://gitdealflow.com" style="color:#60a5fa;text-decoration:none;">GitDealFlow</a>
+  ·
+  <a href="https://signals.gitdealflow.com" style="color:#60a5fa;text-decoration:none;">Signals</a>
+  ·
+  <a href="https://sipi.bot" style="color:#60a5fa;text-decoration:none;">Sipi.bot</a>
+  ·
+  <a href="https://voicelogpro.com" style="color:#60a5fa;text-decoration:none;">VoiceLogPro</a>
+  ·
+  <a href="https://invisibleexit.com" style="color:#60a5fa;text-decoration:none;">InvisibleExit</a>
+  ·
+  <a href="https://unlocksaas.com" style="color:#60a5fa;text-decoration:none;">UnlockSaaS</a>
+  ·
+  <a href="https://churnlens.site" style="color:#60a5fa;text-decoration:none;">ChurnLens</a>
+  ·
+  <a href="https://sanctionsai.dev" style="color:#60a5fa;text-decoration:none;">SanctionsAI</a>
+  ·
+  <a href="https://carshake.online" style="color:#60a5fa;text-decoration:none;">CarShake</a>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#94a3b8;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div>
+<div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
+<h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+<div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
+<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+</div>
+</div>
+</footer>
+<div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#94a3b8;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div></footer>
+<script defer="" src="/share.js"></script>
+</body>
+</html>

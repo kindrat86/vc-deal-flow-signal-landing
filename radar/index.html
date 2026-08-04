@@ -1,0 +1,2322 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>Startup Engineering Signal Radar — Live Heatmap | GitDealFlow</title>
+<meta name="description" content="Interactive heatmap of 369+ startups ranked by engineering velocity. Filter by sector, signal type, stage, and geography. Live from the VC Deal Flow Signal dataset."/>
+<link href="https://gitdealflow.com/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://gitdealflow.com/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="https://gitdealflow.com/radar" rel="canonical"/>
+<meta property="og:title" content="Startup Engineering Signal Radar — Live Heatmap"/>
+<meta property="og:description" content="Interactive heatmap of 369+ startups by engineering velocity. Filter by sector, signal type, stage, and geography."/>
+<meta property="og:url" content="https://gitdealflow.com/radar"/><meta property="og:image" content="https://gitdealflow.com/og.png"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@data_nerd"/>
+<meta name="twitter:creator" content="@data_nerd"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#0b1120;color:#e2e8f0}
+.c{max-width:1200px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:2rem;font-weight:800;margin-bottom:.5rem;background:linear-gradient(135deg,#22c55e,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.st{color:#94a3b8;margin-bottom:1.5rem;font-size:.95rem}
+.stats{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem;padding:1rem;background:#1e293b;border-radius:12px;border:1px solid #334155}
+.stat{text-align:center}
+.stat-n{font-size:1.5rem;font-weight:700;color:#f1f5f9}
+.stat-l{font-size:.75rem;color:#94a3b8;text-transform:uppercase}
+.ctrl{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.ctrl label{font-size:.82rem;color:#94a3b8;display:flex;align-items:center;gap:.3rem}
+.ctrl select,.ctrl input{padding:.3rem .6rem;border-radius:6px;border:1px solid #334155;background:#1e293b;color:#e2e8f0;font-size:.82rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}
+.card{padding:.6rem;border-radius:8px;border:1px solid #334155;background:#1e293b;transition:all .15s;cursor:pointer;position:relative}
+.card:hover{border-color:#60a5fa;transform:translateY(-2px)}
+.card .name{font-size:.82rem;font-weight:600;color:#f1f5f9;margin-bottom:.2rem}
+.card .sec{font-size:.68rem;color:#94a3b8}
+.card .vel{font-size:.75rem;font-weight:700;margin:.3rem 0}
+.card .sig{font-size:.65rem}
+.card .meta{font-size:.65rem;color:#94a3b8;margin-top:.2rem}
+.hidden{display:none!important}
+.pulse{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:4px}
+</style></head><body><div class="c">
+<h1>📡 Startup Engineering Signal Radar</h1>
+<p class="st">Live heatmap of 369 startups tracked by the <a href="https://signals.gitdealflow.com">VC Deal Flow Signal</a>. Color = velocity direction (green=accelerating, red=cooling). Intensity = magnitude. Updated weekly.</p>
+
+<div class="stats">
+<div class="stat"><div class="stat-n">369</div><div class="stat-l">Startups</div></div>
+<div class="stat"><div class="stat-n">15</div><div class="stat-l">Sectors</div></div>
+<div class="stat"><div class="stat-n">364</div><div class="stat-l">Avg Contributors</div></div>
+</div>
+
+<div class="ctrl">
+<label>🔍 <input type="text" id="search" placeholder="Search startup..." style="width:180px"/></label>
+<label>Sector: <select id="sector"><option value="">All</option>
+<option value="Healthcare">Healthcare</option>
+<option value="EdTech">EdTech</option>
+<option value="E-commerce Infrastructure">E-commerce Infrastructure</option>
+<option value="Supply Chain">Supply Chain</option>
+<option value="Web3">Web3</option>
+<option value="Enterprise SaaS">Enterprise SaaS</option>
+<option value="Data Infrastructure">Data Infrastructure</option>
+<option value="Robotics">Robotics</option>
+<option value="Legal Tech">Legal Tech</option>
+<option value="HR Tech">HR Tech</option>
+<option value="PropTech">PropTech</option>
+<option value="AgTech">AgTech</option>
+<option value="Gaming">Gaming</option>
+<option value="Space Tech">Space Tech</option>
+<option value="Social & Community">Social & Community</option>
+</select></label>
+<label>Signal: <select id="signal"><option value="">All</option>
+<option value="breakout">🔥 Hiring Surge</option><option value="acceleration">📈 Building</option>
+<option value="steady">⚡ Shipping</option><option value="migration">🔄 Migrating</option>
+<option value="cooling">❄️ Cooling</option>
+</select></label>
+<label>Stage: <select id="stage"><option value="">All</option>
+<option value="Pre-seed">Pre-seed</option><option value="Seed">Seed</option>
+<option value="Series A/B">Series A/B</option><option value="Growth">Growth</option>
+</select></label>
+</div>
+<div class="grid" id="radarGrid"><div class="card" data-sector="Healthcare" data-signal="infrastructure buildout" data-stage="Pre-seed" data-name="aphp">
+<div class="name">aphp</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Pre-seed · EU · 3 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="stanfordspezi">
+<div class="name">StanfordSpezi</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · US · 5 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="ere-health">
+<div class="name">ere-health</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · EU · 30 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="engineering hiring burst" data-stage="Seed" data-name="epic-open-source">
+<div class="name">epic-open-source</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 18 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="deploy frequency spike" data-stage="Seed" data-name="insightsengineering">
+<div class="name">insightsengineering</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · EU · 9 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="infrastructure buildout" data-stage="Series A/B" data-name="tuva-health">
+<div class="name">tuva-health</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Series A/B · US · 48 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="neuml">
+<div class="name">neuml</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+400%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 26 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Series A/B" data-name="third-culture-software">
+<div class="name">third-culture-software</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#22c55e">+19%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 28 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Growth" data-name="pharmaverse">
+<div class="name">pharmaverse</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 97 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Series A/B" data-name="simpledotorg">
+<div class="name">simpledotorg</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 37 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Pre-seed" data-name="zapplyjobs">
+<div class="name">zapplyjobs</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-27%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · US · 7 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="engineering hiring burst" data-stage="Seed" data-name="healthchainai">
+<div class="name">healthchainai</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-27%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · UK · 14 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="engineering hiring burst" data-stage="Seed" data-name="hpi-studyu">
+<div class="name">hpi-studyu</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-33%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · EU · 17 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Seed" data-name="heliossoftware">
+<div class="name">HeliosSoftware</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-40%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 14 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Growth" data-name="sunlabuiuc">
+<div class="name">sunlabuiuc</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-50%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 56 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Growth" data-name="medplum">
+<div class="name">medplum</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-56%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="samply">
+<div class="name">samply</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-58%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 20 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Pre-seed" data-name="hastehealth">
+<div class="name">HasteHealth</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-60%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="infrastructure buildout" data-stage="Growth" data-name="ohcnetwork">
+<div class="name">ohcnetwork</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-61%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Growth · APAC · 100 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="engineering hiring burst" data-stage="Seed" data-name="freedomintelligence">
+<div class="name">FreedomIntelligence</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-62%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 16 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="engineering hiring burst" data-stage="Growth" data-name="earthians">
+<div class="name">earthians</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-62%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · APAC · 86 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="engineering hiring burst" data-stage="Seed" data-name="the-momentum">
+<div class="name">the-momentum</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-73%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Series A/B" data-name="fedbiomed">
+<div class="name">fedbiomed</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-73%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 23 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Pre-seed" data-name="hcw-home">
+<div class="name">HCW-home</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-83%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · EU · 4 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Series A/B" data-name="masslight">
+<div class="name">masslight</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-83%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 28 contributors</div>
+</div><div class="card" data-sector="Healthcare" data-signal="framework migration" data-stage="Growth" data-name="hapifhir">
+<div class="name">hapifhir</div>
+<div class="sec">Healthcare</div>
+<div class="vel" style="color:#ef4444">-85%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="ucfopen">
+<div class="name">ucfopen</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="ccao-data">
+<div class="name">ccao-data</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="the-mu-foundation">
+<div class="name">The-Mu-Foundation</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 22 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="deploy frequency spike" data-stage="Growth" data-name="classisland">
+<div class="name">ClassIsland</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+400%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · APAC · 56 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="deploy frequency spike" data-stage="Growth" data-name="kde">
+<div class="name">KDE</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+400%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Growth" data-name="opencircuits">
+<div class="name">OpenCircuits</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+386%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 71 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="nfdi4plants">
+<div class="name">nfdi4plants</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+200%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 32 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="tutors-sdk">
+<div class="name">tutors-sdk</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+145%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 21 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Pre-seed" data-name="zoonk">
+<div class="name">zoonk</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+71%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Series A/B" data-name="vacademy-io">
+<div class="name">Vacademy-io</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+29%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · APAC · 23 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Pre-seed" data-name="osunyorg">
+<div class="name">osunyorg</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#22c55e">+18%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · EU · 6 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="infrastructure buildout" data-stage="Pre-seed" data-name="l5lua">
+<div class="name">L5lua</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Pre-seed" data-name="movact">
+<div class="name">MOVACT</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · EU · 4 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Growth" data-name="scribe-org">
+<div class="name">scribe-org</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · EU · 59 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Growth" data-name="sonic-pi-net">
+<div class="name">sonic-pi-net</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-8%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Series A/B" data-name="classroomio">
+<div class="name">classroomio</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-12%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 30 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Growth" data-name="hpi-schul-cloud">
+<div class="name">hpi-schul-cloud</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-12%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Pre-seed" data-name="oaknational">
+<div class="name">oaknational</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-16%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · UK · 5 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Seed" data-name="openolat">
+<div class="name">OpenOLAT</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-17%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · EU · 16 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="infrastructure buildout" data-stage="Series A/B" data-name="dsacms">
+<div class="name">DSACMS</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-23%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Series A/B · US · 31 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Pre-seed" data-name="studydrift">
+<div class="name">StudyDrift</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-27%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="foundation50">
+<div class="name">foundation50</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-31%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 7 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Growth" data-name="hedyorg">
+<div class="name">hedyorg</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-33%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Series A/B" data-name="bitcoin-dev-project">
+<div class="name">bitcoin-dev-project</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-42%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 26 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="towardsai">
+<div class="name">towardsai</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-42%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · US · 3 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Growth" data-name="otter-sec">
+<div class="name">otter-sec</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-47%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="engineering hiring burst" data-stage="Growth" data-name="submitty">
+<div class="name">Submitty</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-48%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Seed" data-name="learning-commons-org">
+<div class="name">learning-commons-org</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-56%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 9 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Seed" data-name="iblai">
+<div class="name">iblai</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-65%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 11 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Pre-seed" data-name="codeforlife-education">
+<div class="name">codeforlife-education</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-67%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · UK · 3 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Series A/B" data-name="ai-shifu">
+<div class="name">ai-shifu</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-74%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · APAC · 21 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Seed" data-name="elimu-ai">
+<div class="name">elimu-ai</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-77%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 12 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Growth" data-name="cpinitiative">
+<div class="name">cpinitiative</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-80%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Series A/B" data-name="spectrocloud">
+<div class="name">spectrocloud</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-80%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · US · 38 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Seed" data-name="learningeconomy">
+<div class="name">learningeconomy</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-84%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 15 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Series A/B" data-name="haxtheweb">
+<div class="name">haxtheweb</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-90%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · US · 42 contributors</div>
+</div><div class="card" data-sector="EdTech" data-signal="framework migration" data-stage="Series A/B" data-name="learnhouse">
+<div class="name">learnhouse</div>
+<div class="sec">EdTech</div>
+<div class="vel" style="color:#ef4444">-93%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 35 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="swellstores">
+<div class="name">swellstores</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · US · 29 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="deploy frequency spike" data-stage="Seed" data-name="vuestorefront">
+<div class="name">vuestorefront</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="bic-org">
+<div class="name">bic-org</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · EU · 3 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="vanilophp">
+<div class="name">vanilophp</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · EU · 22 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="beikeshop">
+<div class="name">beikeshop</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+200%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · APAC · 21 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="juspay">
+<div class="name">juspay</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+113%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · APAC · 65 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="solidusio">
+<div class="name">solidusio</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+100%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="rapidez">
+<div class="name">rapidez</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+100%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · EU · 15 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="evershopcommerce">
+<div class="name">evershopcommerce</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#22c55e">+36%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 46 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="thirtybees">
+<div class="name">thirtybees</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 100 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="saleor">
+<div class="name">saleor</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-12%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="medusajs">
+<div class="name">medusajs</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-19%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="lifecycle-innovations-limited">
+<div class="name">Lifecycle-Innovations-Limited</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-21%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 12 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Pre-seed" data-name="moov-io">
+<div class="name">moov-io</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-21%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="biblys">
+<div class="name">biblys</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-31%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · EU · 5 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="infrastructure buildout" data-stage="Growth" data-name="tempoxyz">
+<div class="name">tempoxyz</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-45%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Growth · Unknown · 72 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="builderio">
+<div class="name">BuilderIO</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-45%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 40 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="intershop">
+<div class="name">intershop</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-46%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 69 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="adyen">
+<div class="name">Adyen</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-47%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · EU · 13 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="mahocommerce">
+<div class="name">MahoCommerce</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-50%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 13 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="openlinker-project">
+<div class="name">openlinker-project</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-51%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="vendurehq">
+<div class="name">vendurehq</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-54%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="paymenter">
+<div class="name">Paymenter</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-62%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 52 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Seed" data-name="ecomplus">
+<div class="name">ecomplus</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-67%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · LATAM · 10 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="framework migration" data-stage="Pre-seed" data-name="bagisto">
+<div class="name">bagisto</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-77%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · APAC · 4 contributors</div>
+</div><div class="card" data-sector="E-commerce Infrastructure" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="mercurjs">
+<div class="name">mercurjs</div>
+<div class="sec">E-commerce Infrastructure</div>
+<div class="vel" style="color:#ef4444">-98%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 7 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="fleetbase">
+<div class="name">fleetbase</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+1600%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · APAC · 7 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="deploy frequency spike" data-stage="Growth" data-name="ocsinventory-ng">
+<div class="name">OCSInventory-NG</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · EU · 71 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="relizaio">
+<div class="name">relizaio</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Canada · 4 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="deploy frequency spike" data-stage="Growth" data-name="velocidex">
+<div class="name">Velocidex</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · APAC · 100 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="hightower-systems">
+<div class="name">hightower-systems</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="eftechcombr">
+<div class="name">eftechcombr</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · LATAM · 4 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="deploy frequency spike" data-stage="Seed" data-name="pyvrp">
+<div class="name">PyVRP</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+200%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · EU · 9 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Growth" data-name="part-db">
+<div class="name">Part-DB</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+145%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 53 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Seed" data-name="rspace-os">
+<div class="name">rspace-os</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+100%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · UK · 10 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="phoenixctms">
+<div class="name">phoenixctms</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#22c55e">+89%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="infrastructure buildout" data-stage="Pre-seed" data-name="aws-samples">
+<div class="name">aws-samples</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Series A/B" data-name="gosqasorg">
+<div class="name">gosqasorg</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-11%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 24 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="pyck-ai">
+<div class="name">pyck-ai</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-18%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · EU · 4 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Series A/B" data-name="aureuserp">
+<div class="name">aureuserp</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-23%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 20 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="engineering hiring burst" data-stage="Seed" data-name="phamos-eu">
+<div class="name">phamos-eu</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-28%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · EU · 18 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="infrastructure buildout" data-stage="Pre-seed" data-name="celerp">
+<div class="name">celerp</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-33%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Seed" data-name="grashjs">
+<div class="name">Grashjs</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-49%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 11 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Series A/B" data-name="pluginsglpi">
+<div class="name">pluginsGLPI</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-50%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · EU · 30 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Series A/B" data-name="medulla-tech">
+<div class="name">medulla-tech</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-56%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · EU · 26 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="engineering hiring burst" data-stage="Seed" data-name="temporalio">
+<div class="name">temporalio</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-58%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 10 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="engineering hiring burst" data-stage="Growth" data-name="ever-co">
+<div class="name">ever-co</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-75%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 80 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Series A/B" data-name="kyrptonaughtmc">
+<div class="name">KyrptonaughtMC</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-83%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 24 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Seed" data-name="epic-breakfast-productions">
+<div class="name">Epic-Breakfast-Productions</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-92%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 16 contributors</div>
+</div><div class="card" data-sector="Supply Chain" data-signal="framework migration" data-stage="Pre-seed" data-name="blb3dprinting">
+<div class="name">BLB3DPrinting</div>
+<div class="sec">Supply Chain</div>
+<div class="vel" style="color:#ef4444">-93%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · US · 6 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="deploy frequency spike" data-stage="Seed" data-name="hyperledger-labs">
+<div class="name">hyperledger-labs</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · US · 15 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="deploy frequency spike" data-stage="Seed" data-name="trustwallet">
+<div class="name">trustwallet</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="chainstacklabs">
+<div class="name">chainstacklabs</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Seed" data-name="polkadot-api">
+<div class="name">polkadot-api</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 17 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="wevm">
+<div class="name">wevm</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 21 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="margelo">
+<div class="name">margelo</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 40 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="deploy frequency spike" data-stage="Growth" data-name="gochain">
+<div class="name">gochain</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Seed" data-name="axone-protocol">
+<div class="name">axone-protocol</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+80%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · EU · 16 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Series A/B" data-name="aptos-labs">
+<div class="name">aptos-labs</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+75%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 46 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="immutable">
+<div class="name">immutable</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+40%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · APAC · 84 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Seed" data-name="growthepie">
+<div class="name">growthepie</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+20%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Seed" data-name="openzeppelin">
+<div class="name">OpenZeppelin</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+12%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="argotorg">
+<div class="name">argotorg</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#22c55e">+10%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="foundry-rs">
+<div class="name">foundry-rs</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 91 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Pre-seed" data-name="sarvalabs">
+<div class="name">sarvalabs</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Seed" data-name="baizhiheizi">
+<div class="name">baizhiheizi</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-16%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Pre-seed" data-name="gear-tech">
+<div class="name">gear-tech</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-17%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="dfinity">
+<div class="name">dfinity</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-18%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 61 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="infrastructure buildout" data-stage="Growth" data-name="kybernetwork">
+<div class="name">KyberNetwork</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-18%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Growth · APAC · 57 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Pre-seed" data-name="mystenlabs">
+<div class="name">MystenLabs</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-19%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Seed" data-name="tradingstrategy-ai">
+<div class="name">tradingstrategy-ai</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-32%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 15 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Series A/B" data-name="canton-network">
+<div class="name">canton-network</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-36%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 43 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Seed" data-name="gofractally">
+<div class="name">gofractally</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-36%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 13 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Growth" data-name="dimensiondev">
+<div class="name">DimensionDev</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-38%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 71 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="besu-eth">
+<div class="name">besu-eth</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-41%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="consensys">
+<div class="name">Consensys</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-41%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Growth" data-name="seismicsystems">
+<div class="name">SeismicSystems</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-56%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Series A/B" data-name="solana-foundation">
+<div class="name">solana-foundation</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-57%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · EU · 39 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="paradigmxyz">
+<div class="name">paradigmxyz</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-58%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 29 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Seed" data-name="exactly">
+<div class="name">exactly</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-61%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 11 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="alloy-rs">
+<div class="name">alloy-rs</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-62%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 32 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="intersectmbo">
+<div class="name">IntersectMBO</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-64%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 52 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Seed" data-name="kuestcom">
+<div class="name">kuestcom</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-65%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 10 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="engineering hiring burst" data-stage="Growth" data-name="cosmwasm">
+<div class="name">CosmWasm</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-73%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Pre-seed" data-name="lifinance">
+<div class="name">lifinance</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-74%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Series A/B" data-name="official-moondao">
+<div class="name">Official-MoonDao</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-79%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 30 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="infrastructure buildout" data-stage="Growth" data-name="chainsafe">
+<div class="name">ChainSafe</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-82%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Growth · Canada · 100 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="infrastructure buildout" data-stage="Series A/B" data-name="ar-io">
+<div class="name">ar-io</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-83%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Series A/B · Unknown · 25 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="onflow">
+<div class="name">onflow</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-85%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 99 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Pre-seed" data-name="nethermindeth">
+<div class="name">NethermindEth</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-88%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Pre-seed" data-name="kairos-io">
+<div class="name">kairos-io</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-88%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Web3" data-signal="framework migration" data-stage="Growth" data-name="status-im">
+<div class="name">status-im</div>
+<div class="sec">Web3</div>
+<div class="vel" style="color:#ef4444">-89%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 100 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="deploy frequency spike" data-stage="Seed" data-name="polarsource">
+<div class="name">polarsource</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 13 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="deploy frequency spike" data-stage="Seed" data-name="open-cap-stack">
+<div class="name">Open-Cap-Stack</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · US · 10 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="saas-js">
+<div class="name">saas-js</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 37 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="deploy frequency spike" data-stage="Seed" data-name="databayt">
+<div class="name">databayt</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+573%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="deploy frequency spike" data-stage="Seed" data-name="relaticle">
+<div class="name">relaticle</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+300%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 16 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="xco-agency">
+<div class="name">XCO-Agency</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+200%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · US · 6 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="opnform">
+<div class="name">OpnForm</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+157%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · EU · 32 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Growth" data-name="temporalio">
+<div class="name">temporalio</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+32%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Seed" data-name="openbyteinc">
+<div class="name">OpenByteInc</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+13%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 18 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="infrastructure buildout" data-stage="Seed" data-name="atrocore">
+<div class="name">atrocore</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#22c55e">+10%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Seed · EU · 18 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Pre-seed" data-name="synapsr">
+<div class="name">Synapsr</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-8%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · EU · 4 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Series A/B" data-name="langchain-ai">
+<div class="name">langchain-ai</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-11%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · US · 39 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Pre-seed" data-name="metorial">
+<div class="name">metorial</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-19%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Series A/B" data-name="dolicloud">
+<div class="name">DoliCloud</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-31%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · EU · 22 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Pre-seed" data-name="churnkey">
+<div class="name">churnkey</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-42%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="infrastructure buildout" data-stage="Seed" data-name="constructorfabric">
+<div class="name">constructorfabric</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-43%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Seed · Unknown · 16 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="yzxingtu2026">
+<div class="name">yzxingtu2026</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-45%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Seed" data-name="mugnavo">
+<div class="name">mugnavo</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-54%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 10 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Growth" data-name="open-condo-software">
+<div class="name">open-condo-software</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-55%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · LATAM · 50 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="engineering hiring burst" data-stage="Seed" data-name="lomiafrica">
+<div class="name">lomiafrica</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-55%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Pre-seed" data-name="iflytek">
+<div class="name">iflytek</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-59%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · APAC · 5 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Pre-seed" data-name="rbnd-studio">
+<div class="name">RBND-studio</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-61%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="infrastructure buildout" data-stage="Growth" data-name="wasp-lang">
+<div class="name">wasp-lang</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-61%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Growth" data-name="archtechx">
+<div class="name">archtechx</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-67%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 71 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Growth" data-name="jmix-framework">
+<div class="name">jmix-framework</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-69%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 84 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Growth" data-name="parabolinc">
+<div class="name">ParabolInc</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-71%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 78 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="engineering hiring burst" data-stage="Growth" data-name="ever-co">
+<div class="name">ever-co</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-75%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 80 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Growth" data-name="zenstackhq">
+<div class="name">zenstackhq</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-86%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 78 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Seed" data-name="pneumaticapp">
+<div class="name">pneumaticapp</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-89%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 8 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="framework migration" data-stage="Series A/B" data-name="goodrain">
+<div class="name">goodrain</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-92%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · APAC · 20 contributors</div>
+</div><div class="card" data-sector="Enterprise SaaS" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="biru-scop">
+<div class="name">BIRU-Scop</div>
+<div class="sec">Enterprise SaaS</div>
+<div class="vel" style="color:#ef4444">-97%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · EU · 3 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="mloda-ai">
+<div class="name">mloda-ai</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · EU · 3 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="starlake-ai">
+<div class="name">starlake-ai</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · EU · 7 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="infrastructure buildout" data-stage="Series A/B" data-name="ohs-foundation">
+<div class="name">ohs-foundation</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Series A/B · Unknown · 28 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="conduitio">
+<div class="name">ConduitIO</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+421%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 23 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Growth" data-name="datajuicer">
+<div class="name">datajuicer</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+350%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 51 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="odpi">
+<div class="name">odpi</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+150%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 30 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Pre-seed" data-name="superlinked">
+<div class="name">superlinked</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+67%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="absaoss">
+<div class="name">AbsaOSS</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+33%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Seed" data-name="bruin-data">
+<div class="name">bruin-data</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+19%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · UK · 13 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Growth" data-name="clickhouse">
+<div class="name">ClickHouse</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+17%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Growth" data-name="airbytehq">
+<div class="name">airbytehq</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#22c55e">+9%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Series A/B" data-name="zipstack">
+<div class="name">Zipstack</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-7%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 30 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Growth" data-name="scribe-org">
+<div class="name">scribe-org</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-12%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · EU · 61 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="rocky-data">
+<div class="name">rocky-data</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-21%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="rudderlabs">
+<div class="name">rudderlabs</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-23%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="opensearch-project">
+<div class="name">opensearch-project</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-30%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="datasqrl">
+<div class="name">DataSQRL</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-30%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 14 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="dbt-labs">
+<div class="name">dbt-labs</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-31%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Growth" data-name="langfuse">
+<div class="name">langfuse</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-34%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Series A/B" data-name="estuary">
+<div class="name">estuary</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-36%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 37 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="dagucloud">
+<div class="name">dagucloud</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-36%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 77 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="point72">
+<div class="name">Point72</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-40%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · US · 22 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="slothflowlabs">
+<div class="name">slothflowlabs</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-41%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 8 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Series A/B" data-name="drt-hub">
+<div class="name">drt-hub</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-42%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · APAC · 30 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="signoz">
+<div class="name">SigNoz</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-45%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Growth" data-name="posthog">
+<div class="name">PostHog</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-45%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Seed" data-name="cryostatio">
+<div class="name">cryostatio</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-46%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 10 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="open-telemetry">
+<div class="name">open-telemetry</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-48%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="infrastructure buildout" data-stage="Series A/B" data-name="tuva-health">
+<div class="name">tuva-health</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-50%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Series A/B · US · 48 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="debezium">
+<div class="name">debezium</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-56%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Series A/B" data-name="rocketride-org">
+<div class="name">rocketride-org</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-57%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · US · 45 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="zemerteam">
+<div class="name">ZemerTeam</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-58%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · US · 6 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="cilium">
+<div class="name">cilium</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-63%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="framework migration" data-stage="Growth" data-name="redpanda-data">
+<div class="name">redpanda-data</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-71%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Data Infrastructure" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="subsquid">
+<div class="name">subsquid</div>
+<div class="sec">Data Infrastructure</div>
+<div class="vel" style="color:#ef4444">-83%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 40 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="eclipse-zenoh">
+<div class="name">eclipse-zenoh</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 44 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="rt-net">
+<div class="name">rt-net</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · APAC · 5 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="infrastructure buildout" data-stage="Series A/B" data-name="gbionics">
+<div class="name">gbionics</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Series A/B · Unknown · 26 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="deploy frequency spike" data-stage="Seed" data-name="robot-descriptions">
+<div class="name">robot-descriptions</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 15 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="deploy frequency spike" data-stage="Seed" data-name="splintered-reality">
+<div class="name">splintered-reality</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 15 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="flexxbotics">
+<div class="name">Flexxbotics</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="infrastructure buildout" data-stage="Seed" data-name="foxglove">
+<div class="name">foxglove</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Seed · Unknown · 19 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Seed" data-name="skybrush-io">
+<div class="name">skybrush-io</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+118%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Growth" data-name="commaai">
+<div class="name">commaai</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+24%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Pre-seed" data-name="lge-ros2">
+<div class="name">lge-ros2</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+24%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · APAC · 4 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Pre-seed" data-name="openscvx">
+<div class="name">OpenSCvx</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#22c55e">+17%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · US · 6 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Growth" data-name="ros-navigation">
+<div class="name">ros-navigation</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Pre-seed" data-name="3d-vision-world">
+<div class="name">3D-Vision-World</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Pre-seed" data-name="webodm">
+<div class="name">WebODM</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-17%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Pre-seed" data-name="reductstore">
+<div class="name">reductstore</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-17%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · EU · 7 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Pre-seed" data-name="zapplyjobs">
+<div class="name">zapplyjobs</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-23%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · US · 7 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Growth" data-name="newton-physics">
+<div class="name">newton-physics</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-35%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 83 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="infrastructure buildout" data-stage="Growth" data-name="rerun-io">
+<div class="name">rerun-io</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-37%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Growth · EU · 100 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="verl-project">
+<div class="name">verl-project</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-41%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Growth" data-name="autowarefoundation">
+<div class="name">autowarefoundation</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-48%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Growth" data-name="livekit">
+<div class="name">livekit</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-50%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 74 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="infrastructure buildout" data-stage="Series A/B" data-name="copper-project">
+<div class="name">copper-project</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-57%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Series A/B · US · 34 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="selfpatch">
+<div class="name">selfpatch</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-57%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 7 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="engineering hiring burst" data-stage="Seed" data-name="innate-inc">
+<div class="name">innate-inc</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-58%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · US · 15 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="engineering hiring burst" data-stage="Growth" data-name="ihmcrobotics">
+<div class="name">ihmcrobotics</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-60%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 79 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Pre-seed" data-name="robodojo-benchmark">
+<div class="name">RoboDojo-Benchmark</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-62%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="engineering hiring burst" data-stage="Growth" data-name="cyberbotics">
+<div class="name">cyberbotics</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-80%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Robotics" data-signal="framework migration" data-stage="Growth" data-name="borglab">
+<div class="name">borglab</div>
+<div class="sec">Robotics</div>
+<div class="vel" style="color:#ef4444">-96%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="association-dataring">
+<div class="name">Association-DataRing</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · EU · 3 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="infrastructure buildout" data-stage="Pre-seed" data-name="ieee-vit">
+<div class="name">IEEE-VIT</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Pre-seed · Unknown · 7 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="deploy frequency spike" data-stage="Seed" data-name="xmudeeplit">
+<div class="name">XMUDeepLIT</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 12 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="engineering hiring burst" data-stage="Seed" data-name="disclose">
+<div class="name">disclose</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Growth" data-name="licensee">
+<div class="name">licensee</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+100%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 60 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Seed" data-name="jlawyerorg">
+<div class="name">jlawyerorg</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+80%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="pactflow">
+<div class="name">pactflow</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+50%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · APAC · 5 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="dealfluence">
+<div class="name">dealfluence</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+22%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="stella">
+<div class="name">stella</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+15%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="trianalab">
+<div class="name">TrianaLab</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#22c55e">+7%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="i-dot-ai">
+<div class="name">i-dot-ai</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · UK · 6 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="publicmap">
+<div class="name">publicmap</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="accordproject">
+<div class="name">accordproject</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-25%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="logicaldoc">
+<div class="name">logicaldoc</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-30%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Growth" data-name="adguardteam">
+<div class="name">AdguardTeam</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-31%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="ondata">
+<div class="name">ondata</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-35%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Seed" data-name="iblai">
+<div class="name">iblai</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-64%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 11 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Series A/B" data-name="gardener">
+<div class="name">gardener</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-70%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · EU · 33 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Growth" data-name="finos">
+<div class="name">finos</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-75%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 52 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="maize-tech">
+<div class="name">maize-tech</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-80%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="open-cap-table-coalition">
+<div class="name">Open-Cap-Table-Coalition</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-92%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 20 contributors</div>
+</div><div class="card" data-sector="Legal Tech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="securitybunker">
+<div class="name">securitybunker</div>
+<div class="sec">Legal Tech</div>
+<div class="vel" style="color:#ef4444">-94%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="minthcm">
+<div class="name">minthcm</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 7 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="payroll-engine">
+<div class="name">Payroll-Engine</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · EU · 4 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="deploy frequency spike" data-stage="Seed" data-name="microblink">
+<div class="name">microblink</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 17 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="ever-co">
+<div class="name">ever-co</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · US · 34 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="deploy frequency spike" data-stage="Seed" data-name="laudspeaker">
+<div class="name">laudspeaker</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · US · 13 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="deploy frequency spike" data-stage="Seed" data-name="exyte">
+<div class="name">exyte</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · US · 15 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="namiml">
+<div class="name">namiml</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+100%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="engineering hiring burst" data-stage="Growth" data-name="akaunting">
+<div class="name">akaunting</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+16%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Seed" data-name="sablier-labs">
+<div class="name">sablier-labs</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#22c55e">+14%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · UK · 11 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="speedyapply">
+<div class="name">speedyapply</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-33%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Series A/B" data-name="horilla">
+<div class="name">horilla</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-33%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 47 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Seed" data-name="pneumaticapp">
+<div class="name">pneumaticapp</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-36%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 9 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Growth" data-name="posthog">
+<div class="name">PostHog</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-43%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Seed" data-name="cla-code-community">
+<div class="name">Cla-Code-Community</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-50%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · LATAM · 16 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Growth" data-name="wp-erp">
+<div class="name">wp-erp</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-64%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 59 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="usertour">
+<div class="name">usertour</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-66%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · APAC · 6 contributors</div>
+</div><div class="card" data-sector="HR Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="blumilksoftware">
+<div class="name">blumilksoftware</div>
+<div class="sec">HR Tech</div>
+<div class="vel" style="color:#ef4444">-77%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 7 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="radcrew">
+<div class="name">radcrew</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="bigprof-software">
+<div class="name">bigprof-software</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="rosteleset">
+<div class="name">rosteleset</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="etewiah">
+<div class="name">etewiah</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 22 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="tae0y">
+<div class="name">tae0y</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="aelassas">
+<div class="name">aelassas</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="framework migration" data-stage="Pre-seed" data-name="synapsr">
+<div class="name">Synapsr</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+63%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · EU · 4 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="bloom-housing">
+<div class="name">bloom-housing</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+58%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 40 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="framework migration" data-stage="Seed" data-name="qloapps">
+<div class="name">Qloapps</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#22c55e">+33%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · APAC · 17 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="framework migration" data-stage="Series A/B" data-name="sfdigitalservices">
+<div class="name">SFDigitalServices</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · US · 35 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="engineering hiring burst" data-stage="Seed" data-name="opengeos">
+<div class="name">opengeos</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#ef4444">-4%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · US · 12 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="framework migration" data-stage="Growth" data-name="open-condo-software">
+<div class="name">open-condo-software</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#ef4444">-17%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · LATAM · 50 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="framework migration" data-stage="Series A/B" data-name="orangecoding">
+<div class="name">orangecoding</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#ef4444">-56%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 43 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="engineering hiring burst" data-stage="Seed" data-name="willowinc">
+<div class="name">WillowInc</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#ef4444">-63%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · APAC · 14 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="framework migration" data-stage="Pre-seed" data-name="aleksnestu">
+<div class="name">AleksNeStu</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#ef4444">-85%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 6 contributors</div>
+</div><div class="card" data-sector="PropTech" data-signal="framework migration" data-stage="Pre-seed" data-name="ahacker-1">
+<div class="name">ahacker-1</div>
+<div class="sec">PropTech</div>
+<div class="vel" style="color:#ef4444">-99%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="photoflare">
+<div class="name">PhotoFlare</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+1600%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 21 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="fields2cover">
+<div class="name">Fields2Cover</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · EU · 22 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="deploy frequency spike" data-stage="Seed" data-name="cran-task-views">
+<div class="name">cran-task-views</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 13 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="sapic">
+<div class="name">sapic</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · US · 7 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="engineering hiring burst" data-stage="Seed" data-name="fineprint-global">
+<div class="name">fineprint-global</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+250%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 9 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="framework migration" data-stage="Series A/B" data-name="rspatial">
+<div class="name">rspatial</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+52%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 49 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="framework migration" data-stage="Growth" data-name="litefarmorg">
+<div class="name">LiteFarmOrg</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+49%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Canada · 65 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="framework migration" data-stage="Seed" data-name="foodontology">
+<div class="name">FoodOntology</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+18%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 12 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="engineering hiring burst" data-stage="Growth" data-name="o3de">
+<div class="name">o3de</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#22c55e">+10%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="framework migration" data-stage="Pre-seed" data-name="nmi-agro">
+<div class="name">nmi-agro</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#ef4444">-33%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · EU · 7 contributors</div>
+</div><div class="card" data-sector="AgTech" data-signal="framework migration" data-stage="Seed" data-name="arpa-simc">
+<div class="name">ARPA-SIMC</div>
+<div class="sec">AgTech</div>
+<div class="vel" style="color:#ef4444">-42%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 12 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="mothcocoon">
+<div class="name">MothCocoon</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="rpgppengine">
+<div class="name">rpgppengine</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+520%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="thevessels">
+<div class="name">TheVessels</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+358%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="deploy frequency spike" data-stage="Pre-seed" data-name="o2-engine">
+<div class="name">o2-engine</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+200%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="deploy frequency spike" data-stage="Growth" data-name="bevyengine">
+<div class="name">bevyengine</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+167%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · US · 100 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Pre-seed" data-name="quartermindgames">
+<div class="name">QuartermindGames</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+100%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · UK · 4 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Series A/B" data-name="gurkenlabs">
+<div class="name">gurkenlabs</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+67%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · EU · 31 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="routevn">
+<div class="name">RouteVN</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+42%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 7 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Growth" data-name="boardgameio">
+<div class="name">boardgameio</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+40%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Series A/B" data-name="castle-engine">
+<div class="name">castle-engine</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+8%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 24 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Seed" data-name="pcgex">
+<div class="name">PCGEx</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+6%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Canada · 12 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Growth" data-name="phase-rs">
+<div class="name">phase-rs</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#22c55e">+6%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 88 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="lacledeslan">
+<div class="name">LacledesLAN</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#ef4444">+0%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="thextech">
+<div class="name">TheXTech</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#ef4444">-21%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 33 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Pre-seed" data-name="mountea-framework">
+<div class="name">Mountea-Framework</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#ef4444">-47%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 4 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Series A/B" data-name="calagopus">
+<div class="name">calagopus</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#ef4444">-52%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · EU · 24 contributors</div>
+</div><div class="card" data-sector="Gaming" data-signal="framework migration" data-stage="Seed" data-name="thunder-engine">
+<div class="name">thunder-engine</div>
+<div class="sec">Gaming</div>
+<div class="vel" style="color:#ef4444">-75%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 17 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="ossimlabs">
+<div class="name">ossimlabs</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 34 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="deploy frequency spike" data-stage="Growth" data-name="satdump">
+<div class="name">SatDump</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+250%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · Unknown · 58 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="celestiaproject">
+<div class="name">CelestiaProject</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+133%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 34 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Series A/B" data-name="official-moondao">
+<div class="name">Official-MoonDao</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+96%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 30 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="spedas">
+<div class="name">spedas</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+80%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 39 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="starwards">
+<div class="name">starwards</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+56%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="opencyphal">
+<div class="name">OpenCyphal</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+50%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 24 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Growth" data-name="daedalusdock">
+<div class="name">DaedalusDock</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+44%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Growth" data-name="nasa-ammos">
+<div class="name">NASA-AMMOS</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#22c55e">+27%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 76 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Pre-seed" data-name="open-space-collective">
+<div class="name">open-space-collective</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-6%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="engineering hiring burst" data-stage="Pre-seed" data-name="ut-issl">
+<div class="name">ut-issl</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-10%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Pre-seed · APAC · 4 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Series A/B" data-name="openc3">
+<div class="name">OpenC3</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-14%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · US · 49 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Series A/B" data-name="mx-space">
+<div class="name">mx-space</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-22%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · APAC · 26 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Seed" data-name="elodin-sys">
+<div class="name">elodin-sys</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-29%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · US · 19 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="engineering hiring burst" data-stage="Growth" data-name="naev">
+<div class="name">naev</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-39%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 100 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Growth" data-name="endless-sky">
+<div class="name">endless-sky</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-44%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · US · 54 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="framework migration" data-stage="Series A/B" data-name="orbiternassp">
+<div class="name">orbiternassp</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-53%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 37 contributors</div>
+</div><div class="card" data-sector="Space Tech" data-signal="engineering hiring burst" data-stage="Growth" data-name="rocketpy-team">
+<div class="name">RocketPy-Team</div>
+<div class="sec">Space Tech</div>
+<div class="vel" style="color:#ef4444">-54%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Growth · Unknown · 72 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="deploy frequency spike" data-stage="Seed" data-name="pysnippet">
+<div class="name">pysnippet</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Seed · Unknown · 8 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="deploy frequency spike" data-stage="Series A/B" data-name="vismalietuva">
+<div class="name">VismaLietuva</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Series A/B · Unknown · 31 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="deploy frequency spike" data-stage="Growth" data-name="yellow-dog-man">
+<div class="name">Yellow-Dog-Man</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#22c55e">+999%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · Unknown · 55 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="deploy frequency spike" data-stage="Growth" data-name="nextcloud">
+<div class="name">nextcloud</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#22c55e">+150%</div>
+<div class="sig">⚡ Shipping</div>
+<div class="meta">Growth · Unknown · 74 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="eclipse-zenoh">
+<div class="name">eclipse-zenoh</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#22c55e">+150%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 22 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Seed" data-name="unacms">
+<div class="name">unacms</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#22c55e">+38%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · Unknown · 11 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Seed" data-name="bakaphp">
+<div class="name">bakaphp</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-6%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Seed · LATAM · 15 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="engineering hiring burst" data-stage="Series A/B" data-name="coollabsio">
+<div class="name">coollabsio</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-18%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Series A/B · Unknown · 41 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="infrastructure buildout" data-stage="Seed" data-name="mininglamp-oss">
+<div class="name">Mininglamp-OSS</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-27%</div>
+<div class="sig">📈 Building</div>
+<div class="meta">Seed · APAC · 17 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Pre-seed" data-name="hophubproject">
+<div class="name">HopHubProject</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-40%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 5 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Series A/B" data-name="getstream">
+<div class="name">GetStream</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-47%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 32 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Growth" data-name="flaskbb">
+<div class="name">flaskbb</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-50%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 62 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Growth" data-name="ebwiki">
+<div class="name">EBWiki</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-60%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · Unknown · 81 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="engineering hiring burst" data-stage="Seed" data-name="nats-io">
+<div class="name">nats-io</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-67%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 15 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Series A/B" data-name="opensensorhub">
+<div class="name">opensensorhub</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-70%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · Unknown · 22 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Growth" data-name="activist-org">
+<div class="name">activist-org</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-72%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Growth · EU · 100 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Series A/B" data-name="opensource-socialnetwork">
+<div class="name">opensource-socialnetwork</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-77%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Series A/B · US · 23 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="engineering hiring burst" data-stage="Seed" data-name="pastvu">
+<div class="name">PastVu</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-82%</div>
+<div class="sig">🔥 Hiring Surge</div>
+<div class="meta">Seed · Unknown · 12 contributors</div>
+</div><div class="card" data-sector="Social & Community" data-signal="framework migration" data-stage="Pre-seed" data-name="trovu">
+<div class="name">trovu</div>
+<div class="sec">Social & Community</div>
+<div class="vel" style="color:#ef4444">-89%</div>
+<div class="sig">🔄 Migrating</div>
+<div class="meta">Pre-seed · Unknown · 3 contributors</div>
+</div></div>
+<p style="margin-top:1rem;color:#94a3b8;font-size:.82rem">Click a card to view full signal on <a href="https://signals.gitdealflow.com">signals.gitdealflow.com</a>. See the <a href="/leaderboard">Leaderboard</a> for ranked lists.</p>
+</div>
+<script>
+const grid = document.getElementById('radarGrid');
+const cards = grid.querySelectorAll('.card');
+function filterCards(){
+  const s = document.getElementById('search').value.toLowerCase();
+  const sec = document.getElementById('sector').value;
+  const sig = document.getElementById('signal').value;
+  const stage = document.getElementById('stage').value;
+  cards.forEach(c => {
+    const matchSector = !sec || c.dataset.sector === sec;
+    const matchSignal = !sig || c.dataset.signal.includes(sig);
+    const matchStage = !stage || c.dataset.stage === stage;
+    const matchSearch = !s || c.dataset.name.includes(s);
+    c.classList.toggle('hidden', !(matchSector && matchSignal && matchStage && matchSearch));
+  });
+}
+document.getElementById('search').addEventListener('input', filterCards);
+document.getElementById('sector').addEventListener('change', filterCards);
+document.getElementById('signal').addEventListener('change', filterCards);
+document.getElementById('stage').addEventListener('change', filterCards);
+//Click to open
+cards.forEach(c => {c.addEventListener('click',function(){
+  const slug = slugify(this.querySelector('.name').textContent);
+  window.open("https://signals.gitdealflow.com/startup/" + slug, '_blank');
+});});
+function slugify(n){return n.toLowerCase().replace(/ /g,'-').replace(/\//g,'-');}
+</script>
+</body></html>
