@@ -129,13 +129,13 @@
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:#60a5fa;text-decoration:none}.container{max-width:600px;margin:0 auto;padding:2rem 1.5rem}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;background:#0f172a;color:#f3f4f6;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#7dd3fc;text-decoration:none}.container{max-width:600px;margin:0 auto;padding:2rem 1.5rem}
 
 /* Hero */
 .hero{text-align:center;padding:3.5rem 1.5rem 2.5rem;border-bottom:1px solid #1e293b;background:radial-gradient(ellipse at top center,rgba(96,165,250,0.06) 0%,transparent 70%)}
-.hero-badge{display:inline-block;padding:.25rem .75rem;border-radius:999px;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);color:#60a5fa;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
-.hero h1{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,#60a5fa 0%,#a78bfa 50%,#f472b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2;margin-bottom:.75rem}
+.hero-badge{display:inline-block;padding:.25rem .75rem;border-radius:999px;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);color:#7dd3fc;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
+.hero h1{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,#7dd3fc 0%,#7dd3fc 50%,#f472b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2;margin-bottom:.75rem}
 .hero p{color:#94a3b8;font-size:.95rem;max-width:480px;margin:0 auto}
 
 /* Input section */
@@ -143,15 +143,15 @@ a{color:#60a5fa;text-decoration:none}.container{max-width:600px;margin:0 auto;pa
 .input-group{display:flex;gap:.5rem;max-width:480px;margin:0 auto}
 @media(max-width:480px){.input-group{flex-direction:column}}
 input[type=text]{flex:1;padding:.8rem 1rem;background:#0f172a;border:1px solid #1e293b;border-radius:12px;color:#f1f5f9;font-size:1rem;outline:none;transition:all .2s}
-input[type=text]:focus{border-color:#60a5fa;box-shadow:0 0 0 3px rgba(96,165,250,0.12)}
-button{flex-shrink:0;padding:.8rem 1.5rem;background:linear-gradient(135deg,#60a5fa,#a78bfa);border:none;border-radius:12px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap}
+input[type=text]:focus{border-color:#7dd3fc;box-shadow:0 0 0 3px rgba(96,165,250,0.12)}
+button{flex-shrink:0;padding:.8rem 1.5rem;background:linear-gradient(135deg,#7dd3fc,#7dd3fc);border:none;border-radius:12px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap}
 button:hover{opacity:.9;transform:translateY(-1px)}
 button:active{transform:translateY(0)}
 button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 
 /* Loading */
 #loading{display:none;text-align:center;margin-top:2rem}
-.spinner{width:32px;height:32px;border:3px solid #1e293b;border-top-color:#60a5fa;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 1rem}
+.spinner{width:32px;height:32px;border:3px solid #1e293b;border-top-color:#7dd3fc;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 1rem}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* Error */
@@ -160,13 +160,13 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 /* Result card */
 #result{display:none;margin-top:2rem}
 .score-card{background:linear-gradient(135deg,#0f172a 0%,#131c33 100%);border:1px solid #1e293b;border-radius:20px;padding:2rem;text-align:center}
-.score-number{font-size:4rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.score-number{font-size:4rem;font-weight:800;background:linear-gradient(135deg,#7dd3fc,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
 .score-label{color:#94a3b8;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem}
 .score-level{display:inline-block;margin-top:1rem;padding:.35rem 1rem;border-radius:999px;font-size:.85rem;font-weight:600}
 .level-novice{background:rgba(100,116,139,0.15);color:#94a3b8;border:1px solid rgba(100,116,139,0.2)}
 .level-tracker{background:rgba(251,191,36,0.1);color:#fbbf24;border:1px solid rgba(251,191,36,0.2)}
-.level-scout{background:rgba(96,165,250,0.1);color:#60a5fa;border:1px solid rgba(96,165,250,0.2)}
-.level-elite{background:rgba(167,139,250,0.1);color:#a78bfa;border:1px solid rgba(167,139,250,0.2)}
+.level-scout{background:rgba(96,165,250,0.1);color:#7dd3fc;border:1px solid rgba(96,165,250,0.2)}
+.level-elite{background:rgba(167,139,250,0.1);color:#7dd3fc;border:1px solid rgba(167,139,250,0.2)}
 .level-maven{background:rgba(34,197,94,0.1);color:#22c55e;border:1px solid rgba(34,197,94,0.2)}
 .score-percentile{color:#94a3b8;font-size:.85rem;margin-top:.75rem}
 .score-summary{color:#cbd5e1;font-size:.9rem;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #1e293b;line-height:1.5}
@@ -188,21 +188,21 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .share-telegram{background:#26a5e4}
 .share-copy{background:#1e293b;color:#94a3b8;border:1px solid #334155}
 .share-copy:hover{background:#334155;color:#e2e8f0}
-.share-link{display:block;width:100%;padding:.5rem .75rem;background:#0b1120;border:1px solid #1e293b;border-radius:8px;color:#94a3b8;font-size:.75rem;font-family:'SF Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:.5rem}
+.share-link{display:block;width:100%;padding:.5rem .75rem;background:#0f172a;border:1px solid #1e293b;border-radius:8px;color:#94a3b8;font-size:.75rem;font-family:'SF Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:.5rem}
 
 /* Embed section */
 .embed-section{margin-top:1.5rem;background:#0f172a;border:1px solid #1e293b;border-radius:16px;padding:1.5rem}
 .embed-section h3{color:#f1f5f9;font-size:.9rem;margin-bottom:.5rem}
 .embed-section p{color:#94a3b8;font-size:.8rem;margin-bottom:1rem}
-.embed-badge-preview{text-align:center;padding:.75rem;background:#0b1120;border:1px solid #1e293b;border-radius:8px;margin-bottom:.75rem}
-.code-block{background:#0b1120;border:1px solid #1e293b;border-radius:8px;padding:.75rem;font-family:'SF Mono','Menlo',monospace;font-size:.72rem;color:#94a3b8;overflow-x:auto;margin-bottom:.5rem;white-space:pre-wrap;word-break:break-all}
+.embed-badge-preview{text-align:center;padding:.75rem;background:#0f172a;border:1px solid #1e293b;border-radius:8px;margin-bottom:.75rem}
+.code-block{background:#0f172a;border:1px solid #1e293b;border-radius:8px;padding:.75rem;font-family:'SF Mono','Menlo',monospace;font-size:.72rem;color:#94a3b8;overflow-x:auto;margin-bottom:.5rem;white-space:pre-wrap;word-break:break-all}
 
 /* How it works */
 .how-section{margin-top:2.5rem}
 .how-section h2{color:#f1f5f9;font-size:1.1rem;margin-bottom:1rem}
 .steps{display:flex;flex-direction:column;gap:.75rem}
 .step{display:flex;gap:.75rem;align-items:flex-start;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem}
-.step-number{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#60a5fa,#a78bfa);color:#fff;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step-number{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#7dd3fc,#7dd3fc);color:#fff;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center}
 .step-text{color:#94a3b8;font-size:.85rem;line-height:1.5}
 
 /* FAQ section */
@@ -219,7 +219,7 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid #1e293b;margin-top:3rem}
 footer .links{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
 footer .links a{color:#94a3b8;font-size:.8rem}
-footer .links a:hover{color:#60a5fa}
+footer .links a:hover{color:#7dd3fc}
 footer .copy{color:#475569;font-size:.72rem}
 
 /* Toast */
@@ -349,11 +349,11 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Velocity</a>
-<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Benchmark</a>
-<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
-<a href="/tools" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Tools</a>
-<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups Hiring Burst</a>
+<a href="/check-velocity" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Check Velocity</a>
+<a href="/benchmark" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Benchmark</a>
+<a href="/trending-this-week" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/tools" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Tools</a>
+<a href="/startups-hiring-burst" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startups Hiring Burst</a>
 </div>
 </div>
 </footer>
@@ -521,7 +521,7 @@ function renderResult(score, level, percentile, summary, startups, username) {
     startupPicks.style.display = 'block';
     startupGrid.innerHTML = startups.map(function(s) {
       const name = typeof s === 'string' ? s : (s.name || s.org || '');
-      const color = typeof s === 'object' && s.color ? s.color : '#60a5fa';
+      const color = typeof s === 'object' && s.color ? s.color : '#7dd3fc';
       return '<div class="startup-chip"><span class="org-icon" style="background:' + color + '"></span>' + name + '</div>';
     }).join('');
   } else {

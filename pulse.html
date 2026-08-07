@@ -40,15 +40,15 @@
 }</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#05080f;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow:hidden;height:100vh;width:100vw}
+body{background:#0f172a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow:hidden;height:100vh;width:100vw}
 #pulse-canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0}
 #overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10;pointer-events:none}
 #header{position:fixed;top:20px;left:30px;z-index:20}
 #header h1{font-size:20px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px}
-#header h1 span{color:#60a5fa}
+#header h1 span{color:#7dd3fc}
 #header .tagline{font-size:11px;color:#94a3b8;margin-top:2px;letter-spacing:0.5px;text-transform:uppercase}
 #stats{position:fixed;top:20px;right:30px;z-index:20;text-align:right;pointer-events:none}
-#stats .num{font-size:28px;font-weight:700;color:#60a5fa}
+#stats .num{font-size:28px;font-weight:700;color:#7dd3fc}
 #stats .lbl{font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px}
 #tooltip{position:fixed;z-index:30;background:#0f172ae8;border:1px solid #1e293b;border-radius:10px;padding:14px 18px;min-width:200px;pointer-events:none;opacity:0;transition:opacity 0.2s;backdrop-filter:blur(8px)}
 #tooltip.visible{opacity:1}
@@ -59,12 +59,12 @@ body{background:#05080f;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFo
 #tooltip .sig{display:inline-block;padding:1px 8px;border-radius:9999px;font-size:10px;margin-top:6px}
 #footer{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:20;font-size:10px;color:#334155;letter-spacing:0.5px;text-align:center;pointer-events:none}
 #footer a{color:#475569;text-decoration:none;pointer-events:auto}
-#footer a:hover{color:#60a5fa}
+#footer a:hover{color:#7dd3fc}
 #legend{position:fixed;bottom:20px;right:30px;z-index:20;text-align:right;pointer-events:none}
 #legend .item{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:2px 0;font-size:10px;color:#94a3b8}
 #legend .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
 .loading{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;text-align:center}
-.loading .spin{width:40px;height:40px;border:3px solid #1e293b;border-top-color:#60a5fa;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 15px}
+.loading .spin{width:40px;height:40px;border:3px solid #1e293b;border-top-color:#7dd3fc;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 15px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading p{color:#94a3b8;font-size:13px}
 </style>
@@ -83,9 +83,9 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
   <h1>Startup Pulse — Engineering Velocity <span>Live</span></h1>
   <div class="tagline">Startup Pulse · Live</div>
   <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
-    <a href="/radar" style="color:#60a5fa;font-size:11px">📡 Radar</a>
-    <a href="/leaderboard" style="color:#60a5fa;font-size:11px">📊 Leaderboard</a>
-    <a href="/embed-gallery" style="color:#60a5fa;font-size:11px">🪪 Badge</a>
+    <a href="/radar" style="color:#7dd3fc;font-size:11px">📡 Radar</a>
+    <a href="/leaderboard" style="color:#7dd3fc;font-size:11px">📊 Leaderboard</a>
+    <a href="/embed-gallery" style="color:#7dd3fc;font-size:11px">🪪 Badge</a>
   </div>
 </div>
 <div id="stats">
@@ -95,7 +95,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div id="tooltip"></div>
 <div id="legend">
   <div class="item"><span class="dot" style="background:#22c55e"></span> Accelerating</div>
-  <div class="item"><span class="dot" style="background:#60a5fa"></span> Steady</div>
+  <div class="item"><span class="dot" style="background:#ff6b1a"></span> Steady</div>
   <div class="item"><span class="dot" style="background:#f59e0b"></span> Decelerating</div>
   <div class="item"><span class="dot" style="background:#a855f7"></span> Breakout</div>
 </div>
@@ -107,7 +107,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 const API = 'https://signals.gitdealflow.com/api/signals.json';
 const COLORS = {
   'hiring-burst': '#22c55e',
-  'accelerant': '#60a5fa',
+  'accelerant': '#7dd3fc',
   'breakout': '#a855f7',
   'steady': '#64748b',
   'Framework migration': '#f59e0b',
@@ -115,7 +115,7 @@ const COLORS = {
 };
 const COLOR_NAMES = {
   '#22c55e': 'Accelerating',
-  '#60a5fa': 'Steady',
+  '#7dd3fc': 'Steady',
   '#a855f7': 'Breakout',
   '#64748b': 'Tracked',
   '#f59e0b': 'Decelerating',

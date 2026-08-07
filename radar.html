@@ -45,41 +45,41 @@
 }</script>
 <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.5}
-    a{color:#60a5fa}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#f3f4f6;line-height:1.5}
+    a{color:#7dd3fc}
     .container{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
-    header{text-align:center;padding:3rem 1.5rem;border-bottom:1px solid #1e293b;background:linear-gradient(180deg,#0f172a,#0b1120)}
-    header h1{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem}
+    header{text-align:center;padding:3rem 1.5rem;border-bottom:1px solid #1e293b;background:linear-gradient(180deg,#0f172a,#0f172a)}
+    header h1{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#7dd3fc,#7dd3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem}
     header p{color:#94a3b8;max-width:450px;margin:0 auto}
 
     .search-box{max-width:480px;margin:2rem auto;text-align:center}
-    .search-box input{width:100%;padding:.85rem 1rem;border:2px solid #1e293b;border-radius:12px;background:#0b1120;color:#e8eaed;font-size:1rem;outline:none;margin-bottom:.75rem}
-    .search-box input:focus{border-color:#60a5fa}
-    .search-box button{width:100%;padding:.85rem;border:none;border-radius:12px;background:linear-gradient(135deg,#60a5fa,#3b82f6);color:#fff;font-size:1rem;font-weight:600;cursor:pointer}
+    .search-box input{width:100%;padding:.85rem 1rem;border:2px solid #1e293b;border-radius:12px;background:#0f172a;color:#f3f4f6;font-size:1rem;outline:none;margin-bottom:.75rem}
+    .search-box input:focus{border-color:#7dd3fc}
+    .search-box button{width:100%;padding:.85rem;border:none;border-radius:12px;background:linear-gradient(135deg,#7dd3fc,#0ea5e9);color:#fff;font-size:1rem;font-weight:600;cursor:pointer}
     .examples{font-size:.8rem;color:#475569;margin-top:.5rem}
-    .examples a{color:#60a5fa;cursor:pointer}
+    .examples a{color:#7dd3fc;cursor:pointer}
 
     .status{text-align:center;padding:.5rem;color:#94a3b8;min-height:2rem}
 
     .results{display:none;margin:1.5rem 0}
     .results.visible{display:block}
 
-    .source-card{background:#0f172a;border:1px solid #60a5fa;border-radius:16px;padding:1.25rem;margin-bottom:1.5rem}
+    .source-card{background:#0f172a;border:1px solid #7dd3fc;border-radius:16px;padding:1.25rem;margin-bottom:1.5rem}
     .source-card .sc-name{font-size:1.1rem;font-weight:700;color:#f1f5f9}
     .source-card .sc-meta{color:#94a3b8;font-size:.85rem;margin-top:.25rem}
     .source-card .sc-tags{display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap}
-    .source-card .sc-tag{padding:.2rem .5rem;border-radius:999px;font-size:.75rem;font-weight:600;background:#1e293b;color:#93c5fd}
+    .source-card .sc-tag{padding:.2rem .5rem;border-radius:999px;font-size:.75rem;font-weight:600;background:#1e293b;color:#7dd3fc}
 
     .similar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
     .sim-card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem;cursor:pointer;transition:border-color .2s}
-    .sim-card:hover{border-color:#60a5fa}
+    .sim-card:hover{border-color:#7dd3fc}
     .sim-card .sim-name{color:#f1f5f9;font-weight:600;font-size:.95rem}
     .sim-card .sim-detail{color:#94a3b8;font-size:.8rem;margin-top:.2rem}
     .sim-card .sim-score{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-size:.7rem;font-weight:600;margin-top:.35rem}
-    .sim-card .sim-signal{font-size:.75rem;color:#93c5fd;margin-top:.25rem}
+    .sim-card .sim-signal{font-size:.75rem;color:#7dd3fc;margin-top:.25rem}
 
     .similarity-bar{height:4px;background:#1e293b;border-radius:2px;overflow:hidden;margin-top:.5rem}
-    .similarity-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,#60a5fa,#a78bfa);transition:width .5s}
+    .similarity-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,#7dd3fc,#7dd3fc);transition:width .5s}
 
     footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#94a3b8;font-size:.8rem}
 
@@ -153,32 +153,32 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <footer>
 <p><a href="https://gitdealflow.com">GitDealFlow</a> · <a href="https://signals.gitdealflow.com">Signals</a></p>
 <footer style="text-align:center;padding:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.75rem;margin-top:3rem;">
-<a href="https://gitdealflow.com" style="color:#60a5fa;text-decoration:none;">GitDealFlow</a>
+<a href="https://gitdealflow.com" style="color:#7dd3fc;text-decoration:none;">GitDealFlow</a>
   ·
-  <a href="https://signals.gitdealflow.com" style="color:#60a5fa;text-decoration:none;">Signals</a>
+  <a href="https://signals.gitdealflow.com" style="color:#7dd3fc;text-decoration:none;">Signals</a>
   ·
-  <a href="https://sipi.bot" style="color:#60a5fa;text-decoration:none;">Sipi.bot</a>
+  <a href="https://sipi.bot" style="color:#7dd3fc;text-decoration:none;">Sipi.bot</a>
   ·
-  <a href="https://voicelogpro.com" style="color:#60a5fa;text-decoration:none;">VoiceLogPro</a>
+  <a href="https://voicelogpro.com" style="color:#7dd3fc;text-decoration:none;">VoiceLogPro</a>
   ·
-  <a href="https://invisibleexit.com" style="color:#60a5fa;text-decoration:none;">InvisibleExit</a>
+  <a href="https://invisibleexit.com" style="color:#7dd3fc;text-decoration:none;">InvisibleExit</a>
   ·
-  <a href="https://unlocksaas.com" style="color:#60a5fa;text-decoration:none;">UnlockSaaS</a>
+  <a href="https://unlocksaas.com" style="color:#7dd3fc;text-decoration:none;">UnlockSaaS</a>
   ·
-  <a href="https://churnlens.site" style="color:#60a5fa;text-decoration:none;">ChurnLens</a>
+  <a href="https://churnlens.site" style="color:#7dd3fc;text-decoration:none;">ChurnLens</a>
   ·
-  <a href="https://sanctionsai.dev" style="color:#60a5fa;text-decoration:none;">SanctionsAI</a>
+  <a href="https://sanctionsai.dev" style="color:#7dd3fc;text-decoration:none;">SanctionsAI</a>
   ·
-  <a href="https://carshake.online" style="color:#60a5fa;text-decoration:none;">CarShake</a>
+  <a href="https://carshake.online" style="color:#7dd3fc;text-decoration:none;">CarShake</a>
 <div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#94a3b8;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div>
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
-<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
-<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
-<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
-<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+<a href="/trending-this-week" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
 </div>
 </div>
 </footer>
@@ -284,7 +284,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
     var html = '';
     scored.forEach(function(item){
       var s = item.startup;
-      var sigColor = '#93c5fd';
+      var sigColor = '#7dd3fc';
       if(s.signalType==='Deploy frequency spike') sigColor='#4ade80';
       else if(s.signalType==='Engineering hiring burst') sigColor='#fbbf24';
       else if(s.signalType==='Framework migration') sigColor='#f87171';

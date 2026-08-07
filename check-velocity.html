@@ -99,32 +99,32 @@
   </script>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0b1120; color: #e2e8f0; min-height: 100vh; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
     .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
-    header { border-bottom: 1px solid #1e293b; background: #0b1120; }
+    header { border-bottom: 1px solid #1e293b; background: #0f172a; }
     nav { max-width: 800px; margin: 0 auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
     nav a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; }
-    nav a:hover { color: #60a5fa; }
+    nav a:hover { color: #7dd3fc; }
     .logo { font-weight: 700; font-size: 1.1rem; color: #f1f5f9; }
-    .logo span { color: #60a5fa; }
+    .logo span { color: #7dd3fc; }
     h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; color: #f1f5f9; }
     .subtitle { color: #94a3b8; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.5; }
     .search-box { display: flex; gap: 0.5rem; margin-bottom: 2rem; }
     .search-box input { flex: 1; padding: 0.75rem 1rem; border: 1px solid #334155; border-radius: 0.5rem; background: #0f172a; color: #e2e8f0; font-size: 1rem; outline: none; transition: border-color 0.2s; }
-    .search-box input:focus { border-color: #60a5fa; }
+    .search-box input:focus { border-color: #7dd3fc; }
     .search-box input::placeholder { color: #475569; }
-    .search-box button { padding: 0.75rem 1.5rem; background: #2563eb; color: white; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: background 0.2s; }
-    .search-box button:hover { background: #1d4ed8; }
+    .search-box button { padding: 0.75rem 1.5rem; background: #0284c7; color: white; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: background 0.2s; }
+    .search-box button:hover { background: #e85a0c; }
     .search-box button:disabled { opacity: 0.5; cursor: not-allowed; }
     .result-card { display: none; background: #0f172a; border: 1px solid #1e293b; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem; }
     .result-card.visible { display: block; }
     .result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
     .result-name { font-size: 1.25rem; font-weight: 700; color: #f1f5f9; }
-    .result-sector { color: #60a5fa; font-size: 0.85rem; }
+    .result-sector { color: #7dd3fc; font-size: 0.85rem; }
     .score-ring { width: 120px; height: 120px; margin: 0 auto 1.5rem; position: relative; }
     .score-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
     .score-ring .bg { fill: none; stroke: #1e293b; stroke-width: 8; }
-    .score-ring .fill { fill: none; stroke: #60a5fa; stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
+    .score-ring .fill { fill: none; stroke: #7dd3fc; stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
     .score-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; }
     .score-value { font-size: 2rem; font-weight: 700; color: #f1f5f9; }
     .score-label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -136,9 +136,9 @@
     .up { color: #22c55e; }
     .down { color: #ef4444; }
     .signal-tag { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; margin-right: 0.5rem; }
-    .signal-hiring { background: #1e3a5f; color: #60a5fa; }
+    .signal-hiring { background: #1e3a5f; color: #7dd3fc; }
     .signal-velocity { background: #14532d; color: #22c55e; }
-    .signal-infra { background: #5b21b6; color: #a78bfa; }
+    .signal-infra { background: #5b21b6; color: #7dd3fc; }
     .not-found { text-align: center; padding: 2rem; color: #94a3b8; }
 
     .embed-section { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 2rem; }
@@ -150,17 +150,17 @@
     .toast.show { opacity: 1; }
     .loader { display: none; text-align: center; padding: 2rem; }
     .loader.visible { display: block; }
-    .spinner { width: 40px; height: 40px; border: 3px solid #1e293b; border-top: 3px solid #60a5fa; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
+    .spinner { width: 40px; height: 40px; border: 3px solid #1e293b; border-top: 3px solid #7dd3fc; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* Responsive Embed Widget Styles */
     .widget-wrapper { background: #0f172a; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 1rem; }
-    .widget-wrapper input { width: 100%; padding: 0.5rem; border: 1px solid #334155; border-radius: 0.375rem; background: #0b1120; color: #e2e8f0; margin-bottom: 0.5rem; }
-    .widget-wrapper button { width: 100%; padding: 0.5rem; background: #2563eb; color: white; border: none; border-radius: 0.375rem; cursor: pointer; }
+    .widget-wrapper input { width: 100%; padding: 0.5rem; border: 1px solid #334155; border-radius: 0.375rem; background: #0f172a; color: #e2e8f0; margin-bottom: 0.5rem; }
+    .widget-wrapper button { width: 100%; padding: 0.5rem; background: #0284c7; color: white; border: none; border-radius: 0.375rem; cursor: pointer; }
 
     .footer-links { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap; }
     .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; }
-    .footer-links a:hover { color: #60a5fa; }
+    .footer-links a:hover { color: #7dd3fc; }
 
     @media (max-width: 640px) {
       h1 { font-size: 1.4rem; }
@@ -244,14 +244,14 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 </div>
 <p style="color:#94a3b8; font-size:0.8rem; text-align:center; margin-top:1rem">
       Based on trailing 60-day GitHub activity data. Updated weekly.
-      <a href="https://signals.gitdealflow.com" style="color:#60a5fa">Full data at signals.gitdealflow.com →</a>
+      <a href="https://signals.gitdealflow.com" style="color:#7dd3fc">Full data at signals.gitdealflow.com →</a>
 </p>
 </div>
 <div class="result-card" id="notFound">
 <div class="not-found">
 <p style="font-size:2rem; margin-bottom:0.5rem">🔍</p>
 <p style="font-weight:600; margin-bottom:0.5rem">Startup not found in our dataset</p>
-<p style="color:#94a3b8; font-size:0.9rem">Try a different name, or browse all tracked startups at <a href="https://signals.gitdealflow.com" style="color:#60a5fa">signals.gitdealflow.com</a></p>
+<p style="color:#94a3b8; font-size:0.9rem">Try a different name, or browse all tracked startups at <a href="https://signals.gitdealflow.com" style="color:#7dd3fc">signals.gitdealflow.com</a></p>
 </div>
 </div>
 <div class="embed-section">
@@ -263,7 +263,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div class="embed-code" id="embedCode">
       &lt;iframe src="https://gitdealflow.com/embed/check-velocity" 
       width="100%" height="360" frameborder="0" 
-      style="border-radius:8px;background:#0b1120"
+      style="border-radius:8px;background:#0f172a"
       title="Startup Velocity Checker by GitDealFlow"&gt;&lt;/iframe&gt;
       <br/>&lt;p style="font-size:0.8rem;color:#94a3b8"&gt;Powered by 
       &lt;a href="https://gitdealflow.com"&gt;GitDealFlow&lt;/a&gt;&lt;/p&gt;
@@ -277,7 +277,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <h2>📊 About the Velocity Score</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem">
 <div style="background:#1e293b;border-radius:0.5rem;padding:1rem">
-<div style="color:#60a5fa;font-weight:700;font-size:0.9rem;margin-bottom:0.5rem">0–25</div>
+<div style="color:#7dd3fc;font-weight:700;font-size:0.9rem;margin-bottom:0.5rem">0–25</div>
 <div style="font-weight:600;font-size:0.9rem;margin-bottom:0.25rem">Steady State</div>
 <div style="color:#94a3b8;font-size:0.85rem;line-height:1.4">Normal engineering velocity. No significant acceleration detected in the last 60 days.</div>
 </div>
@@ -301,7 +301,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <strong style="color:#e2e8f0">Methodology:</strong> The velocity score is a weighted composite of commit velocity change, 
       contributor growth rate, and repository expansion. Data is derived from public GitHub activity 
       across our tracked startup universe. Scores update weekly. 
-      <a href="https://signals.gitdealflow.com/methodology" style="color:#60a5fa">Full methodology →</a>
+      <a href="https://signals.gitdealflow.com/methodology" style="color:#7dd3fc">Full methodology →</a>
 </p>
 </div>
 <div class="footer-links">
@@ -520,11 +520,11 @@ document.getElementById('searchInput').addEventListener('keydown', (e) => {
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/scout" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Scout</a>
-<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Benchmark</a>
-<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
-<a href="/tools" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Tools</a>
-<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups Hiring Burst</a>
+<a href="/scout" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Scout</a>
+<a href="/benchmark" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Benchmark</a>
+<a href="/trending-this-week" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/tools" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Tools</a>
+<a href="/startups-hiring-burst" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startups Hiring Burst</a>
 </div>
 </div>
 <script>(function(){try{if(navigator.doNotTrack=='1'||window.globalPrivacyControl)return;if(localStorage.getItem('gdf_cookie_ack'))return;var d=document.createElement('div');d.setAttribute('role','region');d.setAttribute('aria-label','Cookie notice');d.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9998;background:#0f172a;border-top:1px solid #334155;color:#e2e8f0;padding:16px;font:14px/1.5 system-ui,-apple-system,sans-serif';d.innerHTML='<div style="max-width:900px;margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap"><p style="margin:0;flex:1;min-width:240px">We set one first-party cookie for product analytics (PostHog EU) so we can count unique visitors. No ads, no cross-site tracking. Browsers sending DNT or GPC are auto-opted-out. <a href="/privacy" style="color:#7dd3fc">Details</a>.</p><button type="button" style="min-height:44px;min-width:88px;padding:10px 20px;border:0;border-radius:8px;background:#0284c7;color:#fff;font-weight:600;cursor:pointer">Got it</button></div>';var b=d.querySelector('button');b.onclick=function(){try{localStorage.setItem('gdf_cookie_ack','1')}catch(e){}d.remove()};document.body.appendChild(d)}catch(e){}})();</script></body>

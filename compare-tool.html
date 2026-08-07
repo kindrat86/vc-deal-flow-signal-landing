@@ -45,14 +45,14 @@
 }</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.6}
-a{color:#60a5fa}.container{max-width:800px;margin:0 auto;padding:1.5rem}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f172a;color:#f3f4f6;line-height:1.6}
+a{color:#7dd3fc}.container{max-width:800px;margin:0 auto;padding:1.5rem}
 header{text-align:center;padding:2rem 1.5rem;border-bottom:1px solid #1e293b}
-header h1{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+header h1{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#7dd3fc,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
 header p{color:#94a3b8;font-size:.8rem;margin-top:.35rem}
 .tool{margin-top:1.5rem}
 select{width:100%;padding:.6rem;background:#0f172a;border:1px solid #1e293b;border-radius:8px;color:#f1f5f9;font-size:.85rem;margin-bottom:.5rem;outline:none}
-select:focus{border-color:#60a5fa}
+select:focus{border-color:#7dd3fc}
 .grid{display:none;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin-top:1rem}
 .card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1rem}
 .card h3{color:#f1f5f9;font-size:.85rem;margin-bottom:.5rem}
@@ -112,11 +112,11 @@ footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#94a3b8
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
-<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
-<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
-<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
-<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+<a href="/trending-this-week" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
 </div>
 </div>
 </footer>
@@ -447,13 +447,13 @@ if(selected.length<2)return;
 g.style.display='grid';g.style.gridTemplateColumns='repeat('+selected.length+',1fr)';
 for(const st of selected){
 const isP=!st.velocity.startsWith('-');const vc=st.velocity.replace('-','');
-let cards='<div class="card"><h3><a href="/startups/'+st.slug+'" style="color:#60a5fa;text-decoration:none;">'+st.name+'</a></h3>';
+let cards='<div class="card"><h3><a href="/startups/'+st.slug+'" style="color:#7dd3fc;text-decoration:none;">'+st.name+'</a></h3>';
 cards+='<div class="row"><span class="lbl">Velocity</span><span class="val '+(isP?'pos':'neg')+'">'+st.velocity+'</span></div>';
 cards+='<div class="row"><span class="lbl">Commits (14d)</span><span class="val">'+st.commits.toLocaleString()+'</span></div>';
 cards+='<div class="row"><span class="lbl">Contributors</span><span class="val">'+st.contributors+'</span></div>';
 cards+='<div class="row"><span class="lbl">Signal</span><span class="val" style="color:#94a3b8;">'+st.signal+'</span></div>';
 cards+='<div class="row"><span class="lbl">Sector</span><span class="val" style="color:#94a3b8;">'+st.sector+'</span></div>';
-cards+='<div class="row"><span class="lbl">Badge</span><span class="val"><a href="/badge/'+st.slug+'" style="color:#60a5fa;font-size:.7rem;">embed</a></span></div>';
+cards+='<div class="row"><span class="lbl">Badge</span><span class="val"><a href="/badge/'+st.slug+'" style="color:#7dd3fc;font-size:.7rem;">embed</a></span></div>';
 cards+='</div>';g.innerHTML+=cards;
 }
 }

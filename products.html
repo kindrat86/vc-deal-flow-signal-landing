@@ -159,23 +159,23 @@
   }
   </script>
 <style>
-    .product-page { background: #0b1120; min-height: 100vh; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .product-page { background: #0f172a; min-height: 100vh; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
     .product-container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
     nav { max-width: 1100px; margin: 0 auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
     nav a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; }
-    nav a:hover { color: #60a5fa; }
+    nav a:hover { color: #7dd3fc; }
     .logo { font-weight: 700; font-size: 1.1rem; color: #f1f5f9; }
-    .logo span { color: #60a5fa; }
+    .logo span { color: #7dd3fc; }
     h1 { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; }
     .hero-subtitle { color: #94a3b8; text-align: center; max-width: 650px; margin: 0 auto 2.5rem; line-height: 1.6; font-size: 1.05rem; }
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
     .pricing-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 1rem; padding: 2rem; position: relative; transition: border-color 0.2s, transform 0.2s; display: flex; flex-direction: column; }
-    .pricing-card:hover { border-color: #60a5fa; transform: translateY(-2px); }
-    .pricing-card.popular { border-color: #60a5fa; box-shadow: 0 0 24px rgba(96, 165, 250, 0.08); }
-    .pricing-card.popular::before { content: 'Most Popular'; position: absolute; top: -0.75rem; left: 50%; transform: translateX(-50%); background: #60a5fa; color: #0b1120; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 1rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .pricing-card:hover { border-color: #7dd3fc; transform: translateY(-2px); }
+    .pricing-card.popular { border-color: #7dd3fc; box-shadow: 0 0 24px rgba(96, 165, 250, 0.08); }
+    .pricing-card.popular::before { content: 'Most Popular'; position: absolute; top: -0.75rem; left: 50%; transform: translateX(-50%); background: #ff6b1a; color: #0f172a; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 1rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; }
     .card-header { margin-bottom: 1.5rem; }
     .card-name { font-size: 1.1rem; font-weight: 600; color: #f1f5f9; margin-bottom: 0.25rem; }
-    .card-price { font-size: 2.5rem; font-weight: 700; color: #60a5fa; display: flex; align-items: baseline; gap: 0.25rem; }
+    .card-price { font-size: 2.5rem; font-weight: 700; color: #7dd3fc; display: flex; align-items: baseline; gap: 0.25rem; }
     .card-price .interval { font-size: 1rem; font-weight: 400; color: #94a3b8; }
     .card-savings { font-size: 0.8rem; color: #34d399; font-weight: 600; margin-top: 0.25rem; }
     .card-description { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem; }
@@ -183,11 +183,11 @@
     .feature-list li { color: #cbd5e1; font-size: 0.85rem; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem; border-bottom: 1px solid #1e293b; }
     .feature-list li:last-child { border-bottom: none; }
     .feature-list li::before { content: '\2713'; color: #34d399; font-weight: 700; flex-shrink: 0; }
-    .buy-btn { display: block; width: 100%; padding: 0.85rem; background: #60a5fa; color: #0b1120; border: none; border-radius: 0.5rem; font-size: 1rem; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; transition: background 0.2s, transform 0.1s; }
-    .buy-btn:hover { background: #3b82f6; transform: scale(1.01); }
+    .buy-btn { display: block; width: 100%; padding: 0.85rem; background: #ff6b1a; color: #0f172a; border: none; border-radius: 0.5rem; font-size: 1rem; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+    .buy-btn:hover { background: #e85a0c; transform: scale(1.01); }
     .buy-btn:active { transform: scale(0.99); }
     .buy-btn.outline { background: transparent; border: 1px solid #334155; color: #e2e8f0; }
-    .buy-btn.outline:hover { background: #1e293b; border-color: #60a5fa; }
+    .buy-btn.outline:hover { background: #1e293b; border-color: #7dd3fc; }
 
     .features-section { max-width: 800px; margin: 0 auto 3rem; text-align: center; }
     .features-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
@@ -203,14 +203,14 @@
     .trust-card .icon { font-size: 1.5rem; flex-shrink: 0; }
     .trust-card h3 { font-size: 0.95rem; color: #f1f5f9; margin-bottom: 0.25rem; }
     .trust-card p { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; }
-    .trust-card a { color: #60a5fa; text-decoration: none; }
+    .trust-card a { color: #7dd3fc; text-decoration: none; }
     .trust-card a:hover { text-decoration: underline; }
 
     .faq-section { max-width: 700px; margin: 0 auto 3rem; }
     .faq-section h2 { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 1.5rem; }
     .faq-item { background: #0f172a; border: 1px solid #1e293b; border-radius: 0.75rem; margin-bottom: 0.75rem; overflow: hidden; }
     .faq-question { width: 100%; padding: 1rem 1.25rem; background: none; border: none; color: #e2e8f0; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-align: left; display: flex; justify-content: space-between; align-items: center; }
-    .faq-question:hover { color: #60a5fa; }
+    .faq-question:hover { color: #7dd3fc; }
     .faq-question .arrow { font-size: 1.1rem; transition: transform 0.2s; }
     .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
     .faq-answer { padding: 0 1.25rem 1rem; color: #94a3b8; font-size: 0.88rem; line-height: 1.6; display: none; }
@@ -221,13 +221,13 @@
     .newsletter-section p { color: #94a3b8; font-size: 0.88rem; margin-bottom: 1rem; }
     .newsletter-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
     .newsletter-form input { flex: 1; padding: 0.75rem; background: #1e293b; border: 1px solid #334155; border-radius: 0.375rem; color: #e2e8f0; font-size: 0.9rem; }
-    .newsletter-form input:focus { outline: none; border-color: #60a5fa; }
-    .newsletter-form button { padding: 0.75rem 1.25rem; background: #60a5fa; color: #0b1120; border: none; border-radius: 0.375rem; font-weight: 700; cursor: pointer; }
-    .newsletter-form button:hover { background: #3b82f6; }
+    .newsletter-form input:focus { outline: none; border-color: #7dd3fc; }
+    .newsletter-form button { padding: 0.75rem 1.25rem; background: #ff6b1a; color: #0f172a; border: none; border-radius: 0.375rem; font-weight: 700; cursor: pointer; }
+    .newsletter-form button:hover { background: #e85a0c; }
 
     .footer-links { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
     .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; }
-    .footer-links a:hover { color: #60a5fa; }
+    .footer-links a:hover { color: #7dd3fc; }
 
     @media (max-width: 640px) {
       h1 { font-size: 1.5rem; }
@@ -247,7 +247,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body class="product-page">
-<header style="border-bottom:1px solid #1e293b;background:#0b1120">
+<header style="border-bottom:1px solid #1e293b;background:#0f172a">
 <nav>
 <a class="logo" href="/">GitDeal<span>Flow</span></a>
 <div>
@@ -442,11 +442,11 @@
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
-<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
-<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
-<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
-<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+<a href="/trending-this-week" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
 </div>
 </div>
 <script>(function(){try{if(navigator.doNotTrack=='1'||window.globalPrivacyControl)return;if(localStorage.getItem('gdf_cookie_ack'))return;var d=document.createElement('div');d.setAttribute('role','region');d.setAttribute('aria-label','Cookie notice');d.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9998;background:#0f172a;border-top:1px solid #334155;color:#e2e8f0;padding:16px;font:14px/1.5 system-ui,-apple-system,sans-serif';d.innerHTML='<div style="max-width:900px;margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap"><p style="margin:0;flex:1;min-width:240px">We set one first-party cookie for product analytics (PostHog EU) so we can count unique visitors. No ads, no cross-site tracking. Browsers sending DNT or GPC are auto-opted-out. <a href="/privacy" style="color:#7dd3fc">Details</a>.</p><button type="button" style="min-height:44px;min-width:88px;padding:10px 20px;border:0;border-radius:8px;background:#0284c7;color:#fff;font-weight:600;cursor:pointer">Got it</button></div>';var b=d.querySelector('button');b.onclick=function(){try{localStorage.setItem('gdf_cookie_ack','1')}catch(e){}d.remove()};document.body.appendChild(d)}catch(e){}})();</script></body>

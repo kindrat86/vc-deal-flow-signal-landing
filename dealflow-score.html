@@ -99,12 +99,12 @@
     html { font-size: 16px; -webkit-font-smoothing: antialiased; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background: #0b1120;
-      color: #e8eaed;
+      background: #0f172a;
+      color: #f3f4f6;
       min-height: 100vh;
       line-height: 1.6;
     }
-    a { color: #60a5fa; text-decoration: none; }
+    a { color: #7dd3fc; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .container { max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem; }
@@ -113,13 +113,13 @@
       text-align: center;
       padding: 4rem 1.5rem 2rem;
       border-bottom: 1px solid #1e293b;
-      background: linear-gradient(180deg, #0f172a 0%, #0b1120 100%);
+      background: linear-gradient(180deg, #0f172a 0%, #0f172a 100%);
     }
     header h1 {
       font-size: 2.5rem;
       font-weight: 800;
       letter-spacing: -0.03em;
-      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      background: linear-gradient(135deg, #7dd3fc, #7dd3fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -152,9 +152,9 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #60a5fa;
+      background: #ff6b1a;
       cursor: pointer;
-      border: 2px solid #0b1120;
+      border: 2px solid #0f172a;
     }
     .range-labels {
       display: flex;
@@ -165,7 +165,7 @@
     }
     .range-value {
       text-align: right;
-      color: #60a5fa;
+      color: #7dd3fc;
       font-weight: 700;
       font-size: 1.1rem;
       margin-top: 0.25rem;
@@ -175,14 +175,14 @@
       text-align: center;
       padding: 2rem;
       margin: 2rem 0;
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 16px;
     }
     .score-display .big-score {
       font-size: 4rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      background: linear-gradient(135deg, #7dd3fc, #7dd3fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -204,7 +204,7 @@
       margin: 1.5rem 0;
     }
     .factor-box {
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 12px;
       padding: 1rem;
@@ -242,13 +242,13 @@
       transition: opacity 0.2s;
     }
     .actions button:hover { opacity: 0.9; }
-    .btn-primary { background: linear-gradient(135deg, #60a5fa, #3b82f6); color: #fff; }
-    .btn-secondary { background: #1e293b; color: #e8eaed; border: 1px solid #334155 !important; }
+    .btn-primary { background: linear-gradient(135deg, #7dd3fc, #0ea5e9); color: #fff; }
+    .btn-secondary { background: #1e293b; color: #f3f4f6; border: 1px solid #334155 !important; }
 
     .embed-section {
       margin-top: 1.5rem;
       padding: 1.25rem;
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 12px;
       display: none;
@@ -258,7 +258,7 @@
     .embed-section textarea {
       width: 100%;
       padding: 0.75rem;
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 8px;
       color: #94a3b8;
@@ -276,7 +276,7 @@
       color: #94a3b8;
       font-size: 0.85rem;
     }
-    footer a { color: #60a5fa; }
+    footer a { color: #7dd3fc; }
 
     @media (max-width: 640px) {
       header h1 { font-size: 1.8rem; }
@@ -340,9 +340,9 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 </div>
 <div class="factor-grid">
 <div class="factor-box">
-<div class="factor-score" id="f-speed" style="color:#60a5fa;">50</div>
+<div class="factor-score" id="f-speed" style="color:#7dd3fc;">50</div>
 <div class="factor-label">Speed (30%)</div>
-<div class="factor-bar"><div class="factor-bar-fill" id="bar-speed" style="background:#60a5fa; width:50%;"></div></div>
+<div class="factor-bar"><div class="factor-bar-fill" id="bar-speed" style="background:#ff6b1a; width:50%;"></div></div>
 </div>
 <div class="factor-box">
 <div class="factor-score" id="f-funnel" style="color:#4ade80;">40</div>
@@ -355,9 +355,9 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div class="factor-bar"><div class="factor-bar-fill" id="bar-quality" style="background:#fbbf24; width:30%;"></div></div>
 </div>
 <div class="factor-box">
-<div class="factor-score" id="f-latency" style="color:#a78bfa;">83</div>
+<div class="factor-score" id="f-latency" style="color:#7dd3fc;">83</div>
 <div class="factor-label">Speed (20%)</div>
-<div class="factor-bar"><div class="factor-bar-fill" id="bar-latency" style="background:#a78bfa; width:83%;"></div></div>
+<div class="factor-bar"><div class="factor-bar-fill" id="bar-latency" style="background:#7dd3fc; width:83%;"></div></div>
 </div>
 </div>
 <div class="actions">
@@ -370,7 +370,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
     </p>
 </div>
 <div style="border-top:1px solid #1e293b; padding-top:2rem; text-align:center;">
-<a href="https://gitdealflow.com/scout" style="display:inline-block; padding:0.75rem 1.5rem; background:#1e293b; color:#e8eaed; border-radius:10px; font-weight:600; text-decoration:none; border:1px solid #334155;">
+<a href="https://gitdealflow.com/scout" style="display:inline-block; padding:0.75rem 1.5rem; background:#1e293b; color:#f3f4f6; border-radius:10px; font-weight:600; text-decoration:none; border:1px solid #334155;">
       🔭 Also check your Scout Score →
     </a>
 </div>
@@ -391,32 +391,32 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <p>Powered by <a href="https://gitdealflow.com">GitDealFlow</a> · <a href="https://signals.gitdealflow.com/methodology">Methodology</a> · <a href="https://ssrn.com/abstract=6606558">SSRN Preprint</a></p>
 <p style="margin-top:0.5rem;">All calculations are client-side. No data is stored or transmitted.</p>
 <footer style="text-align:center;padding:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.75rem;margin-top:3rem;">
-<a href="https://gitdealflow.com" style="color:#60a5fa;text-decoration:none;">GitDealFlow</a>
+<a href="https://gitdealflow.com" style="color:#7dd3fc;text-decoration:none;">GitDealFlow</a>
   ·
-  <a href="https://signals.gitdealflow.com" style="color:#60a5fa;text-decoration:none;">Signals</a>
+  <a href="https://signals.gitdealflow.com" style="color:#7dd3fc;text-decoration:none;">Signals</a>
   ·
-  <a href="https://sipi.bot" style="color:#60a5fa;text-decoration:none;">Sipi.bot</a>
+  <a href="https://sipi.bot" style="color:#7dd3fc;text-decoration:none;">Sipi.bot</a>
   ·
-  <a href="https://voicelogpro.com" style="color:#60a5fa;text-decoration:none;">VoiceLogPro</a>
+  <a href="https://voicelogpro.com" style="color:#7dd3fc;text-decoration:none;">VoiceLogPro</a>
   ·
-  <a href="https://invisibleexit.com" style="color:#60a5fa;text-decoration:none;">InvisibleExit</a>
+  <a href="https://invisibleexit.com" style="color:#7dd3fc;text-decoration:none;">InvisibleExit</a>
   ·
-  <a href="https://unlocksaas.com" style="color:#60a5fa;text-decoration:none;">UnlockSaaS</a>
+  <a href="https://unlocksaas.com" style="color:#7dd3fc;text-decoration:none;">UnlockSaaS</a>
   ·
-  <a href="https://churnlens.site" style="color:#60a5fa;text-decoration:none;">ChurnLens</a>
+  <a href="https://churnlens.site" style="color:#7dd3fc;text-decoration:none;">ChurnLens</a>
   ·
-  <a href="https://sanctionsai.dev" style="color:#60a5fa;text-decoration:none;">SanctionsAI</a>
+  <a href="https://sanctionsai.dev" style="color:#7dd3fc;text-decoration:none;">SanctionsAI</a>
   ·
-  <a href="https://carshake.online" style="color:#60a5fa;text-decoration:none;">CarShake</a>
+  <a href="https://carshake.online" style="color:#7dd3fc;text-decoration:none;">CarShake</a>
 <div class="portfolio" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b;text-align:center;"><h4 style="color:#94a3b8;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Network</h4><div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://signals.gitdealflow.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Signals Dataset</a><a href="https://sipi.bot" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipi.bot</a><a href="https://churnlens.site" style="color:#475569;font-size:.75rem;text-decoration:none;">ChurnLens</a><a href="https://carshake.online" style="color:#475569;font-size:.75rem;text-decoration:none;">CarShake</a><a href="https://unlocksaas.com" style="color:#475569;font-size:.75rem;text-decoration:none;">UnlockSaaS</a><a href="https://sanctionsai.dev" style="color:#475569;font-size:.75rem;text-decoration:none;">SanctionsAI</a><a href="https://voicelogpro.com" style="color:#475569;font-size:.75rem;text-decoration:none;">VoiceLogPro</a><a href="https://invisibleexit.com" style="color:#475569;font-size:.75rem;text-decoration:none;">InvisibleExit</a><a href="https://sipiteno.com" style="color:#475569;font-size:.75rem;text-decoration:none;">Sipiteno</a></div></div>
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
-<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
-<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
-<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
-<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+<a href="/trending-this-week" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
 </div>
 </div>
 </footer>
@@ -469,7 +469,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 
     const badge = document.getElementById('verdict-badge');
     if (total >= 80) { badge.textContent = '🏆 OPTIMAL FLOW'; badge.style.background = '#166534'; badge.style.color = '#bbf7d0'; }
-    else if (total >= 60) { badge.textContent = '✅ STEADY FLOW'; badge.style.background = '#1e3a5f'; badge.style.color = '#93c5fd'; }
+    else if (total >= 60) { badge.textContent = '✅ STEADY FLOW'; badge.style.background = '#1e3a5f'; badge.style.color = '#7dd3fc'; }
     else if (total >= 40) { badge.textContent = '⚡ BUILDING'; badge.style.background = '#3a2a1a'; badge.style.color = '#fde68a'; }
     else { badge.textContent = '🔧 NEEDS WORK'; badge.style.background = '#3a1a1a'; badge.style.color = '#fca5a5'; }
 

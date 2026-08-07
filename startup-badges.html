@@ -134,13 +134,13 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0b1120;
+      background: #0f172a;
       color: #e2e8f0;
       line-height: 1.6;
     }
     header {
       border-bottom: 1px solid #1e293b;
-      background: #0b1120;
+      background: #0f172a;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -154,15 +154,15 @@
       justify-content: space-between;
     }
     nav a { color: #94a3b8; text-decoration: none; font-size: 0.875rem; }
-    nav a:hover { color: #60a5fa; }
+    nav a:hover { color: #7dd3fc; }
     .logo { font-weight: 700; font-size: 1.1rem; color: #f1f5f9; }
-    .logo span { color: #60a5fa; }
+    .logo span { color: #7dd3fc; }
     nav .links { display: flex; gap: 1rem; align-items: center; }
 
     .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
 
     h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    h1 span { background: linear-gradient(135deg,#60a5fa,#a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    h1 span { background: linear-gradient(135deg,#7dd3fc,#7dd3fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .subtitle { color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.05rem; max-width: 700px; }
     .subtitle strong { color: #e2e8f0; }
 
@@ -178,7 +178,7 @@
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
-      color: #60a5fa;
+      color: #7dd3fc;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -192,7 +192,7 @@
     #startupSearch {
       width: 100%;
       padding: 0.75rem 1rem;
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #334155;
       border-radius: 0.5rem;
       color: #e2e8f0;
@@ -200,7 +200,7 @@
       outline: none;
       transition: border-color 0.2s;
     }
-    #startupSearch:focus { border-color: #60a5fa; }
+    #startupSearch:focus { border-color: #7dd3fc; }
     #startupSearch::placeholder { color: #475569; }
     #searchResults {
       display: none;
@@ -228,7 +228,7 @@
     #searchResults .result-item:hover { background: #1e293b; }
     #searchResults .result-item .name { color: #e2e8f0; font-weight: 600; }
     #searchResults .result-item .meta { color: #94a3b8; font-size: 0.8rem; }
-    #searchResults .result-item .sector { color: #60a5fa; font-size: 0.75rem; }
+    #searchResults .result-item .sector { color: #7dd3fc; font-size: 0.75rem; }
     .result-count { color: #94a3b8; font-size: 0.8rem; padding: 0.5rem 1rem; border-bottom: 1px solid #1e293b; }
 
     /* Badge preview */
@@ -237,7 +237,7 @@
       justify-content: center;
       align-items: center;
       min-height: 140px;
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #334155;
       border-radius: 0.5rem;
       padding: 1rem;
@@ -246,7 +246,7 @@
     #badgePreview img { max-width: 100%; border-radius: 0.375rem; }
 
     .code-block {
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #334155;
       border-radius: 0.5rem;
       padding: 1rem;
@@ -280,7 +280,7 @@
     .slug-grid a {
       display: inline-block;
       padding: 0.25rem 0.5rem;
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 0.25rem;
       color: #94a3b8;
@@ -293,8 +293,8 @@
       white-space: nowrap;
     }
     .slug-grid a:hover {
-      border-color: #60a5fa;
-      color: #60a5fa;
+      border-color: #7dd3fc;
+      color: #7dd3fc;
     }
 
     /* Loading */
@@ -329,12 +329,12 @@
       margin-top: 1rem;
     }
     .feature-grid .feat {
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 0.5rem;
       padding: 1rem;
     }
-    .feature-grid .feat strong { color: #60a5fa; }
+    .feature-grid .feat strong { color: #7dd3fc; }
     .feature-grid .feat span { color: #94a3b8; font-size: 0.85rem; }
 
     .selected-info {
@@ -342,7 +342,7 @@
       align-items: center;
       gap: 0.75rem;
       padding: 0.75rem 1rem;
-      background: #0b1120;
+      background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 0.5rem;
       margin-top: 0.75rem;
@@ -359,7 +359,7 @@
       flex-wrap: wrap;
     }
     .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; }
-    .footer-links a:hover { color: #60a5fa; }
+    .footer-links a:hover { color: #7dd3fc; }
 
     @media (max-width: 640px) {
       h1 { font-size: 1.5rem; }
@@ -433,7 +433,7 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <p style="margin-bottom:0.75rem">Each badge shows the startup's current signal type, color-coded for quick scanning:</p>
 <div class="feature-grid">
 <div class="feat"><strong style="color:#22c55e">● Engineering Hiring Burst</strong><br/><span>Rapid team expansion</span></div>
-<div class="feat"><strong style="color:#3b82f6">● Deploy Frequency Spike</strong><br/><span>Shipping acceleration</span></div>
+<div class="feat"><strong style="color:#0ea5e9">● Deploy Frequency Spike</strong><br/><span>Shipping acceleration</span></div>
 <div class="feat"><strong style="color:#f59e0b">● Infrastructure Buildout</strong><br/><span>Scaling infrastructure</span></div>
 <div class="feat"><strong style="color:#6b7280">● Framework Migration</strong><br/><span>Tech stack transition</span></div>
 </div>
@@ -450,13 +450,13 @@ posthog.init('phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX', {api_host: 'http
 <div style="margin-top:0.5rem">
 <p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">How do I embed a badge in my GitHub README?</p>
 <p style="color:#94a3b8;margin-bottom:1rem">Add this to your README.md, replacing <code>STARTUP-SLUG</code> with your startup's slug:<br/>
-<code style="background:#0b1120;padding:0.2rem 0.4rem;border-radius:0.25rem;font-size:0.85rem">![VC Deal Flow Signal](https://gitdealflow.com/api/badge/startup/STARTUP-SLUG)</code></p>
+<code style="background:#0f172a;padding:0.2rem 0.4rem;border-radius:0.25rem;font-size:0.85rem">![VC Deal Flow Signal](https://gitdealflow.com/api/badge/startup/STARTUP-SLUG)</code></p>
 <p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">Is this free?</p>
 <p style="color:#94a3b8;margin-bottom:1rem">Yes, completely free. No registration, API key, or rate limits. Cached on our CDN for fast global loading.</p>
 <p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">How often is data refreshed?</p>
 <p style="color:#94a3b8;margin-bottom:1rem">The signals dataset is updated weekly. Badges are CDN-cached up to 24 hours between refreshes.</p>
 <p style="font-weight:600;color:#e2e8f0;margin-bottom:0.25rem">My startup isn't listed. Can I get a badge?</p>
-<p style="color:#94a3b8">Yes! If a slug isn't found, the API returns a "Create Your Own Badge" linking to <a href="/check-velocity" style="color:#60a5fa">gitdealflow.com/check-velocity</a>.</p>
+<p style="color:#94a3b8">Yes! If a slug isn't found, the API returns a "Create Your Own Badge" linking to <a href="/check-velocity" style="color:#7dd3fc">gitdealflow.com/check-velocity</a>.</p>
 </div>
 </div>
 <div class="footer-links">
@@ -533,7 +533,7 @@ searchInput.addEventListener('input', function() {
   ).slice(0, 30);
 
   if (matches.length === 0) {
-    searchResults.innerHTML = `<div class="result-item" style="color:#94a3b8;justify-content:center">No matching startups — <a href="#" style="color:#60a5fa" onclick="event.preventDefault();openVelocityCheck()">check velocity instead?</a></div>`;
+    searchResults.innerHTML = `<div class="result-item" style="color:#94a3b8;justify-content:center">No matching startups — <a href="#" style="color:#7dd3fc" onclick="event.preventDefault();openVelocityCheck()">check velocity instead?</a></div>`;
   } else {
     searchResults.innerHTML = `<div class="result-count">${matches.length} startup${matches.length !== 1 ? 's' : ''} found</div>` +
       matches.map(m =>
@@ -643,11 +643,11 @@ init();
 <div class="related-pages" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #1e293b">
 <h3 style="color:#e2e8f0;font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
 <div class="related-links" style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="/trending-this-week" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Trending This Week</a>
-<a href="/benchmark" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
-<a href="/sector-healthcare" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
-<a href="/startups-hiring-burst" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
-<a href="/check-velocity" style="color:#60a5fa;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
+<a href="/trending-this-week" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Trending This Week</a>
+<a href="/benchmark" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startup Velocity Benchmark</a>
+<a href="/sector-healthcare" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Healthcare Startups</a>
+<a href="/startups-hiring-burst" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Startups with Hiring Burst</a>
+<a href="/check-velocity" style="color:#7dd3fc;text-decoration:none;font-size:0.85rem">Check Startup Velocity</a>
 </div>
 </div>
 <script>(function(){try{if(navigator.doNotTrack=='1'||window.globalPrivacyControl)return;if(localStorage.getItem('gdf_cookie_ack'))return;var d=document.createElement('div');d.setAttribute('role','region');d.setAttribute('aria-label','Cookie notice');d.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9998;background:#0f172a;border-top:1px solid #334155;color:#e2e8f0;padding:16px;font:14px/1.5 system-ui,-apple-system,sans-serif';d.innerHTML='<div style="max-width:900px;margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap"><p style="margin:0;flex:1;min-width:240px">We set one first-party cookie for product analytics (PostHog EU) so we can count unique visitors. No ads, no cross-site tracking. Browsers sending DNT or GPC are auto-opted-out. <a href="/privacy" style="color:#7dd3fc">Details</a>.</p><button type="button" style="min-height:44px;min-width:88px;padding:10px 20px;border:0;border-radius:8px;background:#0284c7;color:#fff;font-weight:600;cursor:pointer">Got it</button></div>';var b=d.querySelector('button');b.onclick=function(){try{localStorage.setItem('gdf_cookie_ack','1')}catch(e){}d.remove()};document.body.appendChild(d)}catch(e){}})();</script></body>

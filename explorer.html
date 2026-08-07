@@ -178,14 +178,14 @@
 }</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;background:#0b1120;color:#e8eaed;line-height:1.5;-webkit-font-smoothing:antialiased}
-a{color:#60a5fa;text-decoration:none}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;background:#0f172a;color:#f3f4f6;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:#7dd3fc;text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1280px;margin:0 auto;padding:1rem}
 
 /* Header */
 header{text-align:center;padding:2rem 1rem 1rem;border-bottom:1px solid #1e293b}
-header h1{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+header h1{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#7dd3fc,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
 header p{color:#94a3b8;font-size:.9rem;margin-top:.35rem}
 
 /* Stats bar */
@@ -198,18 +198,18 @@ header p{color:#94a3b8;font-size:.9rem;margin-top:.35rem}
 .controls{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;padding:1rem 0}
 .search-box{flex:1;min-width:200px}
 .search-box input{width:100%;padding:.65rem .85rem;background:#0f172a;border:1px solid #1e293b;border-radius:8px;color:#f1f5f9;font-size:.85rem;outline:none}
-.search-box input:focus{border-color:#60a5fa}
+.search-box input:focus{border-color:#7dd3fc}
 .filter-group{display:flex;flex-wrap:wrap;gap:.5rem}
 .filter-group select{padding:.65rem .85rem;background:#0f172a;border:1px solid #1e293b;border-radius:8px;color:#f1f5f9;font-size:.8rem;outline:none;cursor:pointer;min-width:140px}
-.filter-group select:focus{border-color:#60a5fa}
+.filter-group select:focus{border-color:#7dd3fc}
 .btn-group{display:flex;gap:.5rem;flex-wrap:wrap}
 .btn{padding:.65rem 1rem;border-radius:8px;font-size:.8rem;font-weight:600;cursor:pointer;border:none;transition:all .15s}
-.btn-primary{background:#2563eb;color:#fff}
-.btn-primary:hover{background:#1d4ed8}
+.btn-primary{background:#0284c7;color:#fff}
+.btn-primary:hover{background:#e85a0c}
 .btn-secondary{background:#1e293b;color:#94a3b8;border:1px solid #334155}
 .btn-secondary:hover{background:#334155;color:#e2e8f0}
-.btn-outline{background:transparent;color:#60a5fa;border:1px solid #334155}
-.btn-outline:hover{background:#0f172a;border-color:#60a5fa}
+.btn-outline{background:transparent;color:#7dd3fc;border:1px solid #334155}
+.btn-outline:hover{background:#0f172a;border-color:#7dd3fc}
 
 /* Table */
 .table-wrap{overflow-x:auto;border:1px solid #1e293b;border-radius:12px}
@@ -218,7 +218,7 @@ thead{position:sticky;top:0;z-index:10}
 thead th{background:#0f172a;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:.65rem .5rem;text-align:left;cursor:pointer;white-space:nowrap;user-select:none;border-bottom:2px solid #1e293b;position:relative}
 thead th:hover{color:#e2e8f0}
 thead th .sort-arrow{display:inline-block;margin-left:3px;color:#94a3b8;font-size:.7rem}
-thead th.sorted{color:#60a5fa}
+thead th.sorted{color:#7dd3fc}
 tbody tr{border-bottom:1px solid #1a2332;transition:background .1s}
 tbody tr:hover{background:#0f172a}
 tbody td{padding:.55rem .5rem;vertical-align:middle}
@@ -228,23 +228,23 @@ td.vel-neg{color:#f87171}
 td.vel-neutral{color:#94a3b8}
 td.sector-cell{color:#94a3b8;font-size:.75rem}
 td.stage-cell{font-size:.75rem}
-.stage-Pre-seed{color:#60a5fa}
-.stage-Seed{color:#a78bfa}
+.stage-Pre-seed{color:#7dd3fc}
+.stage-Seed{color:#7dd3fc}
 .stage-Series{color:#fbbf24}
 .stage-Growth{color:#4ade80}
 .signal-badge{display:inline-block;padding:.15rem .45rem;border-radius:4px;font-size:.7rem;font-weight:500;white-space:nowrap}
-.signal-badge.engineering{background:rgba(96,165,250,.15);color:#60a5fa}
+.signal-badge.engineering{background:rgba(96,165,250,.15);color:#7dd3fc}
 .signal-badge.deploy{background:rgba(74,222,128,.15);color:#4ade80}
 .signal-badge.framework{background:rgba(251,191,36,.15);color:#fbbf24}
-.signal-badge.infrastructure{background:rgba(167,139,250,.15);color:#a78bfa}
-.link-cell a{color:#60a5fa;font-size:.75rem}
+.signal-badge.infrastructure{background:rgba(167,139,250,.15);color:#7dd3fc}
+.link-cell a{color:#7dd3fc;font-size:.75rem}
 .link-cell a:hover{text-decoration:underline}
 
 /* Pagination */
 .pagination{display:flex;justify-content:center;align-items:center;gap:.5rem;padding:1rem 0}
 .page-btn{padding:.45rem .75rem;border:1px solid #334155;border-radius:6px;background:#0f172a;color:#94a3b8;cursor:pointer;font-size:.8rem}
 .page-btn:hover{background:#1e293b;color:#e2e8f0}
-.page-btn.active{background:#2563eb;color:#fff;border-color:#2563eb}
+.page-btn.active{background:#0284c7;color:#fff;border-color:#0284c7}
 .page-btn:disabled{opacity:.4;cursor:default}
 .page-info{color:#94a3b8;font-size:.8rem}
 
@@ -262,7 +262,7 @@ td.stage-cell{font-size:.75rem}
 
 /* Footer */
 footer{text-align:center;padding:2rem;border-top:1px solid #1e293b;color:#94a3b8;font-size:.8rem;margin-top:2rem}
-footer a{color:#60a5fa}
+footer a{color:#7dd3fc}
 footer .network{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e293b}
 footer .network h4{color:#94a3b8;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem}
 footer .network .links{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
@@ -295,7 +295,7 @@ footer .network .links a:hover{color:#94a3b8}
 <h1>Startup Explorer</h1>
 <p>Interactive table of 369 venture-backed startups ranked by GitHub engineering velocity</p>
 
-<p><a href="/leaderboard" style="color:#60a5fa;font-size:0.9rem">📊 See the Leaderboard →</a></p>
+<p><a href="/leaderboard" style="color:#7dd3fc;font-size:0.9rem">📊 See the Leaderboard →</a></p>
 </header>
 <div class="container">
 <div class="stats-bar" id="statsBar">
